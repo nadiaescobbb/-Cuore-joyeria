@@ -79,18 +79,18 @@ const StickyCTA = () => {
   }, []);
 
   return (
-    <div className={`fixed inset-x-4 bottom-4 z-50 transition-all duration-700 sm:inset-x-auto sm:bottom-8 sm:right-8 ${show ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-4 pointer-events-none'}`}>
+    <div className={`fixed right-5 bottom-5 z-50 transition-all duration-700 sm:bottom-8 sm:right-8 ${show ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-4 pointer-events-none'}`}>
       <a
         href={mainContact}
         target="_blank"
         rel="noreferrer"
         aria-label="escribinos por whatsapp"
-        className="flex items-center justify-center gap-4 bg-accent text-background px-6 py-4 rounded-full shadow-2xl shadow-foreground/40 hover:bg-tierra transition-all duration-500 sm:hover:scale-105 group"
+        className="flex items-center justify-center gap-3 bg-accent text-background p-4 sm:px-6 sm:py-4 rounded-full shadow-2xl shadow-foreground/40 hover:bg-tierra transition-all duration-500 sm:hover:scale-105 group"
       >
-        <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5" aria-hidden>
+        <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 sm:w-5 sm:h-5" aria-hidden>
           <path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.45 1.32 4.95L2 22l5.25-1.37a9.94 9.94 0 0 0 4.79 1.22h.01c5.5 0 9.96-4.46 9.96-9.96S17.55 2 12.04 2zm5.84 14.06c-.25.7-1.45 1.34-2 1.42-.51.08-1.16.11-1.87-.12-.43-.14-.99-.32-1.7-.63-3-1.3-4.95-4.31-5.1-4.51-.15-.2-1.22-1.62-1.22-3.09 0-1.47.77-2.19 1.04-2.49.27-.3.6-.37.8-.37.2 0 .4 0 .57.01.18.01.43-.07.67.51.25.6.85 2.07.92 2.22.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.32.39-.45.52-.15.15-.31.32-.13.62.18.3.8 1.32 1.71 2.13 1.18 1.05 2.17 1.37 2.47 1.52.3.15.47.13.65-.07.18-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.27.1 1.74.82 2.04.97.3.15.5.22.57.35.07.13.07.75-.18 1.45z" />
         </svg>
-        <span className="text-[10px] tracking-[0.2em] uppercase font-bold">escribinos por whatsapp</span>
+        <span className="hidden sm:block text-[10px] tracking-[0.2em] uppercase font-bold">escribinos por whatsapp</span>
       </a>
     </div>
   );
@@ -505,7 +505,7 @@ const Cuore = () => {
       </section>
 
 
-      <footer className="py-24 bg-surface/20 border-t border-soft">
+      <footer className="pt-24 pb-32 sm:pb-24 bg-surface/20 border-t border-soft relative z-10">
         <div className="mx-auto max-w-[1400px] px-6 lg:px-12 text-center">
           <Reveal>
             <div className="font-heading text-6xl lg:text-9xl tracking-[-0.06em] mb-16 text-lowercase opacity-90">cuore</div>
