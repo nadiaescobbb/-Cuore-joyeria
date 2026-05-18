@@ -3,7 +3,10 @@ dist/
 build/
 .vite/
 .tanstack/tmp/
-.agents/
+.agents/*
+!.agents/skills/
+!.agents/skills/impeccable/
+!.agents/skills/impeccable/**
 .env
 .env.*
 !.env.example
