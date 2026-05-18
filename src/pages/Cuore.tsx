@@ -1,5 +1,5 @@
 import { Reveal } from "../components/Reveal";
-import { SearchIcon, HeartIcon, UserIcon, ShoppingBagIcon } from "../components/Icons";
+import { ShoppingBagIcon } from "../components/Icons";
 import { useEffect } from "react";
 
 const waNumber = "542964557378";
@@ -33,19 +33,53 @@ const iconicPieces = [
   },
 ];
 
+const quickCategories = [
+  {
+    title: "plata 925",
+    text: "anillos, cadenas, dijes y regalos listos para retirar",
+    cta: "ver plata",
+    msg: "hola cuore, queria consultar por plata 925",
+  },
+  {
+    title: "alianzas",
+    text: "hechas en taller, con medida y grabado",
+    cta: "pedir presupuesto",
+    msg: "hola cuore, queria pedir presupuesto por alianzas",
+  },
+  {
+    title: "relojes casio",
+    text: "mandanos captura del modelo y vemos stock",
+    cta: "consultar casio",
+    msg: "hola cuore, queria consultar por relojes casio",
+  },
+  {
+    title: "arreglos",
+    text: "pilas, mallas, ajustes y reparaciones",
+    cta: "consultar arreglo",
+    msg: "hola cuore, queria consultar por un arreglo",
+  },
+];
+
+const trustPoints = [
+  "av. belgrano 616",
+  "taller propio",
+  "mas de 40 años",
+  "atencion por whatsapp",
+];
+
 const StickyCTA = () => (
-  <div className="fixed bottom-8 right-8 z-50 animate-fade-up [animation-delay:1000ms]">
+  <div className="fixed inset-x-4 bottom-4 z-50 animate-fade-up [animation-delay:1000ms] sm:inset-x-auto sm:bottom-8 sm:right-8">
     <a
       href={mainContact}
       target="_blank"
       rel="noreferrer"
       aria-label="escribinos por whatsapp"
-      className="flex items-center gap-4 bg-accent text-background px-6 py-4 rounded-full shadow-2xl shadow-foreground/40 hover:bg-tierra transition-all duration-500 hover:scale-105 group"
+      className="flex items-center justify-center gap-4 bg-accent text-background px-6 py-4 rounded-full shadow-2xl shadow-foreground/40 hover:bg-tierra transition-all duration-500 sm:hover:scale-105 group"
     >
       <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5" aria-hidden>
         <path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.45 1.32 4.95L2 22l5.25-1.37a9.94 9.94 0 0 0 4.79 1.22h.01c5.5 0 9.96-4.46 9.96-9.96S17.55 2 12.04 2zm5.84 14.06c-.25.7-1.45 1.34-2 1.42-.51.08-1.16.11-1.87-.12-.43-.14-.99-.32-1.7-.63-3-1.3-4.95-4.31-5.1-4.51-.15-.2-1.22-1.62-1.22-3.09 0-1.47.77-2.19 1.04-2.49.27-.3.6-.37.8-.37.2 0 .4 0 .57.01.18.01.43-.07.67.51.25.6.85 2.07.92 2.22.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.32.39-.45.52-.15.15-.31.32-.13.62.18.3.8 1.32 1.71 2.13 1.18 1.05 2.17 1.37 2.47 1.52.3.15.47.13.65-.07.18-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.27.1 1.74.82 2.04.97.3.15.5.22.57.35.07.13.07.75-.18 1.45z" />
       </svg>
-      <span className="text-[10px] tracking-[0.2em] uppercase font-bold hidden sm:inline">whatsapp</span>
+      <span className="text-[10px] tracking-[0.2em] uppercase font-bold">escribinos por whatsapp</span>
     </a>
   </div>
 );
@@ -66,28 +100,22 @@ const Cuore = () => {
       </div>
 
 
-      <header className="relative z-50 bg-background/80 backdrop-blur-md border-b border-soft sticky top-0">
-        <div className="mx-auto max-w-[1400px] px-6 lg:px-12 h-20 flex items-center justify-between">
+      <header className="relative z-50 bg-background/90 backdrop-blur-md border-b border-soft sticky top-0">
+        <div className="mx-auto max-w-[1400px] px-5 lg:px-12 h-16 md:h-20 flex items-center justify-between">
           <div className="flex-1 flex gap-10 items-center">
-            <button className="text-foreground/30 hover:text-accent transition-colors">
-              <SearchIcon className="w-4 h-4" />
-            </button>
-            <nav className="hidden lg:flex gap-10 text-[10px] uppercase tracking-[0.3em] text-foreground/40 font-semibold">
+            <nav className="hidden lg:flex gap-10 text-[10px] uppercase tracking-[0.3em] text-foreground/45 font-semibold">
               <a href="#piezas" className="hover:text-accent transition-colors">joyas</a>
               <a href="#oficio" className="hover:text-accent transition-colors">taller</a>
+              <a href="#relojes" className="hover:text-accent transition-colors">relojes</a>
             </nav>
           </div>
           
-          <a href="#top" className="font-heading text-4xl tracking-[-0.05em] text-lowercase flex-shrink-0">
+          <a href="#top" className="font-heading text-3xl md:text-4xl tracking-[-0.05em] text-lowercase flex-shrink-0">
             cuore
           </a>
           
-          <div className="flex-1 flex justify-end gap-8 items-center">
-            <div className="hidden lg:flex gap-8 text-foreground/30">
-               <HeartIcon className="w-4 h-4 hover:text-accent cursor-pointer transition-colors" />
-               <UserIcon className="w-4 h-4 hover:text-accent cursor-pointer transition-colors" />
-            </div>
-            <a href={mainContact} target="_blank" rel="noreferrer" className="flex items-center gap-4 text-foreground/60 hover:text-accent transition-colors group">
+          <div className="flex-1 flex justify-end items-center">
+            <a href={mainContact} target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 rounded-full bg-foreground px-4 py-3 text-background transition-colors hover:bg-accent md:bg-transparent md:px-0 md:py-0 md:text-foreground/65 md:hover:text-accent">
                <span className="text-[10px] uppercase tracking-[0.3em] font-bold hidden md:block">consultar</span>
                <ShoppingBagIcon className="w-4 h-4" />
             </a>
@@ -95,7 +123,7 @@ const Cuore = () => {
         </div>
       </header>
 
-      <header id="top" className="relative h-[100svh] min-h-[640px] w-full flex items-end overflow-hidden">
+      <header id="top" className="relative min-h-[calc(100svh-4rem)] md:min-h-[calc(100svh-5rem)] w-full flex items-end overflow-hidden">
         <img 
           src="/images/HERO.png" 
           alt="alianzas de oro fabricadas en el taller de cuore" 
@@ -105,44 +133,54 @@ const Cuore = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-transparent to-transparent" />
         <div className="absolute inset-0 bg-noise opacity-5 pointer-events-none" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pb-20 md:pb-28 w-full">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 py-16 md:px-6 md:pb-24 md:pt-28 w-full">
           <Reveal delay={100}>
-            <span className="block text-[11px] tracking-[0.3em] uppercase text-accent mb-6">
+            <span className="inline-flex rounded-full border border-background/15 bg-background/10 px-4 py-2 text-[10px] tracking-[0.24em] uppercase text-background/80 backdrop-blur-sm md:text-[11px]">
               av. belgrano 616 · río grande
             </span>
           </Reveal>
           
           <Reveal delay={200}>
-            <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl leading-[0.95] text-background max-w-4xl text-lowercase">
-              joyas, alianzas<br />
-              <span className="italic text-tierra">y relojes para elegir bien</span>
+            <h1 className="mt-6 max-w-5xl font-heading text-5xl leading-[0.96] text-background text-lowercase md:text-7xl lg:text-8xl">
+              joyas, alianzas y relojes<br />
+              <span className="italic text-tierra">sin vueltas</span>
             </h1>
           </Reveal>
           
           <Reveal delay={300}>
-            <p className="mt-8 max-w-md text-base md:text-lg text-background/70 leading-relaxed text-lowercase italic">
+            <p className="mt-7 max-w-lg text-base text-background/78 leading-relaxed text-lowercase md:text-lg">
               escribinos por whatsapp, mandanos una foto o contanos qué estás buscando.
               te respondemos con opciones reales del local.
             </p>
           </Reveal>
 
           <Reveal delay={400}>
-            <div className="mt-12 flex flex-wrap gap-4">
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <a
                 href={getWaLink("hola cuore, queria consultar por una joya o reloj")}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-3 bg-accent text-background px-8 py-5 text-[10px] tracking-[0.2em] uppercase font-bold hover:bg-tierra transition-colors"
+                className="inline-flex min-h-14 items-center justify-center gap-3 bg-accent px-7 py-4 text-center text-[10px] font-bold uppercase tracking-[0.2em] text-background transition-colors hover:bg-tierra"
               >
                 escribir por whatsapp
                 <span aria-hidden className="text-lg">→</span>
               </a>
               <a
-                href="#oficio"
-                className="inline-flex items-center gap-3 border border-background/25 text-background px-8 py-5 text-[10px] tracking-[0.2em] uppercase font-bold hover:border-accent hover:text-accent transition-colors backdrop-blur-sm"
+                href="#categorias"
+                className="inline-flex min-h-14 items-center justify-center gap-3 border border-background/25 px-7 py-4 text-center text-[10px] font-bold uppercase tracking-[0.2em] text-background backdrop-blur-sm transition-colors hover:border-accent hover:text-accent"
               >
-                ver qué hacemos
+                ver productos
               </a>
+            </div>
+          </Reveal>
+
+          <Reveal delay={500}>
+            <div className="mt-10 grid grid-cols-2 gap-px overflow-hidden border border-background/10 bg-background/10 backdrop-blur-sm md:max-w-3xl md:grid-cols-4">
+              {trustPoints.map((point) => (
+                <div key={point} className="bg-foreground/45 px-4 py-4 text-[10px] font-bold uppercase tracking-[0.18em] text-background/75">
+                  {point}
+                </div>
+              ))}
             </div>
           </Reveal>
         </div>
@@ -152,7 +190,55 @@ const Cuore = () => {
         </div>
       </header>
 
-      <section id="oficio" className="py-24 md:py-32 bg-background border-y border-soft overflow-hidden">
+      <section id="categorias" className="relative z-10 bg-background py-16 md:py-24">
+        <div className="mx-auto max-w-[1400px] px-5 lg:px-12">
+          <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <Reveal>
+              <div>
+                <span className="mb-4 block text-[10px] font-bold uppercase tracking-[0.4em] text-accent">
+                  consulta rapida
+                </span>
+                <h2 className="max-w-2xl font-heading text-4xl leading-tight text-lowercase md:text-6xl">
+                  elegí por dónde empezar
+                </h2>
+              </div>
+            </Reveal>
+            <Reveal delay={150}>
+              <p className="max-w-sm text-sm leading-relaxed text-foreground/55">
+                no hace falta saber el nombre exacto. mandanos una referencia y te guiamos.
+              </p>
+            </Reveal>
+          </div>
+
+          <div className="grid gap-px overflow-hidden border border-soft bg-border sm:grid-cols-2 lg:grid-cols-4">
+            {quickCategories.map((item, i) => (
+              <Reveal key={item.title} delay={i * 80}>
+                <a
+                  href={getWaLink(item.msg)}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group flex min-h-56 flex-col justify-between bg-background p-6 transition-colors hover:bg-surface/45 md:p-8"
+                >
+                  <div>
+                    <span className="mb-7 block text-[10px] font-bold uppercase tracking-[0.32em] text-accent">
+                      0{i + 1}
+                    </span>
+                    <h3 className="font-heading text-3xl text-lowercase">{item.title}</h3>
+                    <p className="mt-4 max-w-[28ch] text-sm leading-relaxed text-foreground/58">
+                      {item.text}
+                    </p>
+                  </div>
+                  <span className="mt-8 text-[10px] font-bold uppercase tracking-[0.25em] text-foreground/45 transition-colors group-hover:text-accent">
+                    {item.cta} →
+                  </span>
+                </a>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="oficio" className="py-20 md:py-28 bg-surface/25 border-y border-soft overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
           <div className="lg:col-span-5 order-2 lg:order-1">
             <Reveal>
@@ -162,7 +248,7 @@ const Cuore = () => {
               <h2 className="font-heading text-4xl md:text-5xl text-foreground mb-8 italic text-lowercase">
                 hechas acá, a tu medida
               </h2>
-              <p className="max-w-[44ch] text-foreground/70 mb-12 leading-relaxed text-lowercase italic">
+              <p className="max-w-[44ch] text-foreground/70 mb-10 leading-relaxed text-lowercase">
                 las hacemos en nuestro taller de río grande. elegís el material,
                 la medida y el grabado; nosotros te pasamos presupuesto por whatsapp.
               </p>
@@ -191,7 +277,7 @@ const Cuore = () => {
                 href={getWaLink("hola cuore, queria pedir un presupuesto por alianzas")}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-10 inline-block text-accent text-xs font-bold uppercase tracking-[0.3em] border-b border-accent/30 pb-1 hover:border-accent transition-colors"
+                className="mt-10 inline-flex min-h-12 items-center justify-center bg-foreground px-6 text-[10px] font-bold uppercase tracking-[0.25em] text-background transition-colors hover:bg-accent"
               >
                 pedir presupuesto →
               </a>
@@ -213,9 +299,9 @@ const Cuore = () => {
         </div>
       </section>
 
-      <section id="piezas" className="py-24 lg:py-48 bg-surface/30 border-y border-soft">
-        <div className="mx-auto max-w-[1400px] px-6 lg:px-12">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-32 gap-12">
+      <section id="piezas" className="py-20 lg:py-32 bg-background border-y border-soft">
+        <div className="mx-auto max-w-[1400px] px-5 lg:px-12">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8 md:mb-24">
             <Reveal>
               <div>
                 <span className="text-[10px] uppercase tracking-[0.5em] text-accent mb-6 block font-bold">joyas</span>
@@ -227,11 +313,11 @@ const Cuore = () => {
             </Reveal>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-20 stagger-grid">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-14 stagger-grid">
             {iconicPieces.map((p, i) => (
               <Reveal key={p.name} delay={i * 150}>
                 <a href={getWaLink(p.msg)} target="_blank" rel="noreferrer" className="group block">
-                  <div className="aspect-[3/4] bg-background border border-soft overflow-hidden mb-10 transition-all duration-1000 group-hover:shadow-warm">
+                  <div className="aspect-[3/4] bg-background border border-soft overflow-hidden mb-6 transition-all duration-1000 group-hover:shadow-warm">
                     <img 
                       src={p.image} 
                       alt={p.name} 
@@ -241,6 +327,9 @@ const Cuore = () => {
                   <div className="space-y-2 px-2">
                     <h3 className="font-heading text-3xl text-lowercase tracking-tight leading-none">{p.name}</h3>
                     <p className="text-[9px] uppercase tracking-[0.3em] text-foreground/40 font-bold italic">{p.description}</p>
+                    <span className="inline-block pt-4 text-[10px] font-bold uppercase tracking-[0.25em] text-accent">
+                      consultar este →
+                    </span>
                   </div>
                 </a>
               </Reveal>
@@ -249,7 +338,7 @@ const Cuore = () => {
         </div>
       </section>
 
-      <section id="relojes" className="py-24 md:py-32 bg-foreground relative overflow-hidden">
+      <section id="relojes" className="py-20 md:py-28 bg-foreground relative overflow-hidden">
         <div className="absolute inset-0 bg-noise opacity-10 pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-20 gap-8">
@@ -264,9 +353,19 @@ const Cuore = () => {
               </div>
             </Reveal>
             <Reveal delay={200}>
-              <p className="text-background/50 max-w-xs text-sm italic text-lowercase leading-relaxed">
-                si viste un modelo, mandanos captura por whatsapp. te decimos si está disponible o qué alternativas hay.
-              </p>
+              <div className="max-w-sm">
+                <p className="text-sm leading-relaxed text-background/58">
+                  si viste un modelo, mandanos captura por whatsapp. te decimos si está disponible o qué alternativas hay.
+                </p>
+                <a
+                  href={getWaLink("hola cuore, queria consultar por un reloj")}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-6 inline-flex min-h-12 items-center justify-center bg-accent px-6 text-[10px] font-bold uppercase tracking-[0.25em] text-background transition-colors hover:bg-tierra"
+                >
+                  consultar reloj →
+                </a>
+              </div>
             </Reveal>
           </div>
 
@@ -292,7 +391,12 @@ const Cuore = () => {
               },
             ].map((w, i) => (
               <Reveal key={w.cat} delay={i * 150}>
-                <article className="bg-foreground p-10 group transition-colors hover:bg-background/[0.02]">
+                <a
+                  href={getWaLink(`hola cuore, queria consultar por relojes ${w.cat}`)}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group block bg-foreground p-8 transition-colors hover:bg-background/[0.02] md:p-10"
+                >
                   <div className="aspect-square overflow-hidden mb-10 bg-background/5 border border-background/5">
                     <img
                       src={w.img}
@@ -304,24 +408,30 @@ const Cuore = () => {
                     {w.cat}
                   </span>
                   <h3 className="font-heading text-3xl text-background mt-3 mb-4 text-lowercase">{w.title}</h3>
-                  <p className="text-sm text-background/40 max-w-[32ch] text-lowercase leading-relaxed italic">{w.desc}</p>
-                </article>
+                  <p className="text-sm text-background/45 max-w-[32ch] text-lowercase leading-relaxed">{w.desc}</p>
+                  <span className="mt-8 inline-block text-[10px] font-bold uppercase tracking-[0.25em] text-accent">
+                    preguntar por whatsapp →
+                  </span>
+                </a>
               </Reveal>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="visita" className="py-24 md:py-32 bg-background border-t border-soft">
-        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-start">
+      <section id="visita" className="py-20 md:py-28 bg-background border-t border-soft">
+        <div className="max-w-7xl mx-auto px-5 md:px-6 grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           <div>
             <Reveal>
               <span className="text-accent uppercase tracking-[0.3em] text-[11px] mb-5 block font-bold">
                 visitanos
               </span>
-              <h2 className="font-heading text-4xl md:text-6xl text-foreground text-lowercase mb-10 leading-tight">
-                te esperamos<br />en el local
+              <h2 className="font-heading text-4xl md:text-6xl text-foreground text-lowercase mb-6 leading-tight">
+                escribinos o pasá<br />por el local
               </h2>
+              <p className="mb-10 max-w-md text-sm leading-relaxed text-foreground/60">
+                estamos en el centro. si venís con una idea, una foto o una medida, te orientamos ahí mismo.
+              </p>
             </Reveal>
             <Reveal delay={200}>
               <dl className="space-y-6 text-sm">
@@ -339,12 +449,12 @@ const Cuore = () => {
               </dl>
             </Reveal>
             <Reveal delay={400}>
-              <div className="mt-12 flex flex-wrap gap-6">
+              <div className="mt-10 grid gap-3 sm:flex sm:flex-wrap sm:gap-6">
                 <a
                   href={getWaLink("hola cuore, queria consultar para pasar por el local")}
                   target="_blank"
                   rel="noreferrer"
-                  className="bg-accent text-background px-8 py-5 text-[10px] tracking-[0.3em] uppercase font-bold hover:bg-tierra transition-colors"
+                  className="inline-flex min-h-14 items-center justify-center bg-accent px-8 py-4 text-center text-[10px] font-bold uppercase tracking-[0.3em] text-background transition-colors hover:bg-tierra"
                 >
                   escribir por whatsapp
                 </a>
@@ -352,7 +462,7 @@ const Cuore = () => {
                   href="https://instagram.com/joyeria.relojeria.cuore"
                   target="_blank"
                   rel="noreferrer"
-                  className="border border-soft text-foreground px-8 py-5 text-[10px] tracking-[0.3em] uppercase font-bold hover:border-accent hover:text-accent transition-colors"
+                  className="inline-flex min-h-14 items-center justify-center border border-soft px-8 py-4 text-center text-[10px] font-bold uppercase tracking-[0.3em] text-foreground transition-colors hover:border-accent hover:text-accent"
                 >
                   ver instagram
                 </a>
