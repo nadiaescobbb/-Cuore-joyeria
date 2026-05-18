@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: "Lora", "serif";
+  --font-body: "Inter", "system-ui", sans-serif;
+
+  --color-background: #FAF6EE; /* hueso */
+  --color-surface: #E8DCC8;    /* arena */
+  --color-foreground: #1C1814; /* carbón */
+  --color-accent: #A07848;     /* bronce */
+  --color-tierra: #C4A882;     /* tierra */
+  --color-border: rgba(28, 24, 20, 0.08);
+
+  --animate-reveal: reveal 1.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--color-background);
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    text-rendering: optimizeLegibility;
+    letter-spacing: -0.015em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-normal leading-[1.15];
+    letter-spacing: -0.04em;
+  }
+
+  /* Custom Scrollbar - Cuore Maison Style */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-accent/20 transition-colors duration-500;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-accent/40;
+  }
+}
+
+@layer utilities {
+  .text-lowercase {
+    text-transform: lowercase;
+  }
+
+  .reveal {
+    opacity: 0;
+  }
+
+  .reveal.is-visible {
+    animation: var(--animate-reveal);
+    animation-delay: var(--delay, 0ms);
+  }
+
+  .border-soft {
+    border-color: rgba(28, 24, 20, 0.06);
+  }
+
+  .bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.04;
+    pointer-events: none;
+  }
+
+  /* Editorial Layouts */
+  .stagger-grid > *:nth-child(even) {
+    @apply translate-y-16;
+  }
+
+  .shadow-warm {
+    box-shadow: 0 20px 40px -15px rgba(160, 120, 72, 0.15);
+  }
+
+  .animate-fade-up {
+    animation: fade-up 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+  }
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+
+
