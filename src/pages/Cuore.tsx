@@ -1,5 +1,4 @@
 import { Reveal } from "../components/Reveal";
-import { ShoppingBagIcon } from "../components/Icons";
 import { useEffect } from "react";
 
 const waNumber = "542964557378";
@@ -115,9 +114,8 @@ const Cuore = () => {
           </a>
           
           <div className="flex-1 flex justify-end items-center">
-            <a href={mainContact} target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 rounded-full bg-foreground px-4 py-3 text-background transition-colors hover:bg-accent md:bg-transparent md:px-0 md:py-0 md:text-foreground/65 md:hover:text-accent">
-               <span className="text-[10px] uppercase tracking-[0.3em] font-bold hidden md:block">consultar</span>
-               <ShoppingBagIcon className="w-4 h-4" />
+            <a href={mainContact} target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center justify-center rounded-full bg-foreground px-5 text-[10px] font-bold uppercase tracking-[0.24em] text-background transition-colors hover:bg-accent md:bg-transparent md:px-0 md:text-foreground/65 md:hover:text-accent">
+               consultar
             </a>
           </div>
         </div>
