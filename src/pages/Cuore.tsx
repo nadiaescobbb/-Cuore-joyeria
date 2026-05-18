@@ -9,25 +9,25 @@ const iconicPieces = [
   {
     name: "anillo de plata 925",
     description: "plata 925",
-    image: "/images/plata025.jpg",
+    image: "/images/plata.avif",
     msg: "hola cuore, queria consultar por el anillo de plata 925",
   },
   {
     name: "alianza clasica",
     description: "hecha en taller",
-    image: "/images/alianzas.jpg",
+    image: "/images/alianzas.avif",
     msg: "hola cuore, queria consultar por alianzas",
   },
   {
     name: "collar",
     description: "para todos los dias",
-    image: "/images/IMG2.jpg",
+    image: "/images/collarportada.avif",
     msg: "hola cuore, queria consultar por collares",
   },
   {
     name: "reloj casio retro",
     description: "modelos casio",
-    image: "/images/reloj.jpg",
+    image: "/images/reloj.avif",
     msg: "hola cuore, queria consultar por relojes casio",
   },
 ];
@@ -305,7 +305,7 @@ const Cuore = () => {
             <Reveal delay={200}>
               <div className="relative aspect-[4/5] overflow-hidden border border-soft shadow-warm">
                 <img
-                  src="/images/craf.jpg"
+                  src="/images/craf.avif"
                   alt="manos de joyero trabajando un anillo"
                   className="w-full h-full object-cover grayscale-[0.1]"
                 />
@@ -389,19 +389,19 @@ const Cuore = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-background/5 border border-background/5 shadow-2xl">
             {[
               {
-                img: "https://images.unsplash.com/photo-1524805444758-089113d48a6d?q=80&w=800&h=800&auto=format&fit=crop",
+                img: "/images/edefice1.avif",
                 cat: "edifice",
                 title: "para todos los días",
                 desc: "modelos de acero, digitales y analógicos",
               },
               {
-                img: "https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?q=80&w=800&h=800&auto=format&fit=crop",
+                img: "/images/clasico.avif",
                 cat: "vintage",
                 title: "retro y clásicos",
                 desc: "los casio de siempre y modelos fáciles de combinar",
               },
               {
-                img: "https://images.unsplash.com/photo-1533139502658-0198f920d8e8?q=80&w=800&h=800&auto=format&fit=crop",
+                img: "/images/gshock.avif",
                 cat: "g-shock",
                 title: "para uso fuerte",
                 desc: "opciones resistentes para trabajo, estudio o deporte",
