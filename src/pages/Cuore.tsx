@@ -114,12 +114,15 @@ const Cuore = () => {
 
       <header className="relative z-50 bg-background/90 backdrop-blur-md border-b border-soft sticky top-0">
         <div className="mx-auto max-w-[1400px] px-5 lg:px-12 h-16 md:h-20 flex items-center justify-between">
-          <div className="flex-1 flex gap-10 items-center">
-            <nav className="hidden lg:flex gap-10 text-[10px] uppercase tracking-[0.3em] text-foreground/45 font-semibold">
+          <div className="flex-1 flex items-center">
+            <nav className="hidden md:flex gap-10 text-[10px] uppercase tracking-[0.3em] text-foreground/45 font-semibold">
               <a href="#piezas" className="hover:text-accent transition-colors">joyas</a>
               <a href="#oficio" className="hover:text-accent transition-colors">taller</a>
               <a href="#relojes" className="hover:text-accent transition-colors">relojes</a>
             </nav>
+            <a href="#piezas" className="md:hidden text-[9px] uppercase tracking-[0.3em] text-foreground/45 font-semibold hover:text-accent transition-colors">
+              colección
+            </a>
           </div>
           
           <a href="#top" className="font-heading text-3xl md:text-4xl tracking-[-0.05em] text-lowercase flex-shrink-0">
@@ -127,7 +130,7 @@ const Cuore = () => {
           </a>
           
           <div className="flex-1 flex justify-end items-center">
-            <a href={mainContact} target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center justify-center rounded-full bg-foreground px-5 text-[10px] font-bold uppercase tracking-[0.24em] text-background transition-colors hover:bg-accent md:bg-transparent md:px-0 md:text-foreground/65 md:hover:text-accent">
+            <a href={mainContact} target="_blank" rel="noreferrer" className="text-[9px] font-bold uppercase tracking-[0.3em] text-foreground/45 transition-colors hover:text-accent md:text-[10px]">
                consultar
             </a>
           </div>
