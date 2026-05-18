@@ -347,8 +347,8 @@ const Cuore = () => {
                   <div className="space-y-2 px-2">
                     <h3 className="font-heading text-3xl text-lowercase tracking-tight leading-none">{p.name}</h3>
                     <p className="text-[9px] uppercase tracking-[0.3em] text-foreground/40 font-bold italic">{p.description}</p>
-                    <span className="inline-block pt-4 text-[10px] font-bold uppercase tracking-[0.25em] text-accent">
-                      consultar este →
+                    <span className="inline-block pt-4 text-[10px] font-bold uppercase tracking-[0.25em] text-accent group-hover:text-tierra transition-colors">
+                      consultar
                     </span>
                   </div>
                 </a>
