@@ -1,5 +1,5 @@
 import { Reveal } from "../components/Reveal";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const waNumber = "542964557378";
 const getWaLink = (msg: string) => `https://wa.me/${waNumber}?text=${encodeURIComponent(msg)}`;
@@ -66,22 +66,35 @@ const trustPoints = [
   "consulta por whatsapp",
 ];
 
-const StickyCTA = () => (
-  <div className="fixed inset-x-4 bottom-4 z-50 animate-fade-up [animation-delay:1000ms] sm:inset-x-auto sm:bottom-8 sm:right-8">
-    <a
-      href={mainContact}
-      target="_blank"
-      rel="noreferrer"
-      aria-label="escribinos por whatsapp"
-      className="flex items-center justify-center gap-4 bg-accent text-background px-6 py-4 rounded-full shadow-2xl shadow-foreground/40 hover:bg-tierra transition-all duration-500 sm:hover:scale-105 group"
-    >
-      <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5" aria-hidden>
-        <path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.45 1.32 4.95L2 22l5.25-1.37a9.94 9.94 0 0 0 4.79 1.22h.01c5.5 0 9.96-4.46 9.96-9.96S17.55 2 12.04 2zm5.84 14.06c-.25.7-1.45 1.34-2 1.42-.51.08-1.16.11-1.87-.12-.43-.14-.99-.32-1.7-.63-3-1.3-4.95-4.31-5.1-4.51-.15-.2-1.22-1.62-1.22-3.09 0-1.47.77-2.19 1.04-2.49.27-.3.6-.37.8-.37.2 0 .4 0 .57.01.18.01.43-.07.67.51.25.6.85 2.07.92 2.22.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.32.39-.45.52-.15.15-.31.32-.13.62.18.3.8 1.32 1.71 2.13 1.18 1.05 2.17 1.37 2.47 1.52.3.15.47.13.65-.07.18-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.27.1 1.74.82 2.04.97.3.15.5.22.57.35.07.13.07.75-.18 1.45z" />
-      </svg>
-      <span className="text-[10px] tracking-[0.2em] uppercase font-bold">escribinos por whatsapp</span>
-    </a>
-  </div>
-);
+const StickyCTA = () => {
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShow(window.scrollY > 600);
+    };
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <div className={`fixed inset-x-4 bottom-4 z-50 transition-all duration-700 sm:inset-x-auto sm:bottom-8 sm:right-8 ${show ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-4 pointer-events-none'}`}>
+      <a
+        href={mainContact}
+        target="_blank"
+        rel="noreferrer"
+        aria-label="escribinos por whatsapp"
+        className="flex items-center justify-center gap-4 bg-accent text-background px-6 py-4 rounded-full shadow-2xl shadow-foreground/40 hover:bg-tierra transition-all duration-500 sm:hover:scale-105 group"
+      >
+        <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5" aria-hidden>
+          <path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.45 1.32 4.95L2 22l5.25-1.37a9.94 9.94 0 0 0 4.79 1.22h.01c5.5 0 9.96-4.46 9.96-9.96S17.55 2 12.04 2zm5.84 14.06c-.25.7-1.45 1.34-2 1.42-.51.08-1.16.11-1.87-.12-.43-.14-.99-.32-1.7-.63-3-1.3-4.95-4.31-5.1-4.51-.15-.2-1.22-1.62-1.22-3.09 0-1.47.77-2.19 1.04-2.49.27-.3.6-.37.8-.37.2 0 .4 0 .57.01.18.01.43-.07.67.51.25.6.85 2.07.92 2.22.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.32.39-.45.52-.15.15-.31.32-.13.62.18.3.8 1.32 1.71 2.13 1.18 1.05 2.17 1.37 2.47 1.52.3.15.47.13.65-.07.18-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.27.1 1.74.82 2.04.97.3.15.5.22.57.35.07.13.07.75-.18 1.45z" />
+        </svg>
+        <span className="text-[10px] tracking-[0.2em] uppercase font-bold">escribinos por whatsapp</span>
+      </a>
+    </div>
+  );
+};
 
 const Cuore = () => {
   useEffect(() => {
@@ -133,9 +146,14 @@ const Cuore = () => {
 
         <div className="relative z-10 max-w-7xl mx-auto px-5 py-16 md:px-6 md:pb-24 md:pt-28 w-full">
           <Reveal delay={100}>
-            <span className="inline-flex rounded-full border border-background/15 bg-background/10 px-4 py-2 text-[10px] tracking-[0.24em] uppercase text-background/80 backdrop-blur-sm md:text-[11px]">
+            <a 
+              href="https://maps.google.com/?q=Av.+Belgrano+616,+Rio+Grande,+Tierra+del+Fuego" 
+              target="_blank" 
+              rel="noreferrer"
+              className="inline-flex rounded-full border border-background/15 bg-background/10 px-4 py-2 text-[10px] tracking-[0.24em] uppercase text-background/80 backdrop-blur-sm transition-colors hover:bg-background/20 hover:text-background md:text-[11px]"
+            >
               av. belgrano 616 · río grande
-            </span>
+            </a>
           </Reveal>
           
           <Reveal delay={200}>
@@ -371,19 +389,19 @@ const Cuore = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-background/5 border border-background/5 shadow-2xl">
             {[
               {
-                img: "https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?q=80&w=800&h=800&auto=format&fit=crop",
+                img: "https://images.unsplash.com/photo-1524805444758-089113d48a6d?q=80&w=800&h=800&auto=format&fit=crop",
                 cat: "edifice",
                 title: "para todos los días",
                 desc: "modelos de acero, digitales y analógicos",
               },
               {
-                img: "https://images.unsplash.com/photo-1522337360788-8b13df772ec2?q=80&w=800&h=800&auto=format&fit=crop",
+                img: "https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?q=80&w=800&h=800&auto=format&fit=crop",
                 cat: "vintage",
                 title: "retro y clásicos",
                 desc: "los casio de siempre y modelos fáciles de combinar",
               },
               {
-                img: "https://images.unsplash.com/photo-1544006659-f0b21f04cb1d?q=80&w=800&h=800&auto=format&fit=crop",
+                img: "https://images.unsplash.com/photo-1533139502658-0198f920d8e8?q=80&w=800&h=800&auto=format&fit=crop",
                 cat: "g-shock",
                 title: "para uso fuerte",
                 desc: "opciones resistentes para trabajo, estudio o deporte",
@@ -435,14 +453,14 @@ const Cuore = () => {
             <Reveal delay={200}>
               <dl className="space-y-6 text-sm">
                 {[
-                  ["dirección", "av. belgrano 616, río grande"],
-                  ["horarios", "lunes a sábado · 10:00-13:00 / 16:00-20:30"],
-                  ["whatsapp", "+54 2964 557378"],
-                  ["instagram", "@joyeria.relojeria.cuore"],
-                ].map(([k, v]) => (
-                  <div key={k} className="flex justify-between gap-6 border-b border-soft pb-4">
-                    <dt className="text-foreground/45 uppercase text-[10px] tracking-widest font-bold">{k}</dt>
-                    <dd className="text-foreground text-right italic">{v}</dd>
+                  { k: "dirección", v: <a href="https://maps.google.com/?q=Av.+Belgrano+616,+Rio+Grande,+Tierra+del+Fuego" target="_blank" rel="noreferrer" className="hover:text-accent underline decoration-soft underline-offset-4 transition-colors">av. belgrano 616, río grande</a> },
+                  { k: "horarios", v: "lunes a sábado · 10:00-13:00 / 16:00-20:30" },
+                  { k: "whatsapp", v: "+54 2964 557378" },
+                  { k: "instagram", v: "@joyeria.relojeria.cuore" },
+                ].map((item) => (
+                  <div key={item.k} className="flex justify-between gap-6 border-b border-soft pb-4">
+                    <dt className="text-foreground/45 uppercase text-[10px] tracking-widest font-bold">{item.k}</dt>
+                    <dd className="text-foreground text-right italic">{item.v}</dd>
                   </div>
                 ))}
               </dl>
