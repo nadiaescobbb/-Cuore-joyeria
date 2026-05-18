@@ -60,10 +60,10 @@ const quickCategories = [
 ];
 
 const trustPoints = [
-  "local en belgrano",
-  "taller propio",
+  "envíos en la provincia",
+  "taller y grabado láser",
   "más de 40 años",
-  "consulta por whatsapp",
+  "todos los medios de pago",
 ];
 
 const StickyCTA = () => {
@@ -266,8 +266,8 @@ const Cuore = () => {
                 hechas acá, a tu medida
               </h2>
               <p className="max-w-[44ch] text-foreground/70 mb-10 leading-relaxed text-lowercase">
-                las hacemos en nuestro taller de río grande. elegís el material,
-                la medida y el grabado; nosotros te pasamos presupuesto por whatsapp.
+                las fabricamos en el taller de joyería más grande de la provincia. elegís el material,
+                la medida y el grabado (láser o manual); nosotros te pasamos presupuesto por whatsapp.
               </p>
             </Reveal>
 
@@ -365,7 +365,7 @@ const Cuore = () => {
                   relojes
                 </span>
                 <h2 className="font-heading text-4xl md:text-5xl text-background text-lowercase leading-tight">
-                  casio y otras marcas
+                  casio y más de 30 marcas
                 </h2>
               </div>
             </Reveal>
@@ -455,8 +455,8 @@ const Cuore = () => {
                 {[
                   { k: "dirección", v: <a href="https://maps.google.com/?q=Av.+Belgrano+616,+Rio+Grande,+Tierra+del+Fuego" target="_blank" rel="noreferrer" className="hover:text-accent underline decoration-soft underline-offset-4 transition-colors">av. belgrano 616, río grande</a> },
                   { k: "horarios", v: "lunes a sábado · 10:00-13:00 / 16:00-20:30" },
-                  { k: "whatsapp", v: "+54 2964 557378" },
-                  { k: "instagram", v: "@joyeria.relojeria.cuore" },
+                  { k: "medios de pago", v: "tarjetas, efectivo, transferencias y links de pago" },
+                  { k: "envíos", v: "entregas en toda la provincia" },
                 ].map((item) => (
                   <div key={item.k} className="flex justify-between gap-6 border-b border-soft pb-4">
                     <dt className="text-foreground/45 uppercase text-[10px] tracking-widest font-bold">{item.k}</dt>
