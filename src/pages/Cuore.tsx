@@ -333,10 +333,10 @@ const Cuore = () => {
             </Reveal>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-14 stagger-grid">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-14">
             {iconicPieces.map((p, i) => (
               <Reveal key={p.name} delay={i * 150}>
-                <a href={getWaLink(p.msg)} target="_blank" rel="noreferrer" className="group block">
+                <a href={getWaLink(p.msg)} target="_blank" rel="noreferrer" className={`group block ${i % 2 !== 0 ? 'sm:translate-y-16' : ''}`}>
                   <div className="aspect-[3/4] bg-background border border-soft overflow-hidden mb-6 transition-all duration-1000 group-hover:shadow-warm">
                     <img 
                       src={p.image} 
