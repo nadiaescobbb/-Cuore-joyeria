@@ -60,10 +60,10 @@ const quickCategories = [
 ];
 
 const trustPoints = [
-  "av. belgrano 616",
+  "local en belgrano",
   "taller propio",
-  "mas de 40 años",
-  "atencion por whatsapp",
+  "más de 40 años",
+  "consulta por whatsapp",
 ];
 
 const StickyCTA = () => (
@@ -94,7 +94,7 @@ const Cuore = () => {
       
       <div className="relative z-50 bg-background/50 backdrop-blur-sm py-2 text-center border-b border-soft">
         <p className="text-[9px] uppercase tracking-[0.4em] text-accent/70 font-medium">
-          joyería y relojería en río grande
+          plata 925 · alianzas · relojes · taller
         </p>
       </div>
 
@@ -170,6 +170,9 @@ const Cuore = () => {
                 ver productos
               </a>
             </div>
+            <p className="mt-4 text-xs text-background/55">
+              respondemos en horario del local
+            </p>
           </Reveal>
 
           <Reveal delay={500}>
@@ -194,7 +197,7 @@ const Cuore = () => {
             <Reveal>
               <div>
                 <span className="mb-4 block text-[10px] font-bold uppercase tracking-[0.4em] text-accent">
-                  consulta rapida
+                  consulta rápida
                 </span>
                 <h2 className="max-w-2xl font-heading text-4xl leading-tight text-lowercase md:text-6xl">
                   elegí por dónde empezar
@@ -208,25 +211,23 @@ const Cuore = () => {
             </Reveal>
           </div>
 
-          <div className="grid gap-px overflow-hidden border border-soft bg-border sm:grid-cols-2 lg:grid-cols-4">
+          <div className="border-y border-soft">
             {quickCategories.map((item, i) => (
               <Reveal key={item.title} delay={i * 80}>
                 <a
                   href={getWaLink(item.msg)}
                   target="_blank"
                   rel="noreferrer"
-                  className="group flex min-h-56 flex-col justify-between bg-background p-6 transition-colors hover:bg-surface/45 md:p-8"
+                  className="group grid gap-5 border-b border-soft py-7 transition-colors last:border-b-0 hover:bg-surface/30 md:grid-cols-[72px_1fr_1.2fr_auto] md:items-center md:px-4"
                 >
-                  <div>
-                    <span className="mb-7 block text-[10px] font-bold uppercase tracking-[0.32em] text-accent">
-                      0{i + 1}
-                    </span>
-                    <h3 className="font-heading text-3xl text-lowercase">{item.title}</h3>
-                    <p className="mt-4 max-w-[28ch] text-sm leading-relaxed text-foreground/58">
-                      {item.text}
-                    </p>
-                  </div>
-                  <span className="mt-8 text-[10px] font-bold uppercase tracking-[0.25em] text-foreground/45 transition-colors group-hover:text-accent">
+                  <span className="font-heading text-2xl italic text-accent md:text-3xl">
+                    0{i + 1}
+                  </span>
+                  <h3 className="font-heading text-3xl text-lowercase md:text-4xl">{item.title}</h3>
+                  <p className="max-w-[42ch] text-sm leading-relaxed text-foreground/58">
+                    {item.text}
+                  </p>
+                  <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-foreground/45 transition-colors group-hover:text-accent">
                     {item.cta} →
                   </span>
                 </a>
