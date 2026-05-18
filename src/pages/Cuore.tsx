@@ -4,32 +4,32 @@ import { useEffect } from "react";
 
 const waNumber = "542964557378";
 const getWaLink = (msg: string) => `https://wa.me/${waNumber}?text=${encodeURIComponent(msg)}`;
-const mainContact = getWaLink("hola cuore, quería hacer una consulta");
+const mainContact = getWaLink("hola cuore, queria hacer una consulta");
 
 const iconicPieces = [
   {
     name: "anillo de plata 925",
-    description: "oficio · plata de ley",
+    description: "plata 925",
     image: "/images/plata025.jpg",
-    msg: "hola, quería consultar por el anillo de plata 925",
+    msg: "hola cuore, queria consultar por el anillo de plata 925",
   },
   {
-    name: "alianza clásica oro",
-    description: "fabricación propia",
+    name: "alianza clasica",
+    description: "hecha en taller",
     image: "/images/alianzas.jpg",
-    msg: "hola, quería consultar por alianzas de oro",
+    msg: "hola cuore, queria consultar por alianzas",
   },
   {
     name: "collar",
-    description: "oficio y detalle",
+    description: "para todos los dias",
     image: "/images/IMG2.jpg",
-    msg: "hola, quería consultar por el collar artesanal",
+    msg: "hola cuore, queria consultar por collares",
   },
   {
     name: "reloj casio retro",
-    description: "distribución oficial",
+    description: "modelos casio",
     image: "/images/reloj.jpg",
-    msg: "hola, quería consultar por el reloj casio retro",
+    msg: "hola cuore, queria consultar por relojes casio",
   },
 ];
 
@@ -45,7 +45,7 @@ const StickyCTA = () => (
       <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5" aria-hidden>
         <path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.45 1.32 4.95L2 22l5.25-1.37a9.94 9.94 0 0 0 4.79 1.22h.01c5.5 0 9.96-4.46 9.96-9.96S17.55 2 12.04 2zm5.84 14.06c-.25.7-1.45 1.34-2 1.42-.51.08-1.16.11-1.87-.12-.43-.14-.99-.32-1.7-.63-3-1.3-4.95-4.31-5.1-4.51-.15-.2-1.22-1.62-1.22-3.09 0-1.47.77-2.19 1.04-2.49.27-.3.6-.37.8-.37.2 0 .4 0 .57.01.18.01.43-.07.67.51.25.6.85 2.07.92 2.22.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.32.39-.45.52-.15.15-.31.32-.13.62.18.3.8 1.32 1.71 2.13 1.18 1.05 2.17 1.37 2.47 1.52.3.15.47.13.65-.07.18-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.27.1 1.74.82 2.04.97.3.15.5.22.57.35.07.13.07.75-.18 1.45z" />
       </svg>
-      <span className="text-[10px] tracking-[0.2em] uppercase font-bold hidden sm:inline">consultar</span>
+      <span className="text-[10px] tracking-[0.2em] uppercase font-bold hidden sm:inline">whatsapp</span>
     </a>
   </div>
 );
@@ -61,7 +61,7 @@ const Cuore = () => {
       
       <div className="relative z-50 bg-background/50 backdrop-blur-sm py-2 text-center border-b border-soft">
         <p className="text-[9px] uppercase tracking-[0.4em] text-accent/70 font-medium">
-          maison artesanal · río grande, patagonia
+          joyería y relojería en río grande
         </p>
       </div>
 
@@ -73,8 +73,8 @@ const Cuore = () => {
               <SearchIcon className="w-4 h-4" />
             </button>
             <nav className="hidden lg:flex gap-10 text-[10px] uppercase tracking-[0.3em] text-foreground/40 font-semibold">
-              <a href="#piezas" className="hover:text-accent transition-colors">piezas</a>
-              <a href="#oficio" className="hover:text-accent transition-colors">oficio</a>
+              <a href="#piezas" className="hover:text-accent transition-colors">joyas</a>
+              <a href="#oficio" className="hover:text-accent transition-colors">taller</a>
             </nav>
           </div>
           
@@ -88,7 +88,7 @@ const Cuore = () => {
                <UserIcon className="w-4 h-4 hover:text-accent cursor-pointer transition-colors" />
             </div>
             <a href={mainContact} target="_blank" rel="noreferrer" className="flex items-center gap-4 text-foreground/60 hover:text-accent transition-colors group">
-               <span className="text-[10px] uppercase tracking-[0.3em] font-bold hidden md:block">iniciar pedido</span>
+               <span className="text-[10px] uppercase tracking-[0.3em] font-bold hidden md:block">consultar</span>
                <ShoppingBagIcon className="w-4 h-4" />
             </a>
           </div>
@@ -108,40 +108,40 @@ const Cuore = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-6 pb-20 md:pb-28 w-full">
           <Reveal delay={100}>
             <span className="block text-[11px] tracking-[0.3em] uppercase text-accent mb-6">
-              desde 1984 · río grande, tierra del fuego
+              av. belgrano 616 · río grande
             </span>
           </Reveal>
           
           <Reveal delay={200}>
             <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl leading-[0.95] text-background max-w-4xl text-lowercase">
-              cuarenta años forjando<br />
-              <span className="italic text-tierra">el fuego austral</span>
+              joyas, alianzas<br />
+              <span className="italic text-tierra">y relojes para elegir bien</span>
             </h1>
           </Reveal>
           
           <Reveal delay={300}>
             <p className="mt-8 max-w-md text-base md:text-lg text-background/70 leading-relaxed text-lowercase italic">
-              fabricamos alianzas a mano, restauramos relojes, grabamos historias.
-              un taller de oficio en el confín del mundo.
+              escribinos por whatsapp, mandanos una foto o contanos qué estás buscando.
+              te respondemos con opciones reales del local.
             </p>
           </Reveal>
 
           <Reveal delay={400}>
             <div className="mt-12 flex flex-wrap gap-4">
               <a
-                href={getWaLink("hola cuore, quería consultar por el taller")}
+                href={getWaLink("hola cuore, queria consultar por una joya o reloj")}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-3 bg-accent text-background px-8 py-5 text-[10px] tracking-[0.2em] uppercase font-bold hover:bg-tierra transition-colors"
               >
-                consultar por whatsapp
+                escribir por whatsapp
                 <span aria-hidden className="text-lg">→</span>
               </a>
               <a
                 href="#oficio"
                 className="inline-flex items-center gap-3 border border-background/25 text-background px-8 py-5 text-[10px] tracking-[0.2em] uppercase font-bold hover:border-accent hover:text-accent transition-colors backdrop-blur-sm"
               >
-                conocer el taller
+                ver qué hacemos
               </a>
             </div>
           </Reveal>
@@ -157,22 +157,22 @@ const Cuore = () => {
           <div className="lg:col-span-5 order-2 lg:order-1">
             <Reveal>
               <span className="text-accent uppercase tracking-[0.3em] text-[11px] mb-5 block font-bold">
-                manufactura propia
+                alianzas
               </span>
               <h2 className="font-heading text-4xl md:text-5xl text-foreground mb-8 italic text-lowercase">
-                alianzas que perduran
+                hechas acá, a tu medida
               </h2>
               <p className="max-w-[44ch] text-foreground/70 mb-12 leading-relaxed text-lowercase italic">
-                no revendemos: fundimos. cada anillo nace en nuestro taller de río grande,
-                del lingote puro al pulido final. tuyo desde el primer fuego.
+                las hacemos en nuestro taller de río grande. elegís el material,
+                la medida y el grabado; nosotros te pasamos presupuesto por whatsapp.
               </p>
             </Reveal>
 
             <ul className="space-y-0">
               {[
-                { n: "01", t: "diseño personalizado", d: "elegimos juntos peso, textura y terminación" },
-                { n: "02", t: "fundición y forjado", d: "trabajamos el metal en nuestra propia mesa" },
-                { n: "03", t: "pulido y grabado", d: "las marcas que la hacen única, tuya" },
+                { n: "01", t: "nos escribís", d: "mandanos una idea, una foto o la medida" },
+                { n: "02", t: "te asesoramos", d: "vemos material, ancho, acabado y presupuesto" },
+                { n: "03", t: "la hacemos", d: "la alianza sale de nuestro taller lista para retirar" },
               ].map((s, i) => (
                 <Reveal key={s.n} delay={i * 100}>
                   <li className="flex items-baseline gap-6 py-5 border-b border-soft">
@@ -188,7 +188,7 @@ const Cuore = () => {
 
             <Reveal delay={400}>
               <a
-                href={getWaLink("hola cuore, quería pedir un presupuesto por alianzas")}
+                href={getWaLink("hola cuore, queria pedir un presupuesto por alianzas")}
                 target="_blank"
                 rel="noreferrer"
                 className="mt-10 inline-block text-accent text-xs font-bold uppercase tracking-[0.3em] border-b border-accent/30 pb-1 hover:border-accent transition-colors"
@@ -218,19 +218,19 @@ const Cuore = () => {
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-32 gap-12">
             <Reveal>
               <div>
-                <span className="text-[10px] uppercase tracking-[0.5em] text-accent mb-6 block font-bold">colección</span>
-                <h2 className="font-heading text-6xl text-lowercase tracking-tight">piezas icónicas</h2>
+                <span className="text-[10px] uppercase tracking-[0.5em] text-accent mb-6 block font-bold">joyas</span>
+                <h2 className="font-heading text-6xl text-lowercase tracking-tight">lo que más nos piden</h2>
               </div>
             </Reveal>
             <Reveal delay={200}>
-              <a href={mainContact} className="text-[10px] font-bold uppercase tracking-[0.3em] border-b border-soft pb-2 hover:text-accent transition-colors">hablar con nosotros</a>
+              <a href={mainContact} className="text-[10px] font-bold uppercase tracking-[0.3em] border-b border-soft pb-2 hover:text-accent transition-colors">consultar stock</a>
             </Reveal>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-20 stagger-grid">
             {iconicPieces.map((p, i) => (
               <Reveal key={p.name} delay={i * 150}>
-                <div className="group cursor-pointer">
+                <a href={getWaLink(p.msg)} target="_blank" rel="noreferrer" className="group block">
                   <div className="aspect-[3/4] bg-background border border-soft overflow-hidden mb-10 transition-all duration-1000 group-hover:shadow-warm">
                     <img 
                       src={p.image} 
@@ -242,7 +242,7 @@ const Cuore = () => {
                     <h3 className="font-heading text-3xl text-lowercase tracking-tight leading-none">{p.name}</h3>
                     <p className="text-[9px] uppercase tracking-[0.3em] text-foreground/40 font-bold italic">{p.description}</p>
                   </div>
-                </div>
+                </a>
               </Reveal>
             ))}
           </div>
@@ -256,16 +256,16 @@ const Cuore = () => {
             <Reveal>
               <div>
                 <span className="text-accent uppercase tracking-[0.3em] text-[11px] block mb-5 font-bold">
-                  curaduría de tiempo
+                  relojes
                 </span>
                 <h2 className="font-heading text-4xl md:text-5xl text-background text-lowercase leading-tight">
-                  más de treinta marcas en vitrina
+                  casio y otras marcas
                 </h2>
               </div>
             </Reveal>
             <Reveal delay={200}>
               <p className="text-background/50 max-w-xs text-sm italic text-lowercase leading-relaxed">
-                somos especialistas en casio. pedinos foto del modelo que buscás por whatsapp.
+                si viste un modelo, mandanos captura por whatsapp. te decimos si está disponible o qué alternativas hay.
               </p>
             </Reveal>
           </div>
@@ -275,20 +275,20 @@ const Cuore = () => {
               {
                 img: "https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?q=80&w=800&h=800&auto=format&fit=crop",
                 cat: "edifice",
-                title: "líneas clásicas",
-                desc: "acero y precisión japonesa, para la jornada larga",
+                title: "para todos los días",
+                desc: "modelos de acero, digitales y analógicos",
               },
               {
                 img: "https://images.unsplash.com/photo-1522337360788-8b13df772ec2?q=80&w=800&h=800&auto=format&fit=crop",
-                cat: "colección vintage",
-                title: "íconos del tiempo",
-                desc: "modelos que nunca pasan de moda, en bronce y oro",
+                cat: "vintage",
+                title: "retro y clásicos",
+                desc: "los casio de siempre y modelos fáciles de combinar",
               },
               {
                 img: "https://images.unsplash.com/photo-1544006659-f0b21f04cb1d?q=80&w=800&h=800&auto=format&fit=crop",
                 cat: "g-shock",
-                title: "resistencia austral",
-                desc: "diseñados para el frío y el viento de tierra del fuego",
+                title: "para uso fuerte",
+                desc: "opciones resistentes para trabajo, estudio o deporte",
               },
             ].map((w, i) => (
               <Reveal key={w.cat} delay={i * 150}>
@@ -296,7 +296,7 @@ const Cuore = () => {
                   <div className="aspect-square overflow-hidden mb-10 bg-background/5 border border-background/5">
                     <img
                       src={w.img}
-                      alt={`${w.title} — ${w.cat}`}
+                      alt={`${w.title} - ${w.cat}`}
                       className="w-full h-full object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-[1.05]"
                     />
                   </div>
@@ -327,7 +327,7 @@ const Cuore = () => {
               <dl className="space-y-6 text-sm">
                 {[
                   ["dirección", "av. belgrano 616, río grande"],
-                  ["horarios", "lunes a sábado · 10:00–13:00 / 16:00–20:30"],
+                  ["horarios", "lunes a sábado · 10:00-13:00 / 16:00-20:30"],
                   ["whatsapp", "+54 2964 557378"],
                   ["instagram", "@joyeria.relojeria.cuore"],
                 ].map(([k, v]) => (
@@ -341,7 +341,7 @@ const Cuore = () => {
             <Reveal delay={400}>
               <div className="mt-12 flex flex-wrap gap-6">
                 <a
-                  href={getWaLink("hola cuore, quería consultar para pasar por el local")}
+                  href={getWaLink("hola cuore, queria consultar para pasar por el local")}
                   target="_blank"
                   rel="noreferrer"
                   className="bg-accent text-background px-8 py-5 text-[10px] tracking-[0.3em] uppercase font-bold hover:bg-tierra transition-colors"
@@ -390,7 +390,7 @@ const Cuore = () => {
             </div>
             <div className="pt-16 border-t border-soft flex flex-col md:flex-row justify-between items-center gap-8 text-[9px] uppercase tracking-[0.3em] text-foreground/20 font-bold">
               <p>© {new Date().getFullYear()} cuore joyería · río grande</p>
-              <p className="italic">oficio patagónico de herencia</p>
+              <p className="italic">escribinos por whatsapp</p>
             </div>
           </Reveal>
         </div>
