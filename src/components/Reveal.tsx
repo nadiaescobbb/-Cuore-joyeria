@@ -11,18 +11,18 @@ interface RevealProps {
   children: ReactNode;
   className?: string;
   delay?: number;
-  as?: "div" | "section" | "h1" | "h2" | "h3" | "p" | "span" | "li" | "a";
 }
 
-export const Reveal = ({ children, className, delay = 0, as: Tag = "div" }: RevealProps) => {
-  const ref = useReveal<HTMLElement>();
+export const Reveal = ({ children, className, delay = 0 }: RevealProps) => {
+  const ref = useReveal<HTMLDivElement>();
+
   return (
-    <Tag
-      ref={ref as any}
+    <div
+      ref={ref}
       className={cn("reveal", className)}
-      style={{ ["--delay" as any]: `${delay}ms` }}
+      style={{ "--delay": `${delay}ms` } as React.CSSProperties}
     >
       {children}
-    </Tag>
+    </div>
   );
 };

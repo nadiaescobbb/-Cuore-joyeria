@@ -5,11 +5,11 @@
   --font-heading: "Lora", "serif";
   --font-body: "Inter", "system-ui", sans-serif;
 
-  --color-background: #FAF6EE; /* hueso */
-  --color-surface: #E8DCC8;    /* arena */
-  --color-foreground: #1C1814; /* carbón */
-  --color-accent: #A07848;     /* bronce */
-  --color-tierra: #C4A882;     /* tierra */
+  --color-background: #FAF6EE;
+  --color-surface: #E8DCC8;
+  --color-foreground: #1C1814;
+  --color-accent: #A07848;
+  --color-tierra: #C4A882;
   --color-border: rgba(28, 24, 20, 0.08);
 
   --animate-reveal: reveal 1.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -39,12 +39,16 @@
     letter-spacing: -0.015em;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-heading font-normal leading-[1.15];
     letter-spacing: -0.04em;
   }
 
-  /* Custom Scrollbar - Cuore Maison Style */
   ::-webkit-scrollbar {
     width: 6px;
   }
@@ -87,7 +91,6 @@
     pointer-events: none;
   }
 
-  /* Editorial Layouts */
   .stagger-grid > *:nth-child(even) {
     @apply translate-y-16;
   }
@@ -112,4 +115,3 @@
     }
   }
 }
-

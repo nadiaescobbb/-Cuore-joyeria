@@ -1,5 +1,5 @@
 import { Reveal } from "../components/Reveal";
-import { ArrowUpRightIcon, ArrowRightIcon, InstagramIcon, ClockIcon, MapPinIcon, CreditCardIcon, SearchIcon, HeartIcon, UserIcon, ShoppingBagIcon } from "../components/Icons";
+import { SearchIcon, HeartIcon, UserIcon, ShoppingBagIcon } from "../components/Icons";
 import { useEffect } from "react";
 
 const waNumber = "542964557378";
@@ -59,7 +59,6 @@ const Cuore = () => {
     <div className="min-h-screen bg-background text-foreground font-body selection:bg-accent/10 overflow-x-hidden">
       <div className="bg-noise fixed inset-0 z-0 pointer-events-none" />
       
-      {/* Top Bar - Quiet Authority */}
       <div className="relative z-50 bg-background/50 backdrop-blur-sm py-2 text-center border-b border-soft">
         <p className="text-[9px] uppercase tracking-[0.4em] text-accent/70 font-medium">
           maison artesanal · río grande, patagonia
@@ -67,7 +66,6 @@ const Cuore = () => {
       </div>
 
 
-      {/* Navigation - Editorial Balance */}
       <header className="relative z-50 bg-background/80 backdrop-blur-md border-b border-soft sticky top-0">
         <div className="mx-auto max-w-[1400px] px-6 lg:px-12 h-20 flex items-center justify-between">
           <div className="flex-1 flex gap-10 items-center">
@@ -97,7 +95,6 @@ const Cuore = () => {
         </div>
       </header>
 
-      {/* Hero Section - Invocation (Fuego Austral) */}
       <header id="top" className="relative h-[100svh] min-h-[640px] w-full flex items-end overflow-hidden">
         <img 
           src="/images/HERO.png" 
@@ -150,13 +147,11 @@ const Cuore = () => {
           </Reveal>
         </div>
 
-        {/* Scroll Indicator */}
         <div className="absolute bottom-10 right-12 flex flex-col items-center gap-4 text-background/20">
           <div className="w-px h-12 bg-background/10" />
         </div>
       </header>
 
-      {/* Craft Section - Oficio Real (Steps) */}
       <section id="oficio" className="py-24 md:py-32 bg-background border-y border-soft overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
           <div className="lg:col-span-5 order-2 lg:order-1">
@@ -218,7 +213,6 @@ const Cuore = () => {
         </div>
       </section>
 
-      {/* Iconic Pieces - Desire (Staggered Editorial) */}
       <section id="piezas" className="py-24 lg:py-48 bg-surface/30 border-y border-soft">
         <div className="mx-auto max-w-[1400px] px-6 lg:px-12">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-32 gap-12">
@@ -255,7 +249,6 @@ const Cuore = () => {
         </div>
       </section>
 
-      {/* Watches Section - Specialized Curation */}
       <section id="relojes" className="py-24 md:py-32 bg-foreground relative overflow-hidden">
         <div className="absolute inset-0 bg-noise opacity-10 pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -319,7 +312,6 @@ const Cuore = () => {
         </div>
       </section>
 
-      {/* Visit Section - Personal Invitation & Social Proof */}
       <section id="visita" className="py-24 md:py-32 bg-background border-t border-soft">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-start">
           <div>
@@ -386,7 +378,6 @@ const Cuore = () => {
       </section>
 
 
-      {/* Footer - Final Authority */}
       <footer className="py-24 bg-surface/20 border-t border-soft">
         <div className="mx-auto max-w-[1400px] px-6 lg:px-12 text-center">
           <Reveal>
