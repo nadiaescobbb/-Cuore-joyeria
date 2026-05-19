@@ -65,6 +65,11 @@ const catalogItems = [
   },
 ];
 
+const featuredPiece = catalogItems[1];
+const displayPieces = catalogItems.filter(
+  (piece) => piece.name !== featuredPiece.name,
+);
+
 const quickCategories = [
   {
     title: "quiero regalar",
@@ -296,22 +301,22 @@ const Cuore = () => {
         className="relative z-10 border-b border-soft bg-background py-12 md:py-20"
       >
         <div className="mx-auto max-w-[1400px] px-5 lg:px-12">
-          <div className="mb-7 flex flex-col gap-5 md:mb-10 md:flex-row md:items-end md:justify-between">
+          <div className="mb-8 flex flex-col gap-5 md:mb-12 md:flex-row md:items-end md:justify-between">
             <div>
-              <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-accent">
-                catálogo consultable
+              <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-accent md:tracking-[0.28em]">
+                vidriera cuore
               </p>
-              <h2 className="mt-3 max-w-3xl font-heading text-4xl leading-none text-lowercase md:text-6xl">
-                tocá una pieza y consultá por whatsapp
+              <h2 className="mt-3 max-w-3xl font-heading text-4xl leading-[0.98] text-lowercase md:text-6xl">
+                piezas para mirar, guardar y preguntar
               </h2>
             </div>
             <p className="max-w-sm text-sm leading-relaxed text-foreground/55">
-              no es carrito: es vidriera. elegí una referencia y te decimos
-              precio, stock o modelos parecidos.
+              si algo te gusta, mandanos la referencia por whatsapp y te decimos
+              disponibilidad, precio o modelos parecidos.
             </p>
           </div>
 
-          <div className="mb-5 flex gap-2 overflow-x-auto pb-2 text-[10px] font-bold uppercase tracking-[0.14em] text-foreground/45">
+          <div className="mb-7 flex gap-2 overflow-x-auto pb-2 text-[10px] font-bold uppercase tracking-[0.12em] text-foreground/45 md:tracking-[0.14em]">
             {["plata 925", "regalos", "alianzas", "relojes", "taller"].map(
               (tag) => (
                 <a
@@ -327,42 +332,80 @@ const Cuore = () => {
             )}
           </div>
 
-          <p className="mb-3 text-xs text-foreground/45 sm:hidden">
-            deslizá para ver más piezas
-          </p>
-
-          <div className="-mx-5 flex snap-x gap-3 overflow-x-auto px-5 pb-2 sm:mx-0 sm:grid sm:grid-cols-2 sm:gap-5 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-4">
-            {catalogItems.map((piece) => (
-              <a
-                key={piece.name}
-                href={getWaLink(piece.msg)}
-                target="_blank"
-                rel="noreferrer"
-                className="group min-w-[48vw] snap-start sm:min-w-0"
-              >
-                <div className="aspect-[4/5] overflow-hidden bg-surface">
-                  <img
-                    src={piece.image}
-                    alt={piece.name}
-                    loading="lazy"
-                    decoding="async"
-                    className="h-full w-full object-cover grayscale-[0.12] transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
-                  />
+          <div className="grid gap-8 lg:grid-cols-[1.05fr_1.7fr] lg:items-start">
+            <a
+              href={getWaLink(featuredPiece.msg)}
+              target="_blank"
+              rel="noreferrer"
+              className="group block border-y border-soft py-5 lg:border-y-0 lg:py-0"
+            >
+              <div className="aspect-[4/5] overflow-hidden bg-surface">
+                <img
+                  src={featuredPiece.image}
+                  alt={featuredPiece.name}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-full w-full object-cover grayscale-[0.08] transition-all duration-1000 group-hover:scale-105 group-hover:grayscale-0"
+                />
+              </div>
+              <div className="mt-5 flex items-end justify-between gap-5">
+                <div>
+                  <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-accent">
+                    pieza destacada
+                  </p>
+                  <h3 className="mt-2 font-heading text-4xl leading-none text-lowercase">
+                    {featuredPiece.name}
+                  </h3>
+                  <p className="mt-2 text-sm text-foreground/52">
+                    {featuredPiece.description}
+                  </p>
                 </div>
-                <p className="mt-3 font-heading text-2xl leading-none text-lowercase">
-                  {piece.name}
-                </p>
-                <p className="mt-2 text-[10px] font-bold uppercase tracking-[0.16em] text-accent">
-                  {piece.category}
-                </p>
-                <p className="mt-1 text-[9px] font-bold uppercase tracking-[0.16em] text-foreground/40 md:tracking-[0.22em]">
-                  {piece.description}
-                </p>
-                <span className="mt-4 inline-block text-[10px] font-bold uppercase tracking-[0.14em] text-foreground/45 transition-colors group-hover:text-accent">
-                  consultar por whatsapp →
+                <span className="hidden text-[10px] font-bold uppercase tracking-[0.14em] text-foreground/45 transition-colors group-hover:text-accent sm:block">
+                  pedir info →
                 </span>
-              </a>
-            ))}
+              </div>
+            </a>
+
+            <div>
+              <p className="mb-3 text-xs text-foreground/45 sm:hidden">
+                deslizá para ver más piezas
+              </p>
+              <div className="-mx-5 flex snap-x gap-3 overflow-x-auto px-5 pb-2 sm:mx-0 sm:grid sm:grid-cols-2 sm:gap-x-5 sm:gap-y-8 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-3">
+                {displayPieces.map((piece) => (
+                  <a
+                    key={piece.name}
+                    href={getWaLink(piece.msg)}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group min-w-[46vw] snap-start sm:min-w-0"
+                  >
+                    <div className="aspect-[4/5] overflow-hidden bg-surface">
+                      <img
+                        src={piece.image}
+                        alt={piece.name}
+                        loading="lazy"
+                        decoding="async"
+                        className="h-full w-full object-cover grayscale-[0.12] transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
+                      />
+                    </div>
+                    <div className="mt-3">
+                      <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-accent">
+                        {piece.category}
+                      </p>
+                      <h3 className="mt-1 font-heading text-2xl leading-none text-lowercase">
+                        {piece.name}
+                      </h3>
+                      <p className="mt-1 text-xs text-foreground/45">
+                        {piece.description}
+                      </p>
+                      <span className="mt-3 inline-block text-[10px] font-bold uppercase tracking-[0.12em] text-foreground/40 transition-colors group-hover:text-accent">
+                        preguntar →
+                      </span>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
 
           <div className="mt-5 grid gap-2 border-t border-soft pt-5 text-xs text-foreground/52 sm:grid-cols-3">
