@@ -306,8 +306,8 @@ const Cuore = () => {
               </h2>
             </div>
             <p className="max-w-sm text-sm leading-relaxed text-foreground/55">
-              no es carrito: es vidriera. elegí una referencia y te decimos
-              precio, stock o modelos parecidos.
+              si algo te gusta, mandanos la referencia por whatsapp y te decimos
+              disponibilidad, precio o modelos parecidos.
             </p>
           </div>
 
