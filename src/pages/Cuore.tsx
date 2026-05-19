@@ -6,30 +6,62 @@ const getWaLink = (msg: string) =>
   `https://wa.me/${waNumber}?text=${encodeURIComponent(msg)}`;
 const mainContact = getWaLink("hola cuore, queria ver opciones disponibles");
 
-const iconicPieces = [
+const catalogItems = [
   {
     name: "anillos de plata",
+    category: "plata 925",
     description: "para usar todos los días",
     image: "/images/plata.avif",
     msg: "hola cuore, queria ver anillos de plata 925 disponibles",
   },
   {
     name: "alianzas a medida",
+    category: "alianzas",
     description: "con grabado",
     image: "/images/alianzas.avif",
     msg: "hola cuore, queria cotizar alianzas",
   },
   {
     name: "collares y dijes",
+    category: "regalos",
     description: "regalos fáciles",
     image: "/images/collarportada.avif",
     msg: "hola cuore, queria ver collares y dijes disponibles",
   },
   {
     name: "casio retro",
+    category: "relojes",
     description: "clásicos que combinan",
     image: "/images/reloj.avif",
     msg: "hola cuore, queria ver modelos casio disponibles",
+  },
+  {
+    name: "casio edifice",
+    category: "relojes",
+    description: "acero y analógicos",
+    image: "/images/edefice1.avif",
+    msg: "hola cuore, queria consultar por relojes casio edifice",
+  },
+  {
+    name: "casio vintage",
+    category: "relojes",
+    description: "retro de todos los días",
+    image: "/images/clasico.avif",
+    msg: "hola cuore, queria consultar por relojes casio vintage",
+  },
+  {
+    name: "g-shock",
+    category: "relojes",
+    description: "para uso fuerte",
+    image: "/images/gshock.avif",
+    msg: "hola cuore, queria consultar por relojes g-shock",
+  },
+  {
+    name: "trabajos de taller",
+    category: "taller",
+    description: "grabado y ajustes",
+    image: "/images/craf.avif",
+    msg: "hola cuore, queria consultar por un trabajo de taller",
   },
 ];
 
@@ -57,27 +89,6 @@ const quickCategories = [
     text: "mandanos captura y vemos si está o qué alternativa hay",
     cta: "mandar captura",
     msg: "hola cuore, queria mandar una captura para consultar disponibilidad",
-  },
-];
-
-const giftMoments = [
-  {
-    title: "para todos los días",
-    text: "piezas simples, fáciles de combinar y listas para retirar",
-    image: "/images/collarportada.avif",
-    msg: "hola cuore, queria ver joyas para todos los dias",
-  },
-  {
-    title: "para regalar",
-    text: "si no sabés qué elegir, te pasamos opciones según presupuesto",
-    image: "/images/plata.avif",
-    msg: "hola cuore, queria opciones para regalar",
-  },
-  {
-    title: "para una fecha",
-    text: "cumple, aniversario, egreso o detalle de último momento",
-    image: "/images/alianzas.avif",
-    msg: "hola cuore, queria ver opciones para una fecha especial",
   },
 ];
 
@@ -147,13 +158,16 @@ const Cuore = () => {
           <div className="flex-1 flex items-center">
             <nav className="hidden md:flex gap-10 text-[10px] uppercase tracking-[0.3em] text-foreground/45 font-semibold">
               <a
+                href="#catalogo"
+                className="hover:text-accent transition-colors"
+              >
+                catálogo
+              </a>
+              <a
                 href="#categorias"
                 className="hover:text-accent transition-colors"
               >
-                regalos
-              </a>
-              <a href="#piezas" className="hover:text-accent transition-colors">
-                plata 925
+                consultas
               </a>
               <a href="#oficio" className="hover:text-accent transition-colors">
                 alianzas
@@ -166,10 +180,10 @@ const Cuore = () => {
               </a>
             </nav>
             <a
-              href="#piezas"
+              href="#catalogo"
               className="md:hidden text-[9px] uppercase tracking-[0.3em] text-foreground/45 font-semibold hover:text-accent transition-colors"
             >
-              ver piezas
+              catálogo
             </a>
           </div>
 
@@ -254,65 +268,77 @@ const Cuore = () => {
                 </span>
               </a>
               <a
-                href="#categorias"
+                href="#catalogo"
                 className="inline-flex min-h-14 items-center justify-center gap-3 border border-background/25 px-7 py-4 text-center text-[10px] font-bold uppercase tracking-[0.14em] text-background backdrop-blur-sm transition-colors hover:border-accent hover:text-accent md:tracking-[0.2em]"
               >
-                elegir por dónde empezar
+                ver catálogo
               </a>
             </div>
             <p className="mt-4 text-xs text-background/55">
               podés mandar captura, medida o presupuesto
             </p>
           </Reveal>
-
-          <Reveal delay={500}>
-            <div className="mt-10 grid grid-cols-2 gap-px overflow-hidden border border-background/10 bg-background/10 backdrop-blur-sm md:max-w-3xl md:grid-cols-4">
-              {trustPoints.map((point) => (
-                <div
-                  key={point}
-                  className="bg-foreground/45 px-4 py-4 text-[10px] font-bold uppercase tracking-[0.12em] text-background/75 md:tracking-[0.18em]"
-                >
-                  {point}
-                </div>
-              ))}
-            </div>
-          </Reveal>
         </div>
       </header>
 
-      <section className="relative z-10 border-b border-soft bg-background py-7 md:py-10">
+      <section className="relative z-10 border-b border-soft bg-background py-4">
+        <div className="mx-auto grid max-w-[1400px] grid-cols-2 gap-px px-5 text-[10px] font-bold uppercase tracking-[0.12em] text-foreground/55 md:grid-cols-4 md:px-12 md:tracking-[0.18em]">
+          {trustPoints.map((point) => (
+            <div key={point} className="bg-surface/30 px-4 py-4">
+              {point}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section
+        id="catalogo"
+        className="relative z-10 border-b border-soft bg-background py-12 md:py-20"
+      >
         <div className="mx-auto max-w-[1400px] px-5 lg:px-12">
-          <div className="mb-5 flex items-end justify-between gap-5">
+          <div className="mb-7 flex flex-col gap-5 md:mb-10 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-accent">
-                vistazo rápido
+                catálogo consultable
               </p>
-              <h2 className="mt-2 font-heading text-3xl leading-none text-lowercase md:text-4xl">
-                lo que más nos piden por whatsapp
+              <h2 className="mt-3 max-w-3xl font-heading text-4xl leading-none text-lowercase md:text-6xl">
+                tocá una pieza y consultá por whatsapp
               </h2>
             </div>
-            <a
-              href={mainContact}
-              target="_blank"
-              rel="noreferrer"
-              className="hidden text-[10px] font-bold uppercase tracking-[0.22em] text-foreground/45 transition-colors hover:text-accent sm:block"
-            >
-              ver más opciones
-            </a>
+            <p className="max-w-sm text-sm leading-relaxed text-foreground/55">
+              no es carrito: es vidriera. elegí una referencia y te decimos
+              precio, stock o modelos parecidos.
+            </p>
+          </div>
+
+          <div className="mb-5 flex gap-2 overflow-x-auto pb-2 text-[10px] font-bold uppercase tracking-[0.14em] text-foreground/45">
+            {["plata 925", "regalos", "alianzas", "relojes", "taller"].map(
+              (tag) => (
+                <a
+                  key={tag}
+                  href={getWaLink(`hola cuore, queria consultar por ${tag}`)}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="whitespace-nowrap border border-soft px-4 py-2 transition-colors hover:border-accent hover:text-accent"
+                >
+                  {tag}
+                </a>
+              ),
+            )}
           </div>
 
           <p className="mb-3 text-xs text-foreground/45 sm:hidden">
             deslizá para ver más piezas
           </p>
 
-          <div className="-mx-5 flex snap-x gap-3 overflow-x-auto px-5 pb-2 sm:mx-0 sm:grid sm:grid-cols-4 sm:overflow-visible sm:px-0 sm:pb-0">
-            {iconicPieces.map((piece) => (
+          <div className="-mx-5 flex snap-x gap-3 overflow-x-auto px-5 pb-2 sm:mx-0 sm:grid sm:grid-cols-2 sm:gap-5 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-4">
+            {catalogItems.map((piece) => (
               <a
                 key={piece.name}
                 href={getWaLink(piece.msg)}
                 target="_blank"
                 rel="noreferrer"
-                className="group min-w-[42vw] snap-start sm:min-w-0"
+                className="group min-w-[48vw] snap-start sm:min-w-0"
               >
                 <div className="aspect-[4/5] overflow-hidden bg-surface">
                   <img
@@ -326,9 +352,15 @@ const Cuore = () => {
                 <p className="mt-3 font-heading text-2xl leading-none text-lowercase">
                   {piece.name}
                 </p>
+                <p className="mt-2 text-[10px] font-bold uppercase tracking-[0.16em] text-accent">
+                  {piece.category}
+                </p>
                 <p className="mt-1 text-[9px] font-bold uppercase tracking-[0.16em] text-foreground/40 md:tracking-[0.22em]">
                   {piece.description}
                 </p>
+                <span className="mt-4 inline-block text-[10px] font-bold uppercase tracking-[0.14em] text-foreground/45 transition-colors group-hover:text-accent">
+                  consultar por whatsapp →
+                </span>
               </a>
             ))}
           </div>
@@ -350,7 +382,7 @@ const Cuore = () => {
             <Reveal>
               <div>
                 <span className="mb-4 block text-[10px] font-bold uppercase tracking-[0.4em] text-accent">
-                  consulta rapida
+                  consulta rápida
                 </span>
                 <h2 className="max-w-2xl font-heading text-4xl leading-tight text-lowercase md:text-6xl">
                   mandanos lo que viste y vemos opciones
@@ -393,62 +425,6 @@ const Cuore = () => {
         </div>
       </section>
 
-      <section className="relative z-10 bg-surface/20 py-16 md:py-24">
-        <div className="mx-auto max-w-[1400px] px-5 lg:px-12">
-          <div className="mb-12 max-w-3xl">
-            <Reveal>
-              <span className="mb-4 block text-[10px] font-bold uppercase tracking-[0.32em] text-accent">
-                para elegir más fácil
-              </span>
-              <h2 className="font-heading text-4xl leading-tight text-lowercase md:text-6xl">
-                para regalar, usar todos los días o salir del apuro con algo
-                lindo
-              </h2>
-            </Reveal>
-            <Reveal delay={120}>
-              <p className="mt-5 max-w-xl text-sm leading-relaxed text-foreground/58">
-                armamos la búsqueda según la ocasión. vos mandás el mensaje y te
-                acercamos opciones concretas.
-              </p>
-            </Reveal>
-          </div>
-
-          <div className="grid gap-px overflow-hidden border border-soft bg-foreground/10 md:grid-cols-3">
-            {giftMoments.map((item, i) => (
-              <Reveal key={item.title} delay={i * 120}>
-                <a
-                  href={getWaLink(item.msg)}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="group block bg-background"
-                >
-                  <div className="aspect-[4/5] overflow-hidden bg-surface">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      loading="lazy"
-                      decoding="async"
-                      className="h-full w-full object-cover grayscale-[0.15] transition-all duration-1000 group-hover:scale-105 group-hover:grayscale-0"
-                    />
-                  </div>
-                  <div className="p-6 md:p-8">
-                    <h3 className="font-heading text-3xl text-lowercase">
-                      {item.title}
-                    </h3>
-                    <p className="mt-3 min-h-[3rem] text-sm leading-relaxed text-foreground/56">
-                      {item.text}
-                    </p>
-                    <span className="mt-7 inline-block text-[10px] font-bold uppercase tracking-[0.16em] text-accent transition-colors group-hover:text-tierra md:tracking-[0.22em]">
-                      pedir opciones →
-                    </span>
-                  </div>
-                </a>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section
         id="oficio"
         className="py-20 md:py-28 bg-surface/25 border-y border-soft overflow-hidden"
@@ -460,7 +436,7 @@ const Cuore = () => {
                 alianzas
               </span>
               <h2 className="font-heading text-4xl md:text-5xl text-foreground mb-8 italic text-lowercase">
-                alianzas hechas aca
+                alianzas hechas acá
               </h2>
               <p className="max-w-[44ch] text-foreground/70 mb-10 leading-relaxed text-lowercase">
                 elegís material, medida, ancho y grabado. las hacemos en nuestro
@@ -529,68 +505,6 @@ const Cuore = () => {
                 <div className="absolute inset-0 bg-accent/5 pointer-events-none" />
               </div>
             </Reveal>
-          </div>
-        </div>
-      </section>
-
-      <section
-        id="piezas"
-        className="py-20 lg:py-32 bg-background border-y border-soft"
-      >
-        <div className="mx-auto max-w-[1400px] px-5 lg:px-12">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8 md:mb-24">
-            <Reveal>
-              <div>
-                <span className="text-[10px] uppercase tracking-[0.4em] text-accent mb-6 block font-bold">
-                  plata 925 y piezas listas
-                </span>
-                <h2 className="font-heading text-5xl text-lowercase tracking-tight md:text-6xl">
-                  piezas que salen siempre
-                </h2>
-              </div>
-            </Reveal>
-            <Reveal delay={200}>
-              <a
-                href={mainContact}
-                className="text-[10px] font-bold uppercase tracking-[0.16em] border-b border-soft pb-2 hover:text-accent transition-colors md:tracking-[0.25em]"
-              >
-                ver qué hay disponible
-              </a>
-            </Reveal>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-14">
-            {iconicPieces.map((p, i) => (
-              <Reveal key={p.name} delay={i * 150}>
-                <a
-                  href={getWaLink(p.msg)}
-                  target="_blank"
-                  rel="noreferrer"
-                  className={`group block ${i % 2 !== 0 ? "sm:translate-y-16" : ""}`}
-                >
-                  <div className="aspect-[3/4] bg-background border border-soft overflow-hidden mb-6 transition-all duration-1000 group-hover:shadow-warm">
-                    <img
-                      src={p.image}
-                      alt={p.name}
-                      loading="lazy"
-                      decoding="async"
-                      className="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
-                    />
-                  </div>
-                  <div className="space-y-2 px-2">
-                    <h3 className="font-heading text-3xl text-lowercase tracking-tight leading-none">
-                      {p.name}
-                    </h3>
-                    <p className="text-[9px] uppercase tracking-[0.3em] text-foreground/40 font-bold italic">
-                      {p.description}
-                    </p>
-                    <span className="inline-block pt-4 text-[10px] font-bold uppercase tracking-[0.16em] text-accent group-hover:text-tierra transition-colors md:tracking-[0.25em]">
-                      consultar si está disponible
-                    </span>
-                  </div>
-                </a>
-              </Reveal>
-            ))}
           </div>
         </div>
       </section>
@@ -828,8 +742,11 @@ const Cuore = () => {
               >
                 whatsapp
               </a>
-              <a href="#piezas" className="hover:text-accent transition-colors">
-                plata 925
+              <a
+                href="#catalogo"
+                className="hover:text-accent transition-colors"
+              >
+                catálogo
               </a>
               <a href="#oficio" className="hover:text-accent transition-colors">
                 el taller
