@@ -1,11 +1,5 @@
-import { ReactNode } from "react";
+import { type CSSProperties, type ReactNode } from "react";
 import { useReveal } from "../hooks/use-reveal";
-import { clsx, type ClassValue } from "clsx";
-import { twMerge } from "tailwind-merge";
-
-function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
-}
 
 interface RevealProps {
   children: ReactNode;
@@ -19,8 +13,8 @@ export const Reveal = ({ children, className, delay = 0 }: RevealProps) => {
   return (
     <div
       ref={ref}
-      className={cn("reveal", className)}
-      style={{ "--delay": `${delay}ms` } as React.CSSProperties}
+      className={className ? `reveal ${className}` : "reveal"}
+      style={{ "--delay": `${delay}ms` } as CSSProperties}
     >
       {children}
     </div>

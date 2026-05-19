@@ -141,7 +141,12 @@ const Cuore = () => {
         <img 
           src="/images/hero.avif" 
           alt="alianzas de oro fabricadas en el taller de cuore" 
-          className="absolute inset-0 w-full h-full object-cover opacity-80 grayscale-[0.2] group-hover:scale-105 transition-transform duration-[10s]"
+          width="1023"
+          height="1537"
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+          className="absolute inset-0 w-full h-full object-cover opacity-80 grayscale-[0.2]"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-foreground/70 via-foreground/30 to-foreground" />
         <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-transparent to-transparent" />
@@ -310,6 +315,8 @@ const Cuore = () => {
                 <img
                   src="/images/craf.avif"
                   alt="manos de joyero trabajando un anillo"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover grayscale-[0.1]"
                 />
                 <div className="absolute inset-0 bg-accent/5 pointer-events-none" />
@@ -341,6 +348,8 @@ const Cuore = () => {
                     <img 
                       src={p.image} 
                       alt={p.name} 
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000" 
                     />
                   </div>
@@ -421,6 +430,8 @@ const Cuore = () => {
                     <img
                       src={w.img}
                       alt={`${w.title} - ${w.cat}`}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-[1.05]"
                     />
                   </div>

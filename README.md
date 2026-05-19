@@ -1,6 +1,6 @@
-# Joyeria Cuore
+# Joyería Cuore
 
-Sitio web de Joyeria y Relojeria Cuore.
+Sitio web de Joyería y Relojería Cuore.
 
 ## Desarrollo
 
@@ -9,7 +9,7 @@ npm install
 npm run dev
 ```
 
-## Produccion
+## Producción
 
 ```bash
 npm run build
