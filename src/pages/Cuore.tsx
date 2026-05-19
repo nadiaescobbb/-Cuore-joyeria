@@ -139,7 +139,7 @@ const Cuore = () => {
 
       <header id="top" className="relative min-h-[calc(100svh-4rem)] md:min-h-[calc(100svh-5rem)] w-full flex items-end overflow-hidden">
         <img 
-          src="/images/HERO.png" 
+          src="/images/hero.avif" 
           alt="alianzas de oro fabricadas en el taller de cuore" 
           className="absolute inset-0 w-full h-full object-cover opacity-80 grayscale-[0.2] group-hover:scale-105 transition-transform duration-[10s]"
         />
