@@ -364,12 +364,6 @@ const Cuore = () => {
               </a>
             ))}
           </div>
-
-          <div className="mt-5 grid gap-2 border-t border-soft pt-5 text-xs text-foreground/52 sm:grid-cols-3">
-            <p>Retiro en Av. Belgrano 616.</p>
-            <p>Podés consultar antes de pasar.</p>
-            <p>Envíos en toda la provincia.</p>
-          </div>
         </div>
       </section>
 
