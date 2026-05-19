@@ -195,7 +195,7 @@ const Cuore = () => {
 
       <header
         id="top"
-        className="relative min-h-[calc(100svh-4rem)] md:min-h-[calc(100svh-5rem)] w-full flex items-end overflow-hidden"
+        className="relative min-h-[calc(86svh-4rem)] md:min-h-[calc(100svh-5rem)] w-full flex items-end overflow-hidden"
       >
         <img
           src="/images/hero.avif"
@@ -279,6 +279,57 @@ const Cuore = () => {
           </Reveal>
         </div>
       </header>
+
+      <section className="relative z-10 border-b border-soft bg-background py-7 md:py-10">
+        <div className="mx-auto max-w-[1400px] px-5 lg:px-12">
+          <div className="mb-5 flex items-end justify-between gap-5">
+            <div>
+              <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-accent">
+                vistazo rápido
+              </p>
+              <h2 className="mt-2 font-heading text-3xl leading-none text-lowercase md:text-4xl">
+                algo de lo que podés pedir
+              </h2>
+            </div>
+            <a
+              href={mainContact}
+              target="_blank"
+              rel="noreferrer"
+              className="hidden text-[10px] font-bold uppercase tracking-[0.22em] text-foreground/45 transition-colors hover:text-accent sm:block"
+            >
+              ver más
+            </a>
+          </div>
+
+          <div className="-mx-5 flex snap-x gap-3 overflow-x-auto px-5 pb-2 sm:mx-0 sm:grid sm:grid-cols-4 sm:overflow-visible sm:px-0 sm:pb-0">
+            {iconicPieces.map((piece) => (
+              <a
+                key={piece.name}
+                href={getWaLink(piece.msg)}
+                target="_blank"
+                rel="noreferrer"
+                className="group min-w-[42vw] snap-start sm:min-w-0"
+              >
+                <div className="aspect-[4/5] overflow-hidden bg-surface">
+                  <img
+                    src={piece.image}
+                    alt={piece.name}
+                    loading="lazy"
+                    decoding="async"
+                    className="h-full w-full object-cover grayscale-[0.12] transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
+                  />
+                </div>
+                <p className="mt-3 font-heading text-2xl leading-none text-lowercase">
+                  {piece.name}
+                </p>
+                <p className="mt-1 text-[9px] font-bold uppercase tracking-[0.22em] text-foreground/40">
+                  {piece.description}
+                </p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section
         id="categorias"
