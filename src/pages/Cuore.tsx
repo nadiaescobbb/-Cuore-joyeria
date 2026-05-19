@@ -278,10 +278,6 @@ const Cuore = () => {
             </div>
           </Reveal>
         </div>
-
-        <div className="absolute bottom-10 right-12 flex flex-col items-center gap-4 text-background/20">
-          <div className="w-px h-12 bg-background/10" />
-        </div>
       </header>
 
       <section
