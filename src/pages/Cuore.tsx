@@ -82,10 +82,10 @@ const giftMoments = [
 ];
 
 const trustPoints = [
-  "mandanos captura",
-  "retiro en el local",
+  "respondemos por whatsapp",
+  "retiro en belgrano 616",
   "envíos en la provincia",
-  "grabado y taller propio",
+  "grabado en taller",
 ];
 
 const StickyCTA = () => {
@@ -246,7 +246,7 @@ const Cuore = () => {
                 href={getWaLink("hola cuore, queria ver opciones disponibles")}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex min-h-14 items-center justify-center gap-3 bg-accent px-7 py-4 text-center text-[10px] font-bold uppercase tracking-[0.2em] text-background transition-colors hover:bg-tierra"
+                className="inline-flex min-h-14 items-center justify-center gap-3 bg-accent px-7 py-4 text-center text-[10px] font-bold uppercase tracking-[0.14em] text-background transition-colors hover:bg-tierra md:tracking-[0.2em]"
               >
                 ver opciones por whatsapp
                 <span aria-hidden className="text-lg">
@@ -255,9 +255,9 @@ const Cuore = () => {
               </a>
               <a
                 href="#categorias"
-                className="inline-flex min-h-14 items-center justify-center gap-3 border border-background/25 px-7 py-4 text-center text-[10px] font-bold uppercase tracking-[0.2em] text-background backdrop-blur-sm transition-colors hover:border-accent hover:text-accent"
+                className="inline-flex min-h-14 items-center justify-center gap-3 border border-background/25 px-7 py-4 text-center text-[10px] font-bold uppercase tracking-[0.14em] text-background backdrop-blur-sm transition-colors hover:border-accent hover:text-accent md:tracking-[0.2em]"
               >
-                mirar categorías
+                elegir por dónde empezar
               </a>
             </div>
             <p className="mt-4 text-xs text-background/55">
@@ -270,7 +270,7 @@ const Cuore = () => {
               {trustPoints.map((point) => (
                 <div
                   key={point}
-                  className="bg-foreground/45 px-4 py-4 text-[10px] font-bold uppercase tracking-[0.18em] text-background/75"
+                  className="bg-foreground/45 px-4 py-4 text-[10px] font-bold uppercase tracking-[0.12em] text-background/75 md:tracking-[0.18em]"
                 >
                   {point}
                 </div>
@@ -288,7 +288,7 @@ const Cuore = () => {
                 vistazo rápido
               </p>
               <h2 className="mt-2 font-heading text-3xl leading-none text-lowercase md:text-4xl">
-                algo de lo que podés pedir
+                lo que más nos piden por whatsapp
               </h2>
             </div>
             <a
@@ -297,9 +297,13 @@ const Cuore = () => {
               rel="noreferrer"
               className="hidden text-[10px] font-bold uppercase tracking-[0.22em] text-foreground/45 transition-colors hover:text-accent sm:block"
             >
-              ver más
+              ver más opciones
             </a>
           </div>
+
+          <p className="mb-3 text-xs text-foreground/45 sm:hidden">
+            deslizá para ver más piezas
+          </p>
 
           <div className="-mx-5 flex snap-x gap-3 overflow-x-auto px-5 pb-2 sm:mx-0 sm:grid sm:grid-cols-4 sm:overflow-visible sm:px-0 sm:pb-0">
             {iconicPieces.map((piece) => (
@@ -322,11 +326,17 @@ const Cuore = () => {
                 <p className="mt-3 font-heading text-2xl leading-none text-lowercase">
                   {piece.name}
                 </p>
-                <p className="mt-1 text-[9px] font-bold uppercase tracking-[0.22em] text-foreground/40">
+                <p className="mt-1 text-[9px] font-bold uppercase tracking-[0.16em] text-foreground/40 md:tracking-[0.22em]">
                   {piece.description}
                 </p>
               </a>
             ))}
+          </div>
+
+          <div className="mt-5 grid gap-2 border-t border-soft pt-5 text-xs text-foreground/52 sm:grid-cols-3">
+            <p>Retiro en Av. Belgrano 616.</p>
+            <p>Podés consultar antes de pasar.</p>
+            <p>Envíos en toda la provincia.</p>
           </div>
         </div>
       </section>
@@ -373,7 +383,7 @@ const Cuore = () => {
                   <p className="max-w-[42ch] text-sm leading-relaxed text-foreground/58">
                     {item.text}
                   </p>
-                  <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-foreground/45 transition-colors group-hover:text-accent">
+                  <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-foreground/45 transition-colors group-hover:text-accent md:tracking-[0.25em]">
                     {item.cta} →
                   </span>
                 </a>
@@ -391,7 +401,8 @@ const Cuore = () => {
                 para elegir más fácil
               </span>
               <h2 className="font-heading text-4xl leading-tight text-lowercase md:text-6xl">
-                para regalar, usar todos los días o resolver hoy
+                para regalar, usar todos los días o salir del apuro con algo
+                lindo
               </h2>
             </Reveal>
             <Reveal delay={120}>
@@ -427,7 +438,7 @@ const Cuore = () => {
                     <p className="mt-3 min-h-[3rem] text-sm leading-relaxed text-foreground/56">
                       {item.text}
                     </p>
-                    <span className="mt-7 inline-block text-[10px] font-bold uppercase tracking-[0.22em] text-accent transition-colors group-hover:text-tierra">
+                    <span className="mt-7 inline-block text-[10px] font-bold uppercase tracking-[0.16em] text-accent transition-colors group-hover:text-tierra md:tracking-[0.22em]">
                       pedir opciones →
                     </span>
                   </div>
@@ -498,7 +509,7 @@ const Cuore = () => {
                 href={getWaLink("hola cuore, queria cotizar alianzas")}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-10 inline-flex min-h-12 items-center justify-center bg-foreground px-6 text-[10px] font-bold uppercase tracking-[0.25em] text-background transition-colors hover:bg-accent"
+                className="mt-10 inline-flex min-h-12 items-center justify-center bg-foreground px-6 text-[10px] font-bold uppercase tracking-[0.16em] text-background transition-colors hover:bg-accent md:tracking-[0.25em]"
               >
                 cotizar alianzas →
               </a>
@@ -541,7 +552,7 @@ const Cuore = () => {
             <Reveal delay={200}>
               <a
                 href={mainContact}
-                className="text-[10px] font-bold uppercase tracking-[0.25em] border-b border-soft pb-2 hover:text-accent transition-colors"
+                className="text-[10px] font-bold uppercase tracking-[0.16em] border-b border-soft pb-2 hover:text-accent transition-colors md:tracking-[0.25em]"
               >
                 ver qué hay disponible
               </a>
@@ -573,8 +584,8 @@ const Cuore = () => {
                     <p className="text-[9px] uppercase tracking-[0.3em] text-foreground/40 font-bold italic">
                       {p.description}
                     </p>
-                    <span className="inline-block pt-4 text-[10px] font-bold uppercase tracking-[0.25em] text-accent group-hover:text-tierra transition-colors">
-                      preguntar disponibilidad
+                    <span className="inline-block pt-4 text-[10px] font-bold uppercase tracking-[0.16em] text-accent group-hover:text-tierra transition-colors md:tracking-[0.25em]">
+                      consultar si está disponible
                     </span>
                   </div>
                 </a>
@@ -611,9 +622,9 @@ const Cuore = () => {
                   href={getWaLink("hola cuore, queria consultar por un reloj")}
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-6 inline-flex min-h-12 items-center justify-center bg-accent px-6 text-[10px] font-bold uppercase tracking-[0.25em] text-background transition-colors hover:bg-tierra"
+                  className="mt-6 inline-flex min-h-12 items-center justify-center bg-accent px-6 text-[10px] font-bold uppercase tracking-[0.16em] text-background transition-colors hover:bg-tierra md:tracking-[0.25em]"
                 >
-                  consultar reloj →
+                  ver relojes disponibles →
                 </a>
               </div>
             </Reveal>
@@ -667,8 +678,8 @@ const Cuore = () => {
                   <p className="text-sm text-background/45 max-w-[32ch] text-lowercase leading-relaxed">
                     {w.desc}
                   </p>
-                  <span className="mt-8 inline-block text-[10px] font-bold uppercase tracking-[0.25em] text-accent">
-                    preguntar disponibilidad →
+                  <span className="mt-8 inline-block text-[10px] font-bold uppercase tracking-[0.16em] text-accent md:tracking-[0.25em]">
+                    consultar si está disponible →
                   </span>
                 </a>
               </Reveal>
@@ -685,7 +696,7 @@ const Cuore = () => {
           <div>
             <Reveal>
               <span className="text-accent uppercase tracking-[0.3em] text-[11px] mb-5 block font-bold">
-                local y confianza
+                vení al local
               </span>
               <h2 className="font-heading text-4xl md:text-6xl text-foreground text-lowercase mb-6 leading-tight">
                 mandanos mensaje o vení
@@ -761,7 +772,7 @@ const Cuore = () => {
                   )}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex min-h-14 items-center justify-center bg-accent px-8 py-4 text-center text-[10px] font-bold uppercase tracking-[0.3em] text-background transition-colors hover:bg-tierra"
+                  className="inline-flex min-h-14 items-center justify-center bg-accent px-8 py-4 text-center text-[10px] font-bold uppercase tracking-[0.16em] text-background transition-colors hover:bg-tierra md:tracking-[0.3em]"
                 >
                   consultar antes de pasar
                 </a>
@@ -769,7 +780,7 @@ const Cuore = () => {
                   href="https://instagram.com/joyeria.relojeria.cuore"
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex min-h-14 items-center justify-center border border-soft px-8 py-4 text-center text-[10px] font-bold uppercase tracking-[0.3em] text-foreground transition-colors hover:border-accent hover:text-accent"
+                  className="inline-flex min-h-14 items-center justify-center border border-soft px-8 py-4 text-center text-[10px] font-bold uppercase tracking-[0.16em] text-foreground transition-colors hover:border-accent hover:text-accent md:tracking-[0.3em]"
                 >
                   ver instagram
                 </a>
