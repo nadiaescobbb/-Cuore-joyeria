@@ -516,23 +516,26 @@ const Cuore = () => {
                   relojes
                 </span>
                 <h2 className="font-heading text-4xl md:text-5xl text-background text-lowercase leading-tight">
-                  casio, clásicos y modelos para todos los días
+                  expertos en casio y más de 30 marcas
                 </h2>
               </div>
             </Reveal>
             <Reveal delay={200}>
               <div className="max-w-sm">
                 <p className="text-sm leading-relaxed text-background/58">
-                  si viste un modelo, mandanos captura. te decimos si está
-                  disponible o qué alternativa tenemos.
+                  trabajamos clásicos, digitales, edifice, g-shock y otras
+                  líneas. mandanos captura del modelo y vemos stock o una
+                  alternativa similar.
                 </p>
                 <a
-                  href={getWaLink("hola cuore, queria consultar por un reloj")}
+                  href={getWaLink(
+                    "hola cuore, queria consultar por relojes casio y otras marcas",
+                  )}
                   target="_blank"
                   rel="noreferrer"
                   className="mt-6 inline-flex min-h-12 items-center justify-center bg-accent px-6 text-[10px] font-bold uppercase tracking-[0.16em] text-background transition-colors hover:bg-tierra md:tracking-[0.25em]"
                 >
-                  ver relojes disponibles →
+                  consultar casio y marcas →
                 </a>
               </div>
             </Reveal>
