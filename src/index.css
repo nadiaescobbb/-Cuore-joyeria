@@ -5,12 +5,12 @@
   --font-heading: "Lora", "serif";
   --font-body: "Inter", "system-ui", sans-serif;
 
-  --color-background: #f8f5ef;
-  --color-surface: #efe8dc;
+  --color-background: #faf8f3;
+  --color-surface: #f1eae0;
   --color-foreground: #211d19;
-  --color-muted: #766e64;
-  --color-accent: #a9824a;
-  --color-tierra: #d8be8a;
+  --color-muted: #6f665c;
+  --color-accent: #9b7439;
+  --color-tierra: #87602f;
   --color-border: rgba(33, 29, 25, 0.08);
 
   --animate-reveal: reveal 1.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -106,7 +106,7 @@
   }
 
   .shadow-warm {
-    box-shadow: 0 20px 40px -15px rgba(169, 130, 74, 0.16);
+    box-shadow: 0 24px 54px -28px rgba(33, 29, 25, 0.22);
   }
 
   .animate-fade-up {

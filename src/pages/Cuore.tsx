@@ -84,7 +84,7 @@ const StickyCTA = () => {
         target="_blank"
         rel="noreferrer"
         aria-label="escribinos por whatsapp"
-        className="flex items-center justify-center gap-3 bg-accent text-background p-4 sm:px-6 sm:py-4 rounded-full shadow-2xl shadow-foreground/40 hover:bg-tierra transition-all duration-500 sm:hover:scale-105 group"
+        className="flex items-center justify-center gap-3 bg-accent text-background p-4 sm:px-6 sm:py-4 rounded-full shadow-2xl shadow-foreground/30 hover:bg-tierra transition-all duration-500 sm:hover:scale-105 group"
       >
         <svg
           viewBox="0 0 24 24"
@@ -112,7 +112,7 @@ const Cuore = () => {
       <div className="bg-noise fixed inset-0 z-0 pointer-events-none" />
 
       <div className="relative z-50 bg-background/50 backdrop-blur-sm py-2 text-center">
-        <p className="text-[9px] uppercase tracking-[0.4em] text-accent/70 font-medium">
+        <p className="text-[9px] uppercase tracking-[0.4em] text-foreground/45 font-medium">
           plata 925 · regalos · alianzas · relojes · taller
         </p>
       </div>
@@ -120,7 +120,7 @@ const Cuore = () => {
       <header className="relative z-50 bg-background/90 backdrop-blur-md sticky top-0">
         <div className="mx-auto max-w-[1400px] px-5 lg:px-12 h-16 md:h-20 flex items-center justify-between">
           <div className="flex-1 flex items-center">
-            <nav className="hidden md:flex gap-10 text-[10px] uppercase tracking-[0.3em] text-foreground/45 font-semibold">
+            <nav className="hidden md:flex gap-10 text-[10px] uppercase tracking-[0.3em] text-foreground/55 font-semibold">
               <a
                 href="#catalogo"
                 className="hover:text-accent transition-colors"
@@ -145,7 +145,7 @@ const Cuore = () => {
             </nav>
             <a
               href="#catalogo"
-              className="md:hidden text-[9px] uppercase tracking-[0.3em] text-foreground/45 font-semibold hover:text-accent transition-colors"
+              className="md:hidden text-[9px] uppercase tracking-[0.3em] text-foreground/55 font-semibold hover:text-accent transition-colors"
             >
               catálogo
             </a>
@@ -163,7 +163,7 @@ const Cuore = () => {
               href={mainContact}
               target="_blank"
               rel="noreferrer"
-              className="text-[9px] font-bold uppercase tracking-[0.3em] text-foreground/45 transition-colors hover:text-accent md:text-[10px]"
+              className="text-[9px] font-bold uppercase tracking-[0.3em] text-foreground/55 transition-colors hover:text-accent md:text-[10px]"
             >
               whatsapp
             </a>
@@ -183,10 +183,10 @@ const Cuore = () => {
           loading="eager"
           fetchPriority="high"
           decoding="async"
-          className="absolute inset-0 w-full h-full object-cover opacity-80 grayscale-[0.2]"
+          className="absolute inset-0 w-full h-full object-cover opacity-72 grayscale-[0.2]"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-foreground/70 via-foreground/30 to-foreground" />
-        <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-foreground/82 via-foreground/48 to-foreground" />
+        <div className="absolute inset-0 bg-gradient-to-r from-foreground/88 via-foreground/20 to-transparent" />
         <div className="absolute inset-0 bg-noise opacity-5 pointer-events-none" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-5 py-16 md:px-6 md:pb-24 md:pt-28 w-full">
@@ -195,7 +195,7 @@ const Cuore = () => {
               href="https://maps.google.com/?q=Av.+Belgrano+616,+Rio+Grande,+Tierra+del+Fuego"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex rounded-full border border-background/15 bg-background/10 px-4 py-2 text-[10px] tracking-[0.24em] uppercase text-background/80 backdrop-blur-sm transition-colors hover:bg-background/20 hover:text-background md:text-[11px]"
+              className="inline-flex rounded-full border border-background/15 bg-background/10 px-4 py-2 text-[10px] tracking-[0.24em] uppercase text-background/85 backdrop-blur-sm transition-colors hover:bg-background/20 hover:text-background md:text-[11px]"
             >
               av. belgrano 616 · río grande
             </a>
@@ -205,14 +205,14 @@ const Cuore = () => {
             <h1 className="mt-6 max-w-5xl font-heading text-5xl leading-[0.96] text-background text-lowercase md:text-7xl lg:text-8xl">
               joyas para usar,
               <br />
-              <span className="italic text-tierra">
+              <span className="italic text-[#d8c79f]">
                 regalar o elegir con calma
               </span>
             </h1>
           </Reveal>
 
           <Reveal delay={300}>
-            <p className="mt-7 max-w-lg text-base text-background/78 leading-relaxed text-lowercase md:text-lg">
+            <p className="mt-7 max-w-lg text-base text-background/84 leading-relaxed text-lowercase md:text-lg">
               mandanos una foto, una idea o el presupuesto que tenés. te
               respondemos por whatsapp con opciones reales del local.
             </p>
@@ -233,12 +233,12 @@ const Cuore = () => {
               </a>
               <a
                 href="#catalogo"
-                className="inline-flex min-h-14 items-center justify-center gap-3 border border-background/25 px-7 py-4 text-center text-[10px] font-bold uppercase tracking-[0.14em] text-background backdrop-blur-sm transition-colors hover:border-accent hover:text-accent md:tracking-[0.2em]"
+                className="inline-flex min-h-14 items-center justify-center gap-3 border border-background/25 px-7 py-4 text-center text-[10px] font-bold uppercase tracking-[0.14em] text-background backdrop-blur-sm transition-colors hover:border-background/65 hover:bg-background/10 md:tracking-[0.2em]"
               >
                 ver catálogo
               </a>
             </div>
-            <p className="mt-4 text-xs text-background/55">
+            <p className="mt-4 text-xs text-background/68">
               podés mandar captura, medida o presupuesto
             </p>
           </Reveal>
@@ -246,9 +246,9 @@ const Cuore = () => {
       </header>
 
       <section className="relative z-10 bg-background py-4">
-        <div className="mx-auto grid max-w-[1400px] grid-cols-2 gap-px px-5 text-[10px] font-bold uppercase tracking-[0.12em] text-foreground/55 md:grid-cols-4 md:px-12 md:tracking-[0.18em]">
+        <div className="mx-auto grid max-w-[1400px] grid-cols-2 gap-px px-5 text-[10px] font-bold uppercase tracking-[0.12em] text-foreground/65 md:grid-cols-4 md:px-12 md:tracking-[0.18em]">
           {trustPoints.map((point) => (
-            <div key={point} className="bg-surface/30 px-4 py-4">
+            <div key={point} className="bg-surface/45 px-4 py-4">
               {point}
             </div>
           ))}
@@ -264,7 +264,7 @@ const Cuore = () => {
             <h2 className="font-heading text-2xl leading-none text-foreground md:text-3xl">
               Categorías populares
             </h2>
-            <p className="hidden text-xs text-foreground/45 sm:block">
+            <p className="hidden text-xs text-foreground/58 sm:block">
               Tocá una categoría y consultanos por WhatsApp.
             </p>
           </div>
@@ -278,7 +278,7 @@ const Cuore = () => {
                 rel="noreferrer"
                 className="group"
               >
-                <div className="aspect-square overflow-hidden bg-surface/35 sm:aspect-[4/3]">
+                <div className="aspect-square overflow-hidden bg-surface/55 sm:aspect-[4/3]">
                   <img
                     src={category.image}
                     alt={category.name}
@@ -313,7 +313,7 @@ const Cuore = () => {
               </div>
             </Reveal>
             <Reveal delay={150}>
-              <p className="max-w-sm text-sm leading-relaxed text-foreground/55">
+              <p className="max-w-sm text-sm leading-relaxed text-foreground/66">
                 no hace falta saber el nombre exacto. si lo viste en instagram,
                 pinterest o en otra joyería, mandanos captura.
               </p>
@@ -329,16 +329,16 @@ const Cuore = () => {
                   rel="noreferrer"
                   className="group grid gap-5 py-7 transition-colors hover:bg-surface/30 md:grid-cols-[72px_1fr_1.2fr_auto] md:items-center md:px-4"
                 >
-                  <span className="font-heading text-2xl italic text-accent md:text-3xl">
+                  <span className="font-heading text-2xl italic text-accent/85 md:text-3xl">
                     0{i + 1}
                   </span>
                   <h3 className="font-heading text-3xl text-lowercase md:text-4xl">
                     {item.title}
                   </h3>
-                  <p className="max-w-[42ch] text-sm leading-relaxed text-foreground/58">
+                  <p className="max-w-[42ch] text-sm leading-relaxed text-foreground/68">
                     {item.text}
                   </p>
-                  <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-foreground/45 transition-colors group-hover:text-accent md:tracking-[0.25em]">
+                  <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-foreground/60 transition-colors group-hover:text-accent md:tracking-[0.25em]">
                     {item.cta} →
                   </span>
                 </a>
@@ -350,7 +350,7 @@ const Cuore = () => {
 
       <section
         id="oficio"
-        className="py-20 md:py-28 bg-surface/25 overflow-hidden"
+        className="py-20 md:py-28 bg-surface/35 overflow-hidden"
       >
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
           <div className="lg:col-span-5 order-2 lg:order-1">
@@ -394,7 +394,7 @@ const Cuore = () => {
                       <p className="text-foreground text-sm tracking-wide font-bold text-lowercase">
                         {s.t}
                       </p>
-                      <p className="text-foreground/50 text-sm mt-1 text-lowercase">
+                      <p className="text-foreground/62 text-sm mt-1 text-lowercase">
                         {s.d}
                       </p>
                     </div>
@@ -425,7 +425,7 @@ const Cuore = () => {
                   decoding="async"
                   className="w-full h-full object-cover grayscale-[0.1]"
                 />
-                <div className="absolute inset-0 bg-accent/5 pointer-events-none" />
+                <div className="absolute inset-0 bg-foreground/5 pointer-events-none" />
               </div>
             </Reveal>
           </div>
@@ -434,7 +434,7 @@ const Cuore = () => {
 
       <section
         id="relojes"
-        className="py-20 md:py-28 bg-foreground relative overflow-hidden"
+        className="py-20 md:py-28 bg-[#1d1915] relative overflow-hidden"
       >
         <div className="absolute inset-0 bg-noise opacity-10 pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -451,7 +451,7 @@ const Cuore = () => {
             </Reveal>
             <Reveal delay={200}>
               <div className="max-w-sm">
-                <p className="text-sm leading-relaxed text-background/58">
+                <p className="text-sm leading-relaxed text-background/68">
                   somos agente oficial de casio y trabajamos clásicos,
                   digitales, edifice, g-shock y otras líneas. mandanos captura
                   del modelo y vemos stock o una alternativa similar.
@@ -498,7 +498,7 @@ const Cuore = () => {
                   )}
                   target="_blank"
                   rel="noreferrer"
-                  className="group flex h-full flex-col bg-foreground p-8 transition-colors hover:bg-background/[0.02] md:p-10"
+                  className="group flex h-full flex-col bg-[#211d19] p-8 transition-colors hover:bg-background/[0.025] md:p-10"
                 >
                   <div className="aspect-square overflow-hidden mb-10 bg-background/5">
                     <img
@@ -509,16 +509,16 @@ const Cuore = () => {
                       className="w-full h-full object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-[1.05]"
                     />
                   </div>
-                  <span className="text-[10px] uppercase tracking-[0.3em] text-accent font-bold">
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-[#c79a58] font-bold">
                     {w.cat}
                   </span>
                   <h3 className="font-heading text-3xl text-background mt-3 mb-4 text-lowercase">
                     {w.title}
                   </h3>
-                  <p className="text-sm text-background/45 max-w-[32ch] text-lowercase leading-relaxed">
+                  <p className="text-sm text-background/62 max-w-[32ch] text-lowercase leading-relaxed">
                     {w.desc}
                   </p>
-                  <span className="mt-8 inline-block text-[10px] font-bold uppercase tracking-[0.16em] text-accent md:tracking-[0.25em]">
+                  <span className="mt-8 inline-block text-[10px] font-bold uppercase tracking-[0.16em] text-[#c79a58] md:tracking-[0.25em]">
                     consultar si está disponible →
                   </span>
                 </a>
@@ -539,7 +539,7 @@ const Cuore = () => {
                 mandanos mensaje o vení
                 <br />a mirar tranqui
               </h2>
-              <p className="mb-10 max-w-md text-sm leading-relaxed text-foreground/60">
+              <p className="mb-10 max-w-md text-sm leading-relaxed text-foreground/68">
                 estamos en el centro de río grande. si venís con una idea, una
                 foto o una medida, te orientamos ahí mismo.
               </p>
@@ -554,7 +554,7 @@ const Cuore = () => {
                 ].map((item) => (
                   <div
                     key={item}
-                    className="bg-surface/20 px-4 py-4 text-sm leading-relaxed text-foreground/65"
+                    className="bg-surface/35 px-4 py-4 text-sm leading-relaxed text-foreground/72"
                   >
                     {item}
                   </div>
@@ -588,7 +588,7 @@ const Cuore = () => {
                   { k: "envíos", v: "entregas en toda la provincia" },
                 ].map((item) => (
                   <div key={item.k} className="flex justify-between gap-6 pb-4">
-                    <dt className="text-foreground/45 uppercase text-[10px] tracking-widest font-bold">
+                    <dt className="text-foreground/58 uppercase text-[10px] tracking-widest font-bold">
                       {item.k}
                     </dt>
                     <dd className="text-foreground text-right italic">
@@ -639,13 +639,13 @@ const Cuore = () => {
         </div>
       </section>
 
-      <footer className="pt-24 pb-32 sm:pb-24 bg-surface/20 relative z-10">
+      <footer className="pt-24 pb-32 sm:pb-24 bg-surface/30 relative z-10">
         <div className="mx-auto max-w-[1400px] px-6 lg:px-12 text-center">
           <Reveal>
             <div className="font-heading text-6xl lg:text-9xl tracking-[-0.06em] mb-16 text-lowercase opacity-90">
               cuore
             </div>
-            <div className="flex flex-wrap justify-center gap-x-14 gap-y-6 text-[10px] uppercase tracking-[0.4em] font-bold text-foreground/40 mb-24">
+            <div className="flex flex-wrap justify-center gap-x-14 gap-y-6 text-[10px] uppercase tracking-[0.4em] font-bold text-foreground/50 mb-24">
               <a
                 href="https://instagram.com/joyeria.relojeria.cuore"
                 target="_blank"
@@ -672,7 +672,7 @@ const Cuore = () => {
                 el taller
               </a>
             </div>
-            <div className="pt-16 flex flex-col md:flex-row justify-between items-center gap-8 text-[9px] uppercase tracking-[0.3em] text-foreground/20 font-bold">
+            <div className="pt-16 flex flex-col md:flex-row justify-between items-center gap-8 text-[9px] uppercase tracking-[0.3em] text-foreground/42 font-bold">
               <p>
                 © {new Date().getFullYear()} cuore joyería y relojería · río
                 grande
