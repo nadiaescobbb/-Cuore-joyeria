@@ -6,62 +6,26 @@ const getWaLink = (msg: string) =>
   `https://wa.me/${waNumber}?text=${encodeURIComponent(msg)}`;
 const mainContact = getWaLink("hola cuore, queria ver opciones disponibles");
 
-const catalogItems = [
+const popularCategories = [
   {
-    name: "anillos de plata",
-    category: "plata 925",
-    description: "para usar todos los días",
+    name: "Anillos",
     image: "/images/plata.avif",
-    msg: "hola cuore, queria ver anillos de plata 925 disponibles",
+    msg: "hola cuore, queria ver anillos disponibles",
   },
   {
-    name: "alianzas a medida",
-    category: "alianzas",
-    description: "con grabado",
-    image: "/images/alianzas.avif",
-    msg: "hola cuore, queria cotizar alianzas",
-  },
-  {
-    name: "collares y dijes",
-    category: "regalos",
-    description: "regalos fáciles",
+    name: "Collares",
     image: "/images/collarportada.avif",
     msg: "hola cuore, queria ver collares y dijes disponibles",
   },
   {
-    name: "casio retro",
-    category: "relojes",
-    description: "clásicos que combinan",
-    image: "/images/reloj.avif",
-    msg: "hola cuore, queria ver modelos casio disponibles",
+    name: "Alianzas",
+    image: "/images/alianzas.avif",
+    msg: "hola cuore, queria cotizar alianzas",
   },
   {
-    name: "casio edifice",
-    category: "relojes",
-    description: "acero y analógicos",
-    image: "/images/edefice1.avif",
-    msg: "hola cuore, queria consultar por relojes casio edifice",
-  },
-  {
-    name: "casio vintage",
-    category: "relojes",
-    description: "retro de todos los días",
+    name: "Relojes Casio",
     image: "/images/clasico.avif",
-    msg: "hola cuore, queria consultar por relojes casio vintage",
-  },
-  {
-    name: "g-shock",
-    category: "relojes",
-    description: "para uso fuerte",
-    image: "/images/gshock.avif",
-    msg: "hola cuore, queria consultar por relojes g-shock",
-  },
-  {
-    name: "trabajos de taller",
-    category: "taller",
-    description: "grabado y ajustes",
-    image: "/images/craf.avif",
-    msg: "hola cuore, queria consultar por un trabajo de taller",
+    msg: "hola cuore, queria ver modelos casio disponibles",
   },
 ];
 
@@ -293,74 +257,39 @@ const Cuore = () => {
 
       <section
         id="catalogo"
-        className="relative z-10 border-b border-soft bg-background py-12 md:py-20"
+        className="relative z-10 border-b border-soft bg-background py-10 md:py-16"
       >
         <div className="mx-auto max-w-[1400px] px-5 lg:px-12">
-          <div className="mb-7 flex flex-col gap-5 md:mb-10 md:flex-row md:items-end md:justify-between">
-            <div>
-              <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-accent">
-                catálogo consultable
-              </p>
-              <h2 className="mt-3 max-w-3xl font-heading text-4xl leading-none text-lowercase md:text-6xl">
-                tocá una pieza y consultá por whatsapp
-              </h2>
-            </div>
-            <p className="max-w-sm text-sm leading-relaxed text-foreground/55">
-              si algo te gusta, mandanos la referencia por whatsapp y te decimos
-              disponibilidad, precio o modelos parecidos.
+          <div className="mb-5 flex items-end justify-between gap-6">
+            <h2 className="font-heading text-2xl leading-none text-foreground md:text-3xl">
+              Categorías populares
+            </h2>
+            <p className="hidden text-xs text-foreground/45 sm:block">
+              Tocá una categoría y consultanos por WhatsApp.
             </p>
           </div>
 
-          <div className="mb-5 flex gap-2 overflow-x-auto pb-2 text-[10px] font-bold uppercase tracking-[0.14em] text-foreground/45">
-            {["plata 925", "regalos", "alianzas", "relojes", "taller"].map(
-              (tag) => (
-                <a
-                  key={tag}
-                  href={getWaLink(`hola cuore, queria consultar por ${tag}`)}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="whitespace-nowrap border border-soft px-4 py-2 transition-colors hover:border-accent hover:text-accent"
-                >
-                  {tag}
-                </a>
-              ),
-            )}
-          </div>
-
-          <p className="mb-3 text-xs text-foreground/45 sm:hidden">
-            deslizá para ver más piezas
-          </p>
-
-          <div className="-mx-5 flex snap-x gap-3 overflow-x-auto px-5 pb-2 sm:mx-0 sm:grid sm:grid-cols-2 sm:gap-5 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-4">
-            {catalogItems.map((piece) => (
+          <div className="-mx-5 flex snap-x gap-1 overflow-x-auto px-5 pb-2 sm:mx-0 sm:grid sm:grid-cols-4 sm:gap-1 sm:overflow-visible sm:px-0 sm:pb-0">
+            {popularCategories.map((category) => (
               <a
-                key={piece.name}
-                href={getWaLink(piece.msg)}
+                key={category.name}
+                href={getWaLink(category.msg)}
                 target="_blank"
                 rel="noreferrer"
-                className="group min-w-[48vw] snap-start sm:min-w-0"
+                className="group min-w-[64vw] snap-start sm:min-w-0"
               >
-                <div className="aspect-[4/5] overflow-hidden bg-surface">
+                <div className="aspect-[4/3] overflow-hidden bg-surface/35">
                   <img
-                    src={piece.image}
-                    alt={piece.name}
+                    src={category.image}
+                    alt={category.name}
                     loading="lazy"
                     decoding="async"
-                    className="h-full w-full object-cover grayscale-[0.12] transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
+                    className="h-full w-full object-contain p-5 transition-transform duration-700 group-hover:scale-105 sm:p-7"
                   />
                 </div>
-                <p className="mt-3 font-heading text-2xl leading-none text-lowercase">
-                  {piece.name}
+                <p className="mt-3 text-sm font-medium text-foreground transition-colors group-hover:text-accent">
+                  {category.name}
                 </p>
-                <p className="mt-2 text-[10px] font-bold uppercase tracking-[0.16em] text-accent">
-                  {piece.category}
-                </p>
-                <p className="mt-1 text-[9px] font-bold uppercase tracking-[0.16em] text-foreground/40 md:tracking-[0.22em]">
-                  {piece.description}
-                </p>
-                <span className="mt-4 inline-block text-[10px] font-bold uppercase tracking-[0.14em] text-foreground/45 transition-colors group-hover:text-accent">
-                  consultar por whatsapp →
-                </span>
               </a>
             ))}
           </div>
