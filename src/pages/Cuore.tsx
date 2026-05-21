@@ -14,7 +14,7 @@ const popularCategories = [
   },
   {
     name: "Collares",
-    image: "/images/collarportada.avif",
+    image: "/images/collares.jpg",
     msg: "hola cuore, queria ver collares y dijes disponibles",
   },
   {
