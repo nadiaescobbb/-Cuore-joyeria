@@ -470,7 +470,7 @@ const Cuore = () => {
             </Reveal>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-background/5 shadow-2xl">
+          <div className="grid grid-cols-1 gap-0 md:grid-cols-3">
             {[
               {
                 img: "/images/edefice1.avif",
@@ -491,14 +491,14 @@ const Cuore = () => {
                 desc: "opciones resistentes para trabajo, estudio o deporte",
               },
             ].map((w, i) => (
-              <Reveal key={w.cat} delay={i * 150}>
+              <Reveal key={w.cat} delay={i * 150} className="h-full">
                 <a
                   href={getWaLink(
                     `hola cuore, queria consultar por relojes ${w.cat}`,
                   )}
                   target="_blank"
                   rel="noreferrer"
-                  className="group block bg-foreground p-8 transition-colors hover:bg-background/[0.02] md:p-10"
+                  className="group flex h-full flex-col bg-foreground p-8 transition-colors hover:bg-background/[0.02] md:p-10"
                 >
                   <div className="aspect-square overflow-hidden mb-10 bg-background/5">
                     <img
