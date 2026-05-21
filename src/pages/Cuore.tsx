@@ -9,7 +9,7 @@ const mainContact = getWaLink("hola cuore, queria ver opciones disponibles");
 const popularCategories = [
   {
     name: "Anillos",
-    image: "/images/plata.avif",
+    image: "/images/anillos.jpg",
     msg: "hola cuore, queria ver anillos disponibles",
   },
   {
