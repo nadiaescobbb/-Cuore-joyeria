@@ -111,13 +111,13 @@ const Cuore = () => {
     <div className="min-h-screen bg-background text-foreground font-body selection:bg-accent/10 overflow-x-hidden">
       <div className="bg-noise fixed inset-0 z-0 pointer-events-none" />
 
-      <div className="relative z-50 bg-background/50 backdrop-blur-sm py-2 text-center border-b border-soft">
+      <div className="relative z-50 bg-background/50 backdrop-blur-sm py-2 text-center">
         <p className="text-[9px] uppercase tracking-[0.4em] text-accent/70 font-medium">
           plata 925 · regalos · alianzas · relojes · taller
         </p>
       </div>
 
-      <header className="relative z-50 bg-background/90 backdrop-blur-md border-b border-soft sticky top-0">
+      <header className="relative z-50 bg-background/90 backdrop-blur-md sticky top-0">
         <div className="mx-auto max-w-[1400px] px-5 lg:px-12 h-16 md:h-20 flex items-center justify-between">
           <div className="flex-1 flex items-center">
             <nav className="hidden md:flex gap-10 text-[10px] uppercase tracking-[0.3em] text-foreground/45 font-semibold">
@@ -245,7 +245,7 @@ const Cuore = () => {
         </div>
       </header>
 
-      <section className="relative z-10 border-b border-soft bg-background py-4">
+      <section className="relative z-10 bg-background py-4">
         <div className="mx-auto grid max-w-[1400px] grid-cols-2 gap-px px-5 text-[10px] font-bold uppercase tracking-[0.12em] text-foreground/55 md:grid-cols-4 md:px-12 md:tracking-[0.18em]">
           {trustPoints.map((point) => (
             <div key={point} className="bg-surface/30 px-4 py-4">
@@ -257,7 +257,7 @@ const Cuore = () => {
 
       <section
         id="catalogo"
-        className="relative z-10 border-b border-soft bg-background py-10 md:py-16"
+        className="relative z-10 bg-background py-10 md:py-16"
       >
         <div className="mx-auto max-w-[1400px] px-5 lg:px-12">
           <div className="mb-5 flex items-end justify-between gap-6">
@@ -320,14 +320,14 @@ const Cuore = () => {
             </Reveal>
           </div>
 
-          <div className="border-y border-soft">
+          <div>
             {quickCategories.map((item, i) => (
               <Reveal key={item.title} delay={i * 80}>
                 <a
                   href={getWaLink(item.msg)}
                   target="_blank"
                   rel="noreferrer"
-                  className="group grid gap-5 border-b border-soft py-7 transition-colors last:border-b-0 hover:bg-surface/30 md:grid-cols-[72px_1fr_1.2fr_auto] md:items-center md:px-4"
+                  className="group grid gap-5 py-7 transition-colors hover:bg-surface/30 md:grid-cols-[72px_1fr_1.2fr_auto] md:items-center md:px-4"
                 >
                   <span className="font-heading text-2xl italic text-accent md:text-3xl">
                     0{i + 1}
@@ -350,7 +350,7 @@ const Cuore = () => {
 
       <section
         id="oficio"
-        className="py-20 md:py-28 bg-surface/25 border-y border-soft overflow-hidden"
+        className="py-20 md:py-28 bg-surface/25 overflow-hidden"
       >
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
           <div className="lg:col-span-5 order-2 lg:order-1">
@@ -386,7 +386,7 @@ const Cuore = () => {
                 },
               ].map((s, i) => (
                 <Reveal key={s.n} delay={i * 100}>
-                  <li className="flex items-baseline gap-6 py-5 border-b border-soft">
+                  <li className="flex items-baseline gap-6 py-5">
                     <span className="font-heading italic text-accent text-2xl shrink-0">
                       {s.n}
                     </span>
@@ -417,7 +417,7 @@ const Cuore = () => {
 
           <div className="lg:col-span-7 order-1 lg:order-2">
             <Reveal delay={200}>
-              <div className="relative aspect-[4/5] overflow-hidden border border-soft shadow-warm">
+              <div className="relative aspect-[4/5] overflow-hidden shadow-warm">
                 <img
                   src="/images/craf.avif"
                   alt="manos de joyero trabajando un anillo"
@@ -470,7 +470,7 @@ const Cuore = () => {
             </Reveal>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-background/5 border border-background/5 shadow-2xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-background/5 shadow-2xl">
             {[
               {
                 img: "/images/edefice1.avif",
@@ -500,7 +500,7 @@ const Cuore = () => {
                   rel="noreferrer"
                   className="group block bg-foreground p-8 transition-colors hover:bg-background/[0.02] md:p-10"
                 >
-                  <div className="aspect-square overflow-hidden mb-10 bg-background/5 border border-background/5">
+                  <div className="aspect-square overflow-hidden mb-10 bg-background/5">
                     <img
                       src={w.img}
                       alt={`${w.title} - ${w.cat}`}
@@ -528,10 +528,7 @@ const Cuore = () => {
         </div>
       </section>
 
-      <section
-        id="visita"
-        className="py-20 md:py-28 bg-background border-t border-soft"
-      >
+      <section id="visita" className="py-20 md:py-28 bg-background">
         <div className="max-w-7xl mx-auto px-5 md:px-6 grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           <div>
             <Reveal>
@@ -557,7 +554,7 @@ const Cuore = () => {
                 ].map((item) => (
                   <div
                     key={item}
-                    className="border border-soft bg-surface/20 px-4 py-4 text-sm leading-relaxed text-foreground/65"
+                    className="bg-surface/20 px-4 py-4 text-sm leading-relaxed text-foreground/65"
                   >
                     {item}
                   </div>
@@ -590,10 +587,7 @@ const Cuore = () => {
                   },
                   { k: "envíos", v: "entregas en toda la provincia" },
                 ].map((item) => (
-                  <div
-                    key={item.k}
-                    className="flex justify-between gap-6 border-b border-soft pb-4"
-                  >
+                  <div key={item.k} className="flex justify-between gap-6 pb-4">
                     <dt className="text-foreground/45 uppercase text-[10px] tracking-widest font-bold">
                       {item.k}
                     </dt>
@@ -629,7 +623,7 @@ const Cuore = () => {
           </div>
 
           <Reveal delay={300} className="h-full min-h-[400px]">
-            <div className="h-full w-full border border-soft grayscale hover:grayscale-0 transition-all duration-[2s] overflow-hidden shadow-warm">
+            <div className="h-full w-full grayscale hover:grayscale-0 transition-all duration-[2s] overflow-hidden shadow-warm">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2342.341517404177!2d-67.7011986230553!3d-53.78572017241857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbc4b176718d7f941%3A0xc3f6a27318721c5b!2sAv.%20Belgrano%20616%2C%20V9420%20R%C3%ADo%20Grande%2C%20Tierra%20del%20Fuego!5e0!3m2!1ses-419!2sar!4v1715545000000!5m2!1ses-419!2sar"
                 width="100%"
@@ -645,7 +639,7 @@ const Cuore = () => {
         </div>
       </section>
 
-      <footer className="pt-24 pb-32 sm:pb-24 bg-surface/20 border-t border-soft relative z-10">
+      <footer className="pt-24 pb-32 sm:pb-24 bg-surface/20 relative z-10">
         <div className="mx-auto max-w-[1400px] px-6 lg:px-12 text-center">
           <Reveal>
             <div className="font-heading text-6xl lg:text-9xl tracking-[-0.06em] mb-16 text-lowercase opacity-90">
@@ -678,7 +672,7 @@ const Cuore = () => {
                 el taller
               </a>
             </div>
-            <div className="pt-16 border-t border-soft flex flex-col md:flex-row justify-between items-center gap-8 text-[9px] uppercase tracking-[0.3em] text-foreground/20 font-bold">
+            <div className="pt-16 flex flex-col md:flex-row justify-between items-center gap-8 text-[9px] uppercase tracking-[0.3em] text-foreground/20 font-bold">
               <p>© {new Date().getFullYear()} cuore joyería · río grande</p>
               <p className="italic">mandanos captura por whatsapp</p>
             </div>
