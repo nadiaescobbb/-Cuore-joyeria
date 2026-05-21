@@ -24,7 +24,7 @@ const popularCategories = [
   },
   {
     name: "Relojes Casio",
-    image: "/images/clasico.avif",
+    image: "/images/relojescasio.jpg",
     msg: "hola cuore, queria ver modelos casio disponibles",
   },
 ];
