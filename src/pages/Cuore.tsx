@@ -359,7 +359,7 @@ const Cuore = () => {
                 alianzas
               </span>
               <h2 className="font-heading text-4xl md:text-5xl text-foreground mb-8 italic text-lowercase">
-                alianzas hechas acá
+                alianzas a medida
               </h2>
               <p className="max-w-[44ch] text-foreground/70 mb-10 leading-relaxed text-lowercase">
                 elegís material, medida, ancho y grabado. las hacemos en nuestro
@@ -445,16 +445,16 @@ const Cuore = () => {
                   relojes
                 </span>
                 <h2 className="font-heading text-4xl md:text-5xl text-background text-lowercase leading-tight">
-                  expertos en casio y más de 30 marcas
+                  agente oficial casio y más de 30 marcas
                 </h2>
               </div>
             </Reveal>
             <Reveal delay={200}>
               <div className="max-w-sm">
                 <p className="text-sm leading-relaxed text-background/58">
-                  trabajamos clásicos, digitales, edifice, g-shock y otras
-                  líneas. mandanos captura del modelo y vemos stock o una
-                  alternativa similar.
+                  somos agente oficial de casio y trabajamos clásicos,
+                  digitales, edifice, g-shock y otras líneas. mandanos captura
+                  del modelo y vemos stock o una alternativa similar.
                 </p>
                 <a
                   href={getWaLink(
