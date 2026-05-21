@@ -1,16 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap");
 @import "tailwindcss";
 
 @theme {
   --font-heading: "Lora", "serif";
   --font-body: "Inter", "system-ui", sans-serif;
 
-  --color-background: oklch(97.1% 0.018 81);
-  --color-surface: oklch(89.8% 0.034 77);
-  --color-foreground: oklch(18.8% 0.018 61);
-  --color-accent: oklch(58.2% 0.08 72);
-  --color-tierra: oklch(72.8% 0.056 76);
-  --color-border: rgba(28, 24, 20, 0.08);
+  --color-background: #f8f5ef;
+  --color-surface: #efe8dc;
+  --color-foreground: #211d19;
+  --color-muted: #766e64;
+  --color-accent: #a9824a;
+  --color-tierra: #d8be8a;
+  --color-border: rgba(33, 29, 25, 0.08);
 
   --animate-reveal: reveal 1.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 
@@ -95,7 +96,7 @@
   }
 
   .border-soft {
-    border-color: rgba(28, 24, 20, 0.06);
+    border-color: rgba(33, 29, 25, 0.07);
   }
 
   .bg-noise {
@@ -105,7 +106,7 @@
   }
 
   .shadow-warm {
-    box-shadow: 0 20px 40px -15px rgba(160, 120, 72, 0.15);
+    box-shadow: 0 20px 40px -15px rgba(169, 130, 74, 0.16);
   }
 
   .animate-fade-up {
