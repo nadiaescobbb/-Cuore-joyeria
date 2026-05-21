@@ -269,25 +269,25 @@ const Cuore = () => {
             </p>
           </div>
 
-          <div className="-mx-5 flex snap-x gap-1 overflow-x-auto px-5 pb-2 sm:mx-0 sm:grid sm:grid-cols-4 sm:gap-1 sm:overflow-visible sm:px-0 sm:pb-0">
+          <div className="grid grid-cols-2 gap-x-2 gap-y-5 sm:grid-cols-4 sm:gap-1">
             {popularCategories.map((category) => (
               <a
                 key={category.name}
                 href={getWaLink(category.msg)}
                 target="_blank"
                 rel="noreferrer"
-                className="group min-w-[64vw] snap-start sm:min-w-0"
+                className="group"
               >
-                <div className="aspect-[4/3] overflow-hidden bg-surface/35">
+                <div className="aspect-square overflow-hidden bg-surface/35 sm:aspect-[4/3]">
                   <img
                     src={category.image}
                     alt={category.name}
                     loading="lazy"
                     decoding="async"
-                    className="h-full w-full object-contain p-5 transition-transform duration-700 group-hover:scale-105 sm:p-7"
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 sm:object-contain sm:p-7"
                   />
                 </div>
-                <p className="mt-3 text-sm font-medium text-foreground transition-colors group-hover:text-accent">
+                <p className="mt-2 text-sm font-medium text-foreground transition-colors group-hover:text-accent sm:mt-3">
                   {category.name}
                 </p>
               </a>
