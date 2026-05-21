@@ -673,7 +673,10 @@ const Cuore = () => {
               </a>
             </div>
             <div className="pt-16 flex flex-col md:flex-row justify-between items-center gap-8 text-[9px] uppercase tracking-[0.3em] text-foreground/20 font-bold">
-              <p>© {new Date().getFullYear()} cuore joyería · río grande</p>
+              <p>
+                © {new Date().getFullYear()} cuore joyería y relojería · río
+                grande
+              </p>
               <p className="italic">mandanos captura por whatsapp</p>
             </div>
           </Reveal>
