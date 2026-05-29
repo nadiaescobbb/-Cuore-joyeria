@@ -121,41 +121,47 @@ const Cuore = () => {
       </a>
       <div className="bg-noise fixed inset-0 z-0 pointer-events-none" />
 
-      <div className="relative z-50 bg-background/50 backdrop-blur-sm py-2 text-center">
-        <p className="text-[10px] uppercase tracking-[0.22em] text-foreground/65 font-medium md:tracking-[0.4em]">
-          plata 925 · regalos · alianzas · relojes · taller
+      <div className="relative z-50 bg-background/50 px-4 py-2 text-center backdrop-blur-sm">
+        <p className="text-[9px] font-medium uppercase tracking-[0.12em] text-foreground/65 sm:text-[10px] md:tracking-[0.4em]">
+          <span className="sm:hidden">plata 925 · regalos · alianzas</span>
+          <span className="hidden sm:inline">
+            plata 925 · regalos · alianzas · relojes · taller
+          </span>
         </p>
       </div>
 
       <header className="relative z-50 bg-background/90 backdrop-blur-md sticky top-0">
-        <div className="mx-auto max-w-[1400px] px-5 lg:px-12 h-16 md:h-20 flex items-center justify-between">
-          <div className="flex-1 flex items-center">
+        <div className="mx-auto flex h-16 max-w-[1400px] items-center justify-between px-4 md:h-20 lg:px-12">
+          <div className="flex min-w-0 flex-1 items-center">
             <nav className="hidden md:flex gap-10 text-[10px] uppercase tracking-[0.3em] text-foreground/55 font-semibold">
               <a
                 href="#catalogo"
-                className="hover:text-accent transition-colors"
+                className="inline-flex min-h-11 items-center transition-colors hover:text-accent"
               >
                 catálogo
               </a>
               <a
                 href="#categorias"
-                className="hover:text-accent transition-colors"
+                className="inline-flex min-h-11 items-center transition-colors hover:text-accent"
               >
                 consultas
               </a>
-              <a href="#oficio" className="hover:text-accent transition-colors">
+              <a
+                href="#oficio"
+                className="inline-flex min-h-11 items-center transition-colors hover:text-accent"
+              >
                 alianzas
               </a>
               <a
                 href="#relojes"
-                className="hover:text-accent transition-colors"
+                className="inline-flex min-h-11 items-center transition-colors hover:text-accent"
               >
                 relojes
               </a>
             </nav>
             <a
               href="#catalogo"
-              className="md:hidden text-[10px] uppercase tracking-[0.18em] text-foreground/65 font-semibold hover:text-accent transition-colors"
+              className="inline-flex min-h-11 items-center text-[9px] font-semibold uppercase tracking-[0.08em] text-foreground/65 transition-colors hover:text-accent md:hidden"
             >
               catálogo
             </a>
@@ -163,20 +169,21 @@ const Cuore = () => {
 
           <a
             href="#top"
-            className="font-heading text-3xl md:text-4xl tracking-[-0.05em] text-lowercase flex-shrink-0"
+            className="inline-flex min-h-11 flex-shrink-0 items-center font-heading text-3xl tracking-[-0.05em] text-lowercase md:text-4xl"
           >
             cuore
           </a>
 
-          <div className="flex-1 flex justify-end items-center">
+          <div className="flex min-w-0 flex-1 items-center justify-end">
             <a
               href={mainContact}
               target="_blank"
               rel="noreferrer"
               aria-label="Consultar por WhatsApp"
-              className="text-[10px] font-bold uppercase tracking-[0.18em] text-foreground/65 transition-colors hover:text-accent md:tracking-[0.3em]"
+              className="inline-flex min-h-11 min-w-11 items-center justify-center px-2 text-[9px] font-bold uppercase tracking-[0.08em] text-foreground/65 transition-colors hover:text-accent sm:text-[10px] sm:tracking-[0.18em] md:px-0 md:tracking-[0.3em]"
             >
-              whatsapp
+              <span className="sm:hidden">wpp</span>
+              <span className="hidden sm:inline">whatsapp</span>
             </a>
           </div>
         </div>
@@ -185,7 +192,7 @@ const Cuore = () => {
       <main id="main-content">
         <header
           id="top"
-          className="relative min-h-[calc(86svh-4rem)] md:min-h-[calc(100svh-5rem)] w-full flex items-end overflow-hidden"
+          className="relative flex min-h-[calc(84svh-4rem)] w-full items-end overflow-hidden md:min-h-[calc(88svh-5rem)]"
         >
           <img
             src="/images/hero.avif"
@@ -201,38 +208,40 @@ const Cuore = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/88 via-foreground/20 to-transparent" />
           <div className="absolute inset-0 bg-noise opacity-5 pointer-events-none" />
 
-          <div className="relative z-10 max-w-7xl mx-auto px-5 py-16 md:px-6 md:pb-24 md:pt-28 w-full">
-            <Reveal delay={100}>
-              <a
-                href="https://maps.google.com/?q=Av.+Belgrano+616,+Rio+Grande,+Tierra+del+Fuego"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Abrir ubicación de Cuore en Google Maps"
-                className="inline-flex rounded-full border border-background/15 bg-background/10 px-4 py-2 text-[10px] tracking-[0.24em] uppercase text-background/85 backdrop-blur-sm transition-colors hover:bg-background/20 hover:text-background md:text-[11px]"
-              >
-                av. belgrano 616 · río grande
-              </a>
-            </Reveal>
+          <div className="relative z-10 mx-auto w-full max-w-7xl px-5 py-12 md:px-6 md:pb-20 md:pt-24">
+            <a
+              href="https://maps.google.com/?q=Av.+Belgrano+616,+Rio+Grande,+Tierra+del+Fuego"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Abrir ubicación de Cuore en Google Maps"
+              className="inline-flex max-w-full rounded-full border border-background/15 bg-background/10 px-4 py-2 text-[9px] uppercase tracking-[0.16em] text-background/85 backdrop-blur-sm transition-colors hover:bg-background/20 hover:text-background sm:text-[10px] md:text-[11px] md:tracking-[0.24em]"
+            >
+              av. belgrano 616 · río grande
+            </a>
 
-            <Reveal delay={200}>
-              <h1 className="mt-6 max-w-5xl font-heading text-5xl leading-[0.96] text-background text-lowercase md:text-7xl lg:text-8xl">
-                joyas para usar,
-                <br />
-                <span className="italic text-[#d8c79f]">
-                  regalar o elegir con calma
+            <h1 className="mt-6 max-w-[22rem] font-heading text-[2.55rem] leading-[0.98] text-background text-lowercase sm:max-w-2xl sm:text-5xl md:max-w-5xl md:text-7xl lg:text-8xl">
+              joyas para usar,
+              <br />
+              <span className="italic text-[#d8c79f]">
+                regalar
+                <span className="sm:hidden">
+                  <br />
                 </span>
-              </h1>
-            </Reveal>
+                <span className="hidden sm:inline"> </span>o elegir
+                <span className="sm:hidden">
+                  <br />
+                </span>
+                <span className="hidden sm:inline"> </span>con calma
+              </span>
+            </h1>
 
-            <Reveal delay={300}>
-              <p className="mt-7 max-w-lg text-base text-background/84 leading-relaxed text-lowercase md:text-lg">
-                mandanos una foto, una idea o el presupuesto que tenés. te
-                respondemos por whatsapp con opciones reales del local.
-              </p>
-            </Reveal>
+            <p className="mt-6 max-w-[21rem] text-base leading-relaxed text-background/84 text-lowercase sm:max-w-lg md:mt-7 md:text-lg">
+              mandanos una foto, una idea o tu presupuesto. te respondemos por
+              whatsapp con opciones reales del local.
+            </p>
 
-            <Reveal delay={400}>
-              <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <div className="mt-8 md:mt-9">
+              <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <a
                   href={getWaLink(
                     "hola cuore, queria ver opciones disponibles",
@@ -240,7 +249,7 @@ const Cuore = () => {
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Ver opciones disponibles por WhatsApp"
-                  className="inline-flex min-h-14 items-center justify-center gap-3 bg-accent px-7 py-4 text-center text-[10px] font-bold uppercase tracking-[0.14em] text-background transition-colors hover:bg-tierra md:tracking-[0.2em]"
+                  className="inline-flex min-h-14 w-full max-w-full items-center justify-center gap-3 bg-accent px-5 py-4 text-center text-[10px] font-bold uppercase tracking-[0.1em] text-background transition-colors hover:bg-tierra sm:w-auto sm:px-7 md:tracking-[0.2em]"
                 >
                   ver opciones por whatsapp
                   <span aria-hidden className="text-lg">
@@ -249,7 +258,7 @@ const Cuore = () => {
                 </a>
                 <a
                   href="#catalogo"
-                  className="inline-flex min-h-14 items-center justify-center gap-3 border border-background/25 px-7 py-4 text-center text-[10px] font-bold uppercase tracking-[0.14em] text-background backdrop-blur-sm transition-colors hover:border-background/65 hover:bg-background/10 md:tracking-[0.2em]"
+                  className="inline-flex min-h-14 w-full max-w-full items-center justify-center gap-3 border border-background/25 px-5 py-4 text-center text-[10px] font-bold uppercase tracking-[0.1em] text-background backdrop-blur-sm transition-colors hover:border-background/65 hover:bg-background/10 sm:w-auto sm:px-7 md:tracking-[0.2em]"
                 >
                   ver catálogo
                 </a>
@@ -257,14 +266,14 @@ const Cuore = () => {
               <p className="mt-4 text-xs text-background/68">
                 podés mandar captura, medida o presupuesto
               </p>
-            </Reveal>
+            </div>
           </div>
         </header>
 
         <section className="relative z-10 bg-background py-4">
-          <div className="mx-auto grid max-w-[1400px] grid-cols-2 gap-px px-5 text-[10px] font-bold uppercase tracking-[0.12em] text-foreground/72 md:grid-cols-4 md:px-12 md:tracking-[0.18em]">
+          <div className="mx-auto grid max-w-[1400px] grid-cols-2 gap-px px-4 text-[9px] font-bold uppercase tracking-[0.08em] text-foreground/72 sm:px-5 sm:text-[10px] md:grid-cols-4 md:px-12 md:tracking-[0.18em]">
             {trustPoints.map((point) => (
-              <div key={point} className="bg-surface/45 px-4 py-4">
+              <div key={point} className="bg-surface/45 px-3 py-4 sm:px-4">
                 {point}
               </div>
             ))}
@@ -674,13 +683,13 @@ const Cuore = () => {
             <div className="font-heading text-6xl lg:text-9xl tracking-[-0.06em] mb-16 text-lowercase opacity-90">
               cuore
             </div>
-            <div className="flex flex-wrap justify-center gap-x-14 gap-y-6 text-[10px] uppercase tracking-[0.22em] font-bold text-foreground/65 mb-24 md:tracking-[0.4em]">
+            <div className="mb-24 flex flex-wrap justify-center gap-x-10 gap-y-2 text-[10px] font-bold uppercase tracking-[0.18em] text-foreground/65 md:gap-x-14 md:gap-y-6 md:tracking-[0.4em]">
               <a
                 href="https://instagram.com/joyeria.relojeria.cuore"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Abrir Instagram de Cuore"
-                className="hover:text-accent transition-colors"
+                className="inline-flex min-h-11 items-center transition-colors hover:text-accent"
               >
                 instagram
               </a>
@@ -689,17 +698,20 @@ const Cuore = () => {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Consultar por WhatsApp"
-                className="hover:text-accent transition-colors"
+                className="inline-flex min-h-11 items-center transition-colors hover:text-accent"
               >
                 whatsapp
               </a>
               <a
                 href="#catalogo"
-                className="hover:text-accent transition-colors"
+                className="inline-flex min-h-11 items-center transition-colors hover:text-accent"
               >
                 catálogo
               </a>
-              <a href="#oficio" className="hover:text-accent transition-colors">
+              <a
+                href="#oficio"
+                className="inline-flex min-h-11 items-center transition-colors hover:text-accent"
+              >
                 el taller
               </a>
             </div>
