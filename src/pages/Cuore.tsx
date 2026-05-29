@@ -129,6 +129,8 @@ const StickyCTA = () => {
 };
 
 const Cuore = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -151,21 +153,49 @@ const Cuore = () => {
 
       <header className="sticky top-0 z-50 border-b border-border bg-background/92 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-[1440px] items-center justify-between px-4 md:h-20 lg:px-10">
-          <nav className="hidden flex-1 items-center gap-8 text-[10px] font-bold uppercase tracking-[0.2em] text-muted md:flex">
-            {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="inline-flex min-h-11 items-center transition-colors hover:text-accent"
-              >
-                {item.label}
-              </a>
-            ))}
-          </nav>
+          <div className="flex flex-1 items-center">
+            <button
+              type="button"
+              aria-label={menuOpen ? "Cerrar menu" : "Abrir menu"}
+              aria-expanded={menuOpen}
+              aria-controls="mobile-menu"
+              onClick={() => setMenuOpen((open) => !open)}
+              className="inline-flex min-h-11 min-w-11 flex-col items-start justify-center gap-1.5 md:hidden"
+            >
+              <span
+                className={`h-px w-6 bg-foreground transition-transform ${
+                  menuOpen ? "translate-y-2 rotate-45" : ""
+                }`}
+              />
+              <span
+                className={`h-px w-6 bg-foreground transition-opacity ${
+                  menuOpen ? "opacity-0" : "opacity-100"
+                }`}
+              />
+              <span
+                className={`h-px w-6 bg-foreground transition-transform ${
+                  menuOpen ? "-translate-y-2 -rotate-45" : ""
+                }`}
+              />
+            </button>
+
+            <nav className="hidden items-center gap-8 text-[10px] font-bold uppercase tracking-[0.2em] text-muted md:flex">
+              {navItems.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="inline-flex min-h-11 items-center transition-colors hover:text-accent"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </nav>
+          </div>
 
           <a
             href="#top"
             className="inline-flex min-h-11 items-center font-heading text-4xl lowercase text-foreground md:text-5xl"
+            onClick={() => setMenuOpen(false)}
           >
             cuore
           </a>
@@ -176,11 +206,47 @@ const Cuore = () => {
               target="_blank"
               rel="noreferrer"
               aria-label="Consultar por WhatsApp"
-              className="inline-flex min-h-11 min-w-11 items-center justify-center text-[10px] font-bold uppercase tracking-[0.16em] text-muted transition-colors hover:text-accent"
+              className="hidden min-h-11 min-w-11 items-center justify-center text-[10px] font-bold uppercase tracking-[0.16em] text-muted transition-colors hover:text-accent md:inline-flex"
             >
               wpp
             </a>
           </div>
+        </div>
+
+        <div
+          id="mobile-menu"
+          className={`md:hidden ${menuOpen ? "block" : "hidden"}`}
+        >
+          <nav className="border-t border-border bg-background px-5 py-5 shadow-warm">
+            <div className="grid gap-px bg-border">
+              {navItems.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setMenuOpen(false)}
+                  className="flex min-h-14 items-center justify-between bg-background px-4 font-heading text-3xl lowercase text-foreground"
+                >
+                  {item.label}
+                  <span
+                    aria-hidden
+                    className="font-body text-[10px] font-bold uppercase tracking-[0.18em] text-accent"
+                  >
+                    ver
+                  </span>
+                </a>
+              ))}
+            </div>
+            <a
+              href={mainContact}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Consultar por WhatsApp"
+              onClick={() => setMenuOpen(false)}
+              className="mt-4 inline-flex min-h-14 w-full items-center justify-center bg-accent px-6 text-center text-[10px] font-bold uppercase tracking-[0.16em] text-background transition-colors hover:bg-tierra"
+            >
+              consultar por whatsapp
+            </a>
+          </nav>
         </div>
       </header>
 
