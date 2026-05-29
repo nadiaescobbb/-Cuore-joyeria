@@ -5,93 +5,93 @@ const waNumber = "542964557378";
 const getWaLink = (msg: string) =>
   `https://wa.me/${waNumber}?text=${encodeURIComponent(msg)}`;
 
-const mainContact = getWaLink("hola cuore, queria ver opciones disponibles");
+const mainContact = getWaLink("Hola Cuore, quería ver opciones disponibles");
 
 const navItems = [
-  { label: "catálogo", href: "#catalogo" },
-  { label: "alianzas", href: "#alianzas" },
-  { label: "relojes", href: "#relojes" },
-  { label: "local", href: "#local" },
+  { label: "Catálogo", href: "#catalogo" },
+  { label: "Alianzas", href: "#alianzas" },
+  { label: "Relojes", href: "#relojes" },
+  { label: "Local", href: "#local" },
 ];
 
 const categories = [
   {
-    name: "anillos",
-    detail: "plata 925, modelos para todos los días y regalos",
+    name: "Anillos",
+    detail: "Plata 925, modelos para todos los días y regalos",
     image: "/images/anillos.jpg",
-    alt: "anillos de plata 925 disponibles en cuore",
-    msg: "hola cuore, queria ver anillos disponibles",
+    alt: "anillos de plata 925 disponibles en Cuore",
+    msg: "Hola Cuore, quería ver anillos disponibles",
   },
   {
-    name: "collares",
-    detail: "cadenas, dijes y piezas simples para usar seguido",
+    name: "Collares",
+    detail: "Cadenas, dijes y piezas simples para usar seguido",
     image: "/images/collares.jpg",
-    alt: "collares y dijes de plata para consultar en cuore",
-    msg: "hola cuore, queria ver collares y dijes disponibles",
+    alt: "collares y dijes de plata para consultar en Cuore",
+    msg: "Hola Cuore, quería ver collares y dijes disponibles",
   },
   {
-    name: "alianzas",
-    detail: "medida, material, ancho y grabado a pedido",
+    name: "Alianzas",
+    detail: "Medida, material, ancho y grabado a pedido",
     image: "/images/alianzas.avif",
     alt: "alianzas a medida con grabado hechas en taller",
-    msg: "hola cuore, queria cotizar alianzas",
+    msg: "Hola Cuore, quería cotizar alianzas",
   },
   {
-    name: "relojes",
-    detail: "casio, clásicos, digitales y otras marcas",
+    name: "Relojes",
+    detail: "Casio, clásicos, digitales y otras marcas",
     image: "/images/relojescasio.jpg",
-    alt: "relojes casio disponibles para consultar por whatsapp",
-    msg: "hola cuore, queria ver modelos de relojes disponibles",
+    alt: "relojes Casio disponibles para consultar por WhatsApp",
+    msg: "Hola Cuore, quería ver modelos de relojes disponibles",
   },
 ];
 
 const mostAsked = [
   {
-    title: "algo para regalar",
-    text: "mandanos para quién es y te pasamos opciones que haya en el local.",
-    cta: "recibir ideas",
-    msg: "hola cuore, queria ver opciones para regalar",
+    title: "Algo para regalar",
+    text: "Mandanos para quién es y te pasamos opciones que haya en el local.",
+    cta: "Recibir ideas",
+    msg: "Hola Cuore, quería ver opciones para regalar",
   },
   {
-    title: "plata 925",
-    text: "anillos, cadenas y dijes fáciles de usar todos los días.",
-    cta: "consultar plata 925",
-    msg: "hola cuore, queria ver plata 925 disponible",
+    title: "Plata 925",
+    text: "Anillos, cadenas y dijes fáciles de usar todos los días.",
+    cta: "Consultar plata 925",
+    msg: "Hola Cuore, quería ver plata 925 disponible",
   },
   {
-    title: "vi este modelo",
-    text: "si tenés una captura, mandala y vemos stock o algo parecido.",
-    cta: "consultar con captura",
-    msg: "hola cuore, queria mandar una captura para consultar disponibilidad",
+    title: "Vi este modelo",
+    text: "Si tenés una captura, mandala y vemos stock o algo parecido.",
+    cta: "Consultar con captura",
+    msg: "Hola Cuore, quería mandar una captura para consultar disponibilidad",
   },
 ];
 
 const watchLines = [
   {
     image: "/images/edefice1.avif",
-    cat: "edifice",
-    title: "acero para todos los días",
-    msg: "hola cuore, queria consultar por relojes edifice",
+    cat: "Edifice",
+    title: "Acero para todos los días",
+    msg: "Hola Cuore, quería consultar por relojes Edifice",
   },
   {
     image: "/images/clasico.avif",
-    cat: "vintage",
-    title: "clásicos de siempre",
-    msg: "hola cuore, queria consultar por relojes vintage",
+    cat: "Vintage",
+    title: "Clásicos de siempre",
+    msg: "Hola Cuore, quería consultar por relojes vintage",
   },
   {
     image: "/images/gshock.avif",
-    cat: "g-shock",
-    title: "resistentes",
-    msg: "hola cuore, queria consultar por relojes g-shock",
+    cat: "G-Shock",
+    title: "Resistentes",
+    msg: "Hola Cuore, quería consultar por relojes G-Shock",
   },
 ];
 
 const trustItems = [
-  "retiro en av. belgrano 616",
-  "envíos en toda la provincia",
-  "grabado y trabajos de taller",
-  "tarjetas, efectivo, transferencia y links de pago",
+  "Retiro en Av. Belgrano 616",
+  "Envíos en toda la provincia",
+  "Grabado y trabajos de taller",
+  "Tarjetas, efectivo, transferencia y links de pago",
 ];
 
 const StickyCTA = () => {
@@ -116,13 +116,13 @@ const StickyCTA = () => {
         href={mainContact}
         target="_blank"
         rel="noreferrer"
-        aria-label="consultar opciones por whatsapp"
+        aria-label="Consultar opciones por WhatsApp"
         className="inline-flex min-h-14 items-center justify-center gap-3 bg-accent px-5 text-[10px] font-bold tracking-[0.16em] text-background shadow-warm transition-colors hover:bg-tierra"
       >
         <span className="text-base" aria-hidden>
           +
         </span>
-        <span className="hidden sm:inline">consultar por whatsapp</span>
+        <span className="hidden sm:inline">Consultar por WhatsApp</span>
       </a>
     </div>
   );
@@ -147,7 +147,7 @@ const Cuore = () => {
 
       <div className="relative z-50 border-b border-border bg-background/90 px-4 py-2 text-center backdrop-blur-md">
         <p className="text-[9px] font-bold tracking-[0.16em] text-muted sm:text-[10px]">
-          plata 925 · regalos · alianzas · relojes · taller
+          Plata 925 · regalos · alianzas · relojes · taller
         </p>
       </div>
 
@@ -156,7 +156,7 @@ const Cuore = () => {
           <div className="flex flex-1 items-center">
             <button
               type="button"
-              aria-label={menuOpen ? "cerrar menu" : "abrir menu"}
+              aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
               aria-expanded={menuOpen}
               aria-controls="mobile-menu"
               onClick={() => setMenuOpen((open) => !open)}
@@ -194,10 +194,10 @@ const Cuore = () => {
 
           <a
             href="#top"
-            className="inline-flex min-h-11 items-center font-heading text-4xl lowercase text-foreground md:text-5xl"
+            className="inline-flex min-h-11 items-center font-heading text-4xl text-foreground md:text-5xl"
             onClick={() => setMenuOpen(false)}
           >
-            cuore
+            Cuore
           </a>
 
           <div className="flex flex-1 justify-end">
@@ -205,7 +205,7 @@ const Cuore = () => {
               href={mainContact}
               target="_blank"
               rel="noreferrer"
-              aria-label="consultar por whatsapp"
+              aria-label="Consultar por WhatsApp"
               className="hidden min-h-11 min-w-11 items-center justify-center text-[10px] font-bold tracking-[0.16em] text-muted transition-colors hover:text-accent md:inline-flex"
             >
               wpp
@@ -224,14 +224,14 @@ const Cuore = () => {
                   key={item.href}
                   href={item.href}
                   onClick={() => setMenuOpen(false)}
-                  className="flex min-h-14 items-center justify-between bg-background px-4 font-heading text-3xl lowercase text-foreground"
+                  className="flex min-h-14 items-center justify-between bg-background px-4 font-heading text-3xl text-foreground"
                 >
                   {item.label}
                   <span
                     aria-hidden
                     className="font-body text-[10px] font-bold tracking-[0.18em] text-accent"
                   >
-                    ir
+                    Ir
                   </span>
                 </a>
               ))}
@@ -240,11 +240,11 @@ const Cuore = () => {
               href={mainContact}
               target="_blank"
               rel="noreferrer"
-              aria-label="consultar por whatsapp"
+              aria-label="Consultar por WhatsApp"
               onClick={() => setMenuOpen(false)}
               className="mt-4 inline-flex min-h-14 w-full items-center justify-center bg-accent px-6 text-center text-[10px] font-bold tracking-[0.16em] text-background transition-colors hover:bg-tierra"
             >
-              consultar por whatsapp
+              Consultar por WhatsApp
             </a>
           </nav>
         </div>
@@ -258,7 +258,7 @@ const Cuore = () => {
           <div className="relative order-1 flex min-h-[38svh] items-end overflow-hidden bg-[#1f1a15] sm:min-h-[44svh] lg:min-h-0">
             <img
               src="/images/hero.avif"
-              alt="collar y anillo de cuore sobre piel"
+              alt="collar y anillo de Cuore sobre piel"
               width="1023"
               height="1537"
               loading="eager"
@@ -269,7 +269,7 @@ const Cuore = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-[#1f1a15]/70 via-[#1f1a15]/5 to-transparent lg:from-[#1f1a15]/82 lg:via-[#1f1a15]/10" />
             <div className="relative w-full p-5 sm:p-8 lg:p-10">
               <p className="max-w-[19rem] text-[13px] leading-relaxed text-background/88 sm:text-sm lg:max-w-sm lg:text-background/78">
-                si algo te gusta, mandanos la referencia por whatsapp y te
+                Si algo te gusta, mandanos la referencia por WhatsApp y te
                 decimos disponibilidad, precio o modelos parecidos.
               </p>
             </div>
@@ -281,29 +281,29 @@ const Cuore = () => {
                 href="https://maps.google.com/?q=Av.+Belgrano+616,+Rio+Grande,+Tierra+del+Fuego"
                 target="_blank"
                 rel="noreferrer"
-                aria-label="abrir ubicacion de cuore en google maps"
+                aria-label="Abrir ubicación de Cuore en Google Maps"
                 className="inline-flex max-w-full border border-border px-4 py-2 text-[9px] font-bold tracking-[0.14em] text-muted transition-colors hover:border-accent/40 hover:text-accent lg:border-background/18 lg:text-background/78 lg:hover:border-background/42 lg:hover:text-background"
               >
-                av. belgrano 616 · río grande
+                Av. Belgrano 616 · Río Grande
               </a>
               <span className="hidden text-right text-[10px] font-bold tracking-[0.2em] text-background/45 sm:block">
-                joyería y relojería
+                Joyería y relojería
               </span>
             </div>
 
             <div className="py-5 lg:py-12">
               <p className="mb-4 text-[10px] font-bold tracking-[0.2em] text-accent lg:mb-5 lg:tracking-[0.24em] lg:text-[#d8c79f]">
-                catálogo consultable
+                Catálogo consultable
               </p>
-              <h1 className="max-w-[20rem] font-heading text-[2.75rem] leading-[0.92] lowercase text-foreground sm:max-w-3xl sm:text-7xl lg:text-8xl lg:text-background">
-                joyas para mirar,
+              <h1 className="max-w-[20rem] font-heading text-[2.75rem] leading-[0.92] text-foreground sm:max-w-3xl sm:text-7xl lg:text-8xl lg:text-background">
+                Joyas para mirar,
                 <span className="block italic text-accent lg:text-[#d8c79f]">
-                  preguntar
+                  Preguntar
                   <span className="block sm:inline"> y elegir</span>
                 </span>
               </h1>
               <p className="mt-4 max-w-[21rem] text-sm leading-relaxed text-muted sm:max-w-xl sm:text-lg lg:mt-7 lg:text-background/76">
-                mirá estilos, mandanos una referencia y te respondemos con
+                Mirá estilos, mandanos una referencia y te respondemos con
                 stock, precio o modelos parecidos.
               </p>
             </div>
@@ -313,16 +313,16 @@ const Cuore = () => {
                 href={mainContact}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="consultar opciones disponibles por whatsapp"
+                aria-label="Consultar opciones disponibles por WhatsApp"
                 className="inline-flex min-h-14 items-center justify-center bg-accent px-7 text-center text-[10px] font-bold tracking-[0.14em] text-background transition-colors hover:bg-tierra"
               >
-                consultar opciones por whatsapp
+                Consultar opciones por WhatsApp
               </a>
               <a
                 href="#catalogo"
                 className="inline-flex min-h-14 items-center justify-center border border-border px-7 text-center text-[10px] font-bold tracking-[0.14em] text-foreground transition-colors hover:border-accent hover:text-accent lg:border-background/22 lg:text-background lg:hover:border-background/60 lg:hover:bg-background/8"
               >
-                ver catálogo
+                Ver catálogo
               </a>
             </div>
           </div>
@@ -344,16 +344,16 @@ const Cuore = () => {
               <Reveal>
                 <div>
                   <p className="mb-4 text-[10px] font-bold tracking-[0.24em] text-accent">
-                    por dónde empezar
+                    Por dónde empezar
                   </p>
-                  <h2 className="max-w-xl font-heading text-5xl lowercase leading-none md:text-6xl">
-                    elegí una categoría y escribinos
+                  <h2 className="max-w-xl font-heading text-5xl leading-none md:text-6xl">
+                    Elegí una categoría y escribinos
                   </h2>
                 </div>
               </Reveal>
               <Reveal delay={120}>
                 <p className="max-w-lg text-sm leading-relaxed text-muted md:ml-auto">
-                  no hace falta saber el nombre exacto: te respondemos con
+                  No hace falta saber el nombre exacto: te respondemos con
                   disponibilidad, precio o alternativas.
                 </p>
               </Reveal>
@@ -366,7 +366,7 @@ const Cuore = () => {
                     href={getWaLink(category.msg)}
                     target="_blank"
                     rel="noreferrer"
-                    aria-label={`consultar ${category.name} por whatsapp`}
+                    aria-label={`Consultar ${category.name} por WhatsApp`}
                     className="group flex h-full flex-col border border-border bg-background transition-colors hover:border-accent/40"
                   >
                     <div className="aspect-[4/5] overflow-hidden bg-surface">
@@ -380,7 +380,7 @@ const Cuore = () => {
                     </div>
                     <div className="flex flex-1 flex-col justify-between gap-8 p-5">
                       <div>
-                        <p className="font-heading text-4xl lowercase">
+                        <p className="font-heading text-4xl">
                           {category.name}
                         </p>
                         <p className="mt-3 text-sm leading-relaxed text-muted">
@@ -388,7 +388,7 @@ const Cuore = () => {
                         </p>
                       </div>
                       <span className="text-[10px] font-bold tracking-[0.16em] text-accent">
-                        consultar {category.name.toLowerCase()}
+                        Consultar {category.name.toLowerCase()}
                       </span>
                     </div>
                   </a>
@@ -403,14 +403,14 @@ const Cuore = () => {
             <Reveal>
               <div className="lg:sticky lg:top-28">
                 <p className="mb-4 text-[10px] font-bold tracking-[0.24em] text-accent">
-                  lo que más preguntan
+                  Lo que más preguntan
                 </p>
-                <h2 className="font-heading text-5xl lowercase leading-none md:text-7xl">
-                  opciones para resolver rápido
+                <h2 className="font-heading text-5xl leading-none md:text-7xl">
+                  Opciones para resolver rápido
                 </h2>
                 <p className="mt-6 max-w-md text-sm leading-relaxed text-muted">
-                  si venís de instagram y no sabés qué pedir, empezá por acá.
-                  te orientamos con opciones reales del local.
+                  Si venís de Instagram y no sabés qué pedir, empezá por acá.
+                  Te orientamos con opciones reales del local.
                 </p>
               </div>
             </Reveal>
@@ -422,14 +422,14 @@ const Cuore = () => {
                     href={getWaLink(item.msg)}
                     target="_blank"
                     rel="noreferrer"
-                    aria-label={`${item.cta} por whatsapp`}
+                    aria-label={`${item.cta} por WhatsApp`}
                     className="group flex h-full min-h-[280px] flex-col justify-between bg-background p-6 transition-colors hover:bg-[#fbfaf6]"
                   >
                     <span className="font-heading text-3xl italic text-accent">
                       0{index + 1}
                     </span>
                     <div>
-                      <h3 className="font-heading text-4xl lowercase">
+                      <h3 className="font-heading text-4xl">
                         {item.title}
                       </h3>
                       <p className="mt-4 text-sm leading-relaxed text-muted">
@@ -462,17 +462,17 @@ const Cuore = () => {
             <Reveal delay={120}>
               <div className="flex h-full flex-col justify-center">
                 <p className="mb-4 text-[10px] font-bold tracking-[0.24em] text-accent">
-                  taller y alianzas
+                  Taller y alianzas
                 </p>
-                <h2 className="font-heading text-5xl italic lowercase leading-none md:text-7xl">
-                  alianzas a medida
+                <h2 className="font-heading text-5xl italic leading-none md:text-7xl">
+                  Alianzas a medida
                 </h2>
                 <p className="mt-7 max-w-xl text-base leading-relaxed text-muted">
-                  elegís material, medida, ancho y grabado. te pasamos
-                  presupuesto por whatsapp antes de pasar.
+                  Elegís material, medida, ancho y grabado. Te pasamos
+                  presupuesto por WhatsApp antes de pasar.
                 </p>
                 <div className="mt-8 grid gap-px bg-border sm:grid-cols-3">
-                  {["referencia", "medida y material", "grabado y entrega"].map(
+                  {["Referencia", "Medida y material", "Grabado y entrega"].map(
                     (step) => (
                       <div key={step} className="bg-surface/55 p-4 text-sm">
                         {step}
@@ -481,13 +481,13 @@ const Cuore = () => {
                   )}
                 </div>
                 <a
-                  href={getWaLink("hola cuore, queria cotizar alianzas")}
+                  href={getWaLink("Hola Cuore, quería cotizar alianzas")}
                   target="_blank"
                   rel="noreferrer"
-                  aria-label="cotizar alianzas por whatsapp"
+                  aria-label="Cotizar alianzas por WhatsApp"
                   className="mt-8 inline-flex min-h-14 w-full items-center justify-center bg-foreground px-7 text-center text-[10px] font-bold tracking-[0.16em] text-background transition-colors hover:bg-accent sm:w-fit"
                 >
-                  cotizar alianzas por whatsapp
+                  Cotizar alianzas por WhatsApp
                 </a>
               </div>
             </Reveal>
@@ -500,16 +500,16 @@ const Cuore = () => {
               <Reveal>
                 <div>
                   <p className="mb-4 text-[10px] font-bold tracking-[0.24em] text-[#d8c79f]">
-                    relojería
+                    Relojería
                   </p>
-                  <h2 className="max-w-4xl font-heading text-5xl lowercase leading-none md:text-7xl">
-                    casio y otras marcas para consultar
+                  <h2 className="max-w-4xl font-heading text-5xl leading-none md:text-7xl">
+                    Casio y otras marcas para consultar
                   </h2>
                 </div>
               </Reveal>
               <Reveal delay={120}>
                 <p className="max-w-md text-sm leading-relaxed text-background/66 md:ml-auto">
-                  mandanos captura del modelo que viste. si no está, buscamos
+                  Mandanos captura del modelo que viste. Si no está, buscamos
                   una alternativa parecida.
                 </p>
               </Reveal>
@@ -522,7 +522,7 @@ const Cuore = () => {
                     href={getWaLink(watch.msg)}
                     target="_blank"
                     rel="noreferrer"
-                    aria-label={`consultar relojes ${watch.cat} por whatsapp`}
+                    aria-label={`Consultar relojes ${watch.cat} por WhatsApp`}
                     className="group block h-full bg-[#262018] p-5 transition-colors hover:bg-[#2b241b]"
                   >
                     <div className="aspect-square overflow-hidden bg-background/5">
@@ -537,11 +537,11 @@ const Cuore = () => {
                     <p className="mt-6 text-[10px] font-bold tracking-[0.24em] text-[#d8c79f]">
                       {watch.cat}
                     </p>
-                    <h3 className="mt-2 font-heading text-4xl lowercase">
+                    <h3 className="mt-2 font-heading text-4xl">
                       {watch.title}
                     </h3>
                     <p className="mt-6 text-[10px] font-bold tracking-[0.16em] text-background/70">
-                      consultar disponibilidad
+                      Consultar disponibilidad
                     </p>
                   </a>
                 </Reveal>
@@ -555,35 +555,35 @@ const Cuore = () => {
             <Reveal>
               <div>
                 <p className="mb-4 text-[10px] font-bold tracking-[0.24em] text-accent">
-                  datos para confiar
+                  Datos para confiar
                 </p>
-                <h2 className="font-heading text-5xl lowercase leading-none md:text-7xl">
-                  consultá antes de pasar
+                <h2 className="font-heading text-5xl leading-none md:text-7xl">
+                  Consultá antes de pasar
                 </h2>
                 <p className="mt-6 max-w-lg text-sm leading-relaxed text-muted">
-                  estamos en el centro de río grande. podés preguntar por stock,
+                  Estamos en el centro de Río Grande. Podés preguntar por stock,
                   mandar una referencia o coordinar retiro.
                 </p>
                 <div className="mt-8 grid gap-3 sm:flex sm:flex-wrap">
                   <a
                     href={getWaLink(
-                      "hola cuore, queria consultar antes de pasar por el local",
+                      "Hola Cuore, quería consultar antes de pasar por el local",
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    aria-label="consultar por whatsapp antes de pasar por el local"
+                    aria-label="Consultar por WhatsApp antes de pasar por el local"
                     className="inline-flex min-h-14 items-center justify-center bg-accent px-7 text-center text-[10px] font-bold tracking-[0.16em] text-background transition-colors hover:bg-tierra"
                   >
-                    consultar antes de pasar
+                    Consultar antes de pasar
                   </a>
                   <a
                     href="https://instagram.com/joyeria.relojeria.cuore"
                     target="_blank"
                     rel="noreferrer"
-                    aria-label="abrir instagram de cuore"
+                    aria-label="Abrir Instagram de Cuore"
                     className="inline-flex min-h-14 items-center justify-center border border-border px-7 text-center text-[10px] font-bold tracking-[0.16em] text-foreground transition-colors hover:border-accent hover:text-accent"
                   >
-                    ver instagram
+                    Ver Instagram
                   </a>
                 </div>
               </div>
@@ -592,10 +592,10 @@ const Cuore = () => {
             <Reveal delay={120}>
               <div className="grid gap-px bg-border">
                 {[
-                  ["dirección", "av. belgrano 616, río grande"],
-                  ["horarios", "lunes a sábado · 10:00-13:00 / 16:00-20:30"],
-                  ["envíos", "entregas en toda la provincia"],
-                  ["pagos", "tarjetas, efectivo, transferencias y links"],
+                  ["Dirección", "Av. Belgrano 616, Río Grande"],
+                  ["Horarios", "Lunes a sábado · 10:00-13:00 / 16:00-20:30"],
+                  ["Envíos", "Entregas en toda la provincia"],
+                  ["Pagos", "Tarjetas, efectivo, transferencias y links"],
                 ].map(([label, value]) => (
                   <div
                     key={label}
@@ -617,16 +617,16 @@ const Cuore = () => {
         <div className="mx-auto max-w-[1440px]">
           <div className="grid gap-12 md:grid-cols-[1fr_1.4fr] md:items-end">
             <div>
-              <p className="font-heading text-7xl lowercase md:text-9xl">
-                cuore
+              <p className="font-heading text-7xl md:text-9xl">
+                Cuore
               </p>
               <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">
-                joyería y relojería en río grande. catálogo consultable por
-                whatsapp.
+                Joyería y relojería en Río Grande. Catálogo consultable por
+                WhatsApp.
               </p>
             </div>
             <nav className="flex flex-wrap gap-x-10 gap-y-2 text-[10px] font-bold tracking-[0.18em] text-muted md:justify-end">
-              {[...navItems, { label: "instagram", href: "https://instagram.com/joyeria.relojeria.cuore" }].map(
+              {[...navItems, { label: "Instagram", href: "https://instagram.com/joyeria.relojeria.cuore" }].map(
                 (item) => (
                   <a
                     key={item.label}
@@ -645,13 +645,13 @@ const Cuore = () => {
                 rel="noreferrer"
                 className="inline-flex min-h-11 items-center transition-colors hover:text-accent"
               >
-                whatsapp
+                WhatsApp
               </a>
             </nav>
           </div>
           <div className="mt-12 flex flex-col gap-3 border-t border-border pt-6 text-[10px] font-bold tracking-[0.14em] text-muted md:flex-row md:justify-between">
-            <p>© {new Date().getFullYear()} cuore joyería y relojería</p>
-            <p>mandanos captura, medida o presupuesto</p>
+            <p>© {new Date().getFullYear()} Cuore joyería y relojería</p>
+            <p>Mandanos captura, medida o presupuesto</p>
           </div>
         </div>
       </footer>
