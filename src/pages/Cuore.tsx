@@ -187,9 +187,9 @@ const Cuore = () => {
       <main id="main-content">
         <section
           id="top"
-          className="relative z-10 grid min-h-[calc(100svh-6rem)] bg-[#1f1a15] text-background lg:grid-cols-[0.95fr_1.05fr]"
+          className="relative z-10 grid bg-background text-foreground lg:min-h-[calc(100svh-6rem)] lg:grid-cols-[0.95fr_1.05fr] lg:bg-[#1f1a15] lg:text-background"
         >
-          <div className="relative order-2 flex items-end overflow-hidden lg:order-1">
+          <div className="relative order-1 flex min-h-[38svh] items-end overflow-hidden bg-[#1f1a15] sm:min-h-[44svh] lg:min-h-0">
             <img
               src="/images/hero.avif"
               alt="collar y anillo de Cuore sobre piel"
@@ -198,25 +198,25 @@ const Cuore = () => {
               loading="eager"
               fetchPriority="high"
               decoding="async"
-              className="absolute inset-0 h-full w-full object-cover object-[58%_center] opacity-90"
+              className="absolute inset-0 h-full w-full object-cover object-[54%_center] opacity-95 lg:object-[58%_center] lg:opacity-90"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#1f1a15]/82 via-[#1f1a15]/10 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#1f1a15]/70 via-[#1f1a15]/5 to-transparent lg:from-[#1f1a15]/82 lg:via-[#1f1a15]/10" />
             <div className="relative w-full p-5 sm:p-8 lg:p-10">
-              <p className="max-w-sm text-sm leading-relaxed text-background/78">
+              <p className="max-w-[19rem] text-[13px] leading-relaxed text-background/88 sm:text-sm lg:max-w-sm lg:text-background/78">
                 Si algo te gusta, mandanos la referencia por WhatsApp y te
                 decimos disponibilidad, precio o modelos parecidos.
               </p>
             </div>
           </div>
 
-          <div className="order-1 flex min-h-[580px] flex-col justify-between px-5 py-10 sm:px-8 lg:order-2 lg:px-12 lg:py-14">
+          <div className="order-2 flex flex-col justify-between px-5 py-6 sm:px-8 lg:min-h-[580px] lg:px-12 lg:py-14">
             <div className="flex items-start justify-between gap-6">
               <a
                 href="https://maps.google.com/?q=Av.+Belgrano+616,+Rio+Grande,+Tierra+del+Fuego"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Abrir ubicacion de Cuore en Google Maps"
-                className="inline-flex max-w-full border border-background/18 px-4 py-2 text-[9px] font-bold uppercase tracking-[0.14em] text-background/78 transition-colors hover:border-background/42 hover:text-background"
+                className="inline-flex max-w-full border border-border px-4 py-2 text-[9px] font-bold uppercase tracking-[0.14em] text-muted transition-colors hover:border-accent/40 hover:text-accent lg:border-background/18 lg:text-background/78 lg:hover:border-background/42 lg:hover:text-background"
               >
                 av. belgrano 616 · rio grande
               </a>
@@ -225,19 +225,18 @@ const Cuore = () => {
               </span>
             </div>
 
-            <div className="py-12">
-              <p className="mb-5 text-[10px] font-bold uppercase tracking-[0.24em] text-[#d8c79f]">
+            <div className="py-5 lg:py-12">
+              <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.2em] text-accent lg:mb-5 lg:tracking-[0.24em] lg:text-[#d8c79f]">
                 catalogo consultable
               </p>
-              <h1 className="max-w-3xl font-heading text-[3rem] leading-[0.92] lowercase text-background sm:text-7xl lg:text-8xl">
-                joyas para
-                <span className="block">mirar,</span>
-                <span className="block italic text-[#d8c79f]">
+              <h1 className="max-w-[20rem] font-heading text-[2.75rem] leading-[0.92] lowercase text-foreground sm:max-w-3xl sm:text-7xl lg:text-8xl lg:text-background">
+                joyas para mirar,
+                <span className="block italic text-accent lg:text-[#d8c79f]">
                   preguntar
                   <span className="block sm:inline"> y elegir</span>
                 </span>
               </h1>
-              <p className="mt-7 max-w-[20rem] text-base leading-relaxed text-background/76 sm:max-w-xl sm:text-lg">
+              <p className="mt-4 max-w-[21rem] text-sm leading-relaxed text-muted sm:max-w-xl sm:text-lg lg:mt-7 lg:text-background/76">
                 Una vidriera simple para ver estilos, mandar captura y resolver
                 por WhatsApp sin vueltas.
               </p>
@@ -255,7 +254,7 @@ const Cuore = () => {
               </a>
               <a
                 href="#catalogo"
-                className="inline-flex min-h-14 items-center justify-center border border-background/22 px-7 text-center text-[10px] font-bold uppercase tracking-[0.14em] text-background transition-colors hover:border-background/60 hover:bg-background/8"
+                className="inline-flex min-h-14 items-center justify-center border border-border px-7 text-center text-[10px] font-bold uppercase tracking-[0.14em] text-foreground transition-colors hover:border-accent hover:text-accent lg:border-background/22 lg:text-background lg:hover:border-background/60 lg:hover:bg-background/8"
               >
                 recorrer catalogo
               </a>
