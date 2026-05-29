@@ -424,7 +424,7 @@ const Cuore = () => {
                     target="_blank"
                     rel="noreferrer"
                     aria-label={`${item.cta} por WhatsApp`}
-                    className="group flex min-h-[280px] flex-col justify-between bg-background p-6 transition-colors hover:bg-[#fbfaf6]"
+                    className="group flex h-full min-h-[280px] flex-col justify-between bg-background p-6 transition-colors hover:bg-[#fbfaf6]"
                   >
                     <span className="font-heading text-3xl italic text-accent">
                       0{index + 1}
