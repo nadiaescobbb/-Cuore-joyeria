@@ -145,12 +145,6 @@ const Cuore = () => {
       </a>
       <div className="bg-noise fixed inset-0 z-0 pointer-events-none" />
 
-      <div className="relative z-50 border-b border-border bg-background/90 px-4 py-2 text-center backdrop-blur-md">
-        <p className="text-[9px] font-bold tracking-[0.16em] text-muted sm:text-[10px]">
-          Plata 925 · regalos · alianzas · relojes · taller
-        </p>
-      </div>
-
       <header className="sticky top-0 z-50 border-b border-border bg-background/92 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-[1440px] items-center justify-between px-4 md:h-20 lg:px-10">
           <div className="flex flex-1 items-center">
