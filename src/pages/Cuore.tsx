@@ -173,7 +173,7 @@ const Cuore = () => {
               />
             </button>
 
-            <nav className="hidden items-center gap-8 text-[10px] font-bold tracking-[0.2em] text-muted md:flex">
+            <nav className="hidden items-center gap-7 text-xs font-bold tracking-[0.06em] text-foreground/72 md:flex">
               {navItems.map((item) => (
                 <a
                   key={item.href}
@@ -200,9 +200,9 @@ const Cuore = () => {
               target="_blank"
               rel="noreferrer"
               aria-label="Consultar por WhatsApp"
-              className="hidden min-h-11 min-w-11 items-center justify-center text-[10px] font-bold tracking-[0.16em] text-muted transition-colors hover:text-accent md:inline-flex"
+              className="hidden min-h-11 items-center justify-center border border-border px-5 text-xs font-bold tracking-[0.06em] text-foreground/78 transition-colors hover:border-accent hover:bg-accent hover:text-background md:inline-flex"
             >
-              wpp
+              Consultar
             </a>
           </div>
         </div>
