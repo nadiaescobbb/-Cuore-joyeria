@@ -20,9 +20,6 @@ export function Hero() {
       <div className="absolute bottom-0 left-0 w-full px-4 pb-10 md:px-8 md:pb-12 lg:px-16 lg:pb-16">
         <div className="max-w-[1440px] mx-auto w-full">
           <div className="max-w-2xl flex flex-col items-start text-left">
-            <span className="font-body text-[10px] font-bold tracking-[0.20em] uppercase text-gold mb-4">
-              Joyería y relojería · Río Grande
-            </span>
             <h1 className="font-heading text-[40px] md:text-6xl lg:text-7xl leading-none tracking-tight font-normal text-background mb-4 drop-shadow-md">
               Fabricamos alianzas, reparamos joyas y asesoramos hace más de 40 <i>años</i>.
             </h1>
