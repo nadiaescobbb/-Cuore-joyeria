@@ -8,12 +8,12 @@ export const trustPoints: TrustPoint[] = [
   {
     id: 'taller',
     title: 'Taller propio',
-    description: 'Fabricamos y reparamos en el local. Lo que dejás con nosotros no sale de nuestras manos.'
+    description: 'Fabricamos y reparamos en el local.'
   },
   {
     id: 'experiencia',
     title: 'Más de 40 años',
-    description: 'Cuore nació en Río Grande. Seguimos acá porque hacemos bien nuestro trabajo.'
+    description: 'Cuore nació en Río Grande.'
   },
   {
     id: 'variedad',
@@ -23,6 +23,6 @@ export const trustPoints: TrustPoint[] = [
   {
     id: 'asesoramiento',
     title: 'Asesoramiento real',
-    description: 'Contanos qué necesitás. Te ayudamos a elegir sin apuro y sin presión.'
+    description: 'Contanos qué necesitás. Te ayudamos a elegir sin apuro.'
   }
 ];
