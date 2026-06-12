@@ -20,7 +20,7 @@ export function Navbar() {
           <img 
             src="/images/cuorelogo.png" 
             alt="Cuore joyería y relojería" 
-            className="h-8 md:h-10 w-auto object-contain brightness-0 invert drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]"
+            className="h-[48px] md:h-20 w-auto object-contain brightness-0 invert drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]"
           />
         </a>
 
