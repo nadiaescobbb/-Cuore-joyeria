@@ -12,6 +12,13 @@
   --color-accent: #87602f;
   --color-tierra: #6f4b24;
   --color-border: rgba(33, 29, 25, 0.08);
+  --color-dark: #1f1a15;
+  --color-dark-surface: #262018;
+  --color-gold: #d8c79f;
+
+  --tracking-tight: 0;
+  --tracking-normal: 0.06em;
+  --tracking-wide: 0.20em;
 
   --animate-reveal: reveal 1.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 
