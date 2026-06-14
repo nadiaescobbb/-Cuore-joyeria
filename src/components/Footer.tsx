@@ -1,47 +1,37 @@
 import { navItems } from '../data/nav';
 
-const getWaLink = (msg: string) => `https://wa.me/542964557378?text=${encodeURIComponent(msg)}`;
-
 export function Footer() {
   return (
-    <footer className="bg-foreground text-background border-t border-dark-surface py-16 md:py-24">
-      <div className="max-w-[1440px] mx-auto px-4 md:px-20">
-        <div className="flex flex-col gap-12 mb-16 w-full">
-          <span className="font-heading text-[72px] md:text-[96px] leading-none tracking-tight text-background">
-            Cuore
-          </span>
-          
-          <div className="flex flex-col items-start gap-6 bg-dark-surface p-6 md:p-8 w-full md:max-w-[60ch]">
-            <p className="font-body text-body text-background leading-relaxed">
-              Si querés ver opciones o resolver una duda, escribinos. En Cuore te ayudamos a elegir.
-            </p>
-            <a 
-              href={getWaLink("Hola Cuore")}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Escribinos por WhatsApp"
-              className="inline-flex items-center justify-center px-8 py-4 bg-accent text-background font-body font-bold text-body tracking-normal hover:bg-tierra transition-colors duration-200 focus-visible:outline-accent w-fit"
-            >
-              Escribinos
-            </a>
-          </div>
-
-          <nav className="flex flex-row flex-wrap gap-x-8 gap-y-4" aria-label="Navegación del pie de página">
-            {navItems.map((item) => (
-              <a 
-                key={item.href} 
-                href={item.href}
-                className="font-body text-body tracking-normal text-muted hover:text-background transition-colors focus-visible:outline-accent"
-              >
-                {item.label}
-              </a>
-            ))}
-          </nav>
+    <footer className="bg-dark border-t border-background/10 py-6 px-8 lg:px-20">
+      <div className="flex flex-col md:grid md:grid-cols-3 items-center gap-6 md:gap-0 max-w-[1440px] mx-auto w-full">
+        <div className="flex items-center justify-center md:justify-start w-full">
+          <a href="#" aria-label="Ir al inicio" className="focus-visible:outline-accent">
+            <img 
+              src="/images/cuorelogo.png" 
+              alt="Cuore logo" 
+              className="h-8 w-auto object-contain brightness-0 invert"
+            />
+          </a>
         </div>
 
-        <div className="border-t border-dark-surface pt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-          <p className="font-body text-caption text-muted tracking-wide uppercase">
-            © {new Date().getFullYear()} Joyería Cuore. Río Grande, TDF.
+        <nav className="flex flex-wrap gap-4 md:gap-8 justify-center w-full" aria-label="Navegación del pie de página">
+          {navItems.map((item) => (
+            <a 
+              key={item.href} 
+              href={item.href}
+              className="font-body text-xs text-background/50 hover:text-background tracking-normal transition-colors duration-200 focus-visible:outline-accent"
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
+
+        <div className="flex flex-col items-center md:items-end gap-1 w-full text-center md:text-right">
+          <p className="font-body text-xs text-background/30">
+            © 2026 Joyería Cuore · Río Grande, TDF.
+          </p>
+          <p className="font-body text-xs text-background/30">
+            Diseño: Trama Studio
           </p>
         </div>
       </div>
