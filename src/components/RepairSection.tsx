@@ -26,7 +26,6 @@ export function RepairSection() {
             <span className="font-body text-base font-normal text-gold text-left">Reparación de relojes</span>
             <span className="font-body text-base font-normal text-gold text-left">Cambio de pilas y mallas</span>
             <span className="font-body text-base font-normal text-gold text-left">Reparación de joyas</span>
-            <span className="font-body text-base font-normal text-gold text-left">Grabado láser</span>
           </div>
 
           {/* CTA */}
