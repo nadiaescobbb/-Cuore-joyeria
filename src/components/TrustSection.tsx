@@ -13,9 +13,6 @@ export function TrustSection() {
             <h2 className="font-heading text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-normal leading-none text-foreground">
               Por qué elegir Cuore.
             </h2>
-            <p className="font-body text-sm text-muted mt-6 max-w-xs">
-              Por eso fabricamos, reparamos y personalizamos en nuestro propio taller.
-            </p>
           </div>
 
           {/* Right Column (Simple Rows) */}
@@ -35,7 +32,7 @@ export function TrustSection() {
                 Más de 40 años
               </h3>
               <p className="font-body text-sm text-muted mt-2">
-                Más de 40 años en Río Grande.
+                En el mismo local, con el mismo oficio.
               </p>
             </div>
 
