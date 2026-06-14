@@ -11,7 +11,7 @@ export function TrustSection() {
           {/* Left Column (Sticky Headline) */}
           <div className="lg:col-span-5 lg:sticky lg:top-32">
             <h2 className="font-heading text-5xl lg:text-6xl font-normal leading-tight tracking-tight text-foreground mb-6">
-              Hay joyas que se compran una vez.<br className="hidden lg:block" /> Y otras que se usan durante años.
+              Por qué elegir Cuore.
             </h2>
             <p className="font-body text-sm text-muted max-w-[40ch]">
               Por eso fabricamos, reparamos y personalizamos en nuestro propio taller.
@@ -21,7 +21,7 @@ export function TrustSection() {
           {/* Right Column (Simple Rows) */}
           <div className="lg:col-span-7 flex flex-col">
             
-            <div className="border-t border-border py-8">
+            <div className="py-10">
               <h3 className="font-heading text-2xl lg:text-3xl font-normal text-foreground mb-2">
                 Taller propio
               </h3>
@@ -30,7 +30,7 @@ export function TrustSection() {
               </p>
             </div>
             
-            <div className="border-t border-border py-8">
+            <div className="py-10">
               <h3 className="font-heading text-2xl lg:text-3xl font-normal text-foreground mb-2">
                 Más de 40 años
               </h3>
@@ -39,7 +39,7 @@ export function TrustSection() {
               </p>
             </div>
 
-            <div className="border-t border-border py-8">
+            <div className="py-10">
               <h3 className="font-heading text-2xl lg:text-3xl font-normal text-foreground mb-2">
                 Una de las joyerías más grandes de la provincia
               </h3>
@@ -48,7 +48,7 @@ export function TrustSection() {
               </p>
             </div>
 
-            <div className="border-t border-b border-border py-8">
+            <div className="py-10">
               <h3 className="font-heading text-2xl lg:text-3xl font-normal text-foreground mb-2">
                 Asesoramiento real
               </h3>
