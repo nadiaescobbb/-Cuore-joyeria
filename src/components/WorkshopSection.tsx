@@ -33,7 +33,7 @@ export function WorkshopSection() {
           
           {/* Body */}
           <p className="font-body text-sm lg:text-base text-muted max-w-md">
-            Elegís material, medida, ancho y grabado. Te pasamos presupuesto por WhatsApp antes de pasar. Cada alianza sale de nuestro taller en Río Grande.
+            Elegís el material, la medida y el grabado. Cada alianza se hace acá, en Río Grande.
           </p>
 
           {/* Steps */}
