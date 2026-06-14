@@ -16,7 +16,7 @@ export function CategoryGrid() {
           Elegí una categoría y escribinos.
         </h2>
         <p className="font-body text-body md:text-lg text-muted max-w-[70ch]">
-          No hace falta saber el nombre exacto. Te respondemos con disponibilidad, precio o alternativas.
+          Mandanos una referencia, una foto o una captura. Te ayudamos a encontrar lo que estás buscando.
         </p>
       </div>
 
