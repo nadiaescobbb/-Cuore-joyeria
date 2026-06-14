@@ -6,53 +6,53 @@ export function TrustSection() {
   return (
     <section id="trust" className="bg-surface relative" ref={ref}>
       <div className="max-w-[1440px] mx-auto px-4 md:px-20 py-24 md:py-32">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1fr] xl:grid-cols-[0.9fr_1fr] gap-16 lg:gap-24 items-start">
           
           {/* Left Column (Sticky Headline) */}
-          <div className="lg:col-span-5 lg:sticky lg:top-32">
-            <h2 className="font-heading text-5xl lg:text-6xl font-normal leading-tight tracking-tight text-foreground mb-6">
+          <div className="lg:sticky lg:top-24">
+            <h2 className="font-heading text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-normal leading-none text-foreground">
               Por qué elegir Cuore.
             </h2>
-            <p className="font-body text-sm text-muted max-w-[40ch]">
+            <p className="font-body text-sm text-muted mt-6 max-w-xs">
               Por eso fabricamos, reparamos y personalizamos en nuestro propio taller.
             </p>
           </div>
 
           {/* Right Column (Simple Rows) */}
-          <div className="lg:col-span-7 flex flex-col">
+          <div className="flex flex-col gap-10 lg:gap-14">
             
-            <div className="py-10">
-              <h3 className="font-heading text-2xl lg:text-3xl font-normal text-foreground mb-2">
+            <div>
+              <h3 className="font-heading text-3xl lg:text-4xl font-normal text-foreground">
                 Taller propio
               </h3>
-              <p className="font-body text-sm text-muted">
+              <p className="font-body text-sm text-muted mt-2">
                 Fabricamos y reparamos en el local.
               </p>
             </div>
             
-            <div className="py-10">
-              <h3 className="font-heading text-2xl lg:text-3xl font-normal text-foreground mb-2">
+            <div>
+              <h3 className="font-heading text-3xl lg:text-4xl font-normal text-foreground">
                 Más de 40 años
               </h3>
-              <p className="font-body text-sm text-muted">
+              <p className="font-body text-sm text-muted mt-2">
                 Más de 40 años en Río Grande.
               </p>
             </div>
 
-            <div className="py-10">
-              <h3 className="font-heading text-2xl lg:text-3xl font-normal text-foreground mb-2">
+            <div>
+              <h3 className="font-heading text-3xl lg:text-4xl font-normal text-foreground">
                 Una de las joyerías más grandes de la provincia
               </h3>
-              <p className="font-body text-sm text-muted">
+              <p className="font-body text-sm text-muted mt-2">
                 Más de 30 marcas de relojes. Stock con renovación permanente. Variedad real para elegir.
               </p>
             </div>
 
-            <div className="py-10">
-              <h3 className="font-heading text-2xl lg:text-3xl font-normal text-foreground mb-2">
+            <div>
+              <h3 className="font-heading text-3xl lg:text-4xl font-normal text-foreground">
                 Asesoramiento real
               </h3>
-              <p className="font-body text-sm text-muted">
+              <p className="font-body text-sm text-muted mt-2">
                 Contanos qué necesitás. Te ayudamos a elegir sin apuro.
               </p>
             </div>
