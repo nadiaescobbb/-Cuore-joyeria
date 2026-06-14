@@ -14,7 +14,7 @@ export function WorkshopSection() {
           <img 
             src="/images/craf.avif" 
             alt="Trabajo artesanal en el taller de Cuore"
-            className="w-full h-full object-cover object-center rounded-none m-0 p-0"
+            className="w-full h-full object-cover object-[center_30%] rounded-none m-0 p-0"
           />
         </div>
         

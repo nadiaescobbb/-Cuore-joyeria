@@ -8,7 +8,7 @@ export function CategoryGrid() {
 
   return (
     <section id="categories" className="max-w-[1440px] mx-auto px-4 md:px-20 py-16 md:py-24" ref={ref}>
-      <div className="flex flex-col items-start text-left mb-12">
+      <div className="w-full flex flex-col items-start text-left mb-12">
         <span className="font-body text-label font-bold tracking-wide text-muted uppercase mb-4">
           Por dónde empezar
         </span>

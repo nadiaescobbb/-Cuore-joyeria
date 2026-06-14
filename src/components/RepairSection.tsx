@@ -42,7 +42,7 @@ export function RepairSection() {
 
         {/* Right Column (Decorative) */}
         <div className="hidden lg:flex items-end justify-end self-end">
-          <span className="font-heading text-[12rem] lg:text-[16rem] text-background/5 leading-none pointer-events-none select-none">
+          <span className="font-heading text-[12rem] lg:text-[16rem] text-background opacity-[0.02] leading-none pointer-events-none select-none">
             04
           </span>
         </div>
