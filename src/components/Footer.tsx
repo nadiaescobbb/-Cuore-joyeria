@@ -9,17 +9,17 @@ export function Footer() {
             <img 
               src="/images/cuorelogo.png" 
               alt="Cuore logo" 
-              className="h-8 w-auto object-contain brightness-0 invert"
+              className="h-10 w-auto object-contain brightness-0 invert"
             />
           </a>
         </div>
 
-        <nav className="flex flex-wrap gap-4 md:gap-8 justify-center w-full" aria-label="Navegación del pie de página">
+        <nav className="flex flex-nowrap gap-6 justify-center w-full" aria-label="Navegación del pie de página">
           {navItems.map((item) => (
             <a 
               key={item.href} 
               href={item.href}
-              className="font-body text-xs text-background/50 hover:text-background tracking-normal transition-colors duration-200 focus-visible:outline-accent"
+              className="font-body text-[11px] text-background/50 hover:text-background tracking-normal transition-colors duration-200 focus-visible:outline-accent"
             >
               {item.label}
             </a>
@@ -28,7 +28,7 @@ export function Footer() {
 
         <div className="flex flex-col items-center md:items-end gap-1 w-full text-center md:text-right">
           <p className="font-body text-xs text-background/30">
-            © 2026 Joyería Cuore · Río Grande, TDF.
+            © 2026 Joyería y Relojería Cuore · Río Grande, TDF.
           </p>
           <p className="font-body text-xs text-background/30">
             Diseño: Trama Studio
