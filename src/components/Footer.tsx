@@ -6,11 +6,9 @@ export function Footer() {
       <div className="flex flex-col md:grid md:grid-cols-3 items-center gap-6 md:gap-0 max-w-[1440px] mx-auto w-full">
         <div className="flex items-center justify-center md:justify-start w-full">
           <a href="#" aria-label="Ir al inicio" className="focus-visible:outline-accent">
-            <img 
-              src="/images/cuorelogo.png" 
-              alt="Cuore logo" 
-              className="h-10 w-auto object-contain brightness-0 invert"
-            />
+            <span className="font-heading text-2xl text-background/80 tracking-tight">
+              Cuore
+            </span>
           </a>
         </div>
 
