@@ -27,7 +27,7 @@ export function WatchSection() {
               {['Casio', 'Tommy Hilfiger', 'Oriental', 'Bulova', 'Casio', 'Tommy Hilfiger', 'Oriental', 'Bulova'].map((brand, index) => (
                 <div key={index} className="flex items-center whitespace-nowrap">
                   <span>{brand}</span>
-                  <span className="text-gold mx-8 lg:mx-12">·</span>
+                  <span className="text-gold/40 mx-8 lg:mx-12">—</span>
                 </div>
               ))}
             </div>
@@ -35,31 +35,57 @@ export function WatchSection() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {watches.map((watch) => (
-          <a 
-            key={watch.id}
-            href={getWaLink(watch.waMessage)}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group flex flex-col focus-visible:outline-accent"
-            aria-label={`Consultar por reloj ${watch.title} en WhatsApp`}
-          >
-            <div className="w-full aspect-square overflow-hidden bg-dark mb-6">
+      <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-3 min-h-[600px]">
+        <a 
+          href={getWaLink(watches[0].waMessage)}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group relative flex flex-col focus-visible:outline-accent overflow-hidden min-h-[400px] lg:min-h-0"
+          aria-label={`Consultar por reloj ${watches[0].title} en WhatsApp`}
+        >
+          <img 
+            src={watches[0].image} 
+            alt={`Reloj ${watches[0].title}`}
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100"
+          />
+          <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-dark/70 to-transparent pointer-events-none"></div>
+          <div className="absolute bottom-4 left-4 z-10 flex flex-col">
+            <span className="font-body text-[10px] tracking-wide text-gold uppercase mb-1">
+              {watches[0].category}
+            </span>
+            <h3 className="font-heading text-xl text-background leading-none">
+              {watches[0].title}
+            </h3>
+          </div>
+        </a>
+
+        <div className="flex flex-col gap-3">
+          {watches.slice(1).map((watch) => (
+            <a 
+              key={watch.id}
+              href={getWaLink(watch.waMessage)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative flex-1 focus-visible:outline-accent overflow-hidden min-h-[300px] lg:min-h-0"
+              aria-label={`Consultar por reloj ${watch.title} en WhatsApp`}
+            >
               <img 
                 src={watch.image} 
                 alt={`Reloj ${watch.title}`}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100"
               />
-            </div>
-            <span className="font-body text-label font-bold tracking-wide text-gold uppercase mb-2">
-              {watch.category}
-            </span>
-            <h3 className="font-heading text-[30px] md:text-[36px] tracking-tight text-background">
-              {watch.title}
-            </h3>
-          </a>
-        ))}
+              <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-dark/70 to-transparent pointer-events-none"></div>
+              <div className="absolute bottom-4 left-4 z-10 flex flex-col">
+                <span className="font-body text-[10px] tracking-wide text-gold uppercase mb-1">
+                  {watch.category}
+                </span>
+                <h3 className="font-heading text-xl text-background leading-none">
+                  {watch.title}
+                </h3>
+              </div>
+            </a>
+          ))}
+        </div>
       </div>
     </section>
   );
