@@ -22,9 +22,9 @@ export function WatchSection() {
           className="flex font-heading text-5xl lg:text-7xl font-normal text-background leading-none w-max"
           style={{ animation: 'marquee 30s linear infinite' }}
         >
-          {[...Array(2)].map((_, groupIndex) => (
+          {[...Array(4)].map((_, groupIndex) => (
             <div key={groupIndex} className="flex items-center">
-              {['Casio', 'Tommy Hilfiger', 'Oriental', 'Bulova', 'Casio', 'Tommy Hilfiger', 'Oriental', 'Bulova'].map((brand, index) => (
+              {['Casio', 'Tommy Hilfiger', 'Oriental', 'Bulova'].map((brand, index) => (
                 <div key={index} className="flex items-center whitespace-nowrap">
                   <span>{brand}</span>
                   <span className="text-gold/40 mx-8 lg:mx-12">—</span>

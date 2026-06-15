@@ -19,7 +19,7 @@ export function TrustSection() {
           <div className="flex flex-col gap-10 lg:gap-14">
             
             <div>
-              <h3 className="font-heading text-4xl lg:text-5xl font-medium text-foreground">
+              <h3 className="font-heading text-5xl lg:text-6xl font-medium text-foreground">
                 Taller propio
               </h3>
               <p className="font-body text-sm text-muted mt-2">
@@ -28,7 +28,7 @@ export function TrustSection() {
             </div>
             
             <div>
-              <h3 className="font-heading text-4xl lg:text-5xl font-medium text-foreground">
+              <h3 className="font-heading text-5xl lg:text-6xl font-medium text-foreground">
                 Más de 40 años
               </h3>
               <p className="font-body text-sm text-muted mt-2">
@@ -37,7 +37,7 @@ export function TrustSection() {
             </div>
 
             <div>
-              <h3 className="font-heading text-4xl lg:text-5xl font-medium text-foreground">
+              <h3 className="font-heading text-5xl lg:text-6xl font-medium text-foreground">
                 Una de las joyerías más grandes de la provincia
               </h3>
               <p className="font-body text-sm text-muted mt-2">
@@ -46,7 +46,7 @@ export function TrustSection() {
             </div>
 
             <div>
-              <h3 className="font-heading text-4xl lg:text-5xl font-medium text-foreground">
+              <h3 className="font-heading text-5xl lg:text-6xl font-medium text-foreground">
                 Asesoramiento real
               </h3>
               <p className="font-body text-sm text-muted mt-2">
