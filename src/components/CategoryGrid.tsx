@@ -52,12 +52,12 @@ export function CategoryGrid() {
               href={getWaLink(categories[1].waMessage)}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative flex flex-col w-full items-end ml-auto -mt-16 md:-mt-48 mb-12 md:mb-32 z-30 focus-visible:outline-accent"
+              className="group relative flex flex-col w-full items-end ml-auto -mt-16 md:-mt-32 mb-20 md:mb-32 z-30 focus-visible:outline-accent"
             >
-              <div className="w-[85%] md:w-[55%] aspect-[4/3] md:aspect-video overflow-hidden bg-surface shadow-2xl">
+              <div className="w-[85%] md:w-[55%] aspect-[4/3] md:aspect-video overflow-hidden bg-surface">
                 <img src={categories[1].image} alt={categories[1].name} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
               </div>
-              <div className="absolute left-0 bottom-[-15%] md:bottom-[-10%] w-[65%] md:w-[40%] bg-background/95 backdrop-blur-sm p-4 md:p-8 shadow-xl">
+              <div className="absolute left-0 bottom-[-15%] md:bottom-[-10%] w-[65%] md:w-[40%] bg-background/95 backdrop-blur-sm p-4 md:p-8 shadow-2xl">
                 <h3 className="font-heading text-[40px] md:text-[64px] tracking-tight text-foreground mb-2">
                   {categories[1].name}
                 </h3>
@@ -74,7 +74,7 @@ export function CategoryGrid() {
               href={getWaLink(categories[2].waMessage)}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative flex flex-col w-full -mt-16 md:-mt-32 mb-12 md:mb-24 z-40 focus-visible:outline-accent"
+              className="group relative flex flex-col w-full -mt-16 md:-mt-32 mb-12 md:mb-24 z-10 focus-visible:outline-accent"
             >
               <div className="w-[65%] md:w-[40%] aspect-[3/4] overflow-hidden bg-surface shadow-2xl">
                 <img src={categories[2].image} alt={categories[2].name} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
