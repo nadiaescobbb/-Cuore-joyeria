@@ -7,4 +7,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  build: {
+    cssTarget: ['es2020', 'safari14']
+  }
 })

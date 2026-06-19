@@ -133,6 +133,12 @@
       transform: translateY(0) scale(1);
     }
   }
+
+  /* Safari specific fallbacks */
+  .backdrop-blur-sm {
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
