@@ -44,24 +44,57 @@ export function WorkshopSection() {
             Fabricamos alianzas en nuestro taller.
           </h2>
           
-          {/* Body */}
-          <p className="font-body text-sm lg:text-base text-muted max-w-md mb-6 lg:mb-0">
+          {/* Desktop Body (Hidden on mobile) */}
+          <p className="hidden lg:block font-body text-base text-muted max-w-md">
             Elegís el material, la medida y el grabado. Cada alianza se hace acá, en Río Grande.
           </p>
 
-          {/* Steps */}
-          <div className="flex lg:flex-col overflow-x-auto lg:overflow-visible gap-6 lg:gap-4 mb-8 lg:mb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-            <div className="flex-shrink-0 flex flex-col lg:flex-row lg:items-baseline gap-1 lg:gap-4">
-              <span className="font-body lg:font-heading text-xs lg:text-sm font-normal text-muted">01.</span>
-              <span className="font-body text-sm lg:text-base font-normal text-foreground">Referencia</span>
+          {/* Desktop Steps (Hidden on mobile) */}
+          <div className="hidden lg:flex flex-col gap-4">
+            <div className="flex items-baseline gap-4">
+              <span className="font-heading text-sm font-normal text-muted">01.</span>
+              <span className="font-body text-base font-normal text-foreground">Referencia</span>
             </div>
-            <div className="flex-shrink-0 flex flex-col lg:flex-row lg:items-baseline gap-1 lg:gap-4">
-              <span className="font-body lg:font-heading text-xs lg:text-sm font-normal text-muted">02.</span>
-              <span className="font-body text-sm lg:text-base font-normal text-foreground">Medida y material</span>
+            <div className="flex items-baseline gap-4">
+              <span className="font-heading text-sm font-normal text-muted">02.</span>
+              <span className="font-body text-base font-normal text-foreground">Medida y material</span>
             </div>
-            <div className="flex-shrink-0 flex flex-col lg:flex-row lg:items-baseline gap-1 lg:gap-4">
-              <span className="font-body lg:font-heading text-xs lg:text-sm font-normal text-muted">03.</span>
-              <span className="font-body text-sm lg:text-base font-normal text-foreground">Grabado y entrega</span>
+            <div className="flex items-baseline gap-4">
+              <span className="font-heading text-sm font-normal text-muted">03.</span>
+              <span className="font-body text-base font-normal text-foreground">Grabado y entrega</span>
+            </div>
+          </div>
+
+          {/* Mobile Steps (Hidden on desktop) */}
+          <div className="flex flex-col gap-6 lg:hidden mb-8">
+            <div className="flex flex-col">
+              <div className="flex items-baseline gap-2">
+                <span className="font-body text-xs text-muted">01 —</span>
+                <span className="font-heading text-2xl text-foreground">Referencia</span>
+              </div>
+              <p className="font-body text-sm text-muted mt-1 pl-0">
+                Nos mostrás qué querés.
+              </p>
+            </div>
+            
+            <div className="flex flex-col">
+              <div className="flex items-baseline gap-2">
+                <span className="font-body text-xs text-muted">02 —</span>
+                <span className="font-heading text-2xl text-foreground">Medida y material</span>
+              </div>
+              <p className="font-body text-sm text-muted mt-1 pl-0">
+                Definimos juntos.
+              </p>
+            </div>
+            
+            <div className="flex flex-col">
+              <div className="flex items-baseline gap-2">
+                <span className="font-body text-xs text-muted">03 —</span>
+                <span className="font-heading text-2xl text-foreground">Grabado y entrega</span>
+              </div>
+              <p className="font-body text-sm text-muted mt-1 pl-0">
+                Lo retirás listo.
+              </p>
             </div>
           </div>
 
