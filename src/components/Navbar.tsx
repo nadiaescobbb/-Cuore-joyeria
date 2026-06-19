@@ -1,11 +1,21 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { navItems } from '../data/nav';
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className="fixed top-0 z-50 w-full bg-transparent">
+    <header className={`fixed top-0 z-50 w-full transition-colors duration-300 ${isScrolled ? 'bg-dark shadow-md' : 'bg-transparent'}`}>
       <div className="max-w-[1440px] mx-auto px-4 md:px-20 h-20 flex items-center justify-between relative z-[60]">
         <nav className="hidden md:flex gap-8" aria-label="Navegación principal">
           {navItems.slice(0, 3).map((item) => (
