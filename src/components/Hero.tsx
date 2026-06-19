@@ -17,13 +17,13 @@ export function Hero() {
       
       <div className="absolute bottom-0 left-0 w-full h-3/5 bg-gradient-to-t from-dark/90 via-dark/40 to-transparent pointer-events-none"></div>
 
-      <div className="absolute bottom-0 left-0 w-full px-4 pb-10 md:px-8 md:pb-12 lg:px-16 lg:pb-16">
+      <div className="absolute bottom-0 inset-x-0 px-6 sm:px-8 pb-10 md:px-8 md:pb-12 lg:px-16 lg:pb-16 box-border">
         <div className="max-w-[1440px] mx-auto w-full">
-          <div className="max-w-2xl flex flex-col items-start text-left">
-            <h1 className="font-heading text-[40px] md:text-6xl lg:text-7xl leading-none tracking-tight font-normal text-background mb-4 drop-shadow-md">
+          <div className="max-w-2xl flex flex-col items-start text-left w-full pr-2 sm:pr-0">
+            <h1 className="font-heading text-4xl sm:text-[40px] md:text-6xl lg:text-7xl leading-[1.05] tracking-tight font-normal text-background mb-4 drop-shadow-md w-full break-words">
               Fabricamos alianzas, reparamos joyas y asesoramos hace más de 40 <i>años</i>.
             </h1>
-            <p className="font-body text-sm lg:text-base text-background/90 max-w-lg mb-6 leading-relaxed drop-shadow-sm">
+            <p className="font-body text-sm lg:text-base text-background/90 max-w-[280px] sm:max-w-lg mb-6 leading-relaxed drop-shadow-sm w-full break-words">
               Mirá estilos, mandanos una referencia y te respondemos con stock, precio o modelos parecidos.
             </p>
             

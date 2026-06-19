@@ -57,7 +57,7 @@ export function Navbar() {
 
         {!isOpen ? (
           <button 
-            className="md:hidden p-2 text-background focus-visible:outline-accent relative z-[60]" 
+            className="md:hidden flex p-2 text-background focus-visible:outline-accent relative z-[60]" 
             aria-label="Abrir menú"
             aria-expanded={isOpen}
             onClick={() => setIsOpen(true)}
@@ -70,7 +70,7 @@ export function Navbar() {
           </button>
         ) : (
           <button 
-            className="md:hidden absolute top-6 right-5 p-2 text-background focus-visible:outline-accent z-[60]"
+            className="md:hidden flex absolute top-6 right-5 p-2 text-background focus-visible:outline-accent z-[60]"
             aria-label="Cerrar menú"
             aria-expanded={isOpen}
             onClick={() => setIsOpen(false)}
