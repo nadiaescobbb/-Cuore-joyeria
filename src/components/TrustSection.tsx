@@ -15,47 +15,63 @@ export function TrustSection() {
             </h2>
           </div>
 
-          {/* Right Column (Timeline on mobile / Simple Rows on desktop) */}
-          <div className="flex flex-col gap-8 md:gap-10 lg:gap-14 border-l-2 border-border pl-6 ml-4 mt-10 md:border-none md:pl-0 md:ml-0 md:mt-0">
+          {/* Right Column (Editorial Numbers on mobile / Simple Rows on desktop) */}
+          <div className="flex flex-col gap-10 md:gap-10 lg:gap-14 mt-10 md:mt-0">
             
             <div className="relative">
-              <div className="absolute left-[-29px] top-2 w-[6px] h-[6px] rounded-full bg-accent md:hidden"></div>
-              <h3 className="font-heading text-3xl md:text-5xl lg:text-6xl font-normal md:font-medium leading-tight md:leading-tight text-foreground">
-                Taller propio
-              </h3>
-              <p className="font-body text-sm text-muted mt-1 md:mt-2">
-                Fabricamos y reparamos en el local.
-              </p>
+              <span className="absolute -top-5 -left-2 font-heading text-[8rem] leading-none text-foreground/6 pointer-events-none select-none z-0 md:hidden">
+                01
+              </span>
+              <div className="relative z-10">
+                <h3 className="font-heading text-3xl md:text-5xl lg:text-6xl font-normal md:font-medium leading-tight md:leading-tight text-foreground">
+                  Taller propio
+                </h3>
+                <p className="font-body text-sm text-muted mt-1 md:mt-2">
+                  Fabricamos y reparamos en el local.
+                </p>
+              </div>
             </div>
             
             <div className="relative">
-              <div className="absolute left-[-29px] top-2 w-[6px] h-[6px] rounded-full bg-accent md:hidden"></div>
-              <h3 className="font-heading text-3xl md:text-5xl lg:text-6xl font-normal md:font-medium leading-tight md:leading-tight text-foreground">
-                Más de 40 años
-              </h3>
-              <p className="font-body text-sm text-muted mt-1 md:mt-2">
-                En el mismo local, con el mismo oficio.
-              </p>
+              <span className="absolute -top-5 -left-2 font-heading text-[8rem] leading-none text-foreground/6 pointer-events-none select-none z-0 md:hidden">
+                02
+              </span>
+              <div className="relative z-10">
+                <h3 className="font-heading text-3xl md:text-5xl lg:text-6xl font-normal md:font-medium leading-tight md:leading-tight text-foreground">
+                  Más de 40 años
+                </h3>
+                <p className="font-body text-sm text-muted mt-1 md:mt-2">
+                  En el mismo local, con el mismo oficio.
+                </p>
+              </div>
             </div>
 
             <div className="relative">
-              <div className="absolute left-[-29px] top-2 w-[6px] h-[6px] rounded-full bg-accent md:hidden"></div>
-              <h3 className="font-heading text-3xl md:text-5xl lg:text-6xl font-normal md:font-medium leading-tight md:leading-tight text-foreground">
-                Una de las joyerías más grandes de la provincia
-              </h3>
-              <p className="font-body text-sm text-muted mt-1 md:mt-2">
-                Más de 30 marcas de relojes. Stock con renovación permanente. Variedad real para elegir.
-              </p>
+              <span className="absolute -top-5 -left-2 font-heading text-[8rem] leading-none text-foreground/6 pointer-events-none select-none z-0 md:hidden">
+                03
+              </span>
+              <div className="relative z-10">
+                <h3 className="font-heading text-3xl md:text-5xl lg:text-6xl font-normal md:font-medium leading-tight md:leading-tight text-foreground">
+                  Una de las joyerías más grandes de la provincia
+                </h3>
+                <p className="font-body text-sm text-muted mt-1 md:mt-2">
+                  Más de 30 marcas de relojes. Stock con renovación permanente. Variedad real para elegir.
+                </p>
+              </div>
             </div>
 
             <div className="relative">
-              <div className="absolute left-[-29px] top-2 w-[6px] h-[6px] rounded-full bg-accent md:hidden"></div>
-              <h3 className="font-heading text-3xl md:text-5xl lg:text-6xl font-normal md:font-medium leading-tight md:leading-tight text-foreground">
-                Asesoramiento real
-              </h3>
-              <p className="font-body text-sm text-muted mt-1 md:mt-2">
-                Contanos qué necesitás. Te ayudamos a elegir sin apuro.
-              </p>
+              <span className="absolute -top-5 -left-2 font-heading text-[8rem] leading-none text-foreground/6 pointer-events-none select-none z-0 md:hidden">
+                04
+              </span>
+              <div className="relative z-10">
+                <h3 className="font-heading text-3xl md:text-5xl lg:text-6xl font-normal md:font-medium leading-tight md:leading-tight text-foreground">
+                  Asesoramiento real
+                </h3>
+                <p className="font-body text-sm text-muted mt-1 md:mt-2">
+                  Contanos qué necesitás. Te ayudamos a elegir sin apuro.
+                </p>
+              </div>
             </div>
 
           </div>
