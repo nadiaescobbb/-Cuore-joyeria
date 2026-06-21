@@ -12,7 +12,7 @@ export function Footer() {
           </a>
         </div>
 
-        <nav className="flex flex-nowrap gap-6 justify-center w-full" aria-label="Navegación del pie de página">
+        <nav className="flex flex-wrap gap-x-4 gap-y-3 md:gap-6 justify-center w-full px-5 md:px-0" aria-label="Navegación del pie de página">
           {navItems.map((item) => (
             <a 
               key={item.href} 
