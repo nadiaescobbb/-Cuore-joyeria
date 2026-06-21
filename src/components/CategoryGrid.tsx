@@ -22,7 +22,7 @@ export function CategoryGrid() {
         </div>
 
         {/* Collage Desestructurado */}
-        <div className="flex flex-col w-full relative">
+        <div className="flex flex-col w-full relative gap-16 md:gap-0">
           
           {/* 1. ANILLOS */}
           {categories[0] && (
@@ -30,12 +30,12 @@ export function CategoryGrid() {
               href={getWaLink(categories[0].waMessage)}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative flex flex-col w-full mb-12 md:mb-24 z-20 focus-visible:outline-accent"
+              className="group relative flex flex-col w-full mb-0 md:mb-24 z-20 focus-visible:outline-accent"
             >
-              <div className="w-[65%] md:w-[40%] aspect-[3/4] overflow-hidden bg-surface shadow-2xl">
+              <div className="w-[85%] md:w-[40%] aspect-[3/4] overflow-hidden bg-surface shadow-2xl">
                 <img src={categories[0].image} alt={categories[0].name} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
               </div>
-              <div className="absolute right-0 top-1/3 w-[45%] md:w-[40%] pl-4 drop-shadow-md">
+              <div className="relative md:absolute md:right-0 md:top-1/3 w-full md:w-[40%] pt-6 md:pt-0 md:pl-4 drop-shadow-md">
                 <h3 className="font-heading text-[40px] md:text-[64px] tracking-tight text-foreground mb-2">
                   {categories[0].name}
                 </h3>
@@ -52,12 +52,12 @@ export function CategoryGrid() {
               href={getWaLink(categories[1].waMessage)}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative flex flex-col w-full items-end ml-auto -mt-16 md:-mt-32 mb-20 md:mb-32 z-30 focus-visible:outline-accent"
+              className="group relative flex flex-col w-full items-end ml-auto mt-0 md:-mt-32 mb-0 md:mb-32 z-30 focus-visible:outline-accent"
             >
               <div className="w-[85%] md:w-[55%] aspect-[4/3] md:aspect-video overflow-hidden bg-surface">
                 <img src={categories[1].image} alt={categories[1].name} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
               </div>
-              <div className="absolute left-0 bottom-[-15%] md:bottom-[-10%] w-[65%] md:w-[40%] bg-background/95 backdrop-blur-sm p-4 md:p-8 shadow-2xl">
+              <div className="relative md:absolute md:left-0 md:bottom-[-10%] w-full md:w-[40%] bg-transparent md:bg-background/95 md:backdrop-blur-sm pt-6 md:pt-0 md:p-8 shadow-none md:shadow-2xl self-start md:self-auto">
                 <h3 className="font-heading text-[40px] md:text-[64px] tracking-tight text-foreground mb-2">
                   {categories[1].name}
                 </h3>
@@ -74,12 +74,12 @@ export function CategoryGrid() {
               href={getWaLink(categories[2].waMessage)}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative flex flex-col w-full -mt-16 md:-mt-32 mb-12 md:mb-24 z-10 focus-visible:outline-accent"
+              className="group relative flex flex-col w-full mt-0 md:-mt-32 mb-0 md:mb-24 z-10 focus-visible:outline-accent"
             >
-              <div className="w-[65%] md:w-[40%] aspect-[3/4] overflow-hidden bg-surface shadow-2xl">
+              <div className="w-[85%] md:w-[40%] aspect-[3/4] overflow-hidden bg-surface shadow-2xl">
                 <img src={categories[2].image} alt={categories[2].name} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
               </div>
-              <div className="absolute right-0 top-1/3 w-[45%] md:w-[40%] pl-4 drop-shadow-md">
+              <div className="relative md:absolute md:right-0 md:top-1/3 w-full md:w-[40%] pt-6 md:pt-0 md:pl-4 drop-shadow-md">
                 <h3 className="font-heading text-[40px] md:text-[64px] tracking-tight text-foreground mb-2">
                   {categories[2].name}
                 </h3>
