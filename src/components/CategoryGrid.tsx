@@ -94,7 +94,7 @@ export function CategoryGrid() {
 
       {/* 4. RELOJES - Separación Visual Masiva */}
       {categories[3] && (
-        <section className="w-full mt-12 md:mt-40 mb-16 md:mb-32">
+        <section className="w-full mt-12 md:mt-40 mb-0">
           <a
             href={getWaLink(categories[3].waMessage)}
             target="_blank"

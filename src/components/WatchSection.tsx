@@ -7,7 +7,7 @@ export function WatchSection() {
   const ref = useReveal();
 
   return (
-    <section id="watches" className="max-w-[1440px] mx-auto px-4 md:px-20 py-16 md:py-24 bg-dark-surface text-background" ref={ref}>
+    <section id="watches" className="max-w-[1440px] mx-auto px-4 md:px-20 pt-8 pb-16 md:pt-12 md:pb-24 bg-dark-surface text-background" ref={ref}>
       <div className="flex flex-col items-start text-left mb-16 w-full overflow-hidden">
         <style>{`
           @keyframes marquee {
@@ -17,14 +17,17 @@ export function WatchSection() {
         `}</style>
         <div 
           className="flex font-marquee uppercase font-bold tracking-[0.02em] text-4xl lg:text-6xl text-background leading-none w-max"
-          style={{ animation: 'marquee 30s linear infinite' }}
+          style={{ 
+            animation: 'marquee 30s linear infinite',
+            maskImage: 'linear-gradient(to right, transparent, black 5%, black 95%, transparent)',
+            WebkitMaskImage: 'linear-gradient(to right, transparent, black 5%, black 95%, transparent)'
+          }}
         >
-          {[...Array(4)].map((_, groupIndex) => (
-            <div key={groupIndex} className="flex items-center">
+          {[...Array(2)].map((_, groupIndex) => (
+            <div key={groupIndex} className="flex items-center gap-12 lg:gap-16 pr-12 lg:pr-16">
               {['Casio', 'Bulova', 'Tommy Hilfiger', 'Orient', 'Citizen', 'Seiko'].map((brand, index) => (
                 <div key={index} className="flex items-center whitespace-nowrap">
                   <span>{brand}</span>
-                  <span className="text-gold text-[0.4em] mx-6 lg:mx-10">•</span>
                 </div>
               ))}
             </div>
