@@ -8,7 +8,7 @@ export function CategoryGrid() {
 
   return (
     <div className="w-full" ref={ref}>
-      <section id="categories" className="max-w-[1440px] mx-auto px-5 md:px-20 pt-16 md:pt-24 pb-8">
+      <section id="categories" className="max-w-[1440px] mx-auto px-5 md:px-20 pt-16 md:pt-24 pb-0 md:pb-8">
         <div className="w-full flex flex-col items-start text-left mb-16 md:mb-32">
           <span className="font-body text-label font-bold tracking-wide text-muted uppercase mb-4">
             Por dónde empezar
@@ -94,7 +94,7 @@ export function CategoryGrid() {
 
       {/* 4. RELOJES - Separación Visual Masiva */}
       {categories[3] && (
-        <section className="w-full mt-24 md:mt-40 mb-16 md:mb-32">
+        <section className="w-full mt-12 md:mt-40 mb-16 md:mb-32">
           <a
             href={getWaLink(categories[3].waMessage)}
             target="_blank"
@@ -112,7 +112,7 @@ export function CategoryGrid() {
             
             {/* Text Overlay */}
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-5">
-              <span className="font-body text-[10px] md:text-xs font-bold tracking-[0.30em] text-accent uppercase mb-6 md:mb-8">
+              <span className="font-body text-[13px] md:text-xs font-bold tracking-[0.32em] text-[#d8c79f] uppercase mb-6 md:mb-8 drop-shadow-md">
                 La otra mitad de Cuore
               </span>
               <h3 className="font-heading text-[64px] md:text-[120px] leading-none tracking-tight text-background mb-6 md:mb-8">
