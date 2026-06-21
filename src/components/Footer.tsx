@@ -29,7 +29,7 @@ export function Footer() {
             © 2026 Joyería y Relojería Cuore · Río Grande, TDF.
           </p>
           <p className="font-body text-xs text-background/30">
-            Diseño: Trama Studio
+            Hecho por heytrama
           </p>
         </div>
       </div>
