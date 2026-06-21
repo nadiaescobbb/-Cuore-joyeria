@@ -9,9 +9,6 @@ export function WatchSection() {
   return (
     <section id="watches" className="max-w-[1440px] mx-auto px-4 md:px-20 py-16 md:py-24 bg-dark-surface text-background" ref={ref}>
       <div className="flex flex-col items-start text-left mb-16 w-full overflow-hidden">
-        <span className="font-body text-label font-bold tracking-wide text-gold uppercase mb-4">
-          Relojería
-        </span>
         <style>{`
           @keyframes marquee {
             from { transform: translateX(0) }
@@ -19,15 +16,15 @@ export function WatchSection() {
           }
         `}</style>
         <div 
-          className="flex font-heading text-5xl lg:text-7xl font-normal text-background leading-none w-max"
+          className="flex font-marquee uppercase font-bold tracking-[0.02em] text-4xl lg:text-6xl text-background leading-none w-max"
           style={{ animation: 'marquee 30s linear infinite' }}
         >
           {[...Array(4)].map((_, groupIndex) => (
             <div key={groupIndex} className="flex items-center">
-              {['Casio', 'Tommy Hilfiger', 'Oriental', 'Bulova'].map((brand, index) => (
+              {['Casio', 'Bulova', 'Tommy Hilfiger', 'Orient', 'Citizen', 'Seiko'].map((brand, index) => (
                 <div key={index} className="flex items-center whitespace-nowrap">
                   <span>{brand}</span>
-                  <span className="text-gold/40 mx-8 lg:mx-12">—</span>
+                  <span className="text-gold text-[0.4em] mx-6 lg:mx-10">•</span>
                 </div>
               ))}
             </div>
