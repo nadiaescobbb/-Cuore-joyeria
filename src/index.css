@@ -41,13 +41,17 @@
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
-    background-color: var(--color-background);
+    background-color: var(--color-dark);
   }
 
   body {
-    @apply bg-background text-foreground font-body;
+    @apply bg-dark text-foreground font-body;
     text-rendering: optimizeLegibility;
     letter-spacing: 0;
+  }
+
+  #root {
+    @apply bg-background min-h-screen flex flex-col overflow-x-hidden;
   }
 
   a,
