@@ -7,10 +7,10 @@ export function WorkshopSection() {
 
   return (
     <section id="workshop" className="w-full bg-background" ref={ref}>
-      <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 min-h-[600px]">
         
         {/* Image Column */}
-        <div className="relative h-[70vh] lg:h-full w-full">
+        <div className="relative h-[70vh] md:h-full w-full">
           <img 
             src="/images/craf.avif" 
             alt="Trabajo artesanal en el taller de Cuore"
@@ -18,10 +18,10 @@ export function WorkshopSection() {
           />
           
           {/* Mobile Overlay Gradient */}
-          <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-dark/85 to-transparent pointer-events-none lg:hidden"></div>
+          <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-dark/85 to-transparent pointer-events-none md:hidden"></div>
           
           {/* Mobile Overlay Text */}
-          <div className="absolute bottom-0 left-0 w-full px-5 pb-8 lg:hidden">
+          <div className="absolute bottom-0 left-0 w-full px-5 pb-8 md:hidden">
             <span className="block font-body text-[10px] font-bold tracking-[0.20em] text-gold uppercase mb-2">
               TALLER Y FABRICACIÓN
             </span>
@@ -32,20 +32,20 @@ export function WorkshopSection() {
         </div>
         
         {/* Text Column */}
-        <div className="flex flex-col justify-start lg:justify-center px-5 py-10 lg:px-16 lg:py-20 lg:gap-8">
+        <div className="flex flex-col justify-start md:justify-center px-5 py-10 md:px-10 md:py-16 lg:px-16 lg:py-20 md:gap-8">
           
-          {/* Desktop Label */}
-          <span className="hidden lg:block font-body text-[10px] font-bold tracking-[0.20em] text-accent uppercase">
+          {/* Desktop/Tablet Label */}
+          <span className="hidden md:block font-body text-[10px] font-bold tracking-[0.20em] text-accent uppercase">
             TALLER Y FABRICACIÓN
           </span>
           
-          {/* Desktop Title */}
-          <h2 className="hidden lg:block font-heading text-5xl lg:text-6xl font-normal leading-tight text-foreground">
+          {/* Desktop/Tablet Title */}
+          <h2 className="hidden md:block font-heading text-4xl md:text-5xl lg:text-6xl font-normal leading-tight text-foreground">
             Fabricamos alianzas en nuestro taller.
           </h2>
           
-          {/* Desktop Body (Hidden on mobile) */}
-          <p className="hidden lg:block font-body text-base text-muted max-w-md">
+          {/* Desktop/Tablet Body (Hidden on mobile) */}
+          <p className="hidden md:block font-body text-base text-muted max-w-md">
             Elegís el material, la medida y el grabado. Cada alianza se hace acá, en Río Grande.
           </p>
 

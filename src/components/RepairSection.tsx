@@ -10,14 +10,14 @@ export function RepairSection() {
       <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_0.4fr] gap-16 items-start">
         
         {/* Left Column */}
-        <div className="flex flex-col items-start gap-6 lg:gap-8">
+        <div className="flex flex-col items-start gap-6 lg:gap-8 max-w-md md:max-w-2xl lg:max-w-none">
           <span className="font-body text-[10px] font-bold tracking-[0.20em] text-gold uppercase text-left">
             REPARACIONES
           </span>
           <h2 className="font-heading text-5xl lg:text-6xl font-normal leading-tight text-background text-left">
             Reparamos las piezas que querés seguir usando.
           </h2>
-          <p className="font-body text-sm lg:text-base text-background/70 max-w-lg text-left">
+          <p className="font-body text-sm lg:text-base text-background/70 max-w-lg md:max-w-2xl lg:max-w-lg text-left">
             Relojes, joyas, mallas y pilas. Si algo se rompió o dejó de funcionar, traelo. Trabajamos las reparaciones en nuestro propio taller.
           </p>
 
