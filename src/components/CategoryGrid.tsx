@@ -32,11 +32,11 @@ export function CategoryGrid() {
               rel="noopener noreferrer"
               className="group relative flex flex-col w-full mb-0 md:mb-24 z-20 focus-visible:outline-accent"
             >
-              <div className="w-[85%] md:w-[40%] aspect-[3/4] overflow-hidden bg-surface shadow-2xl">
+              <div className="w-[85%] md:w-[45%] lg:w-[40%] aspect-[3/4] overflow-hidden bg-surface shadow-2xl">
                 <img src={categories[0].image} alt={categories[0].name} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
               </div>
-              <div className="relative md:absolute md:right-0 md:top-1/3 w-full md:w-[40%] pt-6 md:pt-0 md:pl-4 drop-shadow-md">
-                <h3 className="font-heading text-[40px] md:text-[64px] tracking-tight text-foreground mb-2">
+              <div className="relative md:absolute md:right-0 md:top-1/3 w-full md:w-[55%] lg:w-[40%] pt-6 md:pt-0 md:pl-8 lg:pl-4 drop-shadow-md">
+                <h3 className="font-heading text-[40px] md:text-[48px] lg:text-[64px] tracking-tight text-foreground mb-2">
                   {categories[0].name}
                 </h3>
                 <p className="font-body text-sm md:text-base text-muted leading-relaxed">
@@ -54,11 +54,11 @@ export function CategoryGrid() {
               rel="noopener noreferrer"
               className="group relative flex flex-col w-full items-end ml-auto mt-0 md:-mt-32 mb-0 md:mb-32 z-30 focus-visible:outline-accent"
             >
-              <div className="w-[85%] md:w-[55%] aspect-[4/3] md:aspect-video overflow-hidden bg-surface">
+              <div className="w-[85%] md:w-[55%] lg:w-[55%] aspect-[4/3] md:aspect-video overflow-hidden bg-surface">
                 <img src={categories[1].image} alt={categories[1].name} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
               </div>
-              <div className="relative md:absolute md:left-0 md:bottom-[-10%] w-full md:w-[40%] bg-transparent md:bg-background/95 md:backdrop-blur-sm pt-6 md:pt-0 md:p-8 shadow-none md:shadow-2xl self-start md:self-auto">
-                <h3 className="font-heading text-[40px] md:text-[64px] tracking-tight text-foreground mb-2">
+              <div className="relative md:absolute md:left-0 md:bottom-[-10%] w-full md:w-[50%] lg:w-[40%] bg-transparent md:bg-background/95 md:backdrop-blur-sm pt-6 md:pt-0 md:p-6 lg:p-8 shadow-none md:shadow-2xl self-start md:self-auto">
+                <h3 className="font-heading text-[40px] md:text-[48px] lg:text-[64px] tracking-tight text-foreground mb-2">
                   {categories[1].name}
                 </h3>
                 <p className="font-body text-sm md:text-base text-muted leading-relaxed">
@@ -76,11 +76,11 @@ export function CategoryGrid() {
               rel="noopener noreferrer"
               className="group relative flex flex-col w-full mt-0 md:-mt-32 mb-0 md:mb-24 z-10 focus-visible:outline-accent"
             >
-              <div className="w-[85%] md:w-[40%] aspect-[3/4] overflow-hidden bg-surface shadow-2xl">
+              <div className="w-[85%] md:w-[45%] lg:w-[40%] aspect-[3/4] overflow-hidden bg-surface shadow-2xl">
                 <img src={categories[2].image} alt={categories[2].name} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
               </div>
-              <div className="relative md:absolute md:right-0 md:top-1/3 w-full md:w-[40%] pt-6 md:pt-0 md:pl-4 drop-shadow-md">
-                <h3 className="font-heading text-[40px] md:text-[64px] tracking-tight text-foreground mb-2">
+              <div className="relative md:absolute md:right-0 md:top-1/3 w-full md:w-[55%] lg:w-[40%] pt-6 md:pt-0 md:pl-8 lg:pl-4 drop-shadow-md">
+                <h3 className="font-heading text-[40px] md:text-[48px] lg:text-[64px] tracking-tight text-foreground mb-2">
                   {categories[2].name}
                 </h3>
                 <p className="font-body text-sm md:text-base text-muted leading-relaxed">
@@ -115,7 +115,7 @@ export function CategoryGrid() {
               <span className="font-body text-[13px] md:text-xs font-bold tracking-[0.32em] text-[#d8c79f] uppercase mb-6 md:mb-8 drop-shadow-md">
                 La otra mitad de Cuore
               </span>
-              <h3 className="font-heading text-[64px] md:text-[120px] leading-none tracking-tight text-background mb-6 md:mb-8">
+              <h3 className="font-heading text-[64px] md:text-[80px] lg:text-[120px] leading-none tracking-tight text-background mb-6 md:mb-8">
                 {categories[3].name}
               </h3>
               <p className="font-body text-base md:text-xl text-background/80 leading-relaxed max-w-lg mb-10">

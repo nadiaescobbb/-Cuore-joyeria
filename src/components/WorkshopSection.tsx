@@ -50,7 +50,7 @@ export function WorkshopSection() {
           </p>
 
           {/* Desktop Steps (Hidden on mobile) */}
-          <div className="hidden lg:flex flex-col gap-4">
+          <div className="hidden md:flex flex-col gap-4">
             <div className="flex items-baseline gap-4">
               <span className="font-heading text-sm font-normal text-muted">01.</span>
               <span className="font-body text-base font-normal text-foreground">Referencia</span>
@@ -66,7 +66,7 @@ export function WorkshopSection() {
           </div>
 
           {/* Mobile Steps (Hidden on desktop) */}
-          <div className="flex flex-col gap-6 lg:hidden mb-8">
+          <div className="flex flex-col gap-6 md:hidden mb-8">
             <div className="flex flex-col">
               <div className="flex items-baseline gap-2">
                 <span className="font-body text-xs text-muted">01 —</span>
