@@ -23,11 +23,11 @@ export function Hero() {
             <h1 className="font-heading text-4xl sm:text-[40px] md:text-6xl lg:text-7xl leading-[1.05] tracking-tight font-normal text-background mb-4 drop-shadow-md w-full break-words">
               Fabricamos alianzas, reparamos joyas y asesoramos hace más de 40 <i>años</i>.
             </h1>
-            <p className="font-body text-sm lg:text-base text-background/90 max-w-[280px] sm:max-w-lg mb-6 leading-relaxed drop-shadow-sm w-full break-words">
+            <p className="font-body text-sm md:text-base text-background/90 max-w-[280px] sm:max-w-lg mb-6 leading-relaxed drop-shadow-sm w-full break-words">
               Mirá estilos, mandanos una referencia y te respondemos con stock, precio o modelos parecidos.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 w-full sm:w-auto">
               <a 
                 href={getWaLink("Consultá por WhatsApp")}
                 target="_blank"

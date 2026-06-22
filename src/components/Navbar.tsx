@@ -16,8 +16,8 @@ export function Navbar() {
 
   return (
     <header className={`fixed top-0 z-50 w-full transition-all duration-300 ${isScrolled ? 'bg-dark shadow-md' : 'bg-transparent'}`}>
-      <div className="max-w-[1440px] mx-auto px-4 md:px-20 h-20 flex items-center justify-between relative z-[60]">
-        <nav className="hidden md:flex gap-8" aria-label="Navegación principal">
+      <div className="max-w-[1440px] mx-auto px-4 md:px-8 lg:px-20 h-20 flex items-center justify-between relative z-[60]">
+        <nav className="hidden md:flex gap-6 lg:gap-8" aria-label="Navegación principal">
           {navItems.slice(0, 3).map((item) => (
             <a 
               key={item.href} 
@@ -37,7 +37,7 @@ export function Navbar() {
           />
         </a>
 
-        <div className="hidden md:flex gap-8 items-center">
+        <div className="hidden md:flex gap-6 lg:gap-8 items-center">
           {navItems.slice(3, 5).map((item) => (
             <a 
               key={item.href} 
@@ -86,22 +86,62 @@ export function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div 
-          className="md:hidden fixed inset-0 z-50 bg-dark/95 flex flex-col items-center justify-center gap-8 backdrop-blur-sm"
+          className="md:hidden fixed inset-0 z-50 bg-dark flex flex-col items-center justify-center h-full overflow-hidden"
           onClick={() => setIsOpen(false)}
         >
-          {navItems.map((item) => (
-            <a 
-              key={item.href} 
-              href={item.href}
-              className="text-2xl font-heading font-normal text-background hover:text-gold transition-colors"
-              onClick={(e) => {
-                e.stopPropagation();
-                setIsOpen(false);
-              }}
-            >
-              {item.label}
-            </a>
-          ))}
+          {/* Links Container */}
+          <div className="relative z-10 flex flex-col items-center justify-center w-full gap-12">
+            {/* Grupo 1: Joyería y Relojería */}
+            <div className="flex flex-col items-center gap-2">
+              {[navItems[3], navItems[4]].map((item) => (
+                <a 
+                  key={item.href} 
+                  href={item.href}
+                  className="text-3xl lg:text-4xl font-heading text-background hover:text-gold transition-colors text-center"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setIsOpen(false);
+                  }}
+                >
+                  {item.label}
+                </a>
+              ))}
+            </div>
+
+            {/* Grupo 2: Taller y Reparaciones */}
+            <div className="flex flex-col items-center gap-2">
+              {[navItems[1], navItems[2]].map((item) => (
+                <a 
+                  key={item.href} 
+                  href={item.href}
+                  className="text-3xl lg:text-4xl font-heading text-background hover:text-gold transition-colors text-center"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setIsOpen(false);
+                  }}
+                >
+                  {item.label}
+                </a>
+              ))}
+            </div>
+
+            {/* Grupo 3: Nosotros y Contacto */}
+            <div className="flex flex-col items-center gap-2">
+              {[navItems[0], navItems[5]].map((item) => (
+                <a 
+                  key={item.href} 
+                  href={item.href}
+                  className="text-3xl lg:text-4xl font-heading text-background hover:text-gold transition-colors text-center"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setIsOpen(false);
+                  }}
+                >
+                  {item.label}
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
       )}
     </header>
