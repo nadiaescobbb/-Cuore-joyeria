@@ -13,7 +13,7 @@ export function ContactSection() {
             Contacto
           </span>
           <h2 className="font-heading text-6xl lg:text-7xl font-normal leading-tight text-foreground mb-6">
-            Escribinos antes de pasar.
+            Estamos para ayudarte.
           </h2>
           <p className="font-body text-base text-muted max-w-lg mb-8">
             Te respondemos por WhatsApp. Podés mandar una foto, preguntar por stock o pedir una referencia. Sin compromiso.
@@ -41,7 +41,7 @@ export function ContactSection() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-x-16 lg:gap-y-8 mt-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-x-16 lg:gap-y-8 mt-4">
           <div>
             <span className="font-body text-xs font-bold tracking-[0.16em] text-foreground uppercase mb-1 block">
               Dirección
@@ -63,7 +63,7 @@ export function ContactSection() {
               Envíos
             </span>
             <p className="font-body text-sm text-muted">
-              A todo el país.
+              Envíos dentro de Tierra del Fuego.
             </p>
           </div>
           <div>

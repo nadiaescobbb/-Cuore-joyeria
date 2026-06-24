@@ -118,7 +118,7 @@ export function CategoryGrid() {
               <h3 className="font-heading text-[64px] md:text-[80px] lg:text-[120px] leading-none tracking-tight text-background mb-6 md:mb-8">
                 {categories[3].name}
               </h3>
-              <p className="font-body text-base md:text-xl text-background/80 leading-relaxed max-w-lg mb-10">
+              <p className="font-body text-base md:text-xl text-background/80 leading-relaxed max-w-sm md:max-w-2xl mb-10">
                 {categories[3].description}
               </p>
               <span className="font-body text-xs md:text-sm font-bold tracking-[0.20em] uppercase text-background flex items-center gap-3">
