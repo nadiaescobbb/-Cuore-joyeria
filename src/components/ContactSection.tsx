@@ -7,7 +7,7 @@ export function ContactSection() {
 
   return (
     <section id="contact" className="w-full bg-surface" ref={ref}>
-      <div className="max-w-4xl mx-auto px-8 lg:px-20 py-16 lg:py-24 flex flex-col gap-12">
+      <div className="max-w-4xl mx-auto px-8 lg:px-20 py-section flex flex-col gap-group">
         <div className="flex flex-col items-start text-left">
           <span className="font-body text-[10px] font-bold tracking-[0.20em] text-accent uppercase mb-4">
             Contacto
@@ -41,7 +41,7 @@ export function ContactSection() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-x-16 lg:gap-y-8 mt-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-item gap-x-group">
           <div>
             <span className="font-body text-xs font-bold tracking-[0.16em] text-foreground uppercase mb-1 block">
               Dirección

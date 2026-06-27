@@ -1,4 +1,5 @@
 import { useReveal } from '../hooks/use-reveal';
+import { getImageUrl } from '../utils/image';
 
 const getWaLink = (msg: string) => `https://wa.me/542964557378?text=${encodeURIComponent(msg)}`;
 
@@ -8,7 +9,7 @@ export function Hero() {
   return (
     <section id="hero" className="relative w-full h-[100dvh]" ref={ref}>
       <img 
-        src="/images/hero.avif" 
+        src={getImageUrl('/hero_pab1ge.avif')} 
         alt="Nuestras manos trabajando en joyería Cuore"
         className="absolute inset-0 w-full h-full object-cover object-center"
       />

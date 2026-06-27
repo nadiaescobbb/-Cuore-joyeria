@@ -8,8 +8,8 @@ export function CategoryGrid() {
 
   return (
     <div className="w-full" ref={ref}>
-      <section id="categories" className="max-w-[1440px] mx-auto px-5 md:px-20 pt-16 md:pt-24 pb-0 md:pb-8">
-        <div className="w-full flex flex-col items-start text-left mb-16 md:mb-32">
+      <section id="categories" className="max-w-[1440px] mx-auto px-5 md:px-20 pt-section pb-0 md:pb-8">
+        <div className="w-full flex flex-col items-start text-left mb-group">
           <span className="font-body text-label font-bold tracking-wide text-muted uppercase mb-4">
             Por dónde empezar
           </span>
@@ -22,7 +22,7 @@ export function CategoryGrid() {
         </div>
 
         {/* Collage Desestructurado */}
-        <div className="flex flex-col w-full relative gap-16 md:gap-0">
+        <div className="flex flex-col w-full relative gap-group md:gap-0">
           
           {/* 1. ANILLOS */}
           {categories[0] && (
@@ -30,7 +30,7 @@ export function CategoryGrid() {
               href={getWaLink(categories[0].waMessage)}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative flex flex-col w-full mb-0 md:mb-24 z-20 focus-visible:outline-accent"
+              className="group relative flex flex-col w-full mb-0 md:mb-group z-20 focus-visible:outline-accent"
             >
               <div className="w-[85%] md:w-[45%] lg:w-[40%] aspect-[3/4] overflow-hidden bg-surface shadow-2xl">
                 <img src={categories[0].image} alt={categories[0].name} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
@@ -52,7 +52,7 @@ export function CategoryGrid() {
               href={getWaLink(categories[1].waMessage)}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative flex flex-col w-full items-end ml-auto mt-0 md:-mt-32 mb-0 md:mb-32 z-30 focus-visible:outline-accent"
+              className="group relative flex flex-col w-full items-end ml-auto mt-0 md:-mt-group mb-0 md:mb-group z-30 focus-visible:outline-accent"
             >
               <div className="w-[85%] md:w-[55%] lg:w-[55%] aspect-[4/3] md:aspect-video overflow-hidden bg-surface">
                 <img src={categories[1].image} alt={categories[1].name} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
@@ -74,7 +74,7 @@ export function CategoryGrid() {
               href={getWaLink(categories[2].waMessage)}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative flex flex-col w-full mt-0 md:-mt-32 mb-0 md:mb-24 z-10 focus-visible:outline-accent"
+              className="group relative flex flex-col w-full mt-0 md:-mt-group mb-0 md:mb-group z-10 focus-visible:outline-accent"
             >
               <div className="w-[85%] md:w-[45%] lg:w-[40%] aspect-[3/4] overflow-hidden bg-surface shadow-2xl">
                 <img src={categories[2].image} alt={categories[2].name} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
@@ -94,7 +94,7 @@ export function CategoryGrid() {
 
       {/* 4. RELOJES - Separación Visual Masiva */}
       {categories[3] && (
-        <section className="w-full mt-12 md:mt-40 mb-0">
+        <section className="w-full mt-section mb-0">
           <a
             href={getWaLink(categories[3].waMessage)}
             target="_blank"

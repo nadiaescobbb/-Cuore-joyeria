@@ -1,4 +1,5 @@
 import { useReveal } from '../hooks/use-reveal';
+import { getImageUrl } from '../utils/image';
 
 const getWaLink = (msg: string) => `https://wa.me/542964557378?text=${encodeURIComponent(msg)}`;
 
@@ -12,7 +13,7 @@ export function WorkshopSection() {
         {/* Image Column */}
         <div className="relative h-[70vh] md:h-full w-full">
           <img 
-            src="/images/craf.avif" 
+            src={getImageUrl('/craf_lstywg.avif')} 
             alt="Trabajo artesanal en el taller de Cuore"
             className="w-full h-full object-cover object-[center_top] m-0 p-0"
           />
@@ -32,7 +33,8 @@ export function WorkshopSection() {
         </div>
         
         {/* Text Column */}
-        <div className="flex flex-col justify-start md:justify-center px-5 py-10 md:px-10 md:py-16 lg:px-16 lg:py-20 md:gap-8">
+        <div className="flex flex-col justify-start md:justify-center px-5 py-section md:px-10 lg:px-16 gap-group">
+          <div className="flex flex-col gap-4">
           
           {/* Desktop/Tablet Label */}
           <span className="hidden md:block font-body text-[10px] font-bold tracking-[0.20em] text-accent uppercase">
@@ -49,8 +51,10 @@ export function WorkshopSection() {
             Elegís el material, la medida y el grabado. Cada alianza se hace acá, en Río Grande.
           </p>
 
+          </div>
+
           {/* Desktop Steps (Hidden on mobile) */}
-          <div className="hidden md:flex flex-col gap-4">
+          <div className="hidden md:flex flex-col gap-item">
             <div className="flex items-baseline gap-4">
               <span className="font-heading text-sm font-normal text-muted">01.</span>
               <span className="font-body text-base font-normal text-foreground">Referencia</span>
@@ -66,7 +70,7 @@ export function WorkshopSection() {
           </div>
 
           {/* Mobile Steps (Hidden on desktop) */}
-          <div className="flex flex-col gap-6 md:hidden mb-8">
+          <div className="flex flex-col gap-item md:hidden">
             <div className="flex flex-col">
               <div className="flex items-baseline gap-2">
                 <span className="font-body text-xs text-muted">01 —</span>

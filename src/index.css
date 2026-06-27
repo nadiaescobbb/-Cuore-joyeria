@@ -21,6 +21,10 @@
   --tracking-normal: 0.06em;
   --tracking-wide: 0.20em;
 
+  --spacing-section: var(--spacing-section);
+  --spacing-group: var(--spacing-group);
+  --spacing-item: var(--spacing-item);
+
   --animate-reveal: reveal 1.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 
   @keyframes reveal {
@@ -38,6 +42,28 @@
 }
 
 @layer base {
+  :root {
+    --spacing-item: 32px;
+    --spacing-group: 64px;
+    --spacing-section: 96px;
+  }
+
+  @media (min-width: 768px) {
+    :root {
+      --spacing-item: 40px;
+      --spacing-group: 80px;
+      --spacing-section: 120px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    :root {
+      --spacing-item: 60px;
+      --spacing-group: 120px;
+      --spacing-section: 180px;
+    }
+  }
+
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;

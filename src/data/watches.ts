@@ -1,3 +1,5 @@
+import { getImageUrl } from '../utils/image';
+
 export interface Watch {
   id: string;
   title: string;
@@ -11,21 +13,21 @@ export const watches: Watch[] = [
     id: 'edifice',
     title: 'Edifice',
     category: 'Línea de acero',
-    image: '/images/edefice1.avif',
+    image: getImageUrl('/edefice1_gzc3qa.avif'),
     waMessage: 'Hola Cuore, quería consultar por relojes Casio Edifice'
   },
   {
     id: 'vintage',
     title: 'Vintage',
     category: 'Clásicos retro',
-    image: '/images/clasico.avif',
+    image: getImageUrl('/clasico_b9c6rp.avif'),
     waMessage: 'Hola Cuore, quería consultar por relojes retro/vintage'
   },
   {
     id: 'gshock',
     title: 'G-Shock',
     category: 'Alta resistencia',
-    image: '/images/gshock.avif',
+    image: getImageUrl('/gshock_twz9qg.avif'),
     waMessage: 'Hola Cuore, quería consultar por modelos G-Shock'
   }
 ];

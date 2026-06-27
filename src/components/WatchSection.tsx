@@ -7,8 +7,8 @@ export function WatchSection() {
   const ref = useReveal();
 
   return (
-    <section id="watches" className="max-w-[1440px] mx-auto px-4 md:px-20 pt-8 pb-16 md:pt-12 md:pb-24 bg-dark-surface text-background" ref={ref}>
-      <div className="flex flex-col items-start text-left mb-16 w-full overflow-hidden">
+    <section id="watches" className="max-w-[1440px] mx-auto px-4 md:px-20 py-section bg-dark-surface text-background" ref={ref}>
+      <div className="flex flex-col items-start text-left mb-group w-full overflow-hidden">
         <style>{`
           @keyframes marquee {
             from { transform: translateX(0) }
@@ -35,7 +35,7 @@ export function WatchSection() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 w-full max-w-md md:max-w-2xl lg:max-w-none mx-auto md:auto-rows-[600px] lg:auto-rows-[600px]">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-item w-full max-w-md md:max-w-2xl lg:max-w-none mx-auto md:auto-rows-[600px] lg:auto-rows-[600px]">
         {watches.map((watch) => (
           <a 
             key={watch.id}

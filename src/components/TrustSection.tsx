@@ -5,8 +5,8 @@ export function TrustSection() {
 
   return (
     <section id="trust" className="bg-surface relative" ref={ref}>
-      <div className="max-w-[1440px] mx-auto px-5 py-16 md:px-20 md:py-32">
-        <div className="flex flex-col md:grid md:grid-cols-[0.65fr_1fr] lg:grid-cols-[0.8fr_1fr] xl:grid-cols-[0.9fr_1fr] gap-8 md:gap-10 lg:gap-16 items-start">
+      <div className="max-w-[1440px] mx-auto px-5 py-section md:px-20">
+        <div className="flex flex-col md:grid md:grid-cols-[0.65fr_1fr] lg:grid-cols-[0.8fr_1fr] xl:grid-cols-[0.9fr_1fr] gap-group items-start">
           
           {/* Left Column (Sticky Headline) */}
           <div className="md:sticky md:top-24 lg:sticky lg:top-24 mb-0">
@@ -16,7 +16,7 @@ export function TrustSection() {
           </div>
 
           {/* Right Column (Editorial Numbers on mobile / Simple Rows on desktop) */}
-          <div className="flex flex-col gap-10 md:gap-10 lg:gap-14">
+          <div className="flex flex-col gap-item">
             
             <div className="relative">
               <span className="absolute -top-5 -left-2 font-heading text-[8rem] leading-none text-foreground/6 pointer-events-none select-none z-0 md:hidden">
@@ -70,6 +70,20 @@ export function TrustSection() {
                 </h3>
                 <p className="font-body text-sm text-muted mt-1 md:mt-2">
                   Contanos qué necesitás. Te ayudamos a elegir sin apuro.
+                </p>
+              </div>
+            </div>
+
+            <div className="relative">
+              <span className="absolute -top-5 -left-2 font-heading text-[8rem] leading-none text-foreground/6 pointer-events-none select-none z-0 md:hidden">
+                05
+              </span>
+              <div className="relative z-10">
+                <h3 className="font-heading text-2xl md:text-2xl lg:text-3xl font-normal md:font-medium leading-tight md:leading-tight text-foreground">
+                  Garantía real.
+                </h3>
+                <p className="font-body text-sm text-muted mt-1 md:mt-2">
+                  Trabajamos en oro, plata 925 y plata-oro, con respaldo de taller propio.
                 </p>
               </div>
             </div>

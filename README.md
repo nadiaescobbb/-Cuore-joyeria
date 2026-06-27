@@ -1,83 +1,82 @@
-**Cuore — Consultable Landing Page**
+# Cuore Joyería — Landing Page & Lead Generator
 
-Landing page for Cuore, a jewelry and watchmaking store in Río Grande, Tierra del Fuego. The goal is simple: help customers discover products and reach the store directly via WhatsApp without friction.
+Una landing page optimizada para conversión diseñada para Cuore, una joyería y relojería ubicada en Río Grande, Tierra del Fuego. 
 
-**Live site:** cuore-joyeria.vercel.app
+El objetivo de negocio de este proyecto no era crear un e-commerce tradicional, sino una herramienta de **generación de leads**: mostrar el catálogo y los servicios (taller propio, alianzas a medida) para derivar consultas altamente intencionadas y con contexto directamente al WhatsApp de la tienda.
 
----
-
-**Why It Exists**
-
-Cuore had no web presence. Customers arrived through Instagram and asked about prices via DM with no visual context. This page solves that: it displays the catalog by category, communicates the store's strengths (in-house workshop, custom wedding bands, 30+ watch brands) and routes every inquiry to WhatsApp with a pre-filled message based on the selected category.
-
-Prices are intentionally hidden — a client decision to keep every interaction as a direct conversation.
+**Live site:** [cuore-joyeria.vercel.app](https://cuore-joyeria.vercel.app)
 
 ---
 
-**Technical Decisions**
+## 🧠 Decisiones Técnicas y Arquitectura
 
-**Single page component**
-Everything lives in `Cuore.tsx`. For a landing with no shared state between routes and no business logic complexity, splitting into multiple pages adds overhead with no real benefit.
+Este proyecto fue construido pensando en rendimiento, mantenibilidad y adopción temprana de nuevas tecnologías. 
 
-**Animations with native IntersectionObserver**
-The `useReveal` hook observes elements and adds a class when they enter the viewport. No animation library — CSS handles the work with `cubic-bezier` and `animation-delay` passed as a prop. This avoids a dependency for something the platform already provides.
+### 1. Stack Tecnológico
+*   **React 19 & TypeScript:** Tipado estricto para evitar errores en tiempo de ejecución y aprovechamiento de la última versión de React.
+*   **Tailwind CSS v4:** Adopción temprana del nuevo motor de Tailwind, reemplazando el tradicional `tailwind.config.js` por un sistema de variables de CSS puro (`@theme`), reduciendo la sobrecarga de configuración.
+*   **Vite:** Herramienta de build ultra rápida para una mejor experiencia de desarrollo.
 
-**Pre-filled WhatsApp CTAs**
-Each section generates a `wa.me` link with a category-specific message via `getWaLink(msg)`. The store receives context before replying, which reduces friction on both sides.
+### 2. Animaciones sin dependencias externas
+Para mantener el bundle lo más ligero posible, decidí **no utilizar librerías como Framer Motion o GSAP**. 
+Implementé un sistema de animaciones en scroll utilizando la **API nativa Intersection Observer**. 
+*   Se creó un custom hook `useReveal` que observa cuándo los elementos entran al viewport.
+*   El componente wrapper `<Reveal />` aplica clases de CSS basadas en el estado, manejando duraciones y `animation-delay` directamente por props.
 
-**Tailwind CSS v4**
-First project using v4. The new `@theme` token system replaces `tailwind.config.js` and sits closer to native CSS custom properties. The adaptation from v3 was minimal.
+### 3. Generación Dinámica de Leads
+Para reducir la fricción en el contacto, los botones de llamado a la acción (CTAs) generan URLs dinámicas de `wa.me`. Dependiendo de la sección desde donde el usuario hace clic (por ejemplo, "Relojes" o "Reparaciones"), el mensaje pre-cargado de WhatsApp cambia. Esto otorga contexto inmediato al vendedor antes de responder.
+
+### 4. Optimización de Medios (CDN)
+La aplicación cuenta con una abstracción utilitaria (`getImageUrl`) para inyectar una variable de entorno (`VITE_CDN_URL`). Esto permite cambiar instantáneamente la carga de imágenes locales hacia un CDN como Cloudinary, habilitando formatos modernos y compresión dinámica (`f_auto,q_auto`) sin modificar la lógica de los componentes.
+
+### 5. Arquitectura de Componentes
+El proyecto comenzó como un solo archivo pero fue refactorizado hacia un diseño modular y escalable.
+*   **`App.tsx`** actúa como el layout principal.
+*   Las secciones están divididas lógicamente en `src/components/` (ej: `Hero.tsx`, `CategoryGrid.tsx`, `WorkshopSection.tsx`).
+*   No se utilizó un sistema de enrutamiento (React Router) ni manejo de estado global (Redux/Zustand) debido a que es una Single Page Application (SPA) pura; agregar esas librerías habría añadido complejidad y peso innecesarios a la carga de la página.
 
 ---
 
-**Stack**
+## 📂 Estructura del Proyecto
 
-| Layer | Tool |
-|---|---|
-| UI | React 19 |
-| Language | TypeScript |
-| Styles | Tailwind CSS v4 |
-| Animations | IntersectionObserver API |
-| Build | Vite |
-| Deploy | Vercel |
-
----
-
-**Structure**
-
-```
+```text
 src/
-├── components/
-│   └── Reveal.tsx          # Viewport-triggered animation wrapper
+├── components/          # Componentes modulares por sección de la landing
+│   ├── Reveal.tsx       # Wrapper reutilizable para animaciones de scroll
+│   └── ...              # Hero, Navbar, CategoryGrid, TrustSection, etc.
 ├── hooks/
-│   └── use-reveal.ts       # Encapsulated IntersectionObserver
-├── pages/
-│   └── Cuore.tsx           # Full landing page
-└── index.css               # Design tokens, animations, utilities
+│   └── use-reveal.ts    # Lógica de Intersection Observer encapsulada
+├── index.css            # Tokens de diseño de Tailwind v4 y utilidades custom
+├── App.tsx              # Componente principal que ensambla las secciones
+└── main.tsx             # Entry point de React
 ```
 
 ---
 
-**Scope**
+## 🚀 Instalación y Desarrollo Local
 
-| Current state | Reason | Next step |
-|---|---|---|
-| No cart or checkout | Client sells via WhatsApp, not online | Integrate MercadoPago if online sales are needed |
-| No CMS | Static catalog, client didn't require self-editing | Connect to a headless CMS if inventory grows |
-| Images in `/public` | Portfolio project without CDN | Migrate to Cloudinary or similar in real production |
-| No analytics | Out of initial scope | Add GA4 with WhatsApp click tracking |
+Para correr este proyecto en tu entorno local:
+
+1. Clona el repositorio:
+   ```bash
+   git clone <url-del-repo>
+   ```
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+3. Inicia el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
 
 ---
 
-**Getting Started**
-
-```bash
-npm install
-npm run dev
-```
+## 🔮 Próximos Pasos (Roadmap)
+Si el negocio requiere escalar la plataforma, la base de código está preparada para:
+- **Integración de Headless CMS:** Para que el cliente pueda actualizar imágenes y productos sin requerir despliegues de código.
+- **Analíticas:** Integración de Google Tag Manager para trackear eventos de conversión (clics en botones de WhatsApp).
 
 ---
 
-**Author**
-
-Nadia Escobar — [Trama Studio](https://tramaestudio.com)
+*Desarrollado por Nadia Escobar — [Trama Studio](https://tramaestudio.com)*
