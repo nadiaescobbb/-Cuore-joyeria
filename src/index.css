@@ -25,6 +25,8 @@
   --spacing-group: var(--spacing-group);
   --spacing-item: var(--spacing-item);
 
+  --text-hero-title: clamp(3rem, 8vh, 5rem);
+
   --animate-reveal: reveal 1.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 
   @keyframes reveal {
@@ -70,14 +72,20 @@
     background-color: var(--color-dark);
   }
 
+  @media (min-width: 1024px) {
+    html {
+      background-color: var(--color-background);
+    }
+  }
+
   body {
-    @apply bg-dark text-foreground font-body;
+    @apply bg-dark text-foreground font-body lg:bg-background;
     text-rendering: optimizeLegibility;
     letter-spacing: 0;
   }
 
   #root {
-    @apply bg-background min-h-screen flex flex-col overflow-x-hidden;
+    @apply bg-transparent min-h-screen flex flex-col overflow-x-hidden;
   }
 
   a,

@@ -21,74 +21,52 @@ export function CategoryGrid() {
           </p>
         </div>
 
-        {/* Collage Desestructurado */}
-        <div className="flex flex-col w-full relative gap-group md:gap-0">
+        {/* Collage Desestructurado (Mobile/Tablet) -> Grilla Simétrica (Desktop) */}
+        <div className="flex flex-col lg:grid lg:grid-cols-2 lg:gap-x-[var(--spacing-group)] lg:gap-y-[var(--spacing-section)] w-full relative gap-group md:gap-0">
           
-          {/* 1. ANILLOS */}
-          {categories[0] && (
-            <a
-              href={getWaLink(categories[0].waMessage)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative flex flex-col w-full mb-0 md:mb-group z-20 focus-visible:outline-accent"
-            >
-              <div className="w-[85%] md:w-[45%] lg:w-[40%] aspect-[3/4] overflow-hidden bg-surface shadow-2xl">
-                <img src={categories[0].image} alt={categories[0].name} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
-              </div>
-              <div className="relative md:absolute md:right-0 md:top-1/3 w-full md:w-[55%] lg:w-[40%] pt-6 md:pt-0 md:pl-8 lg:pl-4 drop-shadow-md">
-                <h3 className="font-heading text-[40px] md:text-[48px] lg:text-[64px] tracking-tight text-foreground mb-2">
-                  {categories[0].name}
-                </h3>
-                <p className="font-body text-sm md:text-base text-muted leading-relaxed">
-                  {categories[0].description}
-                </p>
-              </div>
-            </a>
-          )}
-
-          {/* 2. COLLARES */}
-          {categories[1] && (
-            <a
-              href={getWaLink(categories[1].waMessage)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative flex flex-col w-full items-end ml-auto mt-0 md:-mt-group mb-0 md:mb-group z-30 focus-visible:outline-accent"
-            >
-              <div className="w-[85%] md:w-[55%] lg:w-[55%] aspect-[4/3] md:aspect-video overflow-hidden bg-surface">
-                <img src={categories[1].image} alt={categories[1].name} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
-              </div>
-              <div className="relative md:absolute md:left-0 md:bottom-[-10%] w-full md:w-[50%] lg:w-[40%] bg-transparent md:bg-background/95 md:backdrop-blur-sm pt-6 md:pt-0 md:p-6 lg:p-8 shadow-none md:shadow-2xl self-start md:self-auto">
-                <h3 className="font-heading text-[40px] md:text-[48px] lg:text-[64px] tracking-tight text-foreground mb-2">
-                  {categories[1].name}
-                </h3>
-                <p className="font-body text-sm md:text-base text-muted leading-relaxed">
-                  {categories[1].description}
-                </p>
-              </div>
-            </a>
-          )}
-
-          {/* 3. ALIANZAS (Zig-Zag continuo, estilo Anillos) */}
-          {categories[2] && (
-            <a
-              href={getWaLink(categories[2].waMessage)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative flex flex-col w-full mt-0 md:-mt-group mb-0 md:mb-group z-10 focus-visible:outline-accent"
-            >
-              <div className="w-[85%] md:w-[45%] lg:w-[40%] aspect-[3/4] overflow-hidden bg-surface shadow-2xl">
-                <img src={categories[2].image} alt={categories[2].name} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
-              </div>
-              <div className="relative md:absolute md:right-0 md:top-1/3 w-full md:w-[55%] lg:w-[40%] pt-6 md:pt-0 md:pl-8 lg:pl-4 drop-shadow-md">
-                <h3 className="font-heading text-[40px] md:text-[48px] lg:text-[64px] tracking-tight text-foreground mb-2">
-                  {categories[2].name}
-                </h3>
-                <p className="font-body text-sm md:text-base text-muted leading-relaxed">
-                  {categories[2].description}
-                </p>
-              </div>
-            </a>
-          )}
+          {categories.slice(0, 3).map((category, index) => {
+            const isEven = index % 2 === 0;
+            return (
+              <a
+                key={category.name}
+                href={getWaLink(category.waMessage)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`group relative flex flex-col w-full z-20 focus-visible:outline-accent ${
+                  isEven 
+                    ? 'mb-0 md:mb-group lg:mb-0' 
+                    : 'items-end ml-auto mt-0 md:-mt-group mb-0 md:mb-group lg:items-start lg:ml-0 lg:mt-0 lg:mb-0'
+                }`}
+              >
+                <div className={`overflow-hidden bg-surface transition-all ${
+                  isEven 
+                    ? 'w-[85%] md:w-[45%] lg:w-full aspect-[3/4] lg:aspect-[4/5] shadow-2xl lg:shadow-none' 
+                    : 'w-[85%] md:w-[55%] lg:w-full aspect-[4/3] md:aspect-video lg:aspect-[4/5]'
+                }`}>
+                  <img src={category.image} alt={category.name} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+                </div>
+                
+                <div className={`relative md:absolute lg:static lg:w-full lg:p-0 lg:pt-4 lg:bg-transparent lg:backdrop-blur-none lg:shadow-none lg:drop-shadow-none ${
+                  isEven 
+                    ? 'md:right-0 md:top-1/3 w-full md:w-[55%] pt-6 md:pt-0 md:pl-8 drop-shadow-md' 
+                    : 'md:left-0 md:bottom-[-10%] w-full md:w-[50%] bg-transparent md:bg-background/95 md:backdrop-blur-sm pt-6 md:pt-0 md:p-6 shadow-none md:shadow-2xl self-start md:self-auto'
+                }`}>
+                  <h3 className="font-heading text-[40px] md:text-[48px] lg:hidden tracking-tight text-foreground mb-2">
+                    {category.name}
+                  </h3>
+                  
+                  {/* Desktop caption title */}
+                  <h3 className="hidden lg:block font-body text-sm font-bold tracking-widest text-foreground uppercase mb-1">
+                    {category.name}
+                  </h3>
+                  
+                  <p className="font-body text-sm md:text-base lg:text-sm text-muted leading-relaxed">
+                    {category.description}
+                  </p>
+                </div>
+              </a>
+            );
+          })}
         </div>
       </section>
 

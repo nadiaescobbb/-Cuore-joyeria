@@ -55,7 +55,7 @@ export function ContactSection() {
               Horarios
             </span>
             <p className="font-body text-sm text-muted">
-              Lunes a Sábado de 10:00 a 12:30 y de 16:00 a 20:30hs.
+              Lunes a Sábado de 10:00 a 13:00 y de 16:00 a 20:30hs.
             </p>
           </div>
           <div>

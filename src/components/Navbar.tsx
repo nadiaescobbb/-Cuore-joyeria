@@ -16,45 +16,29 @@ export function Navbar() {
   }, []);
 
   return (
-    <header className={`fixed top-0 z-50 w-full pt-4 md:pt-6 transition-all duration-300 ${isScrolled ? 'bg-dark shadow-md pb-4' : 'bg-transparent'}`}>
+    <header className={`fixed top-0 z-50 w-full pt-4 md:pt-6 transition-all duration-300 ${isScrolled ? 'bg-dark lg:bg-background shadow-md lg:shadow-sm pb-4' : 'bg-transparent'}`}>
       <div className="max-w-[1440px] mx-auto px-4 md:px-8 lg:px-20 h-20 flex items-center justify-between relative z-[60]">
-        <nav className="hidden md:flex gap-6 lg:gap-8" aria-label="Navegación principal">
-          {navItems.slice(0, 3).map((item) => (
+        <a href="#" className="focus-visible:outline-accent inline-block relative z-[60]" aria-label="Ir al inicio" onClick={() => setIsOpen(false)}>
+          <img 
+            src={getImageUrl('/cuorelogo_d4gew3.png')} 
+            alt="Cuore joyería y relojería" 
+            className="h-14 md:h-20 w-auto object-contain brightness-0 invert drop-shadow-[0_1px_3px_rgba(0,0,0,0.4)] lg:brightness-100 lg:invert-0 lg:drop-shadow-none"
+          />
+        </a>
+
+        <nav className="hidden md:flex gap-6 lg:gap-8 absolute left-1/2 -translate-x-1/2" aria-label="Navegación principal">
+          {navItems.slice(0, 5).map((item) => (
             <a 
               key={item.href} 
               href={item.href}
-              className="text-body font-body font-normal tracking-normal text-background/80 hover:text-background transition-colors focus-visible:outline-accent"
+              className="font-body font-normal text-xs lg:text-sm uppercase tracking-[0.2em] text-background/80 lg:text-tierra transition-colors focus-visible:outline-accent"
             >
               {item.label}
             </a>
           ))}
         </nav>
-        
-        <a href="#" className="focus-visible:outline-accent inline-block relative z-[60]" aria-label="Ir al inicio" onClick={() => setIsOpen(false)}>
-          <img 
-            src={getImageUrl('/cuorelogo_d4gew3.png')} 
-            alt="Cuore joyería y relojería" 
-            className="h-14 md:h-20 w-auto object-contain brightness-0 invert drop-shadow-[0_1px_3px_rgba(0,0,0,0.4)]"
-          />
-        </a>
 
-        <div className="hidden md:flex gap-6 lg:gap-8 items-center">
-          {navItems.slice(3, 5).map((item) => (
-            <a 
-              key={item.href} 
-              href={item.href}
-              className="text-body font-body font-normal tracking-normal text-background/80 hover:text-background transition-colors focus-visible:outline-accent"
-            >
-              {item.label}
-            </a>
-          ))}
-          <a 
-            href={navItems[5].href}
-            className="text-body font-body font-normal tracking-normal text-background/80 hover:text-background transition-colors focus-visible:outline-accent"
-          >
-            {navItems[5].label}
-          </a>
-        </div>
+
 
         {!isOpen ? (
           <button 

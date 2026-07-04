@@ -7,6 +7,7 @@ import { CategoryGrid } from './components/CategoryGrid';
 import { WatchSection } from './components/WatchSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
+import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <WatchSection />
         <ContactSection />
       </main>
+      <FloatingWhatsApp />
       <Footer />
     </>
   );

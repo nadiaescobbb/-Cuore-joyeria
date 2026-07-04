@@ -7,25 +7,31 @@ export function Hero() {
   const ref = useReveal();
 
   return (
-    <section id="hero" className="relative w-full h-[100dvh]" ref={ref}>
+    <section id="hero" className="relative w-full h-[100dvh] lg:h-auto lg:min-h-[100dvh] lg:grid lg:grid-cols-12 lg:bg-transparent" ref={ref}>
+      
+      {/* MOBILE FULL-BLEED IMAGE & GRADIENTS */}
       <img 
         src={getImageUrl('/hero_pab1ge.avif')} 
         alt="Nuestras manos trabajando en joyería Cuore"
-        className="absolute inset-0 w-full h-full object-cover object-center"
+        className="absolute inset-0 w-full h-full object-cover object-center lg:hidden"
       />
-      
-      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-dark/60 to-transparent pointer-events-none"></div>
-      
-      <div className="absolute bottom-0 left-0 w-full h-3/5 bg-gradient-to-t from-dark/90 via-dark/40 to-transparent pointer-events-none"></div>
+      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-dark/60 to-transparent pointer-events-none lg:hidden"></div>
+      <div className="absolute bottom-0 left-0 w-full h-3/5 bg-gradient-to-t from-dark/90 via-dark/40 to-transparent pointer-events-none lg:hidden"></div>
 
-      <div className="absolute bottom-0 inset-x-0 px-6 sm:px-8 pb-10 md:px-8 md:pb-12 lg:px-16 lg:pb-16 box-border">
-        <div className="max-w-[1440px] mx-auto w-full">
-          <div className="max-w-2xl flex flex-col items-start text-left w-full pr-2 sm:pr-0">
-            <h1 className="font-heading text-4xl sm:text-[40px] md:text-6xl lg:text-7xl leading-[1.05] tracking-tight font-normal text-background mb-4 drop-shadow-md w-full break-words">
-              Fabricamos alianzas, reparamos joyas y asesoramos hace más de 40 <i>años</i>.
+      {/* TEXT PANEL */}
+      <div className="absolute bottom-0 inset-x-0 px-6 sm:px-8 pb-10 md:px-8 md:pb-12 box-border z-10 lg:static lg:col-span-5 lg:h-[calc(100dvh-104px)] lg:mt-[104px] lg:flex lg:flex-col lg:justify-center lg:px-0 lg:pl-[max(4rem,calc(50vw-720px+5rem))] lg:pr-8 lg:bg-transparent">
+        <div className="w-full">
+          <div className="max-w-2xl lg:max-w-none flex flex-col items-start text-left w-full pr-2 sm:pr-0">
+            <h1 className="font-heading font-normal text-background lg:text-foreground mb-4 lg:mb-8 drop-shadow-md lg:drop-shadow-none w-full break-words">
+              <span className="block text-4xl sm:text-[40px] md:text-6xl lg:text-hero-title leading-[1.05] tracking-tight">
+                Joyería, relojería y taller propio.
+              </span>
+              <span className="block text-2xl md:text-3xl leading-[1.2] mt-3 lg:mt-4 text-background/90 lg:text-tierra">
+                Fabricamos alianzas, reparamos joyas y relojes, y trabajamos con una selección que se renueva de forma permanente.
+              </span>
             </h1>
-            <p className="font-body text-sm md:text-base text-background/90 max-w-[280px] sm:max-w-lg mb-6 leading-relaxed drop-shadow-sm w-full break-words">
-              Mirá estilos, mandanos una referencia y te respondemos con stock, precio o modelos parecidos.
+            <p className="font-body text-sm md:text-base lg:text-sm text-background/90 lg:text-tierra max-w-[280px] sm:max-w-lg lg:max-w-md mb-6 lg:mb-6 leading-relaxed drop-shadow-sm lg:drop-shadow-none w-full break-words">
+              Hace más de 40 años que trabajamos desde Río Grande.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 w-full sm:w-auto">
@@ -34,13 +40,13 @@ export function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Consultá por WhatsApp"
-                className="inline-flex items-center justify-center px-6 md:px-8 min-h-12 bg-accent text-background font-body font-bold text-sm md:text-body tracking-normal hover:bg-tierra transition-colors duration-200 focus-visible:outline-accent text-center shadow-md"
+                className="inline-flex items-center justify-center px-6 md:px-8 min-h-12 bg-accent text-background font-body font-bold text-sm md:text-body tracking-normal hover:bg-tierra transition-colors duration-200 focus-visible:outline-accent text-center shadow-md lg:shadow-none"
               >
                 Consultá por WhatsApp
               </a>
               <a 
                 href="#trust"
-                className="inline-flex items-center justify-center px-6 md:px-8 min-h-12 bg-transparent text-background border border-background/60 font-body font-bold text-sm md:text-body tracking-normal hover:bg-background/10 transition-colors duration-200 focus-visible:outline-accent text-center shadow-sm backdrop-blur-sm"
+                className="inline-flex items-center justify-center px-6 md:px-8 min-h-12 bg-transparent text-background lg:text-tierra border border-background/60 lg:border-tierra/40 font-body font-bold text-sm md:text-body tracking-normal hover:bg-background/10 lg:hover:bg-tierra/5 transition-colors duration-200 focus-visible:outline-accent text-center shadow-sm lg:shadow-none backdrop-blur-sm lg:backdrop-blur-none"
               >
                 Ver qué hacemos
               </a>
@@ -48,6 +54,22 @@ export function Hero() {
           </div>
         </div>
       </div>
+
+      {/* DESKTOP IMAGES GRID */}
+      <div className="hidden lg:grid col-span-7 grid-cols-3 gap-x-[var(--spacing-item)] lg:h-[calc(100dvh-104px)] lg:mt-[104px] w-full relative pb-[var(--spacing-item)] lg:pt-[var(--spacing-item)]">
+
+        
+        <div className="w-full h-full relative overflow-hidden bg-surface">
+          <img src={getImageUrl('/alianzas_zawavf.avif')} alt="Alianzas" className="w-full h-full object-cover" />
+        </div>
+        <div className="w-full h-full relative overflow-hidden bg-surface">
+          <img src={getImageUrl('/hero_pab1ge.avif')} alt="Taller" className="w-full h-full object-cover" />
+        </div>
+        <div className="w-full h-full relative overflow-hidden bg-surface">
+          <img src={getImageUrl('/relojescasio_lzx4kk.jpg')} alt="Relojes" className="w-full h-full object-cover" />
+        </div>
+      </div>
+
     </section>
   );
 }
