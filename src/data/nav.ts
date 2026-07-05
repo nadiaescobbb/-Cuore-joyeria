@@ -4,10 +4,10 @@ export interface NavItem {
 }
 
 export const navItems: NavItem[] = [
+  { label: 'Alianzas', href: '#workshop' },
+  { label: 'Relojes', href: '#watches' },
+  { label: 'Reparaciones', href: '#repairs' },
   { label: 'Nosotros', href: '#trust' },
   { label: 'Taller', href: '#workshop' },
-  { label: 'Reparaciones', href: '#repairs' },
-  { label: 'Joyería', href: '#categories' },
-  { label: 'Relojes', href: '#watches' },
   { label: 'Contacto', href: '#contact' }
 ];
