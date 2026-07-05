@@ -12,28 +12,28 @@ export const categories: Category[] = [
   {
     id: 'anillos',
     name: 'Anillos',
-    image: getImageUrl('/cat_anillos_hwizp6.jpg'),
+    image: 'https://res.cloudinary.com/dsdb4fibv/image/upload/v1783222060/cat_anillos_hwizp6.jpg',
     description: '',
     waMessage: 'Hola Cuore, quería ver anillos disponibles'
   },
   {
     id: 'collares',
     name: 'Collares',
-    image: getImageUrl('/cat_collares_rw1nay.jpg'),
+    image: 'https://res.cloudinary.com/dsdb4fibv/image/upload/v1783222065/cat_collares_rw1nay.jpg',
     description: '',
     waMessage: 'Hola Cuore, quería ver opciones de collares'
   },
   {
     id: 'pulseras',
     name: 'Pulseras',
-    image: getImageUrl('/cat_pulseras_c4ffmn.jpg'),
+    image: 'https://res.cloudinary.com/dsdb4fibv/image/upload/v1783222066/cat_pulseras_c4ffmn.jpg',
     description: '',
     waMessage: 'Hola Cuore, quería ver pulseras'
   },
   {
     id: 'aros',
     name: 'Aros',
-    image: getImageUrl('/cat_aros_vaq2ln.jpg'),
+    image: 'https://res.cloudinary.com/dsdb4fibv/image/upload/v1783222068/cat_aros_vaq2ln.jpg',
     description: '',
     waMessage: 'Hola Cuore, quería ver aros'
   },
