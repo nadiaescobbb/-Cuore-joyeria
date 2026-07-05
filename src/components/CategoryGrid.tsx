@@ -7,11 +7,11 @@ export function CategoryGrid() {
   const ref = useReveal();
 
   return (
-    <div className="w-full" ref={ref}>
-      <section id="categories" className="max-w-[1440px] mx-auto px-5 md:px-12 lg:px-20 pt-[120px] md:pt-[180px] pb-16 md:pb-32">
+    <div className="w-full bg-background" ref={ref}>
+      <section id="categories" className="max-w-[1440px] mx-auto px-5 md:px-12 lg:px-20 pt-16 md:pt-[180px] pb-16 md:pb-32">
         
         {/* Encabezado con mucho aire */}
-        <div className="w-full flex flex-col items-center text-center mb-16 md:mb-32">
+        <div className="w-full flex flex-col items-center text-center mb-10 md:mb-32">
           <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-normal leading-tight tracking-tight text-foreground">
             Explorá nuestra selección.
           </h2>
