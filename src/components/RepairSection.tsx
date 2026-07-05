@@ -6,28 +6,28 @@ export function RepairSection() {
   const ref = useReveal();
 
   return (
-    <section id="repairs" className="bg-dark lg:bg-surface px-8 lg:px-20 py-section" ref={ref}>
+    <section id="repairs" className="bg-surface px-8 lg:px-20 py-section" ref={ref}>
       <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_0.4fr] gap-group items-start">
         
         {/* Left Column */}
         <div className="flex flex-col items-start gap-group max-w-md md:max-w-2xl lg:max-w-none">
           <div className="flex flex-col gap-4">
-            <span className="font-body text-[10px] font-bold tracking-[0.20em] text-gold lg:text-tierra uppercase text-left">
+            <span className="font-body text-[10px] font-bold tracking-[0.20em] text-tierra uppercase text-left">
               REPARACIONES
             </span>
-            <h2 className="font-heading text-5xl lg:text-6xl font-normal leading-tight text-background lg:text-foreground text-left">
+            <h2 className="font-heading text-5xl lg:text-6xl font-normal leading-tight text-foreground text-left">
               Reparamos las piezas que querés seguir usando.
             </h2>
-            <p className="font-body text-sm lg:text-base text-background/70 lg:text-tierra max-w-lg md:max-w-2xl lg:max-w-lg text-left">
+            <p className="font-body text-sm lg:text-base text-tierra max-w-lg md:max-w-2xl lg:max-w-lg text-left">
               Relojes, joyas, mallas y pilas. Si algo se rompió o dejó de funcionar, traelo. Trabajamos las reparaciones en nuestro propio taller.
             </p>
           </div>
 
           {/* Servicios */}
           <div className="flex flex-col gap-item">
-            <span className="font-body text-base font-normal text-gold lg:text-tierra text-left">Reparación de relojes</span>
-            <span className="font-body text-base font-normal text-gold lg:text-tierra text-left">Cambio de pilas y mallas</span>
-            <span className="font-body text-base font-normal text-gold lg:text-tierra text-left">Reparación de joyas</span>
+            <span className="font-body text-base font-normal text-tierra text-left">Reparación de relojes</span>
+            <span className="font-body text-base font-normal text-tierra text-left">Cambio de pilas y mallas</span>
+            <span className="font-body text-base font-normal text-tierra text-left">Reparación de joyas</span>
           </div>
 
           {/* CTA */}
@@ -44,7 +44,7 @@ export function RepairSection() {
 
         {/* Right Column (Decorative) */}
         <div className="hidden lg:flex items-end justify-end self-end">
-          <span className="font-heading text-[12rem] lg:text-[16rem] text-background/5 leading-none pointer-events-none select-none lg:hidden">
+          <span className="font-heading text-[12rem] lg:text-[16rem] text-foreground/5 leading-none pointer-events-none select-none lg:hidden">
             04
           </span>
         </div>

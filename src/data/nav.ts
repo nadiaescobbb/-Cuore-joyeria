@@ -8,6 +8,5 @@ export const navItems: NavItem[] = [
   { label: 'Relojes', href: '#watches' },
   { label: 'Reparaciones', href: '#repairs' },
   { label: 'Por qué elegirnos', href: '#trust' },
-  { label: 'Taller', href: '#workshop' },
-  { label: 'Contacto', href: '#contact' }
+  { label: 'Taller', href: '#workshop' }
 ];
