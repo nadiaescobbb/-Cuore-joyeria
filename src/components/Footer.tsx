@@ -2,7 +2,7 @@ import { navItems } from '../data/nav';
 
 export function Footer() {
   return (
-    <footer className="bg-dark lg:bg-surface border-t border-background/10 lg:border-tierra/10 py-6 px-8 lg:px-20">
+    <footer className="bg-dark lg:bg-surface py-6 px-8 lg:px-20">
       <div className="flex flex-col md:grid md:grid-cols-3 items-center gap-6 md:gap-0 max-w-[1440px] mx-auto w-full">
         <div className="flex items-center justify-center md:justify-start w-full">
           <a href="#" aria-label="Ir al inicio" className="focus-visible:outline-accent">
@@ -13,7 +13,7 @@ export function Footer() {
         </div>
 
         <nav className="flex flex-wrap gap-x-4 gap-y-3 md:gap-6 justify-center w-full px-5 md:px-0" aria-label="Navegación del pie de página">
-          {navItems.map((item) => (
+          {navItems.filter(item => item.label !== 'Contacto').map((item) => (
             <a 
               key={item.href} 
               href={item.href}
