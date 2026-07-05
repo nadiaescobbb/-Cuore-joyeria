@@ -29,7 +29,7 @@ export function Footer() {
             © 2026 Joyería y Relojería Cuore · Río Grande, TDF.
           </p>
           <p className="font-body text-xs text-background/30 lg:text-tierra/50">
-            Hecho por <a href="https://www.instagram.com/heytrama" target="_blank" rel="noopener noreferrer" className="hover:text-background lg:hover:text-accent transition-colors duration-200 underline underline-offset-2">heytrama</a>
+            Hecho por <a href="https://www.instagram.com/heytrama" target="_blank" rel="noopener noreferrer" className="hover:text-background lg:hover:text-accent transition-colors duration-200">heytrama</a>
           </p>
         </div>
       </div>
