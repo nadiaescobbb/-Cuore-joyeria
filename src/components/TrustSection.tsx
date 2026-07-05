@@ -1,32 +1,32 @@
 import { useReveal } from '../hooks/use-reveal';
-import { Hammer, Clock, Layers, MessageSquare, ShieldCheck } from 'lucide-react';
+import { Fire, SealCheck, Sparkle, ChatCircle, ShieldCheck } from '@phosphor-icons/react';
 
 export function TrustSection() {
   const ref = useReveal();
 
   const items = [
     {
-      icon: <Hammer className="w-8 h-8 md:w-10 md:h-10 text-foreground mb-4 md:mb-5" strokeWidth={1.5} />,
+      icon: <Fire className="w-8 h-8 md:w-10 md:h-10 text-accent mb-4 md:mb-5" weight="thin" />,
       title: 'Taller propio',
       description: 'Fabricamos y reparamos en nuestro local.'
     },
     {
-      icon: <Clock className="w-8 h-8 md:w-10 md:h-10 text-foreground mb-4 md:mb-5" strokeWidth={1.5} />,
+      icon: <SealCheck className="w-8 h-8 md:w-10 md:h-10 text-accent mb-4 md:mb-5" weight="thin" />,
       title: 'Más de 40 años',
       description: 'El mismo oficio, en el mismo lugar.'
     },
     {
-      icon: <Layers className="w-8 h-8 md:w-10 md:h-10 text-foreground mb-4 md:mb-5" strokeWidth={1.5} />,
+      icon: <Sparkle className="w-8 h-8 md:w-10 md:h-10 text-accent mb-4 md:mb-5" weight="thin" />,
       title: 'Mayor variedad',
       description: 'Más de 30 marcas, stock que se renueva.'
     },
     {
-      icon: <MessageSquare className="w-8 h-8 md:w-10 md:h-10 text-foreground mb-4 md:mb-5" strokeWidth={1.5} />,
+      icon: <ChatCircle className="w-8 h-8 md:w-10 md:h-10 text-accent mb-4 md:mb-5" weight="thin" />,
       title: 'Asesoramiento real',
       description: 'Te ayudamos a elegir sin apuro.'
     },
     {
-      icon: <ShieldCheck className="w-8 h-8 md:w-10 md:h-10 text-foreground mb-4 md:mb-5" strokeWidth={1.5} />,
+      icon: <ShieldCheck className="w-8 h-8 md:w-10 md:h-10 text-accent mb-4 md:mb-5" weight="thin" />,
       title: 'Garantía real',
       description: 'Oro, plata y platino con respaldo propio.'
     }
