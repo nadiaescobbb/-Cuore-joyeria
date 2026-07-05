@@ -20,7 +20,7 @@ export function Navbar() {
       <div className="max-w-[1440px] mx-auto px-4 md:px-8 lg:px-20 h-20 flex items-center justify-between relative z-[60]">
         <a href="#" className="focus-visible:outline-accent inline-block relative z-[60]" aria-label="Ir al inicio" onClick={() => setIsOpen(false)}>
           <img 
-            src={getImageUrl('/cuorelogo_d4gew3.png')} 
+            src="https://res.cloudinary.com/dsdb4fibv/image/upload/v1782508795/cuorelogo_d4gew3.png" 
             alt="Cuore joyería y relojería" 
             className="h-14 md:h-20 w-auto object-contain brightness-0 invert drop-shadow-[0_1px_3px_rgba(0,0,0,0.4)] lg:brightness-100 lg:invert-0 lg:drop-shadow-none"
           />
