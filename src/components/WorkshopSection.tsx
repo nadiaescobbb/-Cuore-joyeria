@@ -16,7 +16,7 @@ export function WorkshopSection() {
             {/* Top Image */}
             <div className="w-full aspect-[4/3] lg:aspect-video relative rounded-sm overflow-hidden bg-surface">
               <img 
-                src={getImageUrl('/craf_lstywg.avif')} 
+                src={getImageUrl('/v1782508794/craf_lstywg.avif')} 
                 alt="Trabajo artesanal en el taller de Cuore"
                 className="w-full h-full object-cover object-[center_top]"
               />
