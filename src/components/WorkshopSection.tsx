@@ -60,7 +60,7 @@ export function WorkshopSection() {
             {/* Top Image */}
             <div className="w-full aspect-[4/3] lg:aspect-video relative rounded-sm overflow-hidden bg-surface">
               <img 
-                src="/repair_workshop.png" 
+                src={getImageUrl('/repair_workshop_sgf7jp.jpg')} 
                 alt="Servicio de reparación de joyas y relojes"
                 className="w-full h-full object-cover object-[center_top]"
               />

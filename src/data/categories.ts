@@ -12,35 +12,35 @@ export const categories: Category[] = [
   {
     id: 'anillos',
     name: 'Anillos',
-    image: '/cat_anillos.png',
+    image: getImageUrl('/cat_anillos_hwizp6.jpg'),
     description: '',
     waMessage: 'Hola Cuore, quería ver anillos disponibles'
   },
   {
     id: 'collares',
     name: 'Collares',
-    image: '/cat_collares.png',
+    image: getImageUrl('/cat_collares_rw1nay.jpg'),
     description: '',
     waMessage: 'Hola Cuore, quería ver opciones de collares'
   },
   {
     id: 'pulseras',
     name: 'Pulseras',
-    image: '/cat_pulseras.png',
+    image: getImageUrl('/cat_pulseras_c4ffmn.jpg'),
     description: '',
     waMessage: 'Hola Cuore, quería ver pulseras'
   },
   {
     id: 'aros',
     name: 'Aros',
-    image: '/cat_aros.png',
+    image: getImageUrl('/cat_aros_vaq2ln.jpg'),
     description: '',
     waMessage: 'Hola Cuore, quería ver aros'
   },
   {
     id: 'relojes',
     name: 'Relojes',
-    image: '/cat_relojes.png',
+    image: '/cat_relojes.png', // Fallback local ya que no se proveyó de Cloudinary
     description: '',
     waMessage: 'Hola Cuore, quería consultar por relojes'
   }
