@@ -7,19 +7,22 @@ export function ContactSection() {
 
   return (
     <section id="contact" className="w-full bg-surface" ref={ref}>
-      <div className="max-w-4xl mx-auto px-8 lg:px-20 pt-group pb-section flex flex-col gap-group">
-        <div className="flex flex-col items-start text-left">
-          <span className="font-body text-[10px] font-bold tracking-[0.20em] text-accent uppercase mb-item">
-            Contacto
-          </span>
-          <h2 className="font-heading text-6xl lg:text-7xl font-normal leading-tight text-foreground mb-group">
-            Estamos para ayudarte.
-          </h2>
-          <p className="font-body text-base text-muted max-w-lg mb-group">
-            Te respondemos por WhatsApp. Podés mandar una foto, preguntar por stock o pedir una referencia. Sin compromiso.
-          </p>
+      <div className="max-w-4xl mx-auto px-8 lg:px-20 pt-group pb-section flex flex-col gap-[var(--spacing-item)]">
+        <div className="flex flex-col items-start text-left gap-[var(--spacing-item)]">
+          
+          <div className="flex flex-col items-start gap-4 lg:gap-6">
+            <span className="font-body text-[10px] font-bold tracking-[0.20em] text-accent uppercase">
+              Contacto
+            </span>
+            <h2 className="font-heading text-6xl lg:text-7xl font-normal leading-tight text-foreground">
+              Estamos para ayudarte.
+            </h2>
+            <p className="font-body text-base text-muted max-w-lg">
+              Te respondemos por WhatsApp. Podés mandar una foto, preguntar por stock o pedir una referencia. Sin compromiso.
+            </p>
+          </div>
 
-          <div className="flex gap-item flex-wrap">
+          <div className="flex gap-[var(--spacing-item)] flex-wrap">
             <a 
               href={getWaLink("Hola Cuore, quería hacer una consulta antes de pasar")}
               target="_blank"

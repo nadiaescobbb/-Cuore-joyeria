@@ -46,7 +46,7 @@ export function WatchSection() {
       <div className="max-w-[1440px] mx-auto px-4 md:px-20 pt-section pb-item">
       
       {/* Brands Carousel */}
-      <div className="w-full max-w-5xl mx-auto mb-group">
+      <div className="w-full max-w-5xl mx-auto mb-item">
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex backface-hidden touch-pan-y flex-row -ml-4 md:-ml-8">
             {BRANDS.map((brand, index) => (

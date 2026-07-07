@@ -11,17 +11,17 @@ export function CategoryGrid() {
       <section id="categories" className="max-w-[1440px] mx-auto px-5 md:px-12 lg:px-20 pt-section">
         
         {/* Encabezado con mucho aire */}
-        <div className="w-full flex flex-col items-center text-center mb-group">
+        <div className="w-full flex flex-col items-center text-center mb-item">
           <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-normal leading-tight tracking-tight text-foreground">
             Explorá nuestra selección.
           </h2>
         </div>
 
         {/* Layout Asimétrico Editorial */}
-        <div className="w-full flex flex-col gap-group">
+        <div className="w-full flex flex-col gap-16 md:gap-20">
           
           {/* Fila 1: Anillos (Izquierda, más angosto y alto) y Collares (Derecha, más ancho, desplazado hacia abajo) */}
-          <div className="flex flex-col md:flex-row items-center gap-group w-full">
+          <div className="flex flex-col md:flex-row items-center gap-16 md:gap-20 w-full">
             {categories[0] && (
               <a
                 href={getWaLink(categories[0].waMessage)}
@@ -48,7 +48,7 @@ export function CategoryGrid() {
                 href={getWaLink(categories[1].waMessage)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative flex flex-col w-full md:w-6/12 h-[45vh] md:h-[50vh] focus-visible:outline-accent overflow-hidden rounded-sm md:translate-y-16"
+                className="group relative flex flex-col w-full md:w-6/12 h-[45vh] md:h-[50vh] focus-visible:outline-accent overflow-hidden rounded-sm md:translate-y-8 lg:translate-y-10"
               >
                 <img 
                   src={categories[1].image} 
@@ -66,7 +66,7 @@ export function CategoryGrid() {
           </div>
 
           {/* Fila 2: Pulseras (Izquierda, cuadrada/ancha, flotando alto) y Aros (Derecha, vertical alta) */}
-          <div className="flex flex-col md:flex-row-reverse items-center gap-group w-full">
+          <div className="flex flex-col md:flex-row-reverse items-center gap-16 md:gap-20 w-full">
             {categories[3] && (
               <a
                 href={getWaLink(categories[3].waMessage)}
@@ -93,7 +93,7 @@ export function CategoryGrid() {
                 href={getWaLink(categories[2].waMessage)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative flex flex-col w-full md:w-6/12 h-[45vh] md:h-[50vh] focus-visible:outline-accent overflow-hidden rounded-sm md:-translate-y-24"
+                className="group relative flex flex-col w-full md:w-6/12 h-[45vh] md:h-[50vh] focus-visible:outline-accent overflow-hidden rounded-sm md:-translate-y-8 lg:-translate-y-10"
               >
                 <img 
                   src={categories[2].image} 
