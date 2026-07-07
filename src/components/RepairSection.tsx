@@ -11,7 +11,7 @@ export function RepairSection() {
         
         {/* Left Column */}
         <div className="flex flex-col items-start gap-group max-w-md md:max-w-2xl lg:max-w-none">
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-item">
             <span className="font-body text-[10px] font-bold tracking-[0.20em] text-tierra uppercase text-left">
               REPARACIONES
             </span>

@@ -9,17 +9,17 @@ export function ContactSection() {
     <section id="contact" className="w-full bg-surface" ref={ref}>
       <div className="max-w-4xl mx-auto px-8 lg:px-20 py-section flex flex-col gap-group">
         <div className="flex flex-col items-start text-left">
-          <span className="font-body text-[10px] font-bold tracking-[0.20em] text-accent uppercase mb-4">
+          <span className="font-body text-[10px] font-bold tracking-[0.20em] text-accent uppercase mb-item">
             Contacto
           </span>
-          <h2 className="font-heading text-6xl lg:text-7xl font-normal leading-tight text-foreground mb-6">
+          <h2 className="font-heading text-6xl lg:text-7xl font-normal leading-tight text-foreground mb-group">
             Estamos para ayudarte.
           </h2>
-          <p className="font-body text-base text-muted max-w-lg mb-8">
+          <p className="font-body text-base text-muted max-w-lg mb-group">
             Te respondemos por WhatsApp. Podés mandar una foto, preguntar por stock o pedir una referencia. Sin compromiso.
           </p>
 
-          <div className="flex gap-4 flex-wrap">
+          <div className="flex gap-item flex-wrap">
             <a 
               href={getWaLink("Hola Cuore, quería hacer una consulta antes de pasar")}
               target="_blank"

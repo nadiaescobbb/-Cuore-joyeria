@@ -20,18 +20,18 @@ export function Navbar() {
       <div className="max-w-[1440px] mx-auto px-4 md:px-8 lg:px-20 h-20 flex items-center justify-between relative z-[60]">
         <a href="#" className="focus-visible:outline-accent inline-block relative z-[60]" aria-label="Ir al inicio" onClick={() => setIsOpen(false)}>
           <img 
-            src="https://res.cloudinary.com/dsdb4fibv/image/upload/v1782508795/cuorelogo_d4gew3.png" 
+            src="https://res.cloudinary.com/dsdb4fibv/image/upload/v1782508796/cuorelogo_cmmt3i.svg" 
             alt="Cuore joyería y relojería" 
             className="h-14 md:h-20 w-auto object-contain"
           />
         </a>
 
-        <nav className="hidden md:flex gap-6 lg:gap-8 absolute left-1/2 -translate-x-1/2" aria-label="Navegación principal">
+        <nav className="hidden md:flex gap-item absolute left-1/2 -translate-x-1/2" aria-label="Navegación principal">
           {navItems.map((item) => (
             <a 
               key={item.href} 
               href={item.href}
-              className="font-body font-normal text-xs lg:text-sm uppercase tracking-[0.2em] text-background/80 lg:text-tierra transition-colors focus-visible:outline-accent"
+              className="font-body font-normal text-xs lg:text-sm uppercase tracking-[0.2em] text-background/80 lg:text-tierra transition-colors focus-visible:outline-accent whitespace-nowrap"
             >
               {item.label}
             </a>
@@ -75,7 +75,7 @@ export function Navbar() {
           onClick={() => setIsOpen(false)}
         >
           {/* Links Container */}
-          <div className="relative z-10 flex flex-col items-center justify-center w-full gap-8">
+          <div className="relative z-10 flex flex-col items-center justify-center w-full gap-item">
             {navItems.map((item) => (
               <a 
                 key={item.href} 

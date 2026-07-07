@@ -7,7 +7,7 @@ export function WorkshopSection() {
   const ref = useReveal();
 
   return (
-    <section className="w-full bg-background relative" ref={ref}>
+    <section className="w-full bg-background relative py-section" ref={ref}>
       <div className="max-w-[1440px] mx-auto px-5 md:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-[var(--spacing-item)] md:gap-[var(--spacing-group)] w-full">
           
@@ -23,10 +23,10 @@ export function WorkshopSection() {
             </div>
 
             {/* Left Aligned Text Block */}
-            <div className="w-full py-8 md:py-12 lg:py-16">
+            <div className="w-full pt-group">
               <div className="flex flex-col items-start text-left gap-item max-w-xl">
                 
-                <div className="flex flex-col items-start gap-3">
+                <div className="flex flex-col items-start gap-item">
                   <span className="font-body text-[10px] md:text-[12px] font-bold tracking-[0.20em] text-accent uppercase">
                     Taller y fabricación
                   </span>
@@ -67,10 +67,10 @@ export function WorkshopSection() {
             </div>
 
             {/* Left Aligned Text Block */}
-            <div className="w-full py-8 md:py-12 lg:py-16">
+            <div className="w-full pt-group">
               <div className="flex flex-col items-start text-left gap-item max-w-xl">
                 
-                <div className="flex flex-col items-start gap-3">
+                <div className="flex flex-col items-start gap-item">
                   <span className="font-body text-[10px] md:text-[12px] font-bold tracking-[0.20em] text-accent uppercase">
                     Reparaciones
                   </span>

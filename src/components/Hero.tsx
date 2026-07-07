@@ -19,22 +19,22 @@ export function Hero() {
       <div className="absolute bottom-0 left-0 w-full h-3/5 bg-gradient-to-t from-dark/90 via-dark/40 to-transparent pointer-events-none lg:hidden"></div>
 
       {/* TEXT PANEL */}
-      <div className="absolute bottom-0 inset-x-0 px-6 sm:px-8 pb-10 md:px-8 md:pb-12 box-border z-10 lg:static lg:col-span-5 lg:h-[calc(100dvh-104px)] lg:mt-[104px] lg:flex lg:flex-col lg:justify-center lg:px-0 lg:pl-[max(4rem,calc(50vw-720px+5rem))] lg:pr-8 lg:bg-transparent">
-        <div className="w-full">
+      <div className="absolute inset-0 flex flex-col pt-section lg:pt-item px-6 sm:px-8 pb-group md:px-8 box-border z-10 lg:static lg:col-span-5 lg:h-[calc(100dvh-104px)] lg:mt-[104px] lg:justify-start lg:px-0 lg:pl-[max(4rem,calc(50vw-720px+5rem))] lg:pr-8 lg:bg-transparent">
+        <div className="w-full mt-auto lg:mt-0">
           <div className="max-w-2xl lg:max-w-none flex flex-col items-start text-left w-full pr-2 sm:pr-0">
-            <h1 className="font-heading font-normal text-background lg:text-foreground mb-4 lg:mb-8 drop-shadow-md lg:drop-shadow-none w-full break-words">
+            <h1 className="font-heading font-normal text-background lg:text-foreground mb-6 lg:mb-8 drop-shadow-md lg:drop-shadow-none w-full break-words">
               <span className="block text-4xl sm:text-[40px] md:text-6xl lg:text-hero-title leading-[1.05] tracking-tight">
                 Joyería, relojería y taller propio.
               </span>
-              <span className="block text-2xl md:text-3xl leading-[1.2] mt-3 lg:mt-4 text-background/90 lg:text-tierra">
+              <span className="block text-2xl md:text-3xl leading-[1.2] mt-4 lg:mt-6 text-background/90 lg:text-tierra">
                 Fabricamos alianzas, reparamos joyas y relojes, y trabajamos con una selección que se renueva de forma permanente.
               </span>
             </h1>
-            <p className="font-body text-sm md:text-base lg:text-sm text-background/90 lg:text-tierra max-w-[280px] sm:max-w-lg lg:max-w-md mb-6 lg:mb-6 leading-relaxed drop-shadow-sm lg:drop-shadow-none w-full break-words">
+            <p className="font-body text-sm md:text-base lg:text-sm text-background/90 lg:text-tierra max-w-[280px] sm:max-w-lg lg:max-w-md mb-item leading-relaxed drop-shadow-sm lg:drop-shadow-none w-full break-words">
               Hace más de 40 años que trabajamos desde Río Grande.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 w-full sm:w-auto">
+            <div className="flex flex-col sm:flex-row gap-item w-full sm:w-auto">
               <a 
                 href={getWaLink("Consultá por WhatsApp")}
                 target="_blank"

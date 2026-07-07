@@ -24,7 +24,7 @@ export function WatchSection() {
           }}
         >
           {[...Array(2)].map((_, groupIndex) => (
-            <div key={groupIndex} className="flex items-center gap-12 lg:gap-16 pr-12 lg:pr-16">
+            <div key={groupIndex} className="flex items-center gap-group pr-group">
               {['Casio', 'Bulova', 'Tommy Hilfiger', 'Orient', 'Citizen', 'Seiko', 'Festina', 'Ferrari', 'Williams'].map((brand, index) => (
                 <div key={index} className="flex items-center whitespace-nowrap">
                   <span>{brand}</span>
