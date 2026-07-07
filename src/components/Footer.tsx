@@ -17,7 +17,7 @@ export function Footer() {
             <a 
               key={item.href} 
               href={item.href}
-              className="font-body text-[11px] text-tierra/80 hover:text-accent tracking-normal transition-colors duration-200 focus-visible:outline-accent"
+              className="font-body text-[11px] text-tierra hover:text-accent tracking-normal transition-colors duration-200 focus-visible:outline-accent"
             >
               {item.label}
             </a>
@@ -25,10 +25,10 @@ export function Footer() {
         </nav>
 
         <div className="flex flex-col items-center md:items-end gap-1 w-full text-center md:text-right">
-          <p className="font-body text-xs text-tierra/50">
+          <p className="font-body text-xs text-muted">
             © 2026 Joyería y Relojería Cuore · Río Grande, TDF.
           </p>
-          <p className="font-body text-xs text-tierra/50">
+          <p className="font-body text-xs text-muted">
             Hecho por <a href="https://www.instagram.com/heytrama" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors duration-200">heytrama</a>
           </p>
         </div>

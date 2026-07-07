@@ -68,10 +68,12 @@ export function WatchSection() {
             {scrollSnaps.map((_, index) => (
               <button
                 key={index}
-                className={`h-1.5 rounded-full transition-all duration-300 ${index === selectedIndex ? 'bg-background w-8' : 'bg-background/30 hover:bg-background/50 w-1.5'}`}
+                className="w-11 h-11 flex items-center justify-center focus-visible:outline-accent group"
                 onClick={() => scrollTo(index)}
                 aria-label={`Ir a la página ${index + 1}`}
-              />
+              >
+                <span className={`h-1.5 rounded-full transition-all duration-300 ${index === selectedIndex ? 'bg-background w-8' : 'bg-background/30 group-hover:bg-background/50 w-1.5'}`} />
+              </button>
             ))}
           </div>
         </div>

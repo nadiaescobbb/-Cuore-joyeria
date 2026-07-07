@@ -30,7 +30,7 @@ export function WorkshopSection() {
               <div className="flex flex-col items-start text-left gap-item max-w-xl">
                 
                 <div className="flex flex-col items-start gap-4 lg:gap-6">
-                  <span className="font-body text-[10px] md:text-[12px] font-bold tracking-[0.20em] text-accent uppercase">
+                  <span className="font-body text-[10px] md:text-[12px] font-bold tracking-[0.20em] text-tierra uppercase">
                     Taller y fabricación
                   </span>
                   
@@ -49,7 +49,7 @@ export function WorkshopSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Cotizar alianzas por WhatsApp"
-                  className="w-full md:w-fit min-h-14 px-10 bg-accent text-background font-body font-bold text-sm tracking-[0.16em] uppercase rounded-sm flex items-center justify-center hover:opacity-90 transition-opacity duration-200 focus-visible:outline-accent"
+                  className="w-full md:w-fit min-h-14 px-10 bg-cta text-background font-body font-bold text-sm tracking-[0.16em] uppercase rounded-sm flex items-center justify-center hover:bg-cta-hover transition-colors duration-200 focus-visible:outline-accent"
                 >
                   Cotizar alianzas
                 </a>
@@ -77,7 +77,7 @@ export function WorkshopSection() {
               <div className="flex flex-col items-start text-left gap-item max-w-xl">
                 
                 <div className="flex flex-col items-start gap-4 lg:gap-6">
-                  <span className="font-body text-[10px] md:text-[12px] font-bold tracking-[0.20em] text-accent uppercase">
+                  <span className="font-body text-[10px] md:text-[12px] font-bold tracking-[0.20em] text-tierra uppercase">
                     Reparaciones
                   </span>
                   
@@ -96,7 +96,7 @@ export function WorkshopSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Consultá por una reparación por WhatsApp"
-                  className="w-full md:w-fit min-h-14 px-10 bg-accent text-background font-body font-bold text-sm tracking-[0.16em] uppercase rounded-sm flex items-center justify-center hover:opacity-90 transition-opacity duration-200 focus-visible:outline-accent"
+                  className="w-full md:w-fit min-h-14 px-10 bg-cta text-background font-body font-bold text-sm tracking-[0.16em] uppercase rounded-sm flex items-center justify-center hover:bg-cta-hover transition-colors duration-200 focus-visible:outline-accent"
                 >
                   Consultá por reparación
                 </a>

@@ -11,7 +11,7 @@ export function ContactSection() {
         <div className="flex flex-col items-start text-left gap-[var(--spacing-item)]">
           
           <div className="flex flex-col items-start gap-4 lg:gap-6">
-            <span className="font-body text-[10px] font-bold tracking-[0.20em] text-accent uppercase">
+            <span className="font-body text-[10px] font-bold tracking-[0.20em] text-tierra uppercase">
               Contacto
             </span>
             <h2 className="font-heading text-6xl lg:text-7xl font-normal leading-tight text-foreground">
@@ -28,7 +28,7 @@ export function ContactSection() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Escribinos por WhatsApp"
-              className="inline-flex items-center justify-center bg-accent text-background min-h-12 px-8 font-body font-bold text-sm tracking-[0.16em] w-fit hover:bg-tierra transition-colors duration-200 focus-visible:outline-accent"
+              className="inline-flex items-center justify-center bg-cta text-background min-h-12 px-8 font-body font-bold text-sm tracking-[0.16em] w-fit hover:bg-cta-hover transition-colors duration-200 focus-visible:outline-accent"
             >
               Escribinos por WhatsApp
             </a>

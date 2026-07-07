@@ -36,7 +36,7 @@ export function RepairSection() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Consultá por una reparación por WhatsApp"
-            className="bg-accent text-background min-h-12 px-8 font-body font-bold text-sm tracking-[0.16em] uppercase w-fit inline-flex items-center justify-center hover:bg-tierra transition-colors duration-200 focus-visible:outline-accent"
+            className="bg-cta text-background min-h-12 px-8 font-body font-bold text-sm tracking-[0.16em] uppercase w-fit inline-flex items-center justify-center hover:bg-cta-hover transition-colors duration-200 focus-visible:outline-accent"
           >
             Consultá por una reparación
           </a>

@@ -34,7 +34,7 @@ export function CategoryGrid() {
                   alt={categories[0].name} 
                   className="absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover:scale-[1.03]" 
                 />
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-colors duration-700 pointer-events-none" />
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-700 pointer-events-none" />
                 <div className="absolute inset-0 flex items-center justify-center p-8 pointer-events-none">
                   <h3 className="font-body text-sm md:text-base font-bold tracking-[0.3em] text-background uppercase text-center drop-shadow-[0_0px_12px_rgba(0,0,0,0.5)] border-b border-transparent group-hover:border-background transition-colors duration-500 pb-2 z-10 relative">
                     {categories[0].name}
@@ -55,7 +55,7 @@ export function CategoryGrid() {
                   alt={categories[1].name} 
                   className="absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover:scale-[1.03]" 
                 />
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-colors duration-700 pointer-events-none" />
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-700 pointer-events-none" />
                 <div className="absolute inset-0 flex items-center justify-center p-8 pointer-events-none">
                   <h3 className="font-body text-sm md:text-base font-bold tracking-[0.3em] text-background uppercase text-center drop-shadow-[0_0px_12px_rgba(0,0,0,0.5)] border-b border-transparent group-hover:border-background transition-colors duration-500 pb-2 z-10 relative">
                     {categories[1].name}
@@ -79,7 +79,7 @@ export function CategoryGrid() {
                   alt={categories[3].name} 
                   className="absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover:scale-[1.03]" 
                 />
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-colors duration-700 pointer-events-none" />
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-700 pointer-events-none" />
                 <div className="absolute inset-0 flex items-center justify-center p-8 pointer-events-none">
                   <h3 className="font-body text-sm md:text-base font-bold tracking-[0.3em] text-background uppercase text-center drop-shadow-[0_0px_12px_rgba(0,0,0,0.5)] border-b border-transparent group-hover:border-background transition-colors duration-500 pb-2 z-10 relative">
                     {categories[3].name}
@@ -100,7 +100,7 @@ export function CategoryGrid() {
                   alt={categories[2].name} 
                   className="absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover:scale-[1.03]" 
                 />
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-colors duration-700 pointer-events-none" />
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-700 pointer-events-none" />
                 <div className="absolute inset-0 flex items-center justify-center p-8 pointer-events-none">
                   <h3 className="font-body text-sm md:text-base font-bold tracking-[0.3em] text-background uppercase text-center drop-shadow-[0_0px_12px_rgba(0,0,0,0.5)] border-b border-transparent group-hover:border-background transition-colors duration-500 pb-2 z-10 relative">
                     {categories[2].name}

@@ -40,7 +40,7 @@ export function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Consultá por WhatsApp"
-                className="inline-flex items-center justify-center px-6 md:px-8 min-h-12 bg-accent text-background font-body font-bold text-sm md:text-body tracking-normal hover:bg-tierra transition-colors duration-200 focus-visible:outline-accent text-center shadow-md lg:shadow-none"
+                className="inline-flex items-center justify-center px-6 md:px-8 min-h-12 bg-cta text-background font-body font-bold text-sm md:text-body tracking-normal hover:bg-cta-hover transition-colors duration-200 focus-visible:outline-accent text-center shadow-md lg:shadow-none"
               >
                 Consultá por WhatsApp
               </a>
