@@ -8,7 +8,7 @@ export function CategoryGrid() {
 
   return (
     <div className="w-full bg-background" ref={ref}>
-      <section id="categories" className="max-w-[1440px] mx-auto px-5 md:px-12 lg:px-20 py-section">
+      <section id="categories" className="max-w-[1440px] mx-auto px-5 md:px-12 lg:px-20 pt-section">
         
         {/* Encabezado con mucho aire */}
         <div className="w-full flex flex-col items-center text-center mb-group">
@@ -18,7 +18,7 @@ export function CategoryGrid() {
         </div>
 
         {/* Layout Asimétrico Editorial */}
-        <div className="w-full flex flex-col gap-group md:gap-section">
+        <div className="w-full flex flex-col gap-group">
           
           {/* Fila 1: Anillos (Izquierda, más angosto y alto) y Collares (Derecha, más ancho, desplazado hacia abajo) */}
           <div className="flex flex-col md:flex-row items-center gap-group w-full">
@@ -27,7 +27,7 @@ export function CategoryGrid() {
                 href={getWaLink(categories[0].waMessage)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative flex flex-col w-full md:w-5/12 h-[55vh] md:h-[90vh] focus-visible:outline-accent overflow-hidden rounded-sm md:mr-auto"
+                className="group relative flex flex-col w-full md:w-5/12 h-[55vh] md:h-[60vh] focus-visible:outline-accent overflow-hidden rounded-sm md:mr-auto"
               >
                 <img 
                   src={categories[0].image} 
@@ -48,7 +48,7 @@ export function CategoryGrid() {
                 href={getWaLink(categories[1].waMessage)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative flex flex-col w-full md:w-6/12 h-[45vh] md:h-[80vh] focus-visible:outline-accent overflow-hidden rounded-sm md:mt-32"
+                className="group relative flex flex-col w-full md:w-6/12 h-[45vh] md:h-[50vh] focus-visible:outline-accent overflow-hidden rounded-sm md:translate-y-16"
               >
                 <img 
                   src={categories[1].image} 
@@ -72,7 +72,7 @@ export function CategoryGrid() {
                 href={getWaLink(categories[3].waMessage)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative flex flex-col w-full md:w-5/12 h-[55vh] md:h-[95vh] focus-visible:outline-accent overflow-hidden rounded-sm md:ml-auto"
+                className="group relative flex flex-col w-full md:w-5/12 h-[55vh] md:h-[60vh] focus-visible:outline-accent overflow-hidden rounded-sm md:ml-auto"
               >
                 <img 
                   src={categories[3].image} 
@@ -93,7 +93,7 @@ export function CategoryGrid() {
                 href={getWaLink(categories[2].waMessage)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative flex flex-col w-full md:w-6/12 h-[45vh] md:h-[75vh] focus-visible:outline-accent overflow-hidden rounded-sm md:mb-48"
+                className="group relative flex flex-col w-full md:w-6/12 h-[45vh] md:h-[50vh] focus-visible:outline-accent overflow-hidden rounded-sm md:-translate-y-24"
               >
                 <img 
                   src={categories[2].image} 

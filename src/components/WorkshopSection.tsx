@@ -7,7 +7,7 @@ export function WorkshopSection() {
   const ref = useReveal();
 
   return (
-    <section className="w-full bg-background relative py-section" ref={ref}>
+    <section className="w-full bg-background relative pt-section" ref={ref}>
       <div className="max-w-[1440px] mx-auto px-5 md:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-[var(--spacing-item)] md:gap-[var(--spacing-group)] w-full">
           
@@ -19,14 +19,17 @@ export function WorkshopSection() {
                 src="https://res.cloudinary.com/dsdb4fibv/image/upload/v1782508794/craf_lstywg.avif" 
                 alt="Trabajo artesanal en el taller de Cuore"
                 className="w-full h-full object-cover object-[center_top]"
+                style={{ filter: 'brightness(0.92) saturate(0.85) sepia(0.10)' }}
               />
+              {/* Overlay oscuro semitransparente para bajar protagonismo */}
+              <div className="absolute inset-0 bg-black/20 pointer-events-none"></div>
             </div>
 
             {/* Left Aligned Text Block */}
-            <div className="w-full pt-group">
+            <div className="w-full pt-item">
               <div className="flex flex-col items-start text-left gap-item max-w-xl">
                 
-                <div className="flex flex-col items-start gap-item">
+                <div className="flex flex-col items-start gap-4 lg:gap-6">
                   <span className="font-body text-[10px] md:text-[12px] font-bold tracking-[0.20em] text-accent uppercase">
                     Taller y fabricación
                   </span>
@@ -63,14 +66,17 @@ export function WorkshopSection() {
                 src="https://res.cloudinary.com/dsdb4fibv/image/upload/v1783222069/repair_workshop_sgf7jp.jpg" 
                 alt="Servicio de reparación de joyas y relojes"
                 className="w-full h-full object-cover object-[center_top]"
+                style={{ filter: 'brightness(0.92) saturate(0.85) sepia(0.10)' }}
               />
+              {/* Overlay oscuro semitransparente para bajar protagonismo */}
+              <div className="absolute inset-0 bg-black/20 pointer-events-none"></div>
             </div>
 
             {/* Left Aligned Text Block */}
-            <div className="w-full pt-group">
+            <div className="w-full pt-item">
               <div className="flex flex-col items-start text-left gap-item max-w-xl">
                 
-                <div className="flex flex-col items-start gap-item">
+                <div className="flex flex-col items-start gap-4 lg:gap-6">
                   <span className="font-body text-[10px] md:text-[12px] font-bold tracking-[0.20em] text-accent uppercase">
                     Reparaciones
                   </span>

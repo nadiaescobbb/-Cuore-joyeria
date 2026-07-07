@@ -1,37 +1,79 @@
+import { useState, useCallback, useEffect } from 'react';
 import { useReveal } from '../hooks/use-reveal';
 import { watches } from '../data/watches';
+import useEmblaCarousel from 'embla-carousel-react';
+import Fade from 'embla-carousel-fade';
 
+const BRANDS = ['Casio', 'Bulova', 'Tommy Hilfiger', 'Orient', 'Citizen', 'Lorus', 'Montreal', 'Festina'];
 const getWaLink = (msg: string) => `https://wa.me/542964557378?text=${encodeURIComponent(msg)}`;
 
 export function WatchSection() {
   const ref = useReveal();
 
+  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+    align: 'start', 
+    containScroll: 'trimSnaps',
+    slidesToScroll: 2,
+    breakpoints: {
+      '(min-width: 1024px)': { slidesToScroll: 4 }
+    }
+  }, [Fade()]);
+
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
+
+  const scrollTo = useCallback((index: number) => emblaApi && emblaApi.scrollTo(index), [emblaApi]);
+
+  const onInit = useCallback((emblaApi: any) => {
+    setScrollSnaps(emblaApi.scrollSnapList());
+  }, []);
+
+  const onSelect = useCallback((emblaApi: any) => {
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+  }, []);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    onInit(emblaApi);
+    onSelect(emblaApi);
+    emblaApi.on('reInit', onInit);
+    emblaApi.on('reInit', onSelect);
+    emblaApi.on('select', onSelect);
+  }, [emblaApi, onInit, onSelect]);
+
   return (
-    <section id="watches" className="max-w-[1440px] mx-auto px-4 md:px-20 py-section bg-dark-surface text-background" ref={ref}>
-      <div className="flex flex-col items-start text-left mb-group w-full overflow-hidden">
-        <style>{`
-          @keyframes marquee {
-            from { transform: translateX(0) }
-            to { transform: translateX(-50%) }
-          }
-        `}</style>
-        <div 
-          className="flex font-marquee uppercase font-bold tracking-[0.02em] text-4xl md:text-5xl lg:text-6xl text-background leading-none w-max"
-          style={{ 
-            animation: 'marquee 30s linear infinite',
-            maskImage: 'linear-gradient(to right, transparent, black 5%, black 95%, transparent)',
-            WebkitMaskImage: 'linear-gradient(to right, transparent, black 5%, black 95%, transparent)'
-          }}
-        >
-          {[...Array(2)].map((_, groupIndex) => (
-            <div key={groupIndex} className="flex items-center gap-group pr-group">
-              {['Casio', 'Bulova', 'Tommy Hilfiger', 'Orient', 'Citizen', 'Seiko', 'Festina', 'Ferrari', 'Williams'].map((brand, index) => (
-                <div key={index} className="flex items-center whitespace-nowrap">
+    <section id="watches" className="w-full bg-dark-surface text-background" ref={ref}>
+      <div className="max-w-[1440px] mx-auto px-4 md:px-20 pt-section pb-item">
+      
+      {/* Brands Carousel */}
+      <div className="w-full mb-group">
+        <div className="overflow-hidden" ref={emblaRef}>
+          <div className="flex backface-hidden touch-pan-y flex-row ml-[calc(var(--spacing-item)*-1)]">
+            {BRANDS.map((brand, index) => (
+              <div 
+                key={index} 
+                className="flex-none min-w-0 w-1/2 lg:w-1/4 pl-[var(--spacing-item)]"
+              >
+                <div className="flex items-center text-center lg:text-left whitespace-nowrap w-full font-marquee uppercase font-bold tracking-[0.02em] text-2xl md:text-3xl lg:text-4xl text-background leading-none select-none cursor-grab active:cursor-grabbing">
                   <span>{brand}</span>
                 </div>
-              ))}
-            </div>
-          ))}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Controls */}
+        <div className="flex items-center justify-center gap-6 mt-[var(--spacing-item)]">
+          <div className="flex justify-center gap-3">
+            {scrollSnaps.map((_, index) => (
+              <button
+                key={index}
+                className={`h-1.5 rounded-full transition-all duration-300 ${index === selectedIndex ? 'bg-background w-8' : 'bg-background/30 hover:bg-background/50 w-1.5'}`}
+                onClick={() => scrollTo(index)}
+                aria-label={`Ir a la página ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
 
@@ -61,6 +103,7 @@ export function WatchSection() {
             </div>
           </a>
         ))}
+      </div>
       </div>
     </section>
   );
