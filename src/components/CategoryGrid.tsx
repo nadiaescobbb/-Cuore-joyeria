@@ -98,7 +98,7 @@ export function CategoryGrid() {
                 <img 
                   src={categories[2].image} 
                   alt={categories[2].name} 
-                  className="absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover:scale-[1.03]" 
+                  className="absolute inset-0 w-full h-full object-cover object-top transition-all duration-1000 group-hover:scale-[1.03]" 
                 />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-700 pointer-events-none" />
                 <div className="absolute inset-0 flex items-center justify-center p-8 pointer-events-none">

@@ -11,7 +11,7 @@ export function Hero() {
       
       {/* MOBILE FULL-BLEED IMAGE & GRADIENTS */}
       <img 
-        src="https://res.cloudinary.com/dsdb4fibv/image/upload/v1782508798/hero_pab1ge.avif" 
+        src="/hero1.avif"
         alt="Nuestras manos trabajando en joyería Cuore"
         className="absolute inset-0 w-full h-full object-cover object-center lg:hidden"
       />
@@ -59,11 +59,11 @@ export function Hero() {
       <div className="hidden lg:grid col-span-7 grid-cols-[3fr_5fr_2fr] gap-x-[var(--spacing-item)] lg:h-[calc(100dvh-104px)] lg:mt-[104px] w-full relative pb-[var(--spacing-item)] lg:pt-[var(--spacing-item)]">
 
         <div className="w-full h-full relative overflow-hidden bg-surface">
-          <img src="https://res.cloudinary.com/dsdb4fibv/image/upload/v1782508798/hero_pab1ge.avif" alt="Taller" className="w-full h-full object-cover" />
+          <img src="/hero1.avif" alt="Taller" className="w-full h-full object-cover" />
         </div>
         
         <div className="w-full h-full relative overflow-hidden bg-surface">
-          <img src="https://res.cloudinary.com/dsdb4fibv/image/upload/v1782508793/alianzas_zawavf.avif" alt="Alianzas" className="w-full h-full object-cover" />
+          <img src="/hero2.avif" alt="Alianzas" className="w-full h-full object-cover object-[center_80%]" />
         </div>
 
         <div className="w-full h-full relative overflow-hidden bg-surface">

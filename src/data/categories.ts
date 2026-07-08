@@ -26,14 +26,14 @@ export const categories: Category[] = [
   {
     id: 'pulseras',
     name: 'Pulseras',
-    image: 'https://res.cloudinary.com/dsdb4fibv/image/upload/v1783222066/cat_pulseras_c4ffmn.jpg',
+    image: '/cat-pulseras.avif',
     description: '',
     waMessage: 'Hola Cuore, quería ver pulseras'
   },
   {
     id: 'aros',
     name: 'Aros',
-    image: 'https://res.cloudinary.com/dsdb4fibv/image/upload/v1783222068/cat_aros_vaq2ln.jpg',
+    image: '/cat-aros.avif',
     description: '',
     waMessage: 'Hola Cuore, quería ver aros'
   },

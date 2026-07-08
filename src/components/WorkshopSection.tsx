@@ -16,9 +16,9 @@ export function WorkshopSection() {
             {/* Top Image */}
             <div className="w-full aspect-[4/3] lg:aspect-video relative rounded-sm overflow-hidden bg-surface">
               <img 
-                src="https://res.cloudinary.com/dsdb4fibv/image/upload/v1782508794/craf_lstywg.avif" 
+                src="/alianzasrepair.avif"
                 alt="Trabajo artesanal en el taller de Cuore"
-                className="w-full h-full object-cover object-[center_top]"
+                className="w-full h-full object-cover object-[center_80%]"
                 style={{ filter: 'brightness(0.92) saturate(0.85) sepia(0.10)' }}
               />
               {/* Overlay oscuro semitransparente para bajar protagonismo */}
@@ -63,7 +63,7 @@ export function WorkshopSection() {
             {/* Top Image */}
             <div className="w-full aspect-[4/3] lg:aspect-video relative rounded-sm overflow-hidden bg-surface">
               <img 
-                src="https://res.cloudinary.com/dsdb4fibv/image/upload/v1783222069/repair_workshop_sgf7jp.jpg" 
+                src="/repair_workshop.png"
                 alt="Servicio de reparación de joyas y relojes"
                 className="w-full h-full object-cover object-[center_top]"
                 style={{ filter: 'brightness(0.92) saturate(0.85) sepia(0.10)' }}
