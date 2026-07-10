@@ -12,7 +12,7 @@ export const categories: Category[] = [
   {
     id: 'anillos',
     name: 'Anillos',
-    image: 'https://res.cloudinary.com/dsdb4fibv/image/upload/v1783222060/cat_anillos_hwizp6.jpg',
+    image: '/cat-anillos.avif',
     description: '',
     waMessage: 'Hola Cuore, quería ver anillos disponibles'
   },

@@ -11,7 +11,7 @@ export function Hero() {
       
       {/* MOBILE FULL-BLEED IMAGE & GRADIENTS */}
       <img 
-        src="/hero1.avif"
+        src="/hero3.avif"
         alt="Nuestras manos trabajando en joyería Cuore"
         className="absolute inset-0 w-full h-full object-cover object-center lg:hidden"
       />
@@ -67,7 +67,7 @@ export function Hero() {
         </div>
 
         <div className="w-full h-full relative overflow-hidden bg-surface">
-          <img src="https://res.cloudinary.com/dsdb4fibv/image/upload/v1782508797/relojescasio_lzx4kk.jpg" alt="Relojes" className="w-full h-full object-cover" />
+          <img src="/hero3.avif" alt="Relojes" className="w-full h-full object-cover" />
         </div>
       </div>
 

@@ -22,16 +22,20 @@ export function Navbar() {
           <img 
             src="https://res.cloudinary.com/dsdb4fibv/image/upload/v1782508796/cuorelogo_cmmt3i.svg" 
             alt="Cuore joyería y relojería" 
-            className="h-14 md:h-20 w-auto object-contain"
+            className={`h-14 md:h-20 w-auto object-contain transition-all ${!isScrolled ? 'brightness-0 invert drop-shadow-md lg:brightness-100 lg:invert-0 lg:drop-shadow-none' : ''}`}
           />
         </a>
 
-        <nav className="hidden md:flex gap-item absolute left-1/2 -translate-x-1/2" aria-label="Navegación principal">
+        <nav className="hidden md:flex gap-4 lg:gap-item ml-auto lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:ml-0 pr-12 lg:pr-0" aria-label="Navegación principal">
           {navItems.map((item) => (
             <a 
               key={item.href} 
               href={item.href}
-              className="font-body font-normal text-xs lg:text-sm uppercase tracking-[0.2em] text-background/80 lg:text-tierra transition-colors focus-visible:outline-accent whitespace-nowrap"
+              className={`font-body font-normal text-xs lg:text-sm uppercase tracking-[0.2em] transition-colors focus-visible:outline-accent whitespace-nowrap ${
+                !isScrolled 
+                  ? 'text-background drop-shadow-md lg:text-tierra lg:drop-shadow-none' 
+                  : 'text-foreground lg:text-tierra'
+              }`}
             >
               {item.label}
             </a>
@@ -42,7 +46,8 @@ export function Navbar() {
 
         {!isOpen ? (
           <button 
-            className="md:hidden flex p-2 text-foreground focus-visible:outline-accent relative z-[60]" 
+            className={`md:hidden flex p-2 focus-visible:outline-accent relative z-[60] transition-colors ${!isScrolled ? 'text-background drop-shadow-md' : 'text-foreground'}`} 
+
             aria-label="Abrir menú"
             aria-expanded={isOpen}
             onClick={() => setIsOpen(true)}
