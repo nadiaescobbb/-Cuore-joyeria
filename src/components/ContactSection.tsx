@@ -1,12 +1,11 @@
-import { useReveal } from '../hooks/use-reveal';
+import { Reveal } from './Reveal';
 
-const getWaLink = (msg: string) => `https://wa.me/542964557378?text=${encodeURIComponent(msg)}`;
+import { getWaLink } from '../constants/wa';
 
 export function ContactSection() {
-  const ref = useReveal();
 
   return (
-    <section id="contact" className="w-full bg-surface" ref={ref}>
+    <Reveal id="contact" className="w-full bg-surface">
       <div className="max-w-4xl mx-auto px-8 lg:px-20 pt-group pb-section flex flex-col gap-[var(--spacing-item)]">
         <div className="flex flex-col items-start text-left gap-[var(--spacing-item)]">
           
@@ -79,6 +78,6 @@ export function ContactSection() {
           </div>
         </div>
       </div>
-    </section>
+    </Reveal>
   );
 }

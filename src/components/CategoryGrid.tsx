@@ -1,13 +1,11 @@
-import { useReveal } from '../hooks/use-reveal';
+import { Reveal } from './Reveal';
 import { categories } from '../data/categories';
 
-const getWaLink = (msg: string) => `https://wa.me/542964557378?text=${encodeURIComponent(msg)}`;
+import { getWaLink } from '../constants/wa';
 
 export function CategoryGrid() {
-  const ref = useReveal();
-
   return (
-    <div className="w-full bg-background" ref={ref}>
+    <Reveal className="w-full bg-background">
       <section id="categories" className="max-w-[1440px] mx-auto px-5 md:px-12 lg:px-20 pt-section">
         
         {/* Encabezado con mucho aire */}
@@ -30,6 +28,7 @@ export function CategoryGrid() {
                 className="group relative flex flex-col w-full md:w-5/12 h-[55vh] md:h-[60vh] focus-visible:outline-accent overflow-hidden rounded-sm md:mr-auto"
               >
                 <img 
+                  loading="lazy"
                   src={categories[0].image} 
                   alt={categories[0].name} 
                   className="absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover:scale-[1.03]" 
@@ -51,6 +50,7 @@ export function CategoryGrid() {
                 className="group relative flex flex-col w-full md:w-6/12 h-[45vh] md:h-[50vh] focus-visible:outline-accent overflow-hidden rounded-sm md:translate-y-8 lg:translate-y-10"
               >
                 <img 
+                  loading="lazy"
                   src={categories[1].image} 
                   alt={categories[1].name} 
                   className="absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover:scale-[1.03]" 
@@ -75,6 +75,7 @@ export function CategoryGrid() {
                 className="group relative flex flex-col w-full md:w-5/12 h-[55vh] md:h-[60vh] focus-visible:outline-accent overflow-hidden rounded-sm md:ml-auto"
               >
                 <img 
+                  loading="lazy"
                   src={categories[3].image} 
                   alt={categories[3].name} 
                   className="absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover:scale-[1.03]" 
@@ -96,6 +97,7 @@ export function CategoryGrid() {
                 className="group relative flex flex-col w-full md:w-6/12 h-[45vh] md:h-[50vh] focus-visible:outline-accent overflow-hidden rounded-sm md:-translate-y-8 lg:-translate-y-10"
               >
                 <img 
+                  loading="lazy"
                   src={categories[2].image} 
                   alt={categories[2].name} 
                   className="absolute inset-0 w-full h-full object-cover object-top transition-all duration-1000 group-hover:scale-[1.03]" 
@@ -112,6 +114,6 @@ export function CategoryGrid() {
 
         </div>
       </section>
-    </div>
+    </Reveal>
   );
 }

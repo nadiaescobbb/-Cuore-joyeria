@@ -1,13 +1,10 @@
-import { useReveal } from '../hooks/use-reveal';
-import { getImageUrl } from '../utils/image';
+import { Reveal } from './Reveal';
 
-const getWaLink = (msg: string) => `https://wa.me/542964557378?text=${encodeURIComponent(msg)}`;
+import { getWaLink } from '../constants/wa';
 
 export function Hero() {
-  const ref = useReveal();
-
   return (
-    <section id="hero" className="relative w-full h-[100dvh] lg:h-auto lg:min-h-[100dvh] lg:grid lg:grid-cols-12 lg:bg-transparent" ref={ref}>
+    <Reveal id="hero" className="relative w-full h-[100dvh] lg:h-auto lg:min-h-[100dvh] lg:grid lg:grid-cols-12 lg:bg-transparent">
       
       {/* MOBILE FULL-BLEED IMAGE & GRADIENTS */}
       <img 
@@ -71,6 +68,6 @@ export function Hero() {
         </div>
       </div>
 
-    </section>
+    </Reveal>
   );
 }

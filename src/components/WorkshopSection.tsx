@@ -1,13 +1,11 @@
-import { useReveal } from '../hooks/use-reveal';
-import { getImageUrl } from '../utils/image';
+import { Reveal } from './Reveal';
 
-const getWaLink = (msg: string) => `https://wa.me/542964557378?text=${encodeURIComponent(msg)}`;
+import { getWaLink } from '../constants/wa';
 
 export function WorkshopSection() {
-  const ref = useReveal();
 
   return (
-    <section className="w-full bg-background relative pt-section" ref={ref}>
+    <Reveal className="w-full bg-background relative pt-section">
       <div className="max-w-[1440px] mx-auto px-5 md:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-[var(--spacing-item)] md:gap-[var(--spacing-group)] w-full">
           
@@ -16,6 +14,7 @@ export function WorkshopSection() {
             {/* Top Image */}
             <div className="w-full aspect-[4/3] lg:aspect-video relative rounded-sm overflow-hidden bg-surface">
               <img 
+                loading="lazy"
                 src="/alianzasrepair.avif"
                 alt="Trabajo artesanal en el taller de Cuore"
                 className="w-full h-full object-cover object-[center_80%]"
@@ -63,6 +62,7 @@ export function WorkshopSection() {
             {/* Top Image */}
             <div className="w-full aspect-[4/3] lg:aspect-video relative rounded-sm overflow-hidden bg-surface">
               <img 
+                loading="lazy"
                 src="/repair_workshop.png"
                 alt="Servicio de reparación de joyas y relojes"
                 className="w-full h-full object-cover object-[center_top]"
@@ -107,6 +107,6 @@ export function WorkshopSection() {
 
         </div>
       </div>
-    </section>
+    </Reveal>
   );
 }

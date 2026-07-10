@@ -1,4 +1,3 @@
-import { getImageUrl } from '../utils/image';
 
 export interface Category {
   id: string;

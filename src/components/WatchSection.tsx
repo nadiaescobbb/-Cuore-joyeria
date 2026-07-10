@@ -1,14 +1,13 @@
 import { useState, useCallback, useEffect } from 'react';
-import { useReveal } from '../hooks/use-reveal';
+import { Reveal } from './Reveal';
 import { watches } from '../data/watches';
 import useEmblaCarousel from 'embla-carousel-react';
 import Fade from 'embla-carousel-fade';
 
 const BRANDS = ['Casio', 'Bulova', 'Tommy Hilfiger', 'Orient', 'Citizen', 'Lorus', 'Montreal', 'Festina'];
-const getWaLink = (msg: string) => `https://wa.me/542964557378?text=${encodeURIComponent(msg)}`;
+import { getWaLink } from '../constants/wa';
 
 export function WatchSection() {
-  const ref = useReveal();
 
   const [emblaRef, emblaApi] = useEmblaCarousel({ 
     align: 'start', 
@@ -42,7 +41,7 @@ export function WatchSection() {
   }, [emblaApi, onInit, onSelect]);
 
   return (
-    <section id="watches" className="w-full bg-dark-surface text-background" ref={ref}>
+    <Reveal id="watches" className="w-full bg-dark-surface text-background">
       <div className="max-w-[1440px] mx-auto px-4 md:px-20 pt-section pb-item">
       
       {/* Brands Carousel */}
@@ -90,6 +89,7 @@ export function WatchSection() {
             aria-label={`Consultar por reloj ${watch.title} en WhatsApp`}
           >
             <img 
+              loading="lazy"
               src={watch.image} 
               alt={`Reloj ${watch.title}`}
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100"
@@ -107,6 +107,6 @@ export function WatchSection() {
         ))}
       </div>
       </div>
-    </section>
+    </Reveal>
   );
 }

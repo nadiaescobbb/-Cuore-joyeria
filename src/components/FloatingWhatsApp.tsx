@@ -1,4 +1,4 @@
-const getWaLink = (msg: string) => `https://wa.me/542964557378?text=${encodeURIComponent(msg)}`;
+import { getWaLink } from '../constants/wa';
 
 export function FloatingWhatsApp() {
   return (

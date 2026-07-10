@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { navItems } from '../data/nav';
-import { getImageUrl } from '../utils/image';
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -74,29 +73,28 @@ export function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      {isOpen && (
-        <div 
-          className="md:hidden fixed inset-0 z-50 bg-background flex flex-col items-center justify-center h-full overflow-hidden"
-          onClick={() => setIsOpen(false)}
-        >
-          {/* Links Container */}
-          <div className="relative z-10 flex flex-col items-center justify-center w-full gap-item">
-            {navItems.map((item) => (
-              <a 
-                key={item.href} 
-                href={item.href}
-                className="text-3xl md:text-4xl font-heading text-tierra hover:text-accent transition-colors text-center"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setIsOpen(false);
-                }}
-              >
-                {item.label}
-              </a>
-            ))}
-          </div>
+      <div 
+        aria-hidden={!isOpen}
+        className={`md:hidden fixed inset-0 z-50 bg-background flex flex-col items-center justify-center h-full overflow-hidden transition-opacity duration-200 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+        onClick={() => setIsOpen(false)}
+      >
+        {/* Links Container */}
+        <div className="relative z-10 flex flex-col items-center justify-center w-full gap-item">
+          {navItems.map((item) => (
+            <a 
+              key={item.href} 
+              href={item.href}
+              className="text-3xl md:text-4xl font-heading text-tierra hover:text-accent transition-colors text-center"
+              onClick={(e) => {
+                e.stopPropagation();
+                setIsOpen(false);
+              }}
+            >
+              {item.label}
+            </a>
+          ))}
         </div>
-      )}
+      </div>
     </header>
   );
 }

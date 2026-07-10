@@ -1,8 +1,7 @@
-import { useReveal } from '../hooks/use-reveal';
+import { Reveal } from './Reveal';
 import { Fire, SealCheck, Sparkle, ChatCircle, ShieldCheck } from '@phosphor-icons/react';
 
 export function TrustSection() {
-  const ref = useReveal();
 
   const items = [
     {
@@ -33,7 +32,7 @@ export function TrustSection() {
   ];
 
   return (
-    <section id="trust" className="bg-background relative" ref={ref}>
+    <Reveal id="trust" className="bg-background relative">
       <div className="max-w-[1440px] mx-auto px-5 pt-group md:px-20 text-center">
         
         <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-normal leading-none text-foreground mb-12 lg:mb-20">
@@ -55,7 +54,7 @@ export function TrustSection() {
         </div>
 
       </div>
-    </section>
+    </Reveal>
   );
 }
 
