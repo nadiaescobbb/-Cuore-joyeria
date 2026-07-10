@@ -1,11 +1,11 @@
-import { Reveal } from './Reveal';
+
 
 import { getWaLink } from '../constants/wa';
 
 export function WorkshopSection() {
 
   return (
-    <Reveal className="w-full bg-background relative pt-section">
+    <section className="w-full bg-background relative pt-section">
       <div className="max-w-[1440px] mx-auto px-5 md:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-[var(--spacing-item)] md:gap-[var(--spacing-group)] w-full">
           
@@ -48,7 +48,7 @@ export function WorkshopSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Cotizar alianzas por WhatsApp"
-                  className="w-full md:w-fit min-h-14 px-10 bg-cta text-background font-body font-bold text-sm tracking-[0.16em] uppercase rounded-sm flex items-center justify-center hover:bg-cta-hover transition-colors duration-200 focus-visible:outline-accent"
+                  className="w-full md:w-fit min-h-14 px-10 bg-cta text-background font-body font-bold text-sm tracking-[0.16em] uppercase rounded-sm flex items-center justify-center hover:bg-cta-hover transition-colors duration-150 ease-linear focus-visible:outline-accent"
                 >
                   Cotizar alianzas
                 </a>
@@ -96,7 +96,7 @@ export function WorkshopSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Consultá por una reparación por WhatsApp"
-                  className="w-full md:w-fit min-h-14 px-10 bg-cta text-background font-body font-bold text-sm tracking-[0.16em] uppercase rounded-sm flex items-center justify-center hover:bg-cta-hover transition-colors duration-200 focus-visible:outline-accent"
+                  className="w-full md:w-fit min-h-14 px-10 bg-cta text-background font-body font-bold text-sm tracking-[0.16em] uppercase rounded-sm flex items-center justify-center hover:bg-cta-hover transition-colors duration-150 ease-linear focus-visible:outline-accent"
                 >
                   Consultá por reparación
                 </a>
@@ -107,6 +107,6 @@ export function WorkshopSection() {
 
         </div>
       </div>
-    </Reveal>
+    </section>
   );
 }

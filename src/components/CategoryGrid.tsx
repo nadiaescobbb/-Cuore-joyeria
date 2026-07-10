@@ -1,11 +1,11 @@
-import { Reveal } from './Reveal';
+
 import { categories } from '../data/categories';
 
 import { getWaLink } from '../constants/wa';
 
 export function CategoryGrid() {
   return (
-    <Reveal className="w-full bg-background">
+    <div className="w-full bg-background">
       <section id="categories" className="max-w-[1440px] mx-auto px-5 md:px-12 lg:px-20 pt-section">
         
         {/* Encabezado con mucho aire */}
@@ -31,11 +31,11 @@ export function CategoryGrid() {
                   loading="lazy"
                   src={categories[0].image} 
                   alt={categories[0].name} 
-                  className="absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover:scale-[1.03]" 
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.03]" 
                 />
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-700 pointer-events-none" />
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-200 pointer-events-none" />
                 <div className="absolute inset-0 flex items-center justify-center p-8 pointer-events-none">
-                  <h3 className="font-body text-sm md:text-base font-bold tracking-[0.3em] text-background uppercase text-center drop-shadow-[0_0px_12px_rgba(0,0,0,0.5)] border-b border-transparent group-hover:border-background transition-colors duration-500 pb-2 z-10 relative">
+                  <h3 className="font-body text-sm md:text-base font-bold tracking-[0.3em] text-background uppercase text-center drop-shadow-[0_0px_12px_rgba(0,0,0,0.5)] border-b border-transparent group-hover:border-background transition-colors duration-200 pb-2 z-10 relative">
                     {categories[0].name}
                   </h3>
                 </div>
@@ -53,11 +53,11 @@ export function CategoryGrid() {
                   loading="lazy"
                   src={categories[1].image} 
                   alt={categories[1].name} 
-                  className="absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover:scale-[1.03]" 
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.03]" 
                 />
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-700 pointer-events-none" />
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-200 pointer-events-none" />
                 <div className="absolute inset-0 flex items-center justify-center p-8 pointer-events-none">
-                  <h3 className="font-body text-sm md:text-base font-bold tracking-[0.3em] text-background uppercase text-center drop-shadow-[0_0px_12px_rgba(0,0,0,0.5)] border-b border-transparent group-hover:border-background transition-colors duration-500 pb-2 z-10 relative">
+                  <h3 className="font-body text-sm md:text-base font-bold tracking-[0.3em] text-background uppercase text-center drop-shadow-[0_0px_12px_rgba(0,0,0,0.5)] border-b border-transparent group-hover:border-background transition-colors duration-200 pb-2 z-10 relative">
                     {categories[1].name}
                   </h3>
                 </div>
@@ -78,11 +78,11 @@ export function CategoryGrid() {
                   loading="lazy"
                   src={categories[3].image} 
                   alt={categories[3].name} 
-                  className="absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover:scale-[1.03]" 
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.03]" 
                 />
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-700 pointer-events-none" />
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-200 pointer-events-none" />
                 <div className="absolute inset-0 flex items-center justify-center p-8 pointer-events-none">
-                  <h3 className="font-body text-sm md:text-base font-bold tracking-[0.3em] text-background uppercase text-center drop-shadow-[0_0px_12px_rgba(0,0,0,0.5)] border-b border-transparent group-hover:border-background transition-colors duration-500 pb-2 z-10 relative">
+                  <h3 className="font-body text-sm md:text-base font-bold tracking-[0.3em] text-background uppercase text-center drop-shadow-[0_0px_12px_rgba(0,0,0,0.5)] border-b border-transparent group-hover:border-background transition-colors duration-200 pb-2 z-10 relative">
                     {categories[3].name}
                   </h3>
                 </div>
@@ -100,11 +100,11 @@ export function CategoryGrid() {
                   loading="lazy"
                   src={categories[2].image} 
                   alt={categories[2].name} 
-                  className="absolute inset-0 w-full h-full object-cover object-top transition-all duration-1000 group-hover:scale-[1.03]" 
+                  className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-300 ease-out group-hover:scale-[1.03]" 
                 />
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-700 pointer-events-none" />
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-200 pointer-events-none" />
                 <div className="absolute inset-0 flex items-center justify-center p-8 pointer-events-none">
-                  <h3 className="font-body text-sm md:text-base font-bold tracking-[0.3em] text-background uppercase text-center drop-shadow-[0_0px_12px_rgba(0,0,0,0.5)] border-b border-transparent group-hover:border-background transition-colors duration-500 pb-2 z-10 relative">
+                  <h3 className="font-body text-sm md:text-base font-bold tracking-[0.3em] text-background uppercase text-center drop-shadow-[0_0px_12px_rgba(0,0,0,0.5)] border-b border-transparent group-hover:border-background transition-colors duration-200 pb-2 z-10 relative">
                     {categories[2].name}
                   </h3>
                 </div>
@@ -114,6 +114,6 @@ export function CategoryGrid() {
 
         </div>
       </section>
-    </Reveal>
+    </div>
   );
 }

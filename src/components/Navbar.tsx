@@ -30,10 +30,10 @@ export function Navbar() {
             <a 
               key={item.href} 
               href={item.href}
-              className={`font-body font-normal text-xs lg:text-sm uppercase tracking-[0.2em] transition-colors focus-visible:outline-accent whitespace-nowrap ${
+              className={`font-body font-normal text-xs lg:text-sm uppercase tracking-[0.2em] transition-colors duration-150 ease-linear focus-visible:outline-accent whitespace-nowrap ${
                 !isScrolled 
-                  ? 'text-background drop-shadow-md lg:text-tierra lg:drop-shadow-none' 
-                  : 'text-foreground lg:text-tierra'
+                  ? 'text-background drop-shadow-md lg:text-tierra lg:drop-shadow-none hover:text-white/80 lg:hover:text-tierra/80' 
+                  : 'text-foreground lg:text-tierra hover:text-foreground/80 lg:hover:text-tierra/80'
               }`}
             >
               {item.label}
@@ -84,7 +84,7 @@ export function Navbar() {
             <a 
               key={item.href} 
               href={item.href}
-              className="text-3xl md:text-4xl font-heading text-tierra hover:text-accent transition-colors text-center"
+              className="text-3xl md:text-4xl font-heading text-tierra hover:text-accent transition-colors duration-150 ease-linear text-center"
               onClick={(e) => {
                 e.stopPropagation();
                 setIsOpen(false);

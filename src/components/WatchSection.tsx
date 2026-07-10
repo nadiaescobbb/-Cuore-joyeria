@@ -1,8 +1,7 @@
 import { useState, useCallback, useEffect } from 'react';
-import { Reveal } from './Reveal';
+
 import { watches } from '../data/watches';
 import useEmblaCarousel from 'embla-carousel-react';
-import Fade from 'embla-carousel-fade';
 
 const BRANDS = ['Casio', 'Bulova', 'Tommy Hilfiger', 'Orient', 'Citizen', 'Lorus', 'Montreal', 'Festina'];
 import { getWaLink } from '../constants/wa';
@@ -16,7 +15,7 @@ export function WatchSection() {
     breakpoints: {
       '(min-width: 1024px)': { slidesToScroll: 4 }
     }
-  }, [Fade()]);
+  });
 
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
@@ -41,7 +40,7 @@ export function WatchSection() {
   }, [emblaApi, onInit, onSelect]);
 
   return (
-    <Reveal id="watches" className="w-full bg-dark-surface text-background">
+    <section id="watches" className="w-full bg-dark-surface text-background">
       <div className="max-w-[1440px] mx-auto px-4 md:px-20 pt-section pb-item">
       
       {/* Brands Carousel */}
@@ -71,7 +70,7 @@ export function WatchSection() {
                 onClick={() => scrollTo(index)}
                 aria-label={`Ir a la página ${index + 1}`}
               >
-                <span className={`h-1.5 rounded-full transition-all duration-300 ${index === selectedIndex ? 'bg-background w-8' : 'bg-background/30 group-hover:bg-background/50 w-1.5'}`} />
+                <span className={`h-1.5 rounded-full transition-all duration-300 ease-in-out ${index === selectedIndex ? 'bg-background w-8' : 'bg-background/30 group-hover:bg-background/50 w-1.5'}`} />
               </button>
             ))}
           </div>
@@ -92,7 +91,7 @@ export function WatchSection() {
               loading="lazy"
               src={watch.image} 
               alt={`Reloj ${watch.title}`}
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100"
+              className="absolute inset-0 w-full h-full object-cover transition-all duration-300 ease-out group-hover:scale-105 opacity-90 group-hover:opacity-100"
             />
             <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-dark/70 to-transparent pointer-events-none"></div>
             <div className="absolute bottom-4 left-4 z-10 flex flex-col">
@@ -107,6 +106,6 @@ export function WatchSection() {
         ))}
       </div>
       </div>
-    </Reveal>
+    </section>
   );
 }

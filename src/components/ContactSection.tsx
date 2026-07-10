@@ -1,11 +1,11 @@
-import { Reveal } from './Reveal';
+
 
 import { getWaLink } from '../constants/wa';
 
 export function ContactSection() {
 
   return (
-    <Reveal id="contact" className="w-full bg-surface">
+    <section id="contact" className="w-full bg-surface">
       <div className="max-w-4xl mx-auto px-8 lg:px-20 pt-group pb-section flex flex-col gap-[var(--spacing-item)]">
         <div className="flex flex-col items-start text-left gap-[var(--spacing-item)]">
           
@@ -27,7 +27,7 @@ export function ContactSection() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Escribinos por WhatsApp"
-              className="inline-flex items-center justify-center bg-cta text-background min-h-12 px-8 font-body font-bold text-sm tracking-[0.16em] w-fit hover:bg-cta-hover transition-colors duration-200 focus-visible:outline-accent"
+              className="inline-flex items-center justify-center bg-cta text-background min-h-12 px-8 font-body font-bold text-sm tracking-[0.16em] w-fit hover:bg-cta-hover transition-colors duration-150 ease-linear focus-visible:outline-accent"
             >
               Escribinos por WhatsApp
             </a>
@@ -36,7 +36,7 @@ export function ContactSection() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Ver Instagram de Cuore"
-              className="inline-flex items-center justify-center border border-foreground/20 text-foreground min-h-12 px-8 font-body font-bold text-sm tracking-[0.16em] w-fit hover:bg-foreground/5 transition-colors duration-200 focus-visible:outline-accent"
+              className="inline-flex items-center justify-center border border-foreground/20 text-foreground min-h-12 px-8 font-body font-bold text-sm tracking-[0.16em] w-fit hover:bg-foreground/5 transition-colors duration-150 ease-linear focus-visible:outline-accent"
             >
               Ver Instagram
             </a>
@@ -78,6 +78,6 @@ export function ContactSection() {
           </div>
         </div>
       </div>
-    </Reveal>
+    </section>
   );
 }

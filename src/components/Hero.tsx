@@ -37,13 +37,13 @@ export function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Consultá por WhatsApp"
-                className="inline-flex items-center justify-center px-6 md:px-8 min-h-12 bg-cta text-background font-body font-bold text-sm md:text-body tracking-normal hover:bg-cta-hover transition-colors duration-200 focus-visible:outline-accent text-center shadow-md lg:shadow-none"
+                className="inline-flex items-center justify-center px-6 md:px-8 min-h-12 bg-cta text-background font-body font-bold text-sm md:text-body tracking-normal hover:bg-cta-hover transition-colors duration-150 ease-linear focus-visible:outline-accent text-center shadow-md lg:shadow-none"
               >
                 Consultá por WhatsApp
               </a>
               <a 
                 href="#trust"
-                className="inline-flex items-center justify-center px-6 md:px-8 min-h-12 bg-transparent text-background lg:text-tierra border border-background/60 lg:border-tierra/40 font-body font-bold text-sm md:text-body tracking-normal hover:bg-background/10 lg:hover:bg-tierra/5 transition-colors duration-200 focus-visible:outline-accent text-center shadow-sm lg:shadow-none backdrop-blur-sm lg:backdrop-blur-none"
+                className="inline-flex items-center justify-center px-6 md:px-8 min-h-12 bg-transparent text-background lg:text-tierra border border-background/60 lg:border-tierra/40 font-body font-bold text-sm md:text-body tracking-normal hover:bg-background/10 lg:hover:bg-tierra/5 transition-colors duration-150 ease-linear focus-visible:outline-accent text-center shadow-sm lg:shadow-none backdrop-blur-sm lg:backdrop-blur-none"
               >
                 Ver qué hacemos
               </a>
