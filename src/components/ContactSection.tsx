@@ -14,7 +14,7 @@ export function ContactSection() {
               Contacto
             </span>
             <h2 className="font-heading text-6xl lg:text-7xl font-normal leading-tight text-foreground">
-              Estamos para ayudarte.
+              Consultas, arreglos y presupuestos.
             </h2>
             <p className="font-body text-base text-muted max-w-lg">
               Te respondemos por WhatsApp. Podés mandar una foto, preguntar por stock o pedir una referencia. Sin compromiso.

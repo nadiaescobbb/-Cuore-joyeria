@@ -7,12 +7,12 @@ export function TrustSection() {
     {
       icon: <Fire className="w-8 h-8 md:w-10 md:h-10 text-accent mb-item" weight="thin" />,
       title: 'Taller propio',
-      description: 'Fabricamos y reparamos en nuestro local.'
+      description: 'Fabricamos y reparamos cada pieza acá, en Río Grande.'
     },
     {
       icon: <SealCheck className="w-8 h-8 md:w-10 md:h-10 text-accent mb-item" weight="thin" />,
       title: 'Más de 40 años',
-      description: 'El mismo oficio, en el mismo lugar.'
+      description: 'Trabajando todos los días en Tierra del Fuego.'
     },
     {
       icon: <Sparkle className="w-8 h-8 md:w-10 md:h-10 text-accent mb-item" weight="thin" />,
@@ -21,13 +21,13 @@ export function TrustSection() {
     },
     {
       icon: <ChatCircle className="w-8 h-8 md:w-10 md:h-10 text-accent mb-item" weight="thin" />,
-      title: 'Asesoramiento real',
-      description: 'Te ayudamos a elegir sin apuro.'
+      title: 'Atención sin apuro',
+      description: 'Te dedicamos tiempo para que mires, te pruebes y decidas.'
     },
     {
       icon: <ShieldCheck className="w-8 h-8 md:w-10 md:h-10 text-accent mb-item" weight="thin" />,
-      title: 'Garantía real',
-      description: 'Oro, plata y platino con respaldo propio.'
+      title: 'Garantía propia',
+      description: 'Respondemos nosotros mismos por cada pieza que reparamos o fabricamos.'
     }
   ];
 

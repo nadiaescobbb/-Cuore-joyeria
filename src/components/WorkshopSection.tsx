@@ -30,11 +30,11 @@ export function WorkshopSection() {
                 
                 <div className="flex flex-col items-start gap-4 lg:gap-6">
                   <span className="font-body text-[10px] md:text-[12px] font-bold tracking-[0.20em] text-tierra uppercase">
-                    Taller y fabricación
+                    Fabricación propia
                   </span>
                   
                   <h2 className="font-heading text-4xl md:text-5xl font-normal leading-tight text-foreground">
-                    Fabricamos alianzas en nuestro taller.
+                    Fabricamos alianzas acá mismo.
                   </h2>
                   
                   <p className="font-body text-base md:text-lg text-tierra">
@@ -86,7 +86,7 @@ export function WorkshopSection() {
                   </h2>
                   
                   <p className="font-body text-base md:text-lg text-tierra">
-                    Relojes, joyas, mallas y pilas. Si algo se rompió o dejó de funcionar, traelo a nuestro propio taller.
+                    Relojes, joyas, mallas y pilas. Si algo se rompió o dejó de funcionar, traelo y lo arreglamos acá.
                   </p>
                 </div>
 

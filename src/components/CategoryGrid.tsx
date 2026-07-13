@@ -11,7 +11,7 @@ export function CategoryGrid() {
         {/* Encabezado con mucho aire */}
         <div className="w-full flex flex-col items-center text-center mb-item">
           <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-normal leading-tight tracking-tight text-foreground">
-            Explorá nuestra selección.
+            Nuestro catálogo de joyas.
           </h2>
         </div>
 
