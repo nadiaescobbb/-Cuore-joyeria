@@ -12,14 +12,14 @@ export const categories: Category[] = [
     id: 'anillos',
     name: 'Anillos',
     image: '/cat-anillos.avif',
-    description: '',
+    description: 'En oro 18kt - Plata con Oro - Plata 925. Variedad de modelos para dama y caballero',
     waMessage: 'Hola Cuore, quería ver anillos disponibles'
   },
   {
     id: 'collares',
     name: 'Collares',
     image: 'https://res.cloudinary.com/dsdb4fibv/image/upload/v1783222065/cat_collares_rw1nay.jpg',
-    description: '',
+    description: 'Gargantillas y cadenas. Variedad de modelos en todas las medidas',
     waMessage: 'Hola Cuore, quería ver opciones de collares'
   },
   {

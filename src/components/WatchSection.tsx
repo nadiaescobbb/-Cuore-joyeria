@@ -3,7 +3,7 @@ import { useState, useCallback, useEffect } from 'react';
 import { watches } from '../data/watches';
 import useEmblaCarousel from 'embla-carousel-react';
 
-const BRANDS = ['Casio', 'Bulova', 'Tommy Hilfiger', 'Orient', 'Citizen', 'Lorus', 'Montreal', 'Festina'];
+const BRANDS = ['Casio', 'Bulova', 'Festina', 'Orient', 'Tissot', 'Swatch', 'Citizen', 'Tommy Hilfiger', 'Seiko', 'Ferrari', 'Hummer', 'Hugo Boss', 'Tressa', 'Montreal', 'Máxima', 'Puma'];
 import { getWaLink } from '../constants/wa';
 
 export function WatchSection() {

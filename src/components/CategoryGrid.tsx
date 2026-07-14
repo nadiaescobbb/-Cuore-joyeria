@@ -34,10 +34,15 @@ export function CategoryGrid() {
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.03]" 
                 />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-200 pointer-events-none" />
-                <div className="absolute inset-0 flex items-center justify-center p-8 pointer-events-none">
+                <div className="absolute inset-0 flex flex-col items-center justify-center p-8 pointer-events-none">
                   <h3 className="font-body text-sm md:text-base font-bold tracking-[0.3em] text-background uppercase text-center drop-shadow-[0_0px_12px_rgba(0,0,0,0.5)] border-b border-transparent group-hover:border-background transition-colors duration-200 pb-2 z-10 relative">
                     {categories[0].name}
                   </h3>
+                  {categories[0].description && (
+                    <p className="mt-4 font-body text-xs md:text-sm text-center text-background/90 max-w-[280px] drop-shadow-md z-10">
+                      {categories[0].description}
+                    </p>
+                  )}
                 </div>
               </a>
             )}
@@ -56,10 +61,15 @@ export function CategoryGrid() {
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.03]" 
                 />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-200 pointer-events-none" />
-                <div className="absolute inset-0 flex items-center justify-center p-8 pointer-events-none">
+                <div className="absolute inset-0 flex flex-col items-center justify-center p-8 pointer-events-none">
                   <h3 className="font-body text-sm md:text-base font-bold tracking-[0.3em] text-background uppercase text-center drop-shadow-[0_0px_12px_rgba(0,0,0,0.5)] border-b border-transparent group-hover:border-background transition-colors duration-200 pb-2 z-10 relative">
                     {categories[1].name}
                   </h3>
+                  {categories[1].description && (
+                    <p className="mt-4 font-body text-xs md:text-sm text-center text-background/90 max-w-[280px] drop-shadow-md z-10">
+                      {categories[1].description}
+                    </p>
+                  )}
                 </div>
               </a>
             )}

@@ -8,12 +8,12 @@ export function WorkshopSection() {
     <section className="w-full bg-background relative pt-section">
       <div className="max-w-[1440px] mx-auto px-5 md:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-[var(--spacing-item)] md:gap-[var(--spacing-group)] w-full">
-          
+
           {/* COLUMN 1 - TALLER */}
           <div id="workshop" className="flex flex-col w-full">
             {/* Top Image */}
             <div className="w-full aspect-[4/3] lg:aspect-video relative rounded-sm overflow-hidden bg-surface">
-              <img 
+              <img
                 loading="lazy"
                 src="/alianzasrepair.avif"
                 alt="Trabajo artesanal en el taller de Cuore"
@@ -27,23 +27,23 @@ export function WorkshopSection() {
             {/* Left Aligned Text Block */}
             <div className="w-full pt-item">
               <div className="flex flex-col items-start text-left gap-item max-w-xl">
-                
+
                 <div className="flex flex-col items-start gap-4 lg:gap-6">
                   <span className="font-body text-[10px] md:text-[12px] font-bold tracking-[0.20em] text-tierra uppercase">
                     Fabricación propia
                   </span>
-                  
+
                   <h2 className="font-heading text-4xl md:text-5xl font-normal leading-tight text-foreground">
-                    Fabricamos alianzas acá mismo.
+                    Alianzas: En oro 18kt - Plata con Oro - Plata 925
                   </h2>
-                  
+
                   <p className="font-body text-base md:text-lg text-tierra">
                     Elegís el material, la medida y el grabado. Cada alianza se hace acá, en Río Grande.
                   </p>
                 </div>
 
                 {/* CTA */}
-                <a 
+                <a
                   href={getWaLink("Hola Cuore, quería cotizar alianzas")}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -61,11 +61,11 @@ export function WorkshopSection() {
           <div id="repairs" className="flex flex-col w-full">
             {/* Top Image */}
             <div className="w-full aspect-[4/3] lg:aspect-video relative rounded-sm overflow-hidden bg-surface">
-              <img 
+              <img
                 loading="lazy"
                 src="/repair_workshop.png"
                 alt="Servicio de reparación de joyas y relojes"
-                className="w-full h-full object-cover object-[center_top]"
+                className="w-full h-full object-cover object-[center_65%]"
                 style={{ filter: 'brightness(0.92) saturate(0.85) sepia(0.10)' }}
               />
               {/* Overlay oscuro semitransparente para bajar protagonismo */}
@@ -75,23 +75,23 @@ export function WorkshopSection() {
             {/* Left Aligned Text Block */}
             <div className="w-full pt-item">
               <div className="flex flex-col items-start text-left gap-item max-w-xl">
-                
+
                 <div className="flex flex-col items-start gap-4 lg:gap-6">
                   <span className="font-body text-[10px] md:text-[12px] font-bold tracking-[0.20em] text-tierra uppercase">
                     Reparaciones
                   </span>
-                  
+
                   <h2 className="font-heading text-4xl md:text-5xl font-normal leading-tight text-foreground">
                     Reparamos las piezas que querés usar.
                   </h2>
-                  
+
                   <p className="font-body text-base md:text-lg text-tierra">
                     Relojes, joyas, mallas y pilas. Si algo se rompió o dejó de funcionar, traelo y lo arreglamos acá.
                   </p>
                 </div>
 
                 {/* CTA */}
-                <a 
+                <a
                   href={getWaLink("Hola Cuore, quería consultar por una reparación")}
                   target="_blank"
                   rel="noopener noreferrer"

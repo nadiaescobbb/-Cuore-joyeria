@@ -23,6 +23,6 @@ export const trustPoints: TrustPoint[] = [
   {
     id: 'asesoramiento',
     title: 'Asesoramiento real',
-    description: 'Contanos qué necesitás. Te ayudamos a elegir sin apuro.'
+    description: 'Contanos qué necesitás. Te ayudaremos a tomar la mejor elección'
   }
 ];
