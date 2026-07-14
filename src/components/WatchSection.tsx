@@ -10,21 +10,27 @@ export function WatchSection() {
 
   const [emblaRef, emblaApi] = useEmblaCarousel({ 
     align: 'start', 
-    containScroll: 'trimSnaps',
-    slidesToScroll: 2,
-    breakpoints: {
-      '(min-width: 1024px)': { slidesToScroll: 4 }
-    }
+    containScroll: 'trimSnaps'
   });
 
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
+  const [itemsPerPage, setItemsPerPage] = useState(2);
 
-  const scrollTo = useCallback((index: number) => emblaApi && emblaApi.scrollTo(index), [emblaApi]);
-
-  const onInit = useCallback((emblaApi: any) => {
-    setScrollSnaps(emblaApi.scrollSnapList());
+  useEffect(() => {
+    const updateItemsPerPage = () => {
+      setItemsPerPage(window.innerWidth >= 1024 ? 4 : 2);
+    };
+    updateItemsPerPage();
+    window.addEventListener('resize', updateItemsPerPage);
+    return () => window.removeEventListener('resize', updateItemsPerPage);
   }, []);
+
+  const totalPages = Math.ceil(BRANDS.length / itemsPerPage);
+  const activeDotIndex = Math.min(Math.floor(selectedIndex / itemsPerPage), Math.max(0, totalPages - 1));
+
+  const scrollToPage = useCallback((pageIndex: number) => {
+    if (emblaApi) emblaApi.scrollTo(pageIndex * itemsPerPage);
+  }, [emblaApi, itemsPerPage]);
 
   const onSelect = useCallback((emblaApi: any) => {
     setSelectedIndex(emblaApi.selectedScrollSnap());
@@ -32,12 +38,10 @@ export function WatchSection() {
 
   useEffect(() => {
     if (!emblaApi) return;
-    onInit(emblaApi);
     onSelect(emblaApi);
-    emblaApi.on('reInit', onInit);
     emblaApi.on('reInit', onSelect);
     emblaApi.on('select', onSelect);
-  }, [emblaApi, onInit, onSelect]);
+  }, [emblaApi, onSelect]);
 
   return (
     <section id="watches" className="w-full bg-dark-surface text-background">
@@ -62,15 +66,15 @@ export function WatchSection() {
 
         {/* Controls */}
         <div className="flex items-center justify-center gap-6 mt-[var(--spacing-item)]">
-          <div className="flex justify-center gap-3">
-            {scrollSnaps.map((_, index) => (
+          <div className="flex justify-center gap-3 flex-wrap">
+            {Array.from({ length: totalPages }).map((_, index) => (
               <button
                 key={index}
                 className="w-11 h-11 flex items-center justify-center focus-visible:outline-accent group"
-                onClick={() => scrollTo(index)}
+                onClick={() => scrollToPage(index)}
                 aria-label={`Ir a la página ${index + 1}`}
               >
-                <span className={`h-1.5 rounded-full transition-all duration-300 ease-in-out ${index === selectedIndex ? 'bg-background w-8' : 'bg-background/30 group-hover:bg-background/50 w-1.5'}`} />
+                <span className={`h-1.5 rounded-full transition-all duration-300 ease-in-out ${index === activeDotIndex ? 'bg-background w-8' : 'bg-background/30 group-hover:bg-background/50 w-1.5'}`} />
               </button>
             ))}
           </div>

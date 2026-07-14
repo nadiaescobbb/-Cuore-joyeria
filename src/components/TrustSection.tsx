@@ -39,14 +39,17 @@ export function TrustSection() {
           Por qué elegir Cuore.
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-y-group md:gap-y-item items-start text-center">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-4 gap-y-10 md:gap-x-8 md:gap-y-10 lg:gap-item items-start text-center">
           {items.map((item, index) => (
-            <div key={index} className="flex flex-col items-center px-2 md:px-0">
+            <div 
+              key={index} 
+              className={`flex flex-col items-center px-1 md:px-0 ${index === items.length - 1 ? 'col-span-2 md:col-span-1 max-w-[220px] md:max-w-none mx-auto' : ''}`}
+            >
               {item.icon}
-              <h3 className="font-heading text-xl md:text-2xl font-normal text-foreground mb-item">
+              <h3 className="font-heading text-lg md:text-2xl font-normal text-foreground mb-2 md:mb-item leading-tight">
                 {item.title}
               </h3>
-              <p className="font-body text-sm md:text-base text-tierra">
+              <p className="font-body text-[11px] md:text-base text-tierra leading-relaxed">
                 {item.description}
               </p>
             </div>
