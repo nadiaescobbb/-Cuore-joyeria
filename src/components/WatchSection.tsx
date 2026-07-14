@@ -32,6 +32,14 @@ export function WatchSection() {
     if (emblaApi) emblaApi.scrollTo(pageIndex * itemsPerPage);
   }, [emblaApi, itemsPerPage]);
 
+  const handleProgressClick = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const clickX = e.clientX - rect.left;
+    const progress = Math.max(0, Math.min(1, clickX / rect.width));
+    const pageIndex = Math.min(Math.floor(progress * totalPages), totalPages - 1);
+    scrollToPage(pageIndex);
+  }, [totalPages, scrollToPage]);
+
   const onSelect = useCallback((emblaApi: any) => {
     setSelectedIndex(emblaApi.selectedScrollSnap());
   }, []);
@@ -65,18 +73,22 @@ export function WatchSection() {
         </div>
 
         {/* Controls */}
-        <div className="flex items-center justify-center gap-6 mt-[var(--spacing-item)]">
-          <div className="flex justify-center gap-3 flex-wrap">
-            {Array.from({ length: totalPages }).map((_, index) => (
-              <button
-                key={index}
-                className="w-11 h-11 flex items-center justify-center focus-visible:outline-accent group"
-                onClick={() => scrollToPage(index)}
-                aria-label={`Ir a la página ${index + 1}`}
-              >
-                <span className={`h-1.5 rounded-full transition-all duration-300 ease-in-out ${index === activeDotIndex ? 'bg-background w-8' : 'bg-background/30 group-hover:bg-background/50 w-1.5'}`} />
-              </button>
-            ))}
+        <div className="flex items-center justify-center mt-[var(--spacing-item)] w-full px-4">
+          <div 
+            className="w-full max-w-xs h-8 flex items-center cursor-pointer group"
+            onClick={handleProgressClick}
+            role="progressbar"
+            aria-valuenow={activeDotIndex + 1}
+            aria-valuemin={1}
+            aria-valuemax={totalPages}
+            aria-label="Progreso del carousel de marcas"
+          >
+            <div className="w-full h-1.5 bg-background/30 rounded-full relative overflow-hidden">
+              <div 
+                className="absolute top-0 left-0 h-full bg-background transition-all duration-300 ease-in-out rounded-full"
+                style={{ width: `${((activeDotIndex + 1) / totalPages) * 100}%` }}
+              />
+            </div>
           </div>
         </div>
       </div>
