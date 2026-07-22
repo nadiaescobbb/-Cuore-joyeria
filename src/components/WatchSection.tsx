@@ -116,8 +116,8 @@ export function WatchSection() {
                   {watch.title}
                 </h3>
                 {watch.galleryImages && (
-                  <span className="mt-4 flex items-center text-sm font-body font-bold uppercase tracking-wider text-background/0 group-hover:text-background transition-colors duration-300 transform translate-y-2 group-hover:translate-y-0">
-                    Ver colección <ArrowRight className="ml-2 w-4 h-4" />
+                  <span className="mt-4 flex items-center text-sm font-body font-bold uppercase tracking-wider text-background transition-colors duration-300">
+                    Ver colección <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </span>
                 )}
               </div>
