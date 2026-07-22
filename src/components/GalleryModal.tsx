@@ -52,7 +52,7 @@ export function GalleryModal({ isOpen, onClose, title, images, waMessage }: Gall
               <div key={idx} className="aspect-[3/4] rounded-sm overflow-hidden bg-background shadow-sm">
                 <img 
                   src={src} 
-                  alt={`${title} producto ${idx + 1}`} 
+                  alt={`Reloj ${title} — modelo ${idx + 1} de la colección en Cuore, Río Grande`} 
                   loading="lazy"
                   className="w-full h-full object-cover"
                 />

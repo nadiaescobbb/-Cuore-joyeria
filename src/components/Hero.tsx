@@ -56,15 +56,15 @@ export function Hero() {
       <div className="hidden lg:grid col-span-7 grid-cols-[3fr_5fr_2fr] gap-x-[var(--spacing-item)] lg:h-[calc(100dvh-104px)] lg:mt-[104px] w-full relative pb-[var(--spacing-item)] lg:pt-[var(--spacing-item)]">
 
         <div className="w-full h-full relative overflow-hidden bg-surface">
-          <img src="/hero1.avif" alt="Taller" className="w-full h-full object-cover" />
+          <img src="/hero1.avif" alt="Taller propio de Cuore joyería en Río Grande, Tierra del Fuego" className="w-full h-full object-cover" />
         </div>
         
         <div className="w-full h-full relative overflow-hidden bg-surface">
-          <img src="/hero2.avif" alt="Alianzas" className="w-full h-full object-cover object-[center_80%]" />
+          <img src="/hero2.avif" alt="Alianzas de boda fabricadas en plata 925 y oro 18kt en Cuore" className="w-full h-full object-cover object-[center_80%]" />
         </div>
 
         <div className="w-full h-full relative overflow-hidden bg-surface">
-          <img src="/hero3.avif" alt="Relojes" className="w-full h-full object-cover" />
+          <img src="/hero3.avif" alt="Relojes y joyería en Cuore, Río Grande" className="w-full h-full object-cover" />
         </div>
       </div>
 

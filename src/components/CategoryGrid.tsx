@@ -31,7 +31,7 @@ export function CategoryGrid() {
                 <img 
                   loading="lazy"
                   src={categories[0].image} 
-                  alt={categories[0].name} 
+                  alt={`${categories[0].name} de plata y oro — joyería Cuore`} 
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.03]" 
                 />
                 <ImageOverlay className="group-hover:opacity-80 transition-opacity duration-300" />
@@ -58,7 +58,7 @@ export function CategoryGrid() {
                 <img 
                   loading="lazy"
                   src={categories[1].image} 
-                  alt={categories[1].name} 
+                  alt={`${categories[1].name} y gargantillas en plata 925 — joyería Cuore`} 
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.03]" 
                 />
                 <ImageOverlay className="group-hover:opacity-80 transition-opacity duration-300" />
@@ -88,7 +88,7 @@ export function CategoryGrid() {
                 <img 
                   loading="lazy"
                   src={categories[3].image} 
-                  alt={categories[3].name} 
+                  alt={`${categories[3].name} de plata y cuero — joyería Cuore`} 
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.03]" 
                 />
                 <ImageOverlay className="group-hover:opacity-80 transition-opacity duration-300" />
@@ -110,7 +110,7 @@ export function CategoryGrid() {
                 <img 
                   loading="lazy"
                   src={categories[2].image} 
-                  alt={categories[2].name} 
+                  alt={`${categories[2].name} de dama y caballero en plata 925 — joyería Cuore`} 
                   className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-300 ease-out group-hover:scale-[1.03]" 
                 />
                 <ImageOverlay className="group-hover:opacity-80 transition-opacity duration-300" />
