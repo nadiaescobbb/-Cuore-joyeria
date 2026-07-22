@@ -2,9 +2,12 @@ import { useState, useCallback, useEffect } from 'react';
 
 import { watches } from '../data/watches';
 import useEmblaCarousel from 'embla-carousel-react';
+import { getWaLink } from '../constants/wa';
+import { ImageOverlay } from './ImageOverlay';
+import { GalleryModal } from './GalleryModal';
+import { ArrowRight } from 'lucide-react';
 
 const BRANDS = ['Casio', 'Bulova', 'Festina', 'Orient', 'Tissot', 'Swatch', 'Citizen', 'Tommy Hilfiger', 'Seiko', 'Ferrari', 'Hummer', 'Hugo Boss', 'Tressa', 'Montreal', 'Máxima', 'Puma'];
-import { getWaLink } from '../constants/wa';
 
 export function WatchSection() {
 
@@ -15,6 +18,7 @@ export function WatchSection() {
 
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [itemsPerPage, setItemsPerPage] = useState(2);
+  const [selectedGallery, setSelectedGallery] = useState<{title: string, images: string[], waMessage: string} | null>(null);
 
   useEffect(() => {
     const updateItemsPerPage = () => {
@@ -94,34 +98,68 @@ export function WatchSection() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-item w-full max-w-md md:max-w-2xl lg:max-w-none mx-auto md:auto-rows-[600px] lg:auto-rows-[600px]">
-        {watches.map((watch) => (
-          <a 
-            key={watch.id}
-            href={getWaLink(watch.waMessage)}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative flex flex-col focus-visible:outline-accent overflow-hidden min-h-[450px] md:min-h-0"
-            aria-label={`Consultar por reloj ${watch.title} en WhatsApp`}
-          >
-            <img 
-              loading="lazy"
-              src={watch.image} 
-              alt={`Reloj ${watch.title}`}
-              className="absolute inset-0 w-full h-full object-cover transition-all duration-300 ease-out group-hover:scale-105 opacity-90 group-hover:opacity-100"
-            />
-            <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-dark/70 to-transparent pointer-events-none"></div>
-            <div className="absolute bottom-4 left-4 z-10 flex flex-col">
-              <span className="font-body text-[10px] tracking-wide text-gold uppercase mb-1">
-                {watch.category}
-              </span>
-              <h3 className="font-heading text-xl text-background leading-none">
-                {watch.title}
-              </h3>
-            </div>
-          </a>
-        ))}
+        {watches.map((watch) => {
+          const content = (
+            <>
+              <img 
+                loading="lazy"
+                src={watch.image} 
+                alt={`Reloj ${watch.title}`}
+                className="absolute inset-0 w-full h-full object-cover transition-all duration-300 ease-out group-hover:scale-105 opacity-90 group-hover:opacity-100"
+              />
+              <ImageOverlay className="group-hover:opacity-80 transition-opacity duration-300" />
+              <div className="absolute inset-x-0 bottom-4 z-10 flex flex-col px-6 md:px-8">
+                <span className="font-body text-[10px] tracking-wide text-accent uppercase mb-1">
+                  {watch.category}
+                </span>
+                <h3 className="font-heading text-3xl md:text-4xl text-background leading-none">
+                  {watch.title}
+                </h3>
+                {watch.galleryImages && (
+                  <span className="mt-4 flex items-center text-sm font-body font-bold uppercase tracking-wider text-background/0 group-hover:text-background transition-colors duration-300 transform translate-y-2 group-hover:translate-y-0">
+                    Ver colección <ArrowRight className="ml-2 w-4 h-4" />
+                  </span>
+                )}
+              </div>
+            </>
+          );
+
+          if (watch.galleryImages) {
+            return (
+              <button
+                key={watch.id}
+                onClick={() => setSelectedGallery({ title: watch.title, images: watch.galleryImages!, waMessage: watch.waMessage })}
+                className="group relative flex flex-col focus-visible:outline-accent overflow-hidden min-h-[450px] md:min-h-0 text-left cursor-pointer"
+                aria-label={`Ver colección de relojes ${watch.title}`}
+              >
+                {content}
+              </button>
+            );
+          }
+
+          return (
+            <a 
+              key={watch.id}
+              href={getWaLink(watch.waMessage)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative flex flex-col focus-visible:outline-accent overflow-hidden min-h-[450px] md:min-h-0"
+              aria-label={`Consultar por reloj ${watch.title} en WhatsApp`}
+            >
+              {content}
+            </a>
+          );
+        })}
       </div>
       </div>
+
+      <GalleryModal
+        isOpen={!!selectedGallery}
+        onClose={() => setSelectedGallery(null)}
+        title={selectedGallery?.title || ''}
+        images={selectedGallery?.images || []}
+        waMessage={selectedGallery?.waMessage || ''}
+      />
     </section>
   );
 }

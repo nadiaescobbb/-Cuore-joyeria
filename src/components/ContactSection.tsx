@@ -22,24 +22,24 @@ export function ContactSection() {
           </div>
 
           <div className="flex gap-[var(--spacing-item)] flex-wrap">
-            <a 
-              href={getWaLink("Hola Cuore, quería hacer una consulta antes de pasar")}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Escribinos por WhatsApp"
-              className="inline-flex items-center justify-center bg-cta text-background min-h-12 px-8 font-body font-bold text-sm tracking-[0.16em] w-fit hover:bg-cta-hover transition-colors duration-150 ease-linear focus-visible:outline-accent"
-            >
-              Escribinos por WhatsApp
-            </a>
-            <a 
-              href="https://instagram.com/cuore_joyas"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Ver Instagram de Cuore"
-              className="inline-flex items-center justify-center border border-foreground/20 text-foreground min-h-12 px-8 font-body font-bold text-sm tracking-[0.16em] w-fit hover:bg-foreground/5 transition-colors duration-150 ease-linear focus-visible:outline-accent"
-            >
-              Ver Instagram
-            </a>
+              <a 
+                href={getWaLink("Hola Cuore, quería hacer una consulta antes de pasar")}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Escribinos por WhatsApp"
+                className="inline-flex items-center justify-center bg-cta text-background min-h-12 px-8 font-body font-bold text-sm tracking-[0.16em] uppercase w-fit hover:bg-cta-hover transition-colors duration-150 ease-linear focus-visible:outline-accent"
+              >
+                ESCRIBINOS POR WHATSAPP
+              </a>
+              <a 
+                href="https://instagram.com/cuore_joyas"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Ver Instagram de Cuore"
+                className="inline-flex items-center justify-center border border-foreground/20 text-foreground min-h-12 px-8 font-body font-bold text-sm tracking-[0.16em] uppercase w-fit hover:bg-foreground/5 transition-colors duration-150 ease-linear focus-visible:outline-accent"
+              >
+                VER INSTAGRAM
+              </a>
           </div>
         </div>
 
