@@ -50,7 +50,7 @@ export function WorkshopSection() {
                   aria-label="Cotizar alianzas por WhatsApp"
                   className="w-full md:w-fit min-h-14 px-10 bg-cta text-background font-body font-bold text-sm tracking-[0.16em] uppercase rounded-sm flex items-center justify-center hover:bg-cta-hover transition-colors duration-150 ease-linear focus-visible:outline-accent"
                 >
-                  COTIZAR ALIANZAS
+                  Cotizar alianzas
                 </a>
 
               </div>
@@ -98,7 +98,7 @@ export function WorkshopSection() {
                   aria-label="Consultá por una reparación por WhatsApp"
                   className="w-full md:w-fit min-h-14 px-10 bg-cta text-background font-body font-bold text-sm tracking-[0.16em] uppercase rounded-sm flex items-center justify-center hover:bg-cta-hover transition-colors duration-150 ease-linear focus-visible:outline-accent"
                 >
-                  CONSULTÁ POR REPARACIÓN
+                  Consultá por reparación
                 </a>
 
               </div>

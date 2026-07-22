@@ -29,7 +29,7 @@ export function ContactSection() {
                 aria-label="Escribinos por WhatsApp"
                 className="inline-flex items-center justify-center bg-cta text-background min-h-12 px-8 font-body font-bold text-sm tracking-[0.16em] uppercase w-fit hover:bg-cta-hover transition-colors duration-150 ease-linear focus-visible:outline-accent"
               >
-                ESCRIBINOS POR WHATSAPP
+                Escribinos por WhatsApp
               </a>
               <a 
                 href="https://instagram.com/cuore_joyas"
@@ -38,7 +38,7 @@ export function ContactSection() {
                 aria-label="Ver Instagram de Cuore"
                 className="inline-flex items-center justify-center border border-foreground/20 text-foreground min-h-12 px-8 font-body font-bold text-sm tracking-[0.16em] uppercase w-fit hover:bg-foreground/5 transition-colors duration-150 ease-linear focus-visible:outline-accent"
               >
-                VER INSTAGRAM
+                Ver Instagram
               </a>
           </div>
         </div>
