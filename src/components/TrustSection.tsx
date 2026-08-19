@@ -51,15 +51,15 @@ export function TrustSection() {
             </p>
           </div>
 
-          {/* Bloque 4: Atención sin apuro (Col 3-4, Fila 2) - Saturated Warm Beige + Border */}
-          <div className="md:col-span-2 bg-[#E4DCD0] text-[#211D19] border border-[#211D19]/18 p-[28px] rounded-[3px] flex flex-col justify-end h-full min-h-[220px] md:min-h-[260px]">
-            <span className="font-mono text-[12px] tracking-[0.16em] uppercase text-[#6F4B24]">
+          {/* Bloque 4: Atención sin apuro (Col 3-4, Fila 2) - Rich Saturated Sand (Option A) */}
+          <div className="md:col-span-2 bg-[#C2AB80] text-[#1F1A15] p-[28px] rounded-[3px] flex flex-col justify-end h-full min-h-[220px] md:min-h-[260px]">
+            <span className="font-mono text-[12px] tracking-[0.16em] uppercase text-[#4A3219]">
               Atención sin apuro
             </span>
-            <h3 className="font-heading text-[24px] md:text-[28px] font-medium leading-tight text-[#211D19] my-2">
+            <h3 className="font-heading text-[24px] md:text-[28px] font-medium leading-tight text-[#1F1A15] my-2">
               "Tiempo para que decidas."
             </h3>
-            <p className="font-body text-[14px] leading-relaxed text-[#211D19]/85">
+            <p className="font-body text-[14px] leading-relaxed text-[#1F1A15]/90">
               Nos dedicamos a que elijas y decidas.
             </p>
           </div>
