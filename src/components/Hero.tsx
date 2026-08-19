@@ -62,7 +62,7 @@ export function Hero() {
         
         {/* Top-right image */}
         <div className="row-span-1 w-full h-full relative overflow-hidden rounded-xl bg-surface">
-          <img src="/hero2.avif" alt="Alianzas de boda fabricadas en plata 925 y oro 18kt en Cuore" className="w-full h-full object-cover object-[center_80%]" />
+          <img src="/hero2.avif" alt="Alianzas de boda fabricadas en plata 925 y oro 18kt en Cuore" className="w-full h-full object-cover object-center" />
         </div>
 
         {/* Bottom-right image */}
