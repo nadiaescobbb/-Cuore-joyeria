@@ -6,7 +6,7 @@ export function CategoryGrid() {
   const jewelryCategories = categories.filter(cat => cat.id !== 'relojes');
 
   return (
-    <div className="w-full bg-background">
+    <div className="w-full bg-[#EFE8DC]">
       <section id="categories" className="max-w-[1440px] mx-auto px-5 md:px-12 lg:px-20 pt-section pb-section">
         
         {/* Encabezado */}
