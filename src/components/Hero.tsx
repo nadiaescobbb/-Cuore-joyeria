@@ -16,7 +16,7 @@ export function Hero() {
       <div className="absolute bottom-0 left-0 w-full h-3/5 bg-gradient-to-t from-dark/90 via-dark/40 to-transparent pointer-events-none lg:hidden"></div>
 
       {/* TEXT PANEL */}
-      <div className="absolute inset-0 flex flex-col pt-section lg:pt-item px-6 sm:px-8 pb-group md:px-8 box-border z-10 lg:static lg:col-span-5 lg:h-[calc(100dvh-104px)] lg:mt-[104px] lg:justify-start lg:px-0 lg:pl-[max(4rem,calc(50vw-720px+5rem))] lg:pr-8 lg:bg-transparent">
+      <div className="absolute inset-0 flex flex-col pt-section lg:pt-item px-6 sm:px-8 pb-group md:px-8 box-border z-10 lg:static lg:col-span-5 lg:h-[calc(100dvh-84px)] lg:mt-[84px] lg:justify-start lg:px-0 lg:pl-[max(4rem,calc(50vw-720px+5rem))] lg:pr-8 lg:bg-transparent">
         <div className="w-full mt-auto lg:mt-0">
           <div className="max-w-2xl lg:max-w-none flex flex-col items-start text-left w-full pr-2 sm:pr-0">
             <h1 className="font-heading font-normal text-background lg:text-foreground mb-6 lg:mb-8 drop-shadow-md lg:drop-shadow-none w-full break-words">
@@ -53,7 +53,7 @@ export function Hero() {
       </div>
 
       {/* DESKTOP IMAGES GRID */}
-      <div className="hidden lg:grid col-span-7 grid-cols-2 grid-rows-2 gap-4 lg:h-[calc(100dvh-104px)] lg:mt-[104px] w-full relative pb-[var(--spacing-item)] lg:pt-[var(--spacing-item)] lg:pr-[max(2rem,calc(50vw-720px+2rem))]">
+      <div className="hidden lg:grid col-span-7 grid-cols-2 grid-rows-2 gap-4 lg:h-[calc(100dvh-84px)] lg:mt-[84px] w-full relative pb-[var(--spacing-item)] lg:pt-[var(--spacing-item)] lg:pr-[max(2rem,calc(50vw-720px+2rem))]">
 
         {/* Left tall image (spans 2 rows) */}
         <div className="row-span-2 w-full h-full relative overflow-hidden rounded-xl bg-surface">
