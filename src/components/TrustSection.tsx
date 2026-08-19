@@ -1,81 +1,82 @@
 
 export function TrustSection() {
-  const items = [
-    {
-      icon: (
-        <svg className="w-5 h-5 text-[#B89B5E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M14.7 6.3L17.7 9.3M15 15l6 6M9 9l-6-6M9 15l-6 6M15 9l6-6M5.5 3.5L8.5 6.5M17.5 15.5L20.5 18.5" />
-        </svg>
-      ),
-      title: 'TALLER PROPIO',
-      description: 'Fabricamos y reparamos cada pieza acá, en Río Grande.'
-    },
-    {
-      icon: (
-        <svg className="w-5 h-5 text-[#B89B5E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M12 3L21 12L12 21L3 12Z" />
-        </svg>
-      ),
-      title: 'MÁS DE 40 AÑOS',
-      description: 'Trabajamos todos los días en Tierra del Fuego.'
-    },
-    {
-      icon: (
-        <svg className="w-5 h-5 text-[#B89B5E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" />
-        </svg>
-      ),
-      title: 'MAYOR VARIEDAD',
-      description: 'Más de 30 marcas, stock que se renueva.'
-    },
-    {
-      icon: (
-        <svg className="w-5 h-5 text-[#B89B5E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <circle cx="12" cy="12" r="9" />
-          <circle cx="12" cy="12" r="5" />
-          <circle cx="12" cy="12" r="1" />
-        </svg>
-      ),
-      title: 'ATENCIÓN SIN APURO',
-      description: 'Nos dedicamos tiempo para que elijas y decidas.'
-    },
-    {
-      icon: (
-        <svg className="w-5 h-5 text-[#B89B5E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M12 3L20 7V13C20 17.4 16.6 20.8 12 22C7.4 20.8 4 17.4 4 13V7L12 3Z" />
-          <path strokeLinecap="round" strokeLinejoin="round" d="M12 8L16 12L12 16L8 12Z" />
-        </svg>
-      ),
-      title: 'GARANTÍA PROPIA',
-      description: 'Respondemos nosotros mismos por cada pieza que reparamos o fabricamos.'
-    }
-  ];
-
   return (
-    <section id="trust" className="bg-background relative pt-12 pb-10 lg:pt-16 lg:pb-12">
-      <div className="max-w-[1440px] mx-auto px-5 md:px-12 lg:px-20 text-center">
+    <section id="trust" className="bg-background relative pt-12 pb-12 lg:pt-16 lg:pb-16">
+      <div className="max-w-[1440px] mx-auto px-5 md:px-12 lg:px-20">
         
-        <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-normal leading-tight text-foreground mb-12 lg:mb-16">
+        {/* Encabezado de Sección */}
+        <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-normal leading-tight text-foreground text-center mb-10 lg:mb-14">
           Por qué elegir Cuore.
         </h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-10 md:gap-x-8 items-start text-center">
-          {items.map((item, index) => (
-            <div 
-              key={index} 
-              className={`flex flex-col items-center text-center px-2 ${index === items.length - 1 ? 'col-span-2 md:col-span-1 max-w-[220px] md:max-w-none mx-auto' : ''}`}
-            >
-              <div className="mb-4 flex items-center justify-center h-8">
-                {item.icon}
-              </div>
-              <h3 className="font-body text-xs font-bold tracking-[0.20em] uppercase text-tierra/80 mb-2">
-                {item.title}
-              </h3>
-              <p className="font-body text-xs md:text-sm text-tierra/90 max-w-[200px] leading-relaxed">
-                {item.description}
-              </p>
-            </div>
-          ))}
+        {/* Muestrario Grid (6 columnas en desktop, 1 columna en mobile) */}
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-4 md:gap-5 w-full">
+          
+          {/* Bloque 1: Taller propio (Col 1-3, Fila 1) - Ochre / Accent Gold */}
+          <div className="md:col-span-3 bg-[#87602F] text-[#FAF8F3] p-[28px] rounded-[3px] flex flex-col justify-end min-h-[220px] md:min-h-[260px]">
+            <span className="font-mono text-[12px] tracking-[0.16em] uppercase text-[#D8C79F]">
+              Taller propio
+            </span>
+            <h3 className="font-heading text-[24px] md:text-[28px] font-medium leading-tight text-[#FAF8F3] my-2">
+              "Cada pieza se hace acá."
+            </h3>
+            <p className="font-body text-[14px] leading-relaxed text-[#FAF8F3]/90">
+              Fabricamos y reparamos cada pieza acá, en Río Grande.
+            </p>
+          </div>
+
+          {/* Bloque 2: Más de 40 años (Col 4-6, Fila 1) - Dark / Ink */}
+          <div className="md:col-span-3 bg-[#1F1A15] text-[#FAF8F3] p-[28px] rounded-[3px] flex flex-col justify-end min-h-[220px] md:min-h-[260px]">
+            <span className="font-mono text-[12px] tracking-[0.16em] uppercase text-[#D8C79F]">
+              Más de 40 años
+            </span>
+            <h3 className="font-heading text-[24px] md:text-[28px] font-medium leading-tight text-[#FAF8F3] my-2">
+              "Todos los días, en Tierra del Fuego."
+            </h3>
+            <p className="font-body text-[14px] leading-relaxed text-[#FAF8F3]/90">
+              Trabajamos todos los días en Tierra del Fuego.
+            </p>
+          </div>
+
+          {/* Bloque 3: Mayor variedad (Col 1-2, Fila 2) - Silver Gray */}
+          <div className="md:col-span-2 bg-[#D8D5D0] text-[#211D19] p-[28px] rounded-[3px] flex flex-col justify-end min-h-[220px] md:min-h-[260px]">
+            <span className="font-mono text-[12px] tracking-[0.16em] uppercase text-[#6F4B24]">
+              Mayor variedad
+            </span>
+            <h3 className="font-heading text-[24px] md:text-[28px] font-medium leading-tight text-[#211D19] my-2">
+              "Más de 30 marcas."
+            </h3>
+            <p className="font-body text-[14px] leading-relaxed text-[#211D19]/85">
+              Más de 30 marcas, stock que se renueva.
+            </p>
+          </div>
+
+          {/* Bloque 4: Atención sin apuro (Col 3-4, Fila 2) - Cream / Light Beige with subtle border */}
+          <div className="md:col-span-2 bg-[#FAF8F3] text-[#211D19] border border-[#211D19]/12 p-[28px] rounded-[3px] flex flex-col justify-end min-h-[220px] md:min-h-[260px]">
+            <span className="font-mono text-[12px] tracking-[0.16em] uppercase text-[#87602F]">
+              Atención sin apuro
+            </span>
+            <h3 className="font-heading text-[24px] md:text-[28px] font-medium leading-tight text-[#211D19] my-2">
+              "Tiempo para que decidas."
+            </h3>
+            <p className="font-body text-[14px] leading-relaxed text-[#211D19]/85">
+              Nos dedicamos a que elijas y decidas.
+            </p>
+          </div>
+
+          {/* Bloque 5: Garantía propia (Col 5-6, Fila 2) - Dark Chocolate CTA */}
+          <div className="md:col-span-2 bg-[#4A3219] text-[#FAF8F3] p-[28px] rounded-[3px] flex flex-col justify-end min-h-[220px] md:min-h-[260px]">
+            <span className="font-mono text-[12px] tracking-[0.16em] uppercase text-[#D8C79F]">
+              Garantía propia
+            </span>
+            <h3 className="font-heading text-[24px] md:text-[28px] font-medium leading-tight text-[#FAF8F3] my-2">
+              "Respondemos nosotros."
+            </h3>
+            <p className="font-body text-[14px] leading-relaxed text-[#FAF8F3]/90">
+              Respondemos nosotros mismos por cada pieza que reparamos o fabricamos.
+            </p>
+          </div>
+
         </div>
 
       </div>
