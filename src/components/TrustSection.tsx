@@ -52,7 +52,7 @@ export function TrustSection() {
   ];
 
   return (
-    <section id="trust" className="bg-background relative pt-section pb-section">
+    <section id="trust" className="bg-background relative pt-12 pb-10 lg:pt-16 lg:pb-12">
       <div className="max-w-[1440px] mx-auto px-5 md:px-12 lg:px-20 text-center">
         
         <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-normal leading-tight text-foreground mb-12 lg:mb-16">

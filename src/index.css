@@ -47,24 +47,24 @@
 
 @layer base {
   :root {
-    --spacing-item: 32px;
-    --spacing-group: 64px;
-    --spacing-section: 96px;
+    --spacing-item: 24px;
+    --spacing-group: 40px;
+    --spacing-section: 64px;
   }
 
   @media (min-width: 768px) {
     :root {
-      --spacing-item: 40px;
-      --spacing-group: 80px;
-      --spacing-section: 120px;
+      --spacing-item: 32px;
+      --spacing-group: 48px;
+      --spacing-section: 80px;
     }
   }
 
   @media (min-width: 1024px) {
     :root {
-      --spacing-item: 60px;
-      --spacing-group: 120px;
-      --spacing-section: 180px;
+      --spacing-item: 36px;
+      --spacing-group: 64px;
+      --spacing-section: 80px;
     }
   }
 

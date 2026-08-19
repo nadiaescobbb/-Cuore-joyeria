@@ -7,7 +7,7 @@ export function CategoryGrid() {
 
   return (
     <div className="w-full bg-[#EFE8DC]">
-      <section id="categories" className="max-w-[1440px] mx-auto px-5 md:px-12 lg:px-20 pt-section pb-section">
+      <section id="categories" className="max-w-[1440px] mx-auto px-5 md:px-12 lg:px-20 py-12 lg:py-16">
         
         {/* Encabezado */}
         <div className="w-full flex flex-col items-center text-center mb-10 md:mb-14">

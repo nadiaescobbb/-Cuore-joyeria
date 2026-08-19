@@ -57,7 +57,7 @@ export function WatchSection() {
 
   return (
     <section id="watches" className="w-full bg-dark-surface text-background">
-      <div className="max-w-[1440px] mx-auto px-4 md:px-20 pt-section pb-item">
+      <div className="max-w-[1440px] mx-auto px-4 md:px-20 py-12 lg:py-16">
       
       {/* Brands Carousel */}
       <div className="w-full max-w-5xl mx-auto mb-item">
