@@ -24,7 +24,7 @@ export function Hero() {
                 Joyería, relojería y taller propio.
               </span>
               <span className="block text-2xl md:text-3xl leading-[1.2] mt-4 lg:mt-6 text-background/90 lg:text-tierra">
-                Fabricamos alianzas, reparamos joyas y relojes, y trabajamos con una selección que se renueva de forma permanente.
+                Fabricamos alianzas, reparamos joyas y trabajamos con una selección que se renueva de forma permanente.
               </span>
             </h1>
             <p className="font-body text-sm md:text-base lg:text-sm text-background/90 lg:text-tierra max-w-[280px] sm:max-w-lg lg:max-w-md mb-item leading-relaxed drop-shadow-sm lg:drop-shadow-none w-full break-words">
@@ -53,18 +53,21 @@ export function Hero() {
       </div>
 
       {/* DESKTOP IMAGES GRID */}
-      <div className="hidden lg:grid col-span-7 grid-cols-[3fr_5fr_2fr] gap-x-[var(--spacing-item)] lg:h-[calc(100dvh-104px)] lg:mt-[104px] w-full relative pb-[var(--spacing-item)] lg:pt-[var(--spacing-item)]">
+      <div className="hidden lg:grid col-span-7 grid-cols-2 grid-rows-2 gap-4 lg:h-[calc(100dvh-104px)] lg:mt-[104px] w-full relative pb-[var(--spacing-item)] lg:pt-[var(--spacing-item)] lg:pr-[max(2rem,calc(50vw-720px+2rem))]">
 
-        <div className="w-full h-full relative overflow-hidden bg-surface">
+        {/* Left tall image (spans 2 rows) */}
+        <div className="row-span-2 w-full h-full relative overflow-hidden rounded-xl bg-surface">
           <img src="/hero1.avif" alt="Taller propio de Cuore joyería en Río Grande, Tierra del Fuego" className="w-full h-full object-cover" />
         </div>
         
-        <div className="w-full h-full relative overflow-hidden bg-surface">
+        {/* Top-right image */}
+        <div className="row-span-1 w-full h-full relative overflow-hidden rounded-xl bg-surface">
           <img src="/hero2.avif" alt="Alianzas de boda fabricadas en plata 925 y oro 18kt en Cuore" className="w-full h-full object-cover object-[center_80%]" />
         </div>
 
-        <div className="w-full h-full relative overflow-hidden bg-surface">
-          <img src="/hero3.avif" alt="Relojes y joyería en Cuore, Río Grande" className="w-full h-full object-cover" />
+        {/* Bottom-right image */}
+        <div className="row-span-1 w-full h-full relative overflow-hidden rounded-xl bg-surface">
+          <img src="/hero3.avif" alt="Joyería en Cuore, Río Grande" className="w-full h-full object-cover" />
         </div>
       </div>
 

@@ -1,129 +1,57 @@
 
 import { categories } from '../data/categories';
-import { ImageOverlay } from './ImageOverlay';
-
 import { getWaLink } from '../constants/wa';
 
 export function CategoryGrid() {
+  const jewelryCategories = categories.filter(cat => cat.id !== 'relojes');
+
   return (
     <div className="w-full bg-background">
-      <section id="categories" className="max-w-[1440px] mx-auto px-5 md:px-12 lg:px-20 pt-section">
+      <section id="categories" className="max-w-[1440px] mx-auto px-5 md:px-12 lg:px-20 pt-section pb-section">
         
-        {/* Encabezado con mucho aire */}
-        <div className="w-full flex flex-col items-center text-center mb-item">
+        {/* Encabezado */}
+        <div className="w-full flex flex-col items-center text-center mb-10 md:mb-14">
           <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-normal leading-tight tracking-tight text-foreground">
             Nuestro catálogo de joyas.
           </h2>
         </div>
 
-        {/* Layout Asimétrico Editorial */}
-        <div className="w-full flex flex-col gap-16 md:gap-20">
-          
-          {/* Fila 1: Anillos (Izquierda, más angosto y alto) y Collares (Derecha, más ancho, desplazado hacia abajo) */}
-          <div className="flex flex-col md:flex-row items-center gap-16 md:gap-20 w-full">
-            {categories[0] && (
-              <a
-                href={getWaLink(categories[0].waMessage)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative flex flex-col w-full md:w-5/12 h-[55vh] md:h-[60vh] focus-visible:outline-accent overflow-hidden rounded-sm md:mr-auto"
-              >
-                <img 
-                  loading="lazy"
-                  src={categories[0].image} 
-                  alt={`${categories[0].name} de plata y oro — joyería Cuore`} 
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.03]" 
-                />
-                <ImageOverlay className="group-hover:opacity-80 transition-opacity duration-300" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-8 pointer-events-none">
-                  <h3 className="font-body text-sm md:text-base font-bold tracking-[0.3em] text-background uppercase text-center drop-shadow-[0_0px_12px_rgba(0,0,0,0.5)] border-b border-transparent group-hover:border-background transition-colors duration-200 pb-2 z-10 relative">
-                    {categories[0].name}
-                  </h3>
-                  {categories[0].description && (
-                    <p className="mt-4 font-body text-xs md:text-sm text-center text-background/90 max-w-[280px] drop-shadow-md z-10">
-                      {categories[0].description}
-                    </p>
-                  )}
-                </div>
-              </a>
-            )}
+        {/* Grilla Simétrica 2x2 */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full max-w-6xl mx-auto">
+          {jewelryCategories.map((category) => (
+            <a
+              key={category.id}
+              href={getWaLink(category.waMessage)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative flex flex-col w-full aspect-[4/3] focus-visible:outline-accent overflow-hidden rounded-none shadow-sm"
+            >
+              {/* Imagen de fondo */}
+              <img 
+                loading="lazy"
+                src={category.image} 
+                alt={`${category.name} — joyería Cuore`} 
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]" 
+              />
+              
+              {/* Overlay oscuro semitransparente */}
+              <div className="absolute inset-0 bg-black/45 group-hover:bg-black/55 transition-colors duration-300 pointer-events-none" />
 
-            {categories[1] && (
-              <a
-                href={getWaLink(categories[1].waMessage)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative flex flex-col w-full md:w-6/12 h-[45vh] md:h-[50vh] focus-visible:outline-accent overflow-hidden rounded-sm md:translate-y-8 lg:translate-y-10"
-              >
-                <img 
-                  loading="lazy"
-                  src={categories[1].image} 
-                  alt={`${categories[1].name} y gargantillas en plata 925 — joyería Cuore`} 
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.03]" 
-                />
-                <ImageOverlay className="group-hover:opacity-80 transition-opacity duration-300" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-8 pointer-events-none">
-                  <h3 className="font-body text-sm md:text-base font-bold tracking-[0.3em] text-background uppercase text-center drop-shadow-[0_0px_12px_rgba(0,0,0,0.5)] border-b border-transparent group-hover:border-background transition-colors duration-200 pb-2 z-10 relative">
-                    {categories[1].name}
-                  </h3>
-                  {categories[1].description && (
-                    <p className="mt-4 font-body text-xs md:text-sm text-center text-background/90 max-w-[280px] drop-shadow-md z-10">
-                      {categories[1].description}
-                    </p>
-                  )}
-                </div>
-              </a>
-            )}
-          </div>
-
-          {/* Fila 2: Pulseras (Izquierda, cuadrada/ancha, flotando alto) y Aros (Derecha, vertical alta) */}
-          <div className="flex flex-col md:flex-row-reverse items-center gap-16 md:gap-20 w-full">
-            {categories[3] && (
-              <a
-                href={getWaLink(categories[3].waMessage)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative flex flex-col w-full md:w-5/12 h-[55vh] md:h-[60vh] focus-visible:outline-accent overflow-hidden rounded-sm md:ml-auto"
-              >
-                <img 
-                  loading="lazy"
-                  src={categories[3].image} 
-                  alt={`${categories[3].name} de plata y cuero — joyería Cuore`} 
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.03]" 
-                />
-                <ImageOverlay className="group-hover:opacity-80 transition-opacity duration-300" />
-                <div className="absolute inset-0 flex items-center justify-center p-8 pointer-events-none">
-                  <h3 className="font-body text-sm md:text-base font-bold tracking-[0.3em] text-background uppercase text-center drop-shadow-[0_0px_12px_rgba(0,0,0,0.5)] border-b border-transparent group-hover:border-background transition-colors duration-200 pb-2 z-10 relative">
-                    {categories[3].name}
-                  </h3>
-                </div>
-              </a>
-            )}
-
-            {categories[2] && (
-              <a
-                href={getWaLink(categories[2].waMessage)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative flex flex-col w-full md:w-6/12 h-[45vh] md:h-[50vh] focus-visible:outline-accent overflow-hidden rounded-sm md:-translate-y-8 lg:-translate-y-10"
-              >
-                <img 
-                  loading="lazy"
-                  src={categories[2].image} 
-                  alt={`${categories[2].name} de dama y caballero en plata 925 — joyería Cuore`} 
-                  className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-300 ease-out group-hover:scale-[1.03]" 
-                />
-                <ImageOverlay className="group-hover:opacity-80 transition-opacity duration-300" />
-                <div className="absolute inset-0 flex items-center justify-center p-8 pointer-events-none">
-                  <h3 className="font-body text-sm md:text-base font-bold tracking-[0.3em] text-background uppercase text-center drop-shadow-[0_0px_12px_rgba(0,0,0,0.5)] border-b border-transparent group-hover:border-background transition-colors duration-200 pb-2 z-10 relative">
-                    {categories[2].name}
-                  </h3>
-                </div>
-              </a>
-            )}
-          </div>
-
+              {/* Texto centrado en la imagen */}
+              <div className="absolute inset-0 flex flex-col items-center justify-center p-6 md:p-8 text-center pointer-events-none z-10">
+                <h3 className="font-body text-xs md:text-sm font-bold tracking-[0.25em] text-[#D8C79F] uppercase mb-2 drop-shadow-sm">
+                  {category.name}
+                </h3>
+                {category.description && (
+                  <p className="font-body text-xs md:text-sm text-background/90 max-w-xs leading-relaxed drop-shadow-sm">
+                    {category.description}
+                  </p>
+                )}
+              </div>
+            </a>
+          ))}
         </div>
+
       </section>
     </div>
   );

@@ -26,14 +26,14 @@ export const categories: Category[] = [
     id: 'pulseras',
     name: 'Pulseras',
     image: '/cat-pulseras.avif',
-    description: '',
+    description: 'Diseños clásicos y contemporáneos en oro y plata.',
     waMessage: 'Hola Cuore, quería ver pulseras'
   },
   {
     id: 'aros',
     name: 'Aros',
     image: '/cat-aros.avif',
-    description: '',
+    description: 'Gargantillas y cadenas. Variedad de modelos en todas las medidas.',
     waMessage: 'Hola Cuore, quería ver aros'
   },
   {

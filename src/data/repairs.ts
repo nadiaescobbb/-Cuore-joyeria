@@ -4,7 +4,6 @@ export interface RepairService {
 }
 
 export const repairServices: RepairService[] = [
-  { id: 'joyas', name: 'Reparación de joyas' },
-  { id: 'pilas', name: 'Cambios de pilas, mallas y cristales' },
-  { id: 'grabado', name: 'Grabado láser' }
+  { id: 'joyas', name: 'Reparación de joyas en plata y oro' },
+  { id: 'grabado', name: 'Grabado láser y personalización' }
 ];
