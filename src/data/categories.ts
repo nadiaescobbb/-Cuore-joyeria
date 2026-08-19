@@ -33,7 +33,7 @@ export const categories: Category[] = [
     id: 'aros',
     name: 'Aros',
     image: '/cat-aros.avif',
-    description: 'Gargantillas y cadenas. Variedad de modelos en todas las medidas.',
+    description: 'Argollas, abridores y colgantes en oro 18kt y plata 925.',
     waMessage: 'Hola Cuore, quería ver aros'
   },
   {
