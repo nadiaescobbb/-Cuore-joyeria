@@ -8,7 +8,7 @@ export function Hero() {
       
       {/* MOBILE FULL-BLEED IMAGE & GRADIENTS */}
       <img 
-        src="/hero3.avif"
+        src="/hero2.avif"
         alt="Nuestras manos trabajando en joyería Cuore"
         className="absolute inset-0 w-full h-full object-cover object-center lg:hidden"
       />
