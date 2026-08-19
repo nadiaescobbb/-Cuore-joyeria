@@ -1,6 +1,6 @@
 
-import { SwatchCard } from '@/components/ui/SwatchCard';
-import { swatchItems } from '@/data/swatches';
+import { SwatchCard } from './ui/SwatchCard';
+import { swatchItems } from '../data/swatches';
 
 export function TrustSection() {
   return (

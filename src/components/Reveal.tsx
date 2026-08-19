@@ -1,5 +1,5 @@
 import { type CSSProperties, type ReactNode } from "react";
-import { useReveal } from "@/hooks/use-reveal";
+import { useReveal } from "../hooks/use-reveal";
 
 interface RevealProps {
   children: ReactNode;
