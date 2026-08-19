@@ -9,11 +9,11 @@ export function TrustSection() {
           Por qué elegir Cuore.
         </h2>
 
-        {/* Muestrario Grid (6 columnas en desktop, 1 columna en mobile) */}
-        <div className="grid grid-cols-1 md:grid-cols-6 gap-4 md:gap-5 w-full">
+        {/* Muestrario Grid (6 columnas en desktop, 1 columna en mobile, items-stretch) */}
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-4 md:gap-5 w-full items-stretch">
           
           {/* Bloque 1: Taller propio (Col 1-3, Fila 1) - Ochre / Accent Gold */}
-          <div className="md:col-span-3 bg-[#87602F] text-[#FAF8F3] p-[28px] rounded-[3px] flex flex-col justify-end min-h-[220px] md:min-h-[260px]">
+          <div className="md:col-span-3 bg-[#87602F] text-[#FAF8F3] p-[28px] rounded-[3px] flex flex-col justify-end h-full min-h-[220px] md:min-h-[260px]">
             <span className="font-mono text-[12px] tracking-[0.16em] uppercase text-[#D8C79F]">
               Taller propio
             </span>
@@ -26,7 +26,7 @@ export function TrustSection() {
           </div>
 
           {/* Bloque 2: Más de 40 años (Col 4-6, Fila 1) - Dark / Ink */}
-          <div className="md:col-span-3 bg-[#1F1A15] text-[#FAF8F3] p-[28px] rounded-[3px] flex flex-col justify-end min-h-[220px] md:min-h-[260px]">
+          <div className="md:col-span-3 bg-[#1F1A15] text-[#FAF8F3] p-[28px] rounded-[3px] flex flex-col justify-end h-full min-h-[220px] md:min-h-[260px]">
             <span className="font-mono text-[12px] tracking-[0.16em] uppercase text-[#D8C79F]">
               Más de 40 años
             </span>
@@ -39,7 +39,7 @@ export function TrustSection() {
           </div>
 
           {/* Bloque 3: Mayor variedad (Col 1-2, Fila 2) - Silver Gray */}
-          <div className="md:col-span-2 bg-[#D8D5D0] text-[#211D19] p-[28px] rounded-[3px] flex flex-col justify-end min-h-[220px] md:min-h-[260px]">
+          <div className="md:col-span-2 bg-[#D8D5D0] text-[#211D19] p-[28px] rounded-[3px] flex flex-col justify-end h-full min-h-[220px] md:min-h-[260px]">
             <span className="font-mono text-[12px] tracking-[0.16em] uppercase text-[#6F4B24]">
               Mayor variedad
             </span>
@@ -51,9 +51,9 @@ export function TrustSection() {
             </p>
           </div>
 
-          {/* Bloque 4: Atención sin apuro (Col 3-4, Fila 2) - Cream / Light Beige with subtle border */}
-          <div className="md:col-span-2 bg-[#FAF8F3] text-[#211D19] border border-[#211D19]/12 p-[28px] rounded-[3px] flex flex-col justify-end min-h-[220px] md:min-h-[260px]">
-            <span className="font-mono text-[12px] tracking-[0.16em] uppercase text-[#87602F]">
+          {/* Bloque 4: Atención sin apuro (Col 3-4, Fila 2) - Saturated Warm Beige + Border */}
+          <div className="md:col-span-2 bg-[#E4DCD0] text-[#211D19] border border-[#211D19]/18 p-[28px] rounded-[3px] flex flex-col justify-end h-full min-h-[220px] md:min-h-[260px]">
+            <span className="font-mono text-[12px] tracking-[0.16em] uppercase text-[#6F4B24]">
               Atención sin apuro
             </span>
             <h3 className="font-heading text-[24px] md:text-[28px] font-medium leading-tight text-[#211D19] my-2">
@@ -65,7 +65,7 @@ export function TrustSection() {
           </div>
 
           {/* Bloque 5: Garantía propia (Col 5-6, Fila 2) - Dark Chocolate CTA */}
-          <div className="md:col-span-2 bg-[#4A3219] text-[#FAF8F3] p-[28px] rounded-[3px] flex flex-col justify-end min-h-[220px] md:min-h-[260px]">
+          <div className="md:col-span-2 bg-[#4A3219] text-[#FAF8F3] p-[28px] rounded-[3px] flex flex-col justify-end h-full min-h-[220px] md:min-h-[260px]">
             <span className="font-mono text-[12px] tracking-[0.16em] uppercase text-[#D8C79F]">
               Garantía propia
             </span>
