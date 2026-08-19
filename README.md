@@ -1,39 +1,34 @@
-# Cuore Joyería — Landing Page & Lead Generator
+# Cuore Joyería y Relojería — Landing Page & Lead Generator
 
-Una landing page optimizada para conversión diseñada para Cuore, una joyería y relojería ubicada en Río Grande, Tierra del Fuego. 
+Una landing page de alto rendimiento y conversión diseñada para **Cuore**, joyería, relojería y taller propio ubicado en Río Grande, Tierra del Fuego.
 
-El objetivo de negocio de este proyecto no era crear un e-commerce tradicional, sino una herramienta de **generación de leads**: mostrar el catálogo y los servicios (taller propio, alianzas a medida) para derivar consultas altamente intencionadas y con contexto directamente al WhatsApp de la tienda.
+El objetivo central del proyecto es la **generación de leads cualificados**: presentar el catálogo, la propuesta de valor y los servicios del taller para derivar consultas directamente al WhatsApp de la tienda con contexto inmediato.
 
 **Live site:** [cuore-joyeria.vercel.app](https://cuore-joyeria.vercel.app)
 
 ---
 
-## 🧠 Decisiones Técnicas y Arquitectura
+## 🧠 Arquitectura & Decisiones Técnicas
 
-Este proyecto fue construido pensando en rendimiento, mantenibilidad y adopción temprana de nuevas tecnologías. 
+Este proyecto fue estructurado con foco en rendimiento, escalabilidad modular y código limpio.
 
 ### 1. Stack Tecnológico
-*   **React 19 & TypeScript:** Tipado estricto para evitar errores en tiempo de ejecución y aprovechamiento de la última versión de React.
-*   **Tailwind CSS v4:** Adopción temprana del nuevo motor de Tailwind, reemplazando el tradicional `tailwind.config.js` por un sistema de variables de CSS puro (`@theme`), reduciendo la sobrecarga de configuración.
-*   **Vite:** Herramienta de build ultra rápida para una mejor experiencia de desarrollo.
+* **React 19 & TypeScript:** Tipado estricto para confiabilidad y mantenibilidad.
+* **Tailwind CSS v4:** Sistema de diseño configurado mediante variables CSS nativas (`@theme`), sin sobrecarga de configuración JS.
+* **Vite:** Empaquetador ligero y ultra rápido con soporte de path alias (`@/*` -> `src/*`).
 
-### 2. Animaciones sin dependencias externas
-Para mantener el bundle lo más ligero posible, decidí **no utilizar librerías como Framer Motion o GSAP**. 
-Implementé un sistema de animaciones en scroll utilizando la **API nativa Intersection Observer**. 
-*   Se creó un custom hook `useReveal` que observa cuándo los elementos entran al viewport.
-*   El componente wrapper `<Reveal />` aplica clases de CSS basadas en el estado, manejando duraciones y `animation-delay` directamente por props.
+### 2. Animaciones Nativas (`useReveal`)
+Se implementó un sistema ligero de revelado en scroll mediante la **API nativa Intersection Observer** sin librerías pesadas externas (sin Framer Motion ni GSAP):
+* Custom hook **`useReveal`** en `@/hooks/use-reveal.ts` que observa la intersección con el viewport.
+* Componente wrapper **`<Reveal />`** en `@/components/Reveal.tsx` que aplica las clases CSS de revelado y retardos (`delay`).
 
 ### 3. Generación Dinámica de Leads
-Para reducir la fricción en el contacto, los botones de llamado a la acción (CTAs) generan URLs dinámicas de `wa.me`. Dependiendo de la sección desde donde el usuario hace clic (por ejemplo, "Relojes" o "Reparaciones"), el mensaje pre-cargado de WhatsApp cambia. Esto otorga contexto inmediato al vendedor antes de responder.
+Los llamados a la acción (CTAs) generan URLs dinámicas de `wa.me` a través de utilidades en `@/constants/wa.ts`. Dependiendo de la sección (Alianzas, Relojes, Reparaciones), se inyecta un mensaje pre-cargado con contexto directo para la atención al cliente.
 
-### 4. Optimización de Medios (CDN)
-La aplicación cuenta con una abstracción utilitaria (`getImageUrl`) para inyectar una variable de entorno (`VITE_CDN_URL`). Esto permite cambiar instantáneamente la carga de imágenes locales hacia un CDN como Cloudinary, habilitando formatos modernos y compresión dinámica (`f_auto,q_auto`) sin modificar la lógica de los componentes.
-
-### 5. Arquitectura de Componentes
-El proyecto comenzó como un solo archivo pero fue refactorizado hacia un diseño modular y escalable.
-*   **`App.tsx`** actúa como el layout principal.
-*   Las secciones están divididas lógicamente en `src/components/` (ej: `Hero.tsx`, `CategoryGrid.tsx`, `WorkshopSection.tsx`).
-*   No se utilizó un sistema de enrutamiento (React Router) ni manejo de estado global (Redux/Zustand) debido a que es una Single Page Application (SPA) pura; agregar esas librerías habría añadido complejidad y peso innecesarios a la carga de la página.
+### 4. Sistema de Componentes Atomizado
+* **`src/components/ui/`**: Componentes reutilizables de UI (`SwatchCard`, `Reveal`, `ImageOverlay`, `FloatingWhatsApp`).
+* **`src/components/`**: Secciones principales (`Hero`, `Navbar`, `TrustSection`, `WorkshopSection`, `CategoryGrid`, `WatchSection`, `ContactSection`, `Footer`).
+* **`src/data/`**: Fuentes de datos estáticas e interfaces tipadas (`swatches.ts`, `categories.ts`, `watches.ts`, `repairs.ts`, `nav.ts`).
 
 ---
 
@@ -41,25 +36,31 @@ El proyecto comenzó como un solo archivo pero fue refactorizado hacia un diseñ
 
 ```text
 src/
-├── components/          # Componentes modulares por sección de la landing
-│   ├── Reveal.tsx       # Wrapper reutilizable para animaciones de scroll
-│   └── ...              # Hero, Navbar, CategoryGrid, TrustSection, etc.
+├── components/          # Secciones modulares y componentes de UI
+│   ├── ui/              # SwatchCard, Reveal, ImageOverlay, FloatingWhatsApp
+│   ├── Hero.tsx
+│   ├── Navbar.tsx
+│   ├── TrustSection.tsx
+│   ├── WorkshopSection.tsx
+│   ├── CategoryGrid.tsx
+│   ├── WatchSection.tsx
+│   ├── ContactSection.tsx
+│   └── Footer.tsx
+├── data/                # Datos estáticos e interfaces (categories, watches, swatches, repairs, nav)
 ├── hooks/
-│   └── use-reveal.ts    # Lógica de Intersection Observer encapsulada
-├── index.css            # Tokens de diseño de Tailwind v4 y utilidades custom
-├── App.tsx              # Componente principal que ensambla las secciones
-└── main.tsx             # Entry point de React
+│   └── use-reveal.ts    # Hook custom para Intersection Observer
+├── index.css            # Tokens de diseño Tailwind v4 y fuentes
+├── App.tsx              # Ensamblado principal de la aplicación
+└── main.tsx             # Punto de entrada React
 ```
 
 ---
 
 ## 🚀 Instalación y Desarrollo Local
 
-Para correr este proyecto en tu entorno local:
-
 1. Clona el repositorio:
    ```bash
-   git clone <url-del-repo>
+   git clone https://github.com/nadiaescobbb/-Cuore-joyeria.git
    ```
 2. Instala las dependencias:
    ```bash
@@ -69,13 +70,10 @@ Para correr este proyecto en tu entorno local:
    ```bash
    npm run dev
    ```
-
----
-
-## 🔮 Próximos Pasos (Roadmap)
-Si el negocio requiere escalar la plataforma, la base de código está preparada para:
-- **Integración de Headless CMS:** Para que el cliente pueda actualizar imágenes y productos sin requerir despliegues de código.
-- **Analíticas:** Integración de Google Tag Manager para trackear eventos de conversión (clics en botones de WhatsApp).
+4. Compila para producción:
+   ```bash
+   npm run build
+   ```
 
 ---
 

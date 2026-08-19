@@ -33,19 +33,19 @@ export const watches: Watch[] = [
     image: 'https://res.cloudinary.com/dsdb4fibv/image/upload/v1782508794/clasico_b9c6rp.avif',
     waMessage: 'Hola Cuore, quería consultar por relojes retro/vintage',
     galleryImages: [
-      '/Casio clasico/4ADF7D4D-A83A-46D9-8D8E-D4C62BF04D67.png',
-      '/Casio clasico/6A3BC9A9-43CE-43DC-82A7-95A5DC9197C3.png',
-      '/Casio clasico/7FE93EAA-2C31-40C7-B1BA-70A36544A3FF.png',
-      '/Casio clasico/84FB8E98-DD8A-4707-981B-7F4237623946.png',
-      '/Casio clasico/A2E8D8D5-1829-4491-905D-8C5B0D08F41D.png',
-      '/Casio clasico/B1501ED4-CAFE-4976-A017-138D5830BA28.png',
-      '/Casio clasico/B731B0BB-5DFD-4C19-B4CF-0F6F60E1F30C.png',
-      '/Casio clasico/CASIOMTP-1141A-7A.png',
-      '/Casio clasico/CasioMTP-1303D-1A.png',
-      '/Casio clasico/D3A4E846-BAE4-4BC4-B215-28971D9B3660.png',
-      '/Casio clasico/D9F20DA5-B5F5-47A9-87EC-FA3BDACFDF90.png',
-      '/Casio clasico/MTP-V002SG-9A.png',
-      '/Casio clasico/casio-ltp-1128.png'
+      '/casioclasico/4ADF7D4D-A83A-46D9-8D8E-D4C62BF04D67.png',
+      '/casioclasico/6A3BC9A9-43CE-43DC-82A7-95A5DC9197C3.png',
+      '/casioclasico/7FE93EAA-2C31-40C7-B1BA-70A36544A3FF.png',
+      '/casioclasico/84FB8E98-DD8A-4707-981B-7F4237623946.png',
+      '/casioclasico/A2E8D8D5-1829-4491-905D-8C5B0D08F41D.png',
+      '/casioclasico/B1501ED4-CAFE-4976-A017-138D5830BA28.png',
+      '/casioclasico/B731B0BB-5DFD-4C19-B4CF-0F6F60E1F30C.png',
+      '/casioclasico/CASIOMTP-1141A-7A.png',
+      '/casioclasico/CasioMTP-1303D-1A.png',
+      '/casioclasico/D3A4E846-BAE4-4BC4-B215-28971D9B3660.png',
+      '/casioclasico/D9F20DA5-B5F5-47A9-87EC-FA3BDACFDF90.png',
+      '/casioclasico/MTP-V002SG-9A.png',
+      '/casioclasico/casio-ltp-1128.png'
     ]
   },
   {
