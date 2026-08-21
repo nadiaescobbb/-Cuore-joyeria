@@ -7,11 +7,11 @@ export function CategoryGrid() {
 
   return (
     <div className="w-full bg-warm-200">
-      <section id="categories" className="max-w-[1440px] mx-auto px-5 md:px-12 lg:px-20 py-12 lg:py-16">
+      <section id="categories" className="max-w-[1440px] mx-auto px-5 md:px-12 lg:px-20 py-16 md:py-20 lg:py-24">
         
         {/* Encabezado */}
         <div className="w-full flex flex-col items-center text-center mb-10 md:mb-14">
-          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-normal leading-tight tracking-tight text-warm-900">
+          <h2 className="font-heading text-3xl md:text-h2-lg font-normal leading-tight tracking-tight text-warm-900">
             Nuestro catálogo de joyas.
           </h2>
         </div>
@@ -39,11 +39,11 @@ export function CategoryGrid() {
 
               {/* Texto centrado en la imagen */}
               <div className="absolute inset-0 flex flex-col items-center justify-center p-6 md:p-8 text-center pointer-events-none z-10">
-                <h3 className="font-body text-xs md:text-sm font-bold tracking-[0.25em] text-white uppercase mb-2 drop-shadow-sm">
+                <h3 className="font-body text-tag font-semibold tracking-[0.2em] text-white uppercase mb-2 drop-shadow-sm">
                   {category.name}
                 </h3>
                 {category.description && (
-                  <p className="font-body text-xs md:text-sm text-warm-200 max-w-xs leading-relaxed drop-shadow-sm">
+                  <p className="font-body text-subtle text-warm-200 max-w-xs leading-relaxed drop-shadow-sm">
                     {category.description}
                   </p>
                 )}

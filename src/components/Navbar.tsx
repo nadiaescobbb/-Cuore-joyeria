@@ -46,7 +46,7 @@ export function Navbar() {
               <a
                 key={item.href}
                 href={item.href}
-                className="font-body font-normal text-xs uppercase tracking-[0.18em] text-tierra hover:text-foreground transition-colors duration-150 ease-linear focus-visible:outline-accent whitespace-nowrap"
+                className="font-body font-medium text-tag uppercase tracking-[0.18em] text-warm-800 hover:text-warm-900 transition-colors duration-150 ease-linear focus-visible:outline-accent whitespace-nowrap"
               >
                 {item.label}
               </a>

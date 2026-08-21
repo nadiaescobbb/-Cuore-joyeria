@@ -29,7 +29,7 @@ export function Footer() {
             <a 
               key={item.href} 
               href={item.href}
-              className="font-body text-xs text-warm-300 hover:text-white uppercase tracking-[0.16em] transition-colors duration-150 ease-linear focus-visible:outline-accent"
+              className="font-body text-tag font-medium text-warm-300 hover:text-white uppercase tracking-[0.18em] transition-colors duration-150 ease-linear focus-visible:outline-accent"
             >
               {item.label}
             </a>

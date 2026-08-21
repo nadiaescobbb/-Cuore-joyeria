@@ -4,11 +4,11 @@ import { swatchItems } from '../data/swatches';
 
 export function TrustSection() {
   return (
-    <section id="trust" className="bg-background relative pt-12 pb-12 lg:pt-16 lg:pb-16">
+    <section id="trust" className="bg-background relative py-16 md:py-20 lg:py-24">
       <div className="max-w-[1440px] mx-auto px-5 md:px-12 lg:px-20">
         
         {/* Encabezado de Sección */}
-        <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-normal leading-tight text-foreground text-center mb-10 lg:mb-14">
+        <h2 className="font-heading text-3xl md:text-h2-lg font-normal leading-tight text-warm-900 text-center mb-10 lg:mb-14">
           Por qué elegir Cuore.
         </h2>
 

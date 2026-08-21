@@ -27,7 +27,7 @@ export function Hero() {
                 Fabricamos alianzas, reparamos joyas y trabajamos con una selección que se renueva de forma permanente.
               </span>
             </h1>
-            <p className="font-body text-sm md:text-base lg:text-sm text-background/90 lg:text-tierra max-w-[280px] sm:max-w-lg lg:max-w-md mb-item leading-relaxed drop-shadow-sm lg:drop-shadow-none w-full break-words">
+            <p className="font-body text-subtle md:text-body text-warm-100 lg:text-warm-800 max-w-[280px] sm:max-w-lg lg:max-w-md mb-item leading-relaxed drop-shadow-sm lg:drop-shadow-none w-full break-words">
               Hace más de 40 años que trabajamos desde Río Grande.
             </p>
             
@@ -37,13 +37,13 @@ export function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Consultar por WhatsApp"
-                className="inline-flex items-center justify-center px-6 md:px-8 min-h-12 bg-action-primary text-warm-100 font-body font-bold text-sm md:text-body tracking-[0.16em] uppercase hover:bg-action-primary-hover transition-colors duration-150 ease-linear focus-visible:outline-accent text-center shadow-md lg:shadow-none"
+                className="inline-flex items-center justify-center px-6 md:px-8 min-h-12 bg-action-primary text-warm-100 font-body text-tag font-semibold tracking-[0.16em] uppercase hover:bg-action-primary-hover transition-colors duration-150 ease-linear focus-visible:outline-accent text-center shadow-md lg:shadow-none"
               >
                 Consultar por WhatsApp
               </a>
               <a 
                 href="#trust"
-                className="inline-flex items-center justify-center px-6 md:px-8 min-h-12 bg-transparent text-warm-100 lg:text-warm-800 border border-warm-100/60 lg:border-warm-800/40 font-body font-bold text-sm md:text-body tracking-[0.16em] uppercase hover:bg-warm-100/10 lg:hover:bg-warm-800/5 transition-colors duration-150 ease-linear focus-visible:outline-accent text-center shadow-sm lg:shadow-none backdrop-blur-sm lg:backdrop-blur-none"
+                className="inline-flex items-center justify-center px-6 md:px-8 min-h-12 bg-transparent text-warm-100 lg:text-warm-800 border border-warm-100/60 lg:border-warm-800/40 font-body text-tag font-semibold tracking-[0.16em] uppercase hover:bg-warm-100/10 lg:hover:bg-warm-800/5 transition-colors duration-150 ease-linear focus-visible:outline-accent text-center shadow-sm lg:shadow-none backdrop-blur-sm lg:backdrop-blur-none"
               >
                 Ver qué hacemos
               </a>
