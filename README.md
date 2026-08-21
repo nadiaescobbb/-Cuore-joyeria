@@ -26,9 +26,9 @@ Se implementó un sistema ligero de revelado en scroll mediante la **API nativa 
 Los llamados a la acción (CTAs) generan URLs dinámicas de `wa.me` a través de utilidades en `@/constants/wa.ts`. Dependiendo de la sección (Alianzas, Relojes, Reparaciones), se inyecta un mensaje pre-cargado con contexto directo para la atención al cliente.
 
 ### 4. Sistema de Componentes Atomizado
-* **`src/components/ui/`**: Componentes reutilizables de UI (`SwatchCard`, `Reveal`, `ImageOverlay`, `FloatingWhatsApp`).
-* **`src/components/`**: Secciones principales (`Hero`, `Navbar`, `TrustSection`, `WorkshopSection`, `CategoryGrid`, `WatchSection`, `ContactSection`, `Footer`).
-* **`src/data/`**: Fuentes de datos estáticas e interfaces tipadas (`swatches.ts`, `categories.ts`, `watches.ts`, `repairs.ts`, `nav.ts`).
+* **`src/components/ui/`**: Componentes atómicos reutilizables de UI (`SwatchCard`).
+* **`src/components/`**: Secciones y módulos UI (`Hero`, `Navbar`, `TrustSection`, `WorkshopSection`, `CategoryGrid`, `WatchSection`, `ContactSection`, `Footer`, `Reveal`, `ImageOverlay`, `FloatingWhatsApp`).
+* **`src/data/`**: Fuentes de datos estáticas e interfaces tipadas (`swatches.ts`, `categories.ts`, `watches.ts`, `nav.ts`).
 
 ---
 
@@ -37,7 +37,7 @@ Los llamados a la acción (CTAs) generan URLs dinámicas de `wa.me` a través de
 ```text
 src/
 ├── components/          # Secciones modulares y componentes de UI
-│   ├── ui/              # SwatchCard, Reveal, ImageOverlay, FloatingWhatsApp
+│   ├── ui/              # SwatchCard (componentes atómicos)
 │   ├── Hero.tsx
 │   ├── Navbar.tsx
 │   ├── TrustSection.tsx
@@ -45,11 +45,14 @@ src/
 │   ├── CategoryGrid.tsx
 │   ├── WatchSection.tsx
 │   ├── ContactSection.tsx
-│   └── Footer.tsx
-├── data/                # Datos estáticos e interfaces (categories, watches, swatches, repairs, nav)
+│   ├── Footer.tsx
+│   ├── Reveal.tsx
+│   ├── ImageOverlay.tsx
+│   └── FloatingWhatsApp.tsx
+├── data/                # Datos estáticos e interfaces (categories, watches, swatches, nav)
 ├── hooks/
 │   └── use-reveal.ts    # Hook custom para Intersection Observer
-├── index.css            # Tokens de diseño Tailwind v4 y fuentes
+├── index.css            # Tokens de diseño HSL en Tailwind v4 y fuentes
 ├── App.tsx              # Ensamblado principal de la aplicación
 └── main.tsx             # Punto de entrada React
 ```
@@ -77,4 +80,4 @@ src/
 
 ---
 
-*Desarrollado por Nadia Escobar — [Trama Studio](https://tramaestudio.com)*
+*Desarrollado por Nadia Escobar — [heytrama](https://heytrama.com)*
