@@ -7,18 +7,38 @@
   --font-mono: "Space Mono", monospace;
   --font-marquee: "Oswald", "Arial Narrow", sans-serif;
 
-  --color-background: #faf8f3;
-  --color-surface: #f1eae0;
-  --color-foreground: #211d19;
-  --color-muted: #6f665c;
-  --color-accent: #87602f;
-  --color-tierra: #6f4b24;
-  --color-cta: #4A3219;
-  --color-cta-hover: #5A3D1E;
-  --color-border: rgba(33, 29, 25, 0.08);
-  --color-dark: #1f1a15;
-  --color-dark-surface: #262018;
-  --color-gold: #d8c79f;
+  /* Escala de Neutros Cálidos (Warm Paper) */
+  --color-warm-100: hsl(40, 25%, 97%); /* Fondo Canvas principal */
+  --color-warm-200: hsl(40, 20%, 93%); /* Superficies secundarias y cards suaves */
+  --color-warm-300: hsl(38, 15%, 86%); /* Bordes y separadores sutiles */
+  --color-warm-400: hsl(38, 12%, 75%); /* Bordes activos / Focus */
+  --color-warm-700: hsl(38, 10%, 45%); /* Texto terciario / Metadata */
+  --color-warm-800: hsl(38, 18%, 25%); /* Texto secundario / Acento cálido */
+  --color-warm-900: hsl(38, 25%, 11%); /* Texto principal / Tinta oscura */
+
+  /* Tokens de Superficie Oscura (Sección Relojes y Footer) */
+  --color-surface-dark: hsl(38, 20%, 10%);
+  --color-surface-dark-card: hsl(38, 16%, 14%);
+  --color-border-dark: hsl(38, 12%, 20%);
+
+  /* Acento de Marca y Acción */
+  --color-brand-gold: hsl(38, 48%, 42%);
+  --color-brand-gold-light: hsl(38, 45%, 85%);
+  --color-action-primary: hsl(38, 25%, 11%);
+  --color-action-primary-hover: hsl(38, 22%, 18%);
+
+  /* Alias de compatibilidad semántica */
+  --color-background: var(--color-warm-100);
+  --color-surface: var(--color-warm-200);
+  --color-foreground: var(--color-warm-900);
+  --color-muted: var(--color-warm-700);
+  --color-accent: var(--color-brand-gold);
+  --color-tierra: var(--color-warm-800);
+  --color-cta: var(--color-action-primary);
+  --color-cta-hover: var(--color-action-primary-hover);
+  --color-dark: var(--color-surface-dark);
+  --color-dark-surface: var(--color-surface-dark);
+  --color-gold: var(--color-brand-gold-light);
 
   --tracking-tight: 0;
   --tracking-normal: 0.06em;
@@ -72,17 +92,17 @@
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
-    background-color: var(--color-dark);
+    background-color: var(--color-surface-dark);
   }
 
   @media (min-width: 1024px) {
     html {
-      background-color: var(--color-background);
+      background-color: var(--color-warm-100);
     }
   }
 
   body {
-    @apply bg-dark text-foreground font-body lg:bg-background;
+    @apply bg-surface-dark text-warm-900 font-body lg:bg-warm-100;
     text-rendering: optimizeLegibility;
     letter-spacing: 0;
   }

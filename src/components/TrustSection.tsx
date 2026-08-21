@@ -23,6 +23,7 @@ export function TrustSection() {
               bgColor={item.bgColor}
               textColor={item.textColor}
               labelColor={item.labelColor}
+              borderColor={item.borderColor}
               colSpanClass={item.colSpanClass}
             />
           ))}

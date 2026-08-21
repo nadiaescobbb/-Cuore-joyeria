@@ -109,14 +109,14 @@ export function WatchSection() {
               />
               <ImageOverlay className="group-hover:opacity-80 transition-opacity duration-300" />
               <div className="absolute inset-x-0 bottom-4 z-10 flex flex-col px-6 md:px-8">
-                <span className="font-body text-[10px] tracking-wide text-accent uppercase mb-1">
+                <span className="font-body text-[10px] tracking-wide text-brand-gold-light uppercase mb-1">
                   {watch.category}
                 </span>
-                <h3 className="font-heading text-3xl md:text-4xl text-background leading-none">
+                <h3 className="font-heading text-3xl md:text-4xl text-warm-100 leading-none">
                   {watch.title}
                 </h3>
                 {watch.galleryImages && (
-                  <span className="mt-4 flex items-center text-sm font-body font-bold uppercase tracking-wider text-background transition-colors duration-300">
+                  <span className="mt-4 flex items-center text-sm font-body font-bold uppercase tracking-wider text-warm-100 transition-colors duration-300">
                     Ver colección <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </span>
                 )}

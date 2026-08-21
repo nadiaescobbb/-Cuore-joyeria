@@ -5,6 +5,7 @@ interface SwatchCardProps {
   bgColor: string;
   textColor?: string;
   labelColor?: string;
+  borderColor?: string;
   colSpanClass?: string;
 }
 
@@ -13,13 +14,14 @@ export function SwatchCard({
   title,
   description,
   bgColor,
-  textColor = 'text-[#FAF8F3]',
-  labelColor = 'text-[#D8C79F]',
+  textColor = 'text-warm-900',
+  labelColor = 'text-brand-gold',
+  borderColor = 'border-warm-300',
   colSpanClass = 'md:col-span-3',
 }: SwatchCardProps) {
   return (
     <div
-      className={`${colSpanClass} ${bgColor} ${textColor} p-[28px] rounded-[3px] flex flex-col justify-end h-full min-h-[220px] md:min-h-[260px]`}
+      className={`${colSpanClass} ${bgColor} ${textColor} border ${borderColor} p-[28px] rounded-[3px] flex flex-col justify-end h-full min-h-[220px] md:min-h-[260px]`}
     >
       <span className={`font-mono text-[12px] tracking-[0.16em] uppercase ${labelColor}`}>
         {label}

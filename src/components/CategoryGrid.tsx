@@ -6,12 +6,12 @@ export function CategoryGrid() {
   const jewelryCategories = categories.filter(cat => cat.id !== 'relojes');
 
   return (
-    <div className="w-full bg-[#EFE8DC]">
+    <div className="w-full bg-warm-200">
       <section id="categories" className="max-w-[1440px] mx-auto px-5 md:px-12 lg:px-20 py-12 lg:py-16">
         
         {/* Encabezado */}
         <div className="w-full flex flex-col items-center text-center mb-10 md:mb-14">
-          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-normal leading-tight tracking-tight text-foreground">
+          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-normal leading-tight tracking-tight text-warm-900">
             Nuestro catálogo de joyas.
           </h2>
         </div>
@@ -24,7 +24,7 @@ export function CategoryGrid() {
               href={getWaLink(category.waMessage)}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative flex flex-col w-full aspect-[4/3] focus-visible:outline-accent overflow-hidden rounded-none shadow-sm"
+              className="group relative flex flex-col w-full aspect-[4/3] focus-visible:outline-accent overflow-hidden rounded-[3px] shadow-sm"
             >
               {/* Imagen de fondo */}
               <img 
@@ -34,16 +34,16 @@ export function CategoryGrid() {
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]" 
               />
               
-              {/* Overlay oscuro semitransparente */}
-              <div className="absolute inset-0 bg-black/45 group-hover:bg-black/55 transition-colors duration-300 pointer-events-none" />
+              {/* Overlay oscuro gradiente uniforme para contraste WCAG AA (>4.5:1) */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/20 group-hover:from-black/90 group-hover:via-black/55 transition-colors duration-300 pointer-events-none" />
 
               {/* Texto centrado en la imagen */}
               <div className="absolute inset-0 flex flex-col items-center justify-center p-6 md:p-8 text-center pointer-events-none z-10">
-                <h3 className="font-body text-xs md:text-sm font-bold tracking-[0.25em] text-[#D8C79F] uppercase mb-2 drop-shadow-sm">
+                <h3 className="font-body text-xs md:text-sm font-bold tracking-[0.25em] text-white uppercase mb-2 drop-shadow-sm">
                   {category.name}
                 </h3>
                 {category.description && (
-                  <p className="font-body text-xs md:text-sm text-background/90 max-w-xs leading-relaxed drop-shadow-sm">
+                  <p className="font-body text-xs md:text-sm text-warm-200 max-w-xs leading-relaxed drop-shadow-sm">
                     {category.description}
                   </p>
                 )}
