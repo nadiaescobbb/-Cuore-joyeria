@@ -55,7 +55,7 @@ export function Navbar() {
 
           {/* Mobile Hamburger Toggle Button */}
           <button
-            className="md:hidden flex p-2 text-foreground focus-visible:outline-accent relative z-50"
+            className="md:hidden flex items-center justify-center p-3 min-h-[44px] min-w-[44px] text-foreground focus-visible:outline-accent relative z-50"
             aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
             aria-expanded={isOpen}
             onClick={() => setIsOpen(!isOpen)}
