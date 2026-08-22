@@ -4,7 +4,7 @@ import { swatchItems } from '../data/swatches';
 
 export function TrustSection() {
   return (
-    <section id="trust" className="bg-background relative py-16 md:py-20 lg:py-24">
+    <section id="trust" className="bg-background relative pt-16 md:pt-20 lg:pt-24 pb-24 md:pb-28 lg:pb-32">
       <div className="max-w-[1440px] mx-auto px-5 md:px-12 lg:px-20">
         
         {/* Encabezado de Sección */}

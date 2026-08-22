@@ -4,7 +4,7 @@ import { getWaLink } from '../constants/wa';
 
 export function ContactSection() {
   return (
-    <section id="contact" className="w-full bg-warm-100 py-16 lg:py-24">
+    <section id="contact" className="w-full bg-warm-100 pt-20 md:pt-24 pb-28 md:pb-36">
       <div className="max-w-[1440px] mx-auto px-5 md:px-12 lg:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
