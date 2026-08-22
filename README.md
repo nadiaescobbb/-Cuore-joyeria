@@ -1,83 +1,122 @@
-# Cuore Joyería y Relojería — Landing Page & Lead Generator
+# ✨ Cuore Joyería y Relojería
 
-Una landing page de alto rendimiento y conversión diseñada para **Cuore**, joyería, relojería y taller propio ubicado en Río Grande, Tierra del Fuego.
+> Landing page de alto rendimiento y generación de leads comerciales para taller de joyería y relojería artesanal en Tierra del Fuego.
 
-El objetivo central del proyecto es la **generación de leads cualificados**: presentar el catálogo, la propuesta de valor y los servicios del taller para derivar consultas directamente al WhatsApp de la tienda con contexto inmediato.
-
-**Live site:** [cuore-joyeria.vercel.app](https://cuore-joyeria.vercel.app)
-
----
-
-## 🧠 Arquitectura & Decisiones Técnicas
-
-Este proyecto fue estructurado con foco en rendimiento, escalabilidad modular y código limpio.
-
-### 1. Stack Tecnológico
-* **React 19 & TypeScript:** Tipado estricto para confiabilidad y mantenibilidad.
-* **Tailwind CSS v4:** Sistema de diseño configurado mediante variables CSS nativas (`@theme`), sin sobrecarga de configuración JS.
-* **Vite:** Empaquetador ligero y ultra rápido con soporte de path alias (`@/*` -> `src/*`).
-
-### 2. Animaciones Nativas (`useReveal`)
-Se implementó un sistema ligero de revelado en scroll mediante la **API nativa Intersection Observer** sin librerías pesadas externas (sin Framer Motion ni GSAP):
-* Custom hook **`useReveal`** en `@/hooks/use-reveal.ts` que observa la intersección con el viewport.
-* Componente wrapper **`<Reveal />`** en `@/components/Reveal.tsx` que aplica las clases CSS de revelado y retardos (`delay`).
-
-### 3. Generación Dinámica de Leads
-Los llamados a la acción (CTAs) generan URLs dinámicas de `wa.me` a través de utilidades en `@/constants/wa.ts`. Dependiendo de la sección (Alianzas, Relojes, Reparaciones), se inyecta un mensaje pre-cargado con contexto directo para la atención al cliente.
-
-### 4. Sistema de Componentes Atomizado
-* **`src/components/ui/`**: Componentes atómicos reutilizables de UI (`SwatchCard`).
-* **`src/components/`**: Secciones y módulos UI (`Hero`, `Navbar`, `TrustSection`, `WorkshopSection`, `CategoryGrid`, `WatchSection`, `ContactSection`, `Footer`, `Reveal`, `ImageOverlay`, `FloatingWhatsApp`).
-* **`src/data/`**: Fuentes de datos estáticas e interfaces tipadas (`swatches.ts`, `categories.ts`, `watches.ts`, `nav.ts`).
+[![React 19](https://img.shields.io/badge/React_19-20232A?style=flat-square&logo=react&logoColor=61DAFB)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript_5-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS v4](https://img.shields.io/badge/Tailwind_CSS_v4-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Live Demo](https://img.shields.io/badge/Demo-cuore--joyeria.vercel.app-111111?style=flat-square&logo=vercel&logoColor=white)](https://cuore-joyeria.vercel.app)
 
 ---
 
-## 📂 Estructura del Proyecto
+## 🎯 Objetivo & Enfoque
 
-```text
-src/
-├── components/          # Secciones modulares y componentes de UI
-│   ├── ui/              # SwatchCard (componentes atómicos)
-│   ├── Hero.tsx
-│   ├── Navbar.tsx
-│   ├── TrustSection.tsx
-│   ├── WorkshopSection.tsx
-│   ├── CategoryGrid.tsx
-│   ├── WatchSection.tsx
-│   ├── ContactSection.tsx
-│   ├── Footer.tsx
-│   ├── Reveal.tsx
-│   ├── ImageOverlay.tsx
-│   └── FloatingWhatsApp.tsx
-├── data/                # Datos estáticos e interfaces (categories, watches, swatches, nav)
-├── hooks/
-│   └── use-reveal.ts    # Hook custom para Intersection Observer
-├── index.css            # Tokens de diseño HSL en Tailwind v4 y fuentes
-├── App.tsx              # Ensamblado principal de la aplicación
-└── main.tsx             # Punto de entrada React
+Cuore combina tradición artesanal de más de 40 años con precisión técnica. La aplicación está diseñada como un **motor de conversión directa**: estructura el catálogo, la propuesta de valor del taller propio y los servicios de relojería para derivar consultas calificadas a WhatsApp con contexto comercial precargado.
+
+---
+
+## 🧠 Decisiones Técnicas & Performance
+
+| Área | Implementación | Decisión de Ingeniería |
+| :--- | :--- | :--- |
+| **⚡ Animaciones** | `IntersectionObserver` API en `useReveal` | **Zero-dependency:** Evita sobrecargas de librerías como Framer Motion (~50kb) o GSAP (~34kb) logrando transiciones fluidas en scroll sin penalizar el LCP. |
+| **🎨 Design Tokens** | Tailwind CSS v4 `@theme` | Variables CSS nativas y rampa de color HSL cálida, eliminando archivos de configuración JavaScript pesados. |
+| **📲 Lead Routing** | Generador de URLs dinámicas (`wa.me`) | Inyecta mensajes estructurados según la sección de origen (*Alianzas*, *Taller*, *Relojería*), reduciendo la fricción de contacto. |
+| **♿ Accesibilidad** | Respeto a `prefers-reduced-motion` | Desactiva animaciones de entrada y asegura opacidad completa para usuarios con sensibilidad al movimiento. |
+
+---
+
+## 💡 Aspectos Destacados de Código
+
+### Animaciones Nativas con `useReveal` (`src/hooks/use-reveal.ts`)
+Hook desacoplado que observa la entrada de elementos al viewport y se desuscribe automáticamente tras la primera intersección para evitar *memory leaks*:
+
+```typescript
+export function useReveal<T HTMLElement="HTMLDivElement" extends>(options: UseRevealOptions = {}) {
+  const { threshold = 0.15, rootMargin = '0px 0px -50px 0px' } = options;
+  const elementRef = useRef<T>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const node = elementRef.current;
+    if (!node) return;
+
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setIsVisible(true);
+        observer.unobserve(node); // Limpieza inmediata tras el primer render
+      }
+    }, { threshold, rootMargin });
+
+    observer.observe(node);
+    return () => { if (node) observer.unobserve(node); };
+  }, [threshold, rootMargin]);
+
+  return { elementRef, isVisible };
+}
+
 ```
 
 ---
 
-## 🚀 Instalación y Desarrollo Local
+## 📁 Estructura del Proyecto
 
-1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/nadiaescobbb/-Cuore-joyeria.git
-   ```
-2. Instala las dependencias:
-   ```bash
-   npm install
-   ```
-3. Inicia el servidor de desarrollo:
-   ```bash
-   npm run dev
-   ```
-4. Compila para producción:
-   ```bash
-   npm run build
-   ```
+```text
+src/
+├── 🎨 components/
+│   ├── ui/                  # Componentes atómicos (SwatchCard)
+│   ├── Hero.tsx             # Sección principal con tipografía responsive
+│   ├── Navbar.tsx           # Navegación y anclas de catálogo
+│   ├── WorkshopSection.tsx  # Propuesta de valor del taller propio
+│   ├── CategoryGrid.tsx     # Grilla de joyas y alianzas
+│   ├── WatchSection.tsx     # Catálogo de relojería
+│   ├── Reveal.tsx           # Wrapper de animación por viewport
+│   └── FloatingWhatsApp.tsx # Botón contextual persistente
+├── 📊 data/                 # Datasets estáticos e interfaces (watches, categories, swatches)
+├── ⚙️ hooks/                # Custom hooks (use-reveal.ts)
+├── 🔧 constants/            # Generador de links y mensajes para WhatsApp
+├── 💅 index.css             # Tokens HSL y estilos base en Tailwind v4
+├── App.tsx                  # Estructura general de la vista
+└── main.tsx                 # Entry point de la aplicación
+
+```
 
 ---
 
-*Desarrollado por Nadia Escobar — [heytrama](https://heytrama.com)*
+## 🚀 Setup & Desarrollo Local
+
+### 1. Clonar el repositorio
+
+```bash
+git clone [https://github.com/nadiaescobbb/-Cuore-joyeria.git](https://github.com/nadiaescobbb/-Cuore-joyeria.git)
+cd -Cuore-joyeria
+
+```
+
+### 2. Instalar dependencias
+
+```bash
+npm install
+
+```
+
+### 3. Iniciar entorno de desarrollo
+
+```bash
+npm run dev
+
+```
+
+### 4. Compilar para producción
+
+```bash
+npm run build
+
+```
+
+---
+
+## 📬 Créditos
+
+Diseñado y desarrollado por **Nadia Escobar** — [HeyTrama](https://heytrama.com).
